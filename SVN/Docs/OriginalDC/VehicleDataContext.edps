@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDeveloper>
+  <ProjectSettings>
+    <Rules>
+      <EntitySet PluralizationName="Pluralize" />
+      <Class UseSchemaAsPrefix="False" RemoveUnderscores="True" CodeCase="Capitalized" AddPrefix="" AddSuffix="" RemovePrefixes="" RemoveSuffixes="" PluralizationName="Singularize" />
+      <Property RemoveUnderscores="True" CodeCase="Capitalized" AddPrefix="" AddSuffix="" RemovePrefixes="" RemoveSuffixes="" PluralizationName="Unchanged" />
+    </Rules>
+    <Generation Template="LINQ C#" DestinationFolder="D:\Product\VDMS\VDMS II\Source Code\VDMS.Website\Document">
+      <GeneratedFiles>
+        <File Name="VehicleDataContext.Designer.cs" />
+      </GeneratedFiles>
+    </Generation>
+  </ProjectSettings>
+</EntityDeveloper>

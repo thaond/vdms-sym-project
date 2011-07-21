@@ -1,0 +1,1839 @@
+﻿- Drop column Source in table v2_p_Warehouse (mr.Tuan: OCC BÊN HTP LÀ SYNONYM TỪ HTF, TƯƠNG TỰ CHO DNF VÀ DNP)
+- Add column Dealer_Type (char(2)) to table v2_p_Dealer (mr.Tuan: nếu là 2S thì hoàng hoá chỉ có phụ tùng, 3S thì cả xe máy và phụ tùng, occ03)
+- Drop column Part_Info_Id in table v2_p_Favorite
+- Add column Part_Code (varchar(40) not null), Part_Type (char(1) not null) to table v2_p_Favorite
+- Add column Order_Date_Control (integer not null) to table v2_p_Dealer
+- Add column Fax (varchar(20)), Mobile (varchar(20)) to table v2_p_Contact
+
+
+- Add column Type (char (1) not null default 'P') to table v2_p_Warehouse
+- Add column Default_V_Warehouse_Id (number (19) not null default 0) to table v2_p_Dealer
+- Add column Order_Date (datetime not null default Sales_Date), Manual_Voucher_Number (varchar(50)) to table v2_p_Sales_Header
+- Change Sales_Date column in table v2_p_Sales_Header to nullable
+- Web.config *change*. Pls download new version of dot connect
+
+- Add column V_Warehouse_Id (number (19)) to table v2_app_User_Profile
+- Add column Problem_Again_Quantity(number 10 not null default 0), Passed(number 1 not null default 0), Transaction_Comment (nvarchar(250)) to table v2_p_N_G_Form_Detail
+- Add column TC_VDR08 (varchar(30)) to table TC_VDR_FILE
+- Add view view_dnp_tc_col_file, view_dnp_tc_ine_file, view_htp_tc_col_file, view_htp_tc_ine_file
+- Add column V_A_T_Code (varchar(30)) to table v2_p_Customer
+- Add column Not_Good_Number (varchar(30)) to table v2_p_Receive_Header
+
+- Create 2 table:
+
+CREATE TABLE v2_p_Cycle_Count_Detail(
+    Cycle_Count_Detail_Id    NUMBER(10, 0)     NOT NULL,
+    Cycle_Count_Header_Id    NUMBER(10, 0)     NOT NULL,
+    Part_Code                VARCHAR2(30)      NOT NULL,
+    Quantity                 NUMBER(38, 0)     NOT NULL,
+    Item_Comment             NVARCHAR2(256),
+    Part_type				 CHAR(1)          NOT NULL,
+    CONSTRAINT PK166 PRIMARY KEY (Cycle_Count_Detail_Id)
+)
+;
+
+CREATE TABLE v2_p_Cycle_Count_Header(
+    Cycle_Count_Header_Id    NUMBER(10, 0)     NOT NULL,
+    Dealer_Code              VARCHAR2(30)      NOT NULL,
+    Warehouse_Id             NUMBER(10, 0)     NOT NULL,
+    Created_Time             TIMESTAMP(6)      NOT NULL,
+    Created_By               NVARCHAR2(256)    NOT NULL,
+    Last_Edited_Date         TIMESTAMP(6)      NOT NULL,
+    Cycle_Date               TIMESTAMP(6)      NOT NULL,
+    Status                   CHAR(1)           NOT NULL,
+    Transaction_Comment      NVARCHAR2(256),
+    CONSTRAINT PK165 PRIMARY KEY (Cycle_Count_Header_Id)
+)
+;
+
+ALTER TABLE v2_p_Cycle_Count_Detail ADD CONSTRAINT Refv2_p_Cycle_Count_Header318 
+    FOREIGN KEY (Cycle_Count_Header_Id)
+    REFERENCES v2_p_Cycle_Count_Header(Cycle_Count_Header_Id)
+;
+
+ALTER TABLE v2_p_Cycle_Count_Header ADD CONSTRAINT Refv2_p_Warehouse319 
+    FOREIGN KEY (Warehouse_Id)
+    REFERENCES v2_p_Warehouse(Warehouse_Id)
+;
+
+ALTER TABLE v2_p_Cycle_Count_Header ADD CONSTRAINT Refv2_p_Dealer320 
+    FOREIGN KEY (Dealer_Code)
+    REFERENCES v2_p_Dealer(Dealer_Code)
+;
+
+CREATE SEQUENCE v2_seq_CycleCountDetail MINVALUE 1 MAXVALUE 
+999999999999999999999999999 START WITH 1 INCREMENT BY 1 CACHE 20;
+
+CREATE OR REPLACE TRIGGER v2_p_Cycle_Count_Detail_U_PK BEFORE INSERT ON v2_p_Cycle_Count_Detail
+REFERENCING OLD AS OLD NEW AS NEW
+FOR EACH ROW
+BEGIN
+SELECT v2_seq_CycleCountDetail.NEXTVAL INTO :NEW.Cycle_Count_Detail_Id FROM DUAL;
+END;
+/
+
+CREATE SEQUENCE v2_seq_CycleCountHeader MINVALUE 1 MAXVALUE 
+999999999999999999999999999 START WITH 1 INCREMENT BY 1 CACHE 20;
+
+CREATE OR REPLACE TRIGGER v2_p_Cycle_Count_Header_U_PK BEFORE INSERT ON v2_p_Cycle_Count_Header
+REFERENCING OLD AS OLD NEW AS NEW
+FOR EACH ROW
+BEGIN
+SELECT v2_seq_CycleCountHeader.NEXTVAL INTO :NEW.Cycle_Count_Header_Id FROM DUAL;
+END;
+/
+
+-- 2009/06/12: update sale voucher Number
+
+CREATE OR REPLACE TRIGGER VDMS.UPDATE_VOUCHER
+  BEFORE INSERT ON VDMS.V2_P_SALES_HEADER FOR EACH ROW
+BEGIN
+    SELECT 
+        CONCAT(:NEW.SALES_ORDER_NUMBER, LPAD(TO_CHAR(TO_NUMBER(NVL(SUBSTR(MAX(SALES_ORDER_NUMBER), -4), '0')) + 1), 4, '0')) 
+    INTO :NEW.SALES_ORDER_NUMBER
+    FROM V2_P_SALES_HEADER 
+    WHERE DEALER_CODE = :NEW.DEALER_CODE 
+        AND WAREHOUSE_ID = :NEW.WAREHOUSE_ID 
+        --AND to_char(MODIFIED_DATE,'ddMMyyyy') = to_char(:NEW.MODIFIED_DATE,'ddMMyyyy')
+        AND SALES_ORDER_NUMBER LIKE CONCAT(:NEW.SALES_ORDER_NUMBER, '%')
+    --ORDER BY SALES_ORDER_NUMBER DESC 
+    ;
+END;
+/
+
+- Send NG to interface, create trigger:
+CREATE OR REPLACE TRIGGER VDMS.V2_P_N_G_FORM_SEND_TIP_TOP
+  BEFORE UPDATE ON VDMS.V2_P_N_G_FORM_HEADER FOR EACH ROW
+BEGIN
+    IF :NEW.APPROVE_LEVEL = 3 AND :NEW.STATUS = 'CF' THEN
+        INSERT INTO TC_VDS_FILE (TC_VDS01, TC_VDS02) VALUES 
+            (substr(:NEW.NOT_GOOD_NUMBER, 1, instr(:NEW.NOT_GOOD_NUMBER, '-NG-', 1, 1) - 1),
+             :NEW.NOT_GOOD_NUMBER
+            ) ;
+    END IF;
+END;
+
+- Add column SALES_COMMENT (nvarchar2(256)) to table V2_P_SALES_HEADER
+
+- Add column REWARD_NUMBER (varchar2(30)) to table V2_P_N_G_FORM_HEADER
+
+--change package REPORT, line 85: "="  =>  "like"  (cuoi' report_selling_daily)
+--change package REPORT, line 188: "="  =>  "like"  (cuoi' report_selling_daily_debtonly)
+--change package INVENTORY.REPORT_SALES: line 402
+           FROM (SELECT occ01 AS DealerCode FROM view_dnf_occ_file WHERE occ21 = 'VN' AND occacti = 'Y' AND occ34 <> ' ' AND NOT occ34 IS NULL AND UPPER(occ01) LIKE p_Dealer) I1
+ ==>       FROM (SELECT DEALER_CODE AS DealerCode FROM V2_P_DEALER WHERE DEALER_CODE <> '/' AND DATABASE_CODE = p_DatabaseCode AND DEALER_CODE LIKE p_Dealer) I1
+
+-- add ID triger cho SALE_INVENTORY, SALE_INVENTORYLOCK
+
+- Modify trigger
+CREATE OR REPLACE TRIGGER VDMS.V2_P_N_G_FORM_SEND_TIP_TOP
+  BEFORE UPDATE ON VDMS.V2_P_N_G_FORM_HEADER FOR EACH ROW
+BEGIN
+    IF :NEW.APPROVE_LEVEL = 3 AND :NEW.STATUS = 'CF' THEN
+        INSERT INTO TC_VDS_FILE (TC_VDS01, TC_VDS02) VALUES 
+            (substr(:NEW.NOT_GOOD_NUMBER, 4, length(:NEW.NOT_GOOD_NUMBER) - 3),
+             :NEW.NOT_GOOD_NUMBER
+            ) ;
+    END IF;
+END;
+
+- Add column Voucher_number(varchar2(30)) to table v2_p_Transfer_Header
+-- and tgriger
+CREATE OR REPLACE TRIGGER VDMS.UPDATE_Transfer_VOUCHER
+  BEFORE INSERT ON VDMS.V2_P_TRANSFER_HEADER FOR EACH ROW
+BEGIN
+    SELECT 
+        CONCAT(:NEW.VOUCHER_NUMBER, LPAD(TO_CHAR(TO_NUMBER(NVL(SUBSTR(MAX(VOUCHER_NUMBER), -4), '0')) + 1), 4, '0')) 
+    INTO :NEW.VOUCHER_NUMBER
+    FROM V2_P_TRANSFER_HEADER 
+    WHERE DEALER_CODE = :NEW.DEALER_CODE 
+        AND FROM_WAREHOUSE_ID = :NEW.FROM_WAREHOUSE_ID 
+        AND TO_WAREHOUSE_ID = :NEW.TO_WAREHOUSE_ID 
+        AND VOUCHER_NUMBER LIKE CONCAT(:NEW.VOUCHER_NUMBER, '%')
+    ;
+END;
+/
+----------------------------------------------------------
+CREATE OR REPLACE VIEW VIEW_HTP_TC_VDA_FILE
+(TC_VDA01, TC_VDA02, TC_VDA03, TC_VDA04, TC_VDA05, 
+ TC_VDA06, TC_VDA07)
+AS 
+SELECT "TC_VDA01","TC_VDA02","TC_VDA03","TC_VDA04","TC_VDA05","TC_VDA06","TC_VDA07" 
+FROM TC_VDA_FILE@htf_dblink WITH READ ONLY;
+
+
+CREATE OR REPLACE VIEW VIEW_DNP_TC_VDA_FILE
+(TC_VDA01, TC_VDA02, TC_VDA03, TC_VDA04, TC_VDA05, 
+ TC_VDA06, TC_VDA07)
+AS 
+SELECT "TC_VDA01","TC_VDA02","TC_VDA03","TC_VDA04","TC_VDA05","TC_VDA06","TC_VDA07" 
+FROM TC_VDA_FILE@DNF_dblink WITH READ ONLY;
+
+CREATE OR REPLACE VIEW VIEW_HTP_TC_VDB_FILE
+(TC_VDB01, TC_VDB02, TC_VDB03, TC_VDB04, TC_VDB05, 
+ TC_VDB06, TC_VDB07)
+AS 
+SELECT "TC_VDB01","TC_VDB02","TC_VDB03","TC_VDB04","TC_VDB05","TC_VDB06","TC_VDB07" 
+FROM TC_VDB_FILE@htf_dblink WITH READ ONLY;
+
+CREATE OR REPLACE VIEW VIEW_DNP_TC_VDB_FILE
+(TC_VDB01, TC_VDB02, TC_VDB03, TC_VDB04, TC_VDB05, 
+ TC_VDB06, TC_VDB07)
+AS 
+SELECT "TC_VDB01","TC_VDB02","TC_VDB03","TC_VDB04","TC_VDB05","TC_VDB06","TC_VDB07" 
+FROM TC_VDB_FILE@DNF_dblink WITH READ ONLY;
+
+- Modify table v2_p_Sales_Detail, set Part_Name can be null
+
+----------------------------------------------------------------------------------------
+-------------------------------- VDMS-I ------------------------------------------------
+
+update sale_orderheader set secondaryshippingcode = shippingto where secondaryshippingcode is null;
+
+-----
+ALTER TABLE DATA_ITEMINSTANCE MODIFY(ITEMTYPE NULL);
+update DATA_ITEMINSTANCE set ITEMTYPE=NULL;
+ALTER TABLE DATA_ITEMINSTANCE MODIFY(ITEMTYPE VARCHAR2(50));
+update DATA_ITEMINSTANCE 
+    set ITEMTYPE=(select distinct ITEMTYPE 
+                  from DATA_ITEM 
+                  where DATA_ITEM.ITEMCODE = DATA_ITEMINSTANCE.ITEMCODE 
+                 );
+ALTER TABLE DATA_ITEMINSTANCE MODIFY(ITEMTYPE NOT NULL);
+
+-----
+update SYM_CUSTOMER set CUSTOMERTYPE = 2 where FORSERVICE=1;
+
+-----
+CREATE OR REPLACE VIEW VDMS.VIEW_ALL_OGB_FILE (
+  SHIPPING_QUANTITY,
+  ORDER_NUMBER,
+  ITEM_CODE,
+  DATABASE_CODE
+)
+AS
+  SELECT ogb12 AS Shipping_Quantity, ogb31 AS Order_Number, ogb04 AS Item_Code, 'DNF' AS Database_Code FROM ogb_file@dnf_dblink
+UNION ALL
+SELECT ogb12 AS Shipping_Quantity, ogb31 AS Order_Number, ogb04 AS Item_Code, 'HTF' AS Database_Code FROM ogb_file@htf_dblink
+ WITH READ ONLY;
+
+-----
+-- thuong thi default branch == DealerCode luon neu khac thi phai cap nhat bang tay thay vi run dong thu 2:
+ALTER TABLE SALE_INVOICE ADD ("BRANCHCODE" VARCHAR2(30)) ;
+UPDATE SALE_INVOICE SET BRANCHCODE = DEALERCODE;
+ALTER TABLE SALE_INVOICE MODIFY("BRANCHCODE" NOT NULL);   
+
+-- thuong thi default branch == DealerCode luon neu khac thi phai cap nhat bang tay thay vi run dong thu 2:
+ALTER TABLE SALE_BATCHINVOICEHEADER ADD ("BRANCHCODE" VARCHAR2(30)) ;
+UPDATE SALE_BATCHINVOICEHEADER SET BRANCHCODE = DEALERCODE;
+ALTER TABLE SALE_BATCHINVOICEHEADER MODIFY("BRANCHCODE" NOT NULL); 
+
+-----
+--update sale_inventorylock set dealercode =concat(concat(dealercode , '-'), dealercode)
+--where instr(dealercode, '-') = 0 and islocked = 1;
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+
+
+-- Add column Reference_Root_Id number(10) to table v2_p_Order_header
+ALTER TABLE v2_p_Order_header ADD ("Reference_Root_Id" number(10)) ;
+
+-- Change view VIEW_ALL_IMA_FILE as:
+CREATE OR REPLACE VIEW VDMS.VIEW_ALL_IMA_FILE (
+  PART_CODE,
+  ENGLISH_NAME,
+  VIETNAM_NAME,
+  CATEGORY,
+  CREATED_DATE,
+  MODEL,
+  DATABASE_CODE
+)
+AS
+SELECT ima01 AS Part_Code, ima02 AS English_Name, ta_ima030 AS Vietnam_Name, ima06 AS Category, ima901 AS created_date, ima131 as model, 'DNF' AS Database_Code FROM ima_file@dnp_dblink
+UNION ALL
+SELECT ima01 AS Part_Code, ima02 AS English_Name, ta_ima030 AS Vietnam_Name, ima06 AS Category, ima901 AS created_date, ima131 as model, 'HTF' AS Database_Code FROM ima_file@htp_dblink;
+
+
+-- VDMS-II Change request
+update V2_P_RECEIVE_HEADER set NOT_GOOD_NUMBER = 
+(select NOT_GOOD_NUMBER from V2_P_N_G_FORM_HEADER where V2_P_N_G_FORM_HEADER.RECEIVE_HEADER_ID = V2_P_RECEIVE_HEADER.RECEIVE_HEADER_ID);
+-- VDMS-I Change request
+ALTER TABLE SALE_INVOICE drop constraint UNI_ENGINENUMBER;
+alter table SALE_INVOICE add constraint UNI_ENGINENUMBER UNIQUE(ENGINENUMBER, DEALERCODE);
+
+ALTER TABLE SER_WARRANTYINFO ADD (CreateByDealer VARCHAR2(30)) ;
+UPDATE SER_WARRANTYINFO SET CreateByDealer = '/';
+ALTER TABLE SER_WARRANTYINFO MODIFY(CreateByDealer NOT NULL); 
+
+ALTER TABLE SER_WARRANTYINFO ADD (Status VARCHAR2(3)) ;
+UPDATE SER_WARRANTYINFO SET Status = 'OLD';
+ALTER TABLE SER_WARRANTYINFO MODIFY(Status NOT NULL);
+
+--- INTERFACE VDMS-I ---------------------------------------------------------------------------------
+
+DROP TABLE TC_VDT_FILE;
+CREATE TABLE TC_VDT_FILE (
+  TC_VDT01 NUMBER(10) NOT NULL,
+  TC_VDT02 VARCHAR2(30),
+  TC_VDT03 VARCHAR2(30),
+  TC_VDT04 VARCHAR2(30),
+  TC_VDT05 VARCHAR2(30),
+  TC_VDT06 VARCHAR2(30),
+  TC_VDT07 DATE,
+  TC_VDT08 DATE,
+  TC_VDT09 DATE,
+  TC_VDT10 DATE,
+  TC_VDT11 DATE,
+  TC_VDT12 VARCHAR2(1),
+  TC_VDT13 VARCHAR2(2),
+  TC_VDT14 VARCHAR2(1),
+  TC_VDT15 NVARCHAR2(2000),
+  TC_VDT16 NVARCHAR2(2000),
+  TC_VDT17 VARCHAR2(30),
+  TC_VDT18 VARCHAR2(30) NOT NULL,
+  TC_VDT19 CHAR(1),
+  TC_VDT20 VARCHAR2(30));
+
+COMMENT ON COLUMN TC_VDT_FILE.TC_VDT01 IS 'VDMS OderNo';
+COMMENT ON COLUMN TC_VDT_FILE.TC_VDT02 IS 'TipTop OrderNo';
+COMMENT ON COLUMN TC_VDT_FILE.TC_VDT03 IS 'Dealer Code';
+COMMENT ON COLUMN TC_VDT_FILE.TC_VDT04 IS 'Delivery Dealer Code';
+COMMENT ON COLUMN TC_VDT_FILE.TC_VDT05 IS 'Delivery Branch Code';
+COMMENT ON COLUMN TC_VDT_FILE.TC_VDT06 IS 'Invoice Code';
+COMMENT ON COLUMN TC_VDT_FILE.TC_VDT07 IS 'Order Date';
+COMMENT ON COLUMN TC_VDT_FILE.TC_VDT08 IS 'Quotation Date';
+COMMENT ON COLUMN TC_VDT_FILE.TC_VDT09 IS 'Payment Date';
+COMMENT ON COLUMN TC_VDT_FILE.TC_VDT10 IS 'Delivery Date';
+COMMENT ON COLUMN TC_VDT_FILE.TC_VDT11 IS 'Shipping Date';
+COMMENT ON COLUMN TC_VDT_FILE.TC_VDT12 IS 'Order Type';
+COMMENT ON COLUMN TC_VDT_FILE.TC_VDT13 IS 'Flag ';
+COMMENT ON COLUMN TC_VDT_FILE.TC_VDT14 IS 'Tiptop Process';
+COMMENT ON COLUMN TC_VDT_FILE.TC_VDT15 IS 'Dealer Comment';
+COMMENT ON COLUMN TC_VDT_FILE.TC_VDT16 IS 'VMEPComment';
+COMMENT ON COLUMN TC_VDT_FILE.TC_VDT17 IS 'Database Code';
+COMMENT ON COLUMN TC_VDT_FILE.TC_VDT18 IS 'AREACODE';
+COMMENT ON COLUMN TC_VDT_FILE.TC_VDT19 IS 'LastUpdateBy';
+
+CREATE OR REPLACE TRIGGER UPDATE_TC_VDT_FILE
+  BEFORE UPDATE OF "TC_VDT02", "TC_VDT03", "TC_VDT04", "TC_VDT05", "TC_VDT06", "TC_VDT07" ON TC_VDT_FILE FOR EACH ROW
+declare 
+    shipDate date;
+    status number;
+BEGIN
+IF (:NEW.tc_vdt19 = 'T') THEN -- processed by tiptop 
+--    if(
+--        ((:NEW.tc_vdt02 = null) and ((:NEW.tc_vdt13 = 'QU') or (:NEW.tc_vdt13 = 'CF'))) or 
+--        ((:NEW.tc_vdt02 <> null) and (:NEW.tc_vdt13 = 'QU'))
+--      ) THEN  -- approved
+--        status := 4;  
+--    ELSE IF ((:NEW.tc_vdt02 <> null) and (:NEW.tc_vdt13 = 'CF')) THEN -- totally confirmed
+--            status := 2;  
+--         ELSE -- sent
+--            status := 1;  
+--         END IF;
+--    END IF; 
+
+    -- set to void
+    if((:NEW.tc_vdt13 = 'NE') and (:OLD.tc_vdt14 = 'Y') and (:NEW.tc_vdt14 = 'N')) then
+        UPDATE SALE_ORDERHEADER H 
+        SET H.STATUS = 1
+        WHERE H.ORDERID = :NEW.tc_vdt01;
+    end if;
+    
+    if(:NEW.tc_vdt11 = null)then
+        shipDate := TO_DATE('01/01/0001', 'dd/mm/yyyy');
+    else
+        shipDate := :NEW.tc_vdt11;
+    end if;
+
+    UPDATE SALE_ORDERHEADER H 
+    SET H.ORDERNUMBER = :NEW.tc_vdt02,
+        H.DEALERCODE = :NEW.tc_vdt03,
+        H.SHIPPINGTO = :NEW.tc_vdt04,
+        H.SECONDARYSHIPPINGCODE = :NEW.tc_vdt05,
+        H.ORDERDATE = :NEW.tc_vdt07,
+        H.DEALERCOMMENT = :NEW.tc_vdt15,
+        H.VMEPCOMMENT = :NEW.tc_vdt16,
+        H.DATABASECODE = :NEW.tc_vdt17,
+        H.AREACODE = :NEW.tc_vdt18,
+        H.LASTEDITEDDATE = SYSDATE(),
+        H.LASTEDITEDBY = 'TIPTOP',
+        --H.status = status,
+        H.SHIPPINGDATE = shipDate,
+        H.SECONDARYSHIPPINGTO = (SELECT address FROM V2_P_WAREHOUSE W WHERE W.CODE = :NEW.tc_vdt05 and W.TYPE = 'V' and W.DEALER_CODE = :NEW.tc_vdt04)
+    WHERE H.ORDERID = :NEW.tc_vdt01;
+END IF;
+END;
+/
+
+DROP TABLE TC_VDU_FILE;
+CREATE TABLE TC_VDU_FILE (
+  TC_VDU01 NUMBER(10) NOT NULL,
+  TC_VDU02 NUMBER(10) NOT NULL,
+  TC_VDU03 VARCHAR2(30),
+  TC_VDU04 NUMBER(10),
+  TC_VDU05 NUMBER(10),
+  TC_VDU06 NUMBER(18),
+  TC_VDU07 NUMBER(3),
+  TC_VDU08 CHAR(1),
+  TC_VDU09 VARCHAR2(30),
+  TC_VDU10 VARCHAR2(30),
+  TC_VDU11 VARCHAR2(30),
+  TC_VDU12 VARCHAR2(30));
+
+COMMENT ON COLUMN TC_VDU_FILE.TC_VDU01 IS 'VDMS OderNo';
+COMMENT ON COLUMN TC_VDU_FILE.TC_VDU02 IS 'Order LineNo';
+COMMENT ON COLUMN TC_VDU_FILE.TC_VDU03 IS 'Item Code';
+COMMENT ON COLUMN TC_VDU_FILE.TC_VDU04 IS 'Order Quantity';
+COMMENT ON COLUMN TC_VDU_FILE.TC_VDU05 IS 'Confirm Quantity';
+COMMENT ON COLUMN TC_VDU_FILE.TC_VDU06 IS 'Unit Price';
+COMMENT ON COLUMN TC_VDU_FILE.TC_VDU07 IS 'ORDERPRIORITY';
+COMMENT ON COLUMN TC_VDU_FILE.TC_VDU08 IS 'LastUpdateBy (Tiptop/VDMS)';
+
+CREATE OR REPLACE TRIGGER DELETE_TC_VDU
+  BEFORE DELETE ON TC_VDU_FILE FOR EACH ROW
+BEGIN
+IF(:OLD.TC_VDU02 > 0) THEN
+    UPDATE sale_orderdetail D SET D.ORDERDETAILID = D.ORDERDETAILID * -1 WHERE D.ORDERDETAILID = :OLD.TC_VDU02;  -- to avoid delete od in VDMS by trigger
+    DELETE FROM sale_orderdetail d WHERE d.ORDERID = :OLD.TC_VDU01 AND d.ORDERDETAILID = :OLD.TC_VDU02 * -1;
+END IF;
+END;
+/
+
+CREATE OR REPLACE TRIGGER INSERT_TC_VDU
+  BEFORE INSERT ON TC_VDU_FILE FOR EACH ROW
+DECLARE
+    nextID NUMBER;
+BEGIN
+    IF(:NEW.TC_VDU08 = 'T') THEN
+        SELECT seq_ORDERDETAIL.NEXTVAL INTO nextID FROM DUAL;
+
+        INSERT INTO SALE_ORDERDETAIL (CREATEDBY,CREATEDDATE,LASTEDITEDBY,LASTEDITEDDATE,
+                                        ITEMCODE,ORDERDETAILID,ORDERID,ORDERPRIORITY,
+                                        ORDERQTY,UNITPRICE,UNITPRICEDISCOUNT) 
+        VALUES (
+            'TIPTOP',SYSDATE(),'TIPTOP',SYSDATE(),
+            :NEW.TC_VDU03,nextID,:NEW.TC_VDU01,:NEW.TC_VDU07,
+            :NEW.TC_VDU04,:NEW.TC_VDU06,0
+        );
+
+        :NEW.TC_VDU02 := nextID;
+    END IF;
+END;
+/
+
+CREATE OR REPLACE TRIGGER UPDATE_TC_VDU
+  BEFORE UPDATE OF "TC_VDU01", "TC_VDU02", "TC_VDU03", "TC_VDU04", "TC_VDU05", "TC_VDU06", "TC_VDU07", "TC_VDU08" ON TC_VDU_FILE FOR EACH ROW
+BEGIN
+    if(:NEW.TC_VDU08 = 'T') then
+        update SALE_ORDERDETAIL D set 
+            d.LASTEDITEDBY = 'TIPTOP',
+            d.LASTEDITEDDATE = SYSDATE(),
+            d.ORDERPRIORITY = :NEW.TC_VDU07,
+            d.ORDERQTY = :NEW.TC_VDU04,
+            d.UNITPRICE = :NEW.TC_VDU06,
+            d.ITEMCODE = :NEW.TC_VDU03
+        where d.ORDERID = :NEW.TC_VDU01 and d.ORDERDETAILID = :NEW.TC_VDU02;
+
+        if(:NEW.TC_VDU05 <> null) then 
+            update SALE_ORDERDETAIL D set D.ORDERQTY = :NEW.TC_VDU05 where d.ORDERID = :NEW.TC_VDU01 and d.ORDERDETAILID = :NEW.TC_VDU02;
+        end if;
+    end if;
+END;
+/
+
+DROP TABLE TC_VDV_FILE;
+CREATE TABLE TC_VDV_FILE (
+  TC_VDV01 VARCHAR2(30) NOT NULL,
+  TC_VDV02 NUMBER(10),
+  TC_VDV03 DATE,
+  TC_VDV04 VARCHAR2(30),
+  TC_VDV05 VARCHAR2(30),
+  TC_VDV06 CHAR(1),
+  TC_VDV07 VARCHAR2(30),
+  TC_VDV08 VARCHAR2(30),
+  TC_VDV09 VARCHAR2(30),
+  TC_VDV10 VARCHAR2(30));
+
+COMMENT ON COLUMN TC_VDV_FILE.TC_VDV01 IS 'IssuesNumber';
+COMMENT ON COLUMN TC_VDV_FILE.TC_VDV02 IS 'total Quantity';
+COMMENT ON COLUMN TC_VDV_FILE.TC_VDV03 IS 'Shipping Date';
+COMMENT ON COLUMN TC_VDV_FILE.TC_VDV04 IS 'DealerCode';
+COMMENT ON COLUMN TC_VDV_FILE.TC_VDV05 IS 'BranchCode';
+COMMENT ON COLUMN TC_VDV_FILE.TC_VDV06 IS 'Flag';
+
+DROP TABLE TC_VDX_FILE;
+CREATE TABLE TC_VDX_FILE (
+  TC_VDX01 VARCHAR2(30) NOT NULL,
+  TC_VDX02 VARCHAR2(30) NOT NULL,
+  TC_VDX03 NUMBER(10),
+  TC_VDX04 VARCHAR2(30),
+  TC_VDX05 VARCHAR2(30),
+  TC_VDX06 VARCHAR2(30) NOT NULL,
+  TC_VDX07 NVARCHAR2(480),
+  TC_VDX08 VARCHAR2(30),
+  TC_VDX09 NVARCHAR2(400),
+  TC_VDX10 DATE,
+  TC_VDX11 NUMBER,
+  TC_VDX12 VARCHAR2(30),
+  TC_VDX13 VARCHAR2(30));
+
+COMMENT ON COLUMN TC_VDX_FILE.TC_VDX01 IS 'IssuesNumber';
+COMMENT ON COLUMN TC_VDX_FILE.TC_VDX02 IS 'TipTop OrderNo';
+COMMENT ON COLUMN TC_VDX_FILE.TC_VDX03 IS 'VDMS OrderNo';
+COMMENT ON COLUMN TC_VDX_FILE.TC_VDX04 IS 'ItemCode';
+COMMENT ON COLUMN TC_VDX_FILE.TC_VDX05 IS 'Model';
+COMMENT ON COLUMN TC_VDX_FILE.TC_VDX06 IS 'Engine number';
+COMMENT ON COLUMN TC_VDX_FILE.TC_VDX07 IS 'Color name';
+COMMENT ON COLUMN TC_VDX_FILE.TC_VDX08 IS 'Color code';
+COMMENT ON COLUMN TC_VDX_FILE.TC_VDX09 IS 'ItemName';
+COMMENT ON COLUMN TC_VDX_FILE.TC_VDX10 IS 'OutStockDate';
+COMMENT ON COLUMN TC_VDX_FILE.TC_VDX11 IS 'Price';
+
+------------------------
+
+CREATE OR REPLACE TRIGGER UPDATE_SEND_OHTOINTERFACE
+	BEFORE INSERT OR UPDATE OF "STATUS", "ORDERNUMBER", "ORDERDATE", "DEALERCODE", "DEALERCOMMENT", "VMEPCOMMENT", "AREACODE", "DATABASECODE", "SECONDARYSHIPPINGCODE", "SHIPPINGTO" ON SALE_ORDERHEADER FOR EACH ROW
+Declare 
+    exist number;
+    dupONo number;
+    islocked VARCHAR2(1);
+    flag VARCHAR2(2);
+BEGIN
+    select count(*) into exist from TC_VDT_FILE H where H.TC_VDT01 = :NEW.ORDERID; 
+
+    -- tach sau confirm 2 lan cung 1 so' 
+    if(exist=0) then
+        select count(*) into dupONo from TC_VDT_FILE H where H.TC_VDT02 = :NEW.ORDERNUMBER; 
+        if(dupONo>0) then
+            -- remove detail
+            update TC_VDU_FILE U set U.TC_VDU08 = 'V', U.TC_VDU02 = U.TC_VDU02 * -1 
+            where u.TC_VDU01 in (select H.TC_VDT01 from TC_VDT_FILE H where H.TC_VDT02 = :NEW.ORDERNUMBER);
+            delete from TC_VDU_FILE U 
+            where u.TC_VDU01 in (select H.TC_VDT01 from TC_VDT_FILE H where H.TC_VDT02 = :NEW.ORDERNUMBER);
+            -- remove header
+            delete from TC_VDT_FILE H where H.TC_VDT02 = :NEW.ORDERNUMBER;
+        end if;
+    end if;
+
+    -- lock status
+    islocked := 'N';
+    if((:NEW.STATUS > 1) and (:NEW.STATUS <> 3)) then islocked := 'Y'; end if;
+
+    -- order flag
+    if((exist >0) and (:NEW.STATUS <> 3)) then 
+        select TC_VDT13 into flag from TC_VDT_FILE H where H.TC_VDT01 = :NEW.ORDERID;
+        if(flag = null) then flag := 'NE'; end if;
+    else 
+        if(:NEW.STATUS = 3) then flag := 'DE'; else flag := 'NE'; end if;
+    end if;
+    if(:NEW.STATUS = 2) then flag := 'CF'; end if;
+
+    -- do update to interface
+    if (:NEW.STATUS > 0) then
+        if (exist >0) then
+            update TC_VDU_FILE U set U.TC_VDU08 = 'V', U.TC_VDU02 = 0 where u.TC_VDU01 = :NEW.ORDERID;  -- to avoid delete od in VDMS by trigger
+            delete from TC_VDU_FILE U where U.TC_VDU01 = :NEW.ORDERID;
+            --delete from TC_VDT_FILE T where T.TC_VDT01 = :NEW.ORDERID;
+        end if;
+        -- header
+        if(exist>0)then
+            --if(TTP = 'N')then
+                update TC_VDT_FILE set 
+                    TC_VDT02 = :NEW.ORDERNUMBER,
+                    TC_VDT03 = :NEW.DEALERCODE,
+                    TC_VDT04 = :NEW.SHIPPINGTO,
+                    TC_VDT05 = :NEW.SECONDARYSHIPPINGCODE,
+                    TC_VDT07 = :NEW.ORDERDATE,
+                    TC_VDT13 = flag,
+                    TC_VDT14 = islocked,
+                    TC_VDT15 = :NEW.DEALERCOMMENT,
+                    TC_VDT16 = :NEW.VMEPCOMMENT,
+                    TC_VDT17 = :NEW.DATABASECODE,
+                    TC_VDT18 = :NEW.AREACODE,
+                    TC_VDT19 = 'V'
+                where TC_VDT01 = :NEW.ORDERID;
+            --end if;
+        else
+            insert into TC_VDT_FILE (TC_VDT01,TC_VDT02,TC_VDT03,TC_VDT04,TC_VDT05,TC_VDT07,TC_VDT12,TC_VDT13,TC_VDT14,
+                                 TC_VDT15,TC_VDT16,TC_VDT17,TC_VDT18,TC_VDT19)
+            values (:NEW.ORDERID,:NEW.ORDERNUMBER,:NEW.DEALERCODE,:NEW.SHIPPINGTO,:NEW.SECONDARYSHIPPINGCODE,:NEW.ORDERDATE,
+                'M',flag,islocked,:NEW.DEALERCOMMENT,:NEW.VMEPCOMMENT,:NEW.DATABASECODE,:NEW.AREACODE,'V');
+        end if;
+        -- detail
+        --if(TTP = 'N')then
+            insert into TC_VDU_FILE(TC_VDU01,TC_VDU02,TC_VDU03,TC_VDU04,TC_VDU06,TC_VDU07,TC_VDU08)
+                select d.ORDERID, d.ORDERDETAILID, d.ITEMCODE, d.ORDERQTY, d.UNITPRICE, d.ORDERPRIORITY, 'V' 
+                from SALE_ORDERDETAIL d where d.ORDERID = :new.ORDERID;
+        --end if;
+    end if;
+END;
+/
+
+CREATE OR REPLACE TRIGGER DELETE_DEL_ODINTERFACE
+  BEFORE DELETE ON SALE_ORDERDETAIL FOR EACH ROW
+Declare 
+    exist number;
+    --TTP VARCHAR2(1);
+BEGIN
+--select TC_VDT14 into TTP from TC_VDT_FILE H where H.TC_VDT01 = :OLD.ORDERID;
+
+if (:OLD.ORDERDETAILID > 0) then
+    update TC_VDU_FILE U set U.TC_VDU08 = 'V', U.TC_VDU02 = U.TC_VDU02 * -1 where u.TC_VDU01 = :OLD.ORDERID and U.TC_VDU02 = :OLD.ORDERDETAILID;  -- to avoid delete od in VDMS by trigger
+    delete from TC_VDU_FILE U where U.TC_VDU01 = :OLD.ORDERID and U.TC_VDU02 = :OLD.ORDERDETAILID * -1;
+end if;
+END;
+/
+
+CREATE OR REPLACE TRIGGER INSERT_SEND_ODTOINTERFACE
+  BEFORE INSERT ON SALE_ORDERDETAIL FOR EACH ROW
+Declare 
+    exist number;
+    h_Status number;
+BEGIN
+    select Status into h_Status from SALE_ORDERHEADER H where H.ORDERID = :NEW.ORDERID;
+    if((h_Status > 0) and (h_Status <> 3)) then
+        delete from TC_VDU_FILE U where U.TC_VDU01 = :NEW.ORDERID and U.TC_VDU02 = :NEW.ORDERDETAILID;
+
+        select count(*) into exist from TC_VDT_FILE where TC_VDT01 = :NEW.ORDERID;
+        if(exist>0) then
+            insert into TC_VDU_FILE(TC_VDU01,TC_VDU02,TC_VDU03,TC_VDU04,TC_VDU06,TC_VDU07,TC_VDU08)
+            values( :NEW.ORDERID, :NEW.ORDERDETAILID, :NEW.ITEMCODE, :NEW.ORDERQTY, :NEW.UNITPRICE, :NEW.ORDERPRIORITY, 'V' );
+        end if;
+    end if;
+END;
+/
+
+
+--- end INTERFACE VDMS-I ---------------------------------------------------------------------------------
+
+
+-- test result at HatayFact --------------------------------------------
+
+DROP INDEX USERIDROLEID_KEY;
+CREATE UNIQUE INDEX USERIDROLEID_KEY
+    ON ASPNET_USERSINROLES  ("ROLEID", "USERID");
+    
+--- PART package for sync VDMS-I parts:
+
+CREATE OR REPLACE PACKAGE PART
+  IS
+
+    FUNCTION UpdatePartsPriceI RETURN INTEGER;
+ 
+    FUNCTION AddNewPartsI RETURN INTEGER;
+    
+END; -- Package spec
+/
+
+CREATE OR REPLACE PACKAGE BODY PART
+IS
+
+
+   FUNCTION UpdatePartsPriceI RETURN INTEGER
+    AS
+   BEGIN 
+       UPDATE DATA_WARRANTYCONDITION wc SET
+       unitprice = (SELECT A.xmf07
+                      FROM VIEW_DNP_XMF_FILE A, (SELECT xmf03, MAX(xmf05) AS LAST_DATE FROM VIEW_DNP_XMF_FILE
+                                        WHERE xmf07 IS NOT NULL GROUP BY xmf03) temp
+       WHERE A.xmf03=temp.xmf03 AND A.xmf01='DSP' AND A.xmf02='VND' AND A.xmf05=temp.LAST_DATE AND A.xmf03 = wc.partcode);
+
+       RETURN SQL%ROWCOUNT;
+   END;
+
+    FUNCTION AddNewPartsI RETURN INTEGER
+    AS
+    v_rows  INTEGER := 0;
+   BEGIN
+INSERT INTO DATA_WARRANTYCONDITION (WARRANTYCONDITIONID, PARTCODE, PARTNAMEVN, PARTNAMEEN, MOTORCODE, WARRANTYTIME, WARRANTYLENGTH,LABOUR,MANPOWER, UNITPRICE)
+(SELECT SEQ_WARRANTYCONDITION.NEXTVAL, Part_Code, NVL(VietNam_Name, 'NO USE'), NVL(English_Name, 'NO USE'), MODEL, 0, 0,0, '0', UnitPrice
+ FROM       (SELECT L.*, P.xmf07 AS UnitPrice FROM
+            (SELECT ima.* FROM VIEW_ALL_IMA_FILE ima WHERE NOT EXISTS (SELECT partcode FROM DATA_WARRANTYCONDITION WHERE partcode = ima.part_code)
+                                                  AND ima.database_code = 'DNF') L
+            JOIN                                                  
+            (SELECT A.xmf07 , A.xmf03 FROM VIEW_DNP_XMF_FILE A ,
+                        (SELECT xmf03, MAX(xmf05) AS LAST_DATE FROM VIEW_DNP_XMF_FILE WHERE xmf07 IS NOT NULL GROUP BY xmf03) temp
+                 WHERE A.xmf03=temp.xmf03 AND A.xmf01='DSP' AND A.xmf02='VND' AND A.xmf05=temp.LAST_DATE) P
+            ON L.Part_code = P.xmf03)
+);
+
+v_rows:=SQL%ROWCOUNT;
+
+INSERT INTO DATA_WARRANTYCONDITION (WARRANTYCONDITIONID, PARTCODE, PARTNAMEVN, PARTNAMEEN, MOTORCODE, WARRANTYTIME, WARRANTYLENGTH,LABOUR,MANPOWER, UNITPRICE)
+(SELECT SEQ_WARRANTYCONDITION.NEXTVAL, Part_Code, NVL(VietNam_Name, 'NO USE'), NVL(English_Name, 'NO USE'), MODEL, 0, 0,0, '0', UnitPrice
+ FROM       (SELECT L.*, P.xmf07 AS UnitPrice FROM
+            (SELECT ima.* FROM VIEW_ALL_IMA_FILE ima WHERE NOT EXISTS (SELECT partcode FROM DATA_WARRANTYCONDITION WHERE partcode = ima.part_code)
+                                                  AND ima.database_code = 'HTF') L
+            JOIN                                                  
+            (SELECT A.xmf07 , A.xmf03 FROM VIEW_DNP_XMF_FILE A ,
+                        (SELECT xmf03, MAX(xmf05) AS LAST_DATE FROM VIEW_DNP_XMF_FILE WHERE xmf07 IS NOT NULL GROUP BY xmf03) temp
+                 WHERE A.xmf03=temp.xmf03 AND A.xmf01='DSP' AND A.xmf02='VND' AND A.xmf05=temp.LAST_DATE) P
+            ON L.Part_code = P.xmf03)
+);
+
+v_rows:= v_rows + SQL%ROWCOUNT;
+RETURN v_rows;
+   END;
+   
+END;
+/
+    
+--- VDMS-II order fix:
+
+--1. Tìm các dữ liệu bản ghi bị lặp ở order detail:
+
+--SELECT d1.ORDER_HEADER_ID, d1.ORDER_DETAIL_ID, d2.ORDER_DETAIL_ID, d1.PART_CODE, d1.LINE_NUMBER, d2.LINE_NUMBER FROM VDMS.V2_P_ORDER_DETAIL d1, VDMS.V2_P_ORDER_DETAIL d2
+--where d1.ORDER_HEADER_ID = d2.ORDER_HEADER_ID and d1.PART_CODE = d2.PART_CODE
+--and d1.LINE_NUMBER < d2.LINE_NUMBER;
+
+--2. Xóa:
+
+delete from V2_P_ORDER_DETAIL d where d.ORDER_DETAIL_ID in
+(SELECT d2.ORDER_DETAIL_ID FROM VDMS.V2_P_ORDER_DETAIL d1, VDMS.V2_P_ORDER_DETAIL d2
+where d1.ORDER_HEADER_ID = d2.ORDER_HEADER_ID and d1.PART_CODE = d2.PART_CODE
+and d1.LINE_NUMBER < d2.LINE_NUMBER);
+
+--3. Trong interface file
+
+--SELECT d1.TC_VDQ01, d1.TC_VDQ02, d2.TC_VDQ02, d1.TC_VDQ03, d1.TC_VDQ04, d2.TC_VDQ04 FROM VDMS.TC_VDQ_FILE d1, VDMS.TC_VDQ_FILE d2
+--where d1.TC_VDQ01 = d2.TC_VDQ01 and d1.TC_VDQ03 = d2.TC_VDQ03
+--and d1.TC_VDQ02 < d2.TC_VDQ02;
+
+--TC_VDQ01 là order_header_id,  TC_VDQ02 là line_number, TC_VDQ03 là part_code
+
+--4. Xóa
+
+delete from TC_VDQ_FILE d where d.TC_VDQ01 * 10000 + d.TC_VDQ02 in
+(SELECT d2.TC_VDQ01 * 10000 + d2.TC_VDQ02 FROM VDMS.TC_VDQ_FILE d1, VDMS.TC_VDQ_FILE d2
+where d1.TC_VDQ01 = d2.TC_VDQ01 and d1.TC_VDQ03 = d2.TC_VDQ03
+and d1.TC_VDQ02 < d2.TC_VDQ02);
+
+--5. Kiem tra voi TC_VDR
+
+--SELECT d1.TC_VDR01, d1.TC_VDR02, d2.TC_VDR02, d1.TC_VDR04 FROM VDMS.TC_VDR_FILE d1, VDMS.TC_VDR_FILE d2
+--where d1.TC_VDR01 = d2.TC_VDR01 and d1.TC_VDR04 = d2.TC_VDR04
+--and d1.TC_VDR02 < d2.TC_VDR02;
+
+--TC_VDR01 là order_header_id,  TC_VDR02 là line_number, TC_VDR04 là part_code
+
+--6. Xoa
+
+delete from TC_VDR_FILE d where d.TC_VDR01 * 10000 + d.TC_VDR02 in
+(SELECT d2.TC_VDR01 * 10000 + d2.TC_VDR02 FROM VDMS.TC_VDR_FILE d1, VDMS.TC_VDR_FILE d2
+where d1.TC_VDR01 = d2.TC_VDR01 and d1.TC_VDR04 = d2.TC_VDR04
+and d1.TC_VDR02 < d2.TC_VDR02);
+
+--7. Quan trong: Cho them rang buoc unique vao cac bang
+
+--a. V2_P_ORDER_DETAIL unique voi Part_Code va ORDER_HEADER_ID
+
+ALTER TABLE v2_p_order_detail
+ADD CONSTRAINT u_pc_oid UNIQUE (order_header_id, part_code);
+
+
+--b. TC_VDQ_FILE unique voi TC_VDQ01 va TC_VDQ03
+
+ALTER TABLE tc_vdq_file
+ADD CONSTRAINT u_tc_vdq03_tc_vdq01 UNIQUE (tc_vdq01, tc_vdq03);
+
+--c. TC_VDR_FILE unique voi TC_VDR01 va TC_VDR04
+
+
+ALTER TABLE tc_vdr_file
+ADD CONSTRAINT u_tc_vdr01_tc_vdr04 UNIQUE (tc_vdr01, tc_vdr04);
+    
+-- end test result at HatayFact --------------------------------------------    
+
+
+------ change to update to_location to VDMS while change order by tiptop
+
+CREATE OR REPLACE TRIGGER UPDATE_INTERFACE_ORDER
+  BEFORE UPDATE ON TC_VDP_FILE FOR EACH ROW
+BEGIN
+   UPDATE v2_p_order_header
+      SET tip_top_processed = :NEW.tc_vdp13
+    WHERE v2_p_order_header.order_header_id = :NEW.tc_vdp01;
+
+-- QUOTATION
+   IF ((:NEW.tc_vdp12 = 'QU') AND (:NEW.tc_vdp13 = 'Y'))
+   THEN
+      UPDATE v2_p_order_header
+         SET tip_top_number = :NEW.tc_vdp02,
+             quotation_date = :NEW.tc_vdp07,
+             tip_top_processed = :NEW.tc_vdp13,
+             status = 'CF' -- order is confirmed
+       WHERE v2_p_order_header.order_header_id = :NEW.tc_vdp01;
+   END IF;
+
+-- CONFIRM (dealer paid)
+   IF ((:NEW.tc_vdp12 = 'CF') AND (:NEW.tc_vdp13 = 'Y'))
+   THEN
+      UPDATE v2_p_order_header
+         SET quotation_date = :NEW.tc_vdp07,                 -- Quotation date
+             tip_top_number = :NEW.tc_vdp02,              -- Tip-Top Order No.
+             confirm_date = :NEW.tc_vdp08,                     -- Confirm Date
+             payment_date = :NEW.tc_vdp18,                      -- Payment Date
+             status = 'CF' -- order is confirmed
+       WHERE v2_p_order_header.order_header_id = :NEW.tc_vdp01;
+   END IF;
+
+-- CHANGE Order (all type of Order)
+   IF ((:NEW.tc_vdp12 = 'CH') AND (:NEW.tc_vdp13 = 'Y'))
+   THEN
+      UPDATE v2_p_order_header
+         SET dealer_code = :NEW.tc_vdp03,                      -- Dealer Code
+             -- Delivery Code NEW.TC_VDP04
+             -- get warehouse from Master warehouse table
+            to_location =
+                (SELECT TO_NUMBER (warehouse_id)
+                   FROM v2_p_warehouse A
+                  WHERE A.dealer_code = :NEW.tc_vdp03 AND A.TYPE = 'P'	-- (updated here)
+                    AND A.code = :NEW.tc_vdp04),
+             to_dealer = :NEW.tc_vdp05,                        -- Invoice Code
+             order_date = :NEW.tc_vdp06,                         -- Order Date
+             quotation_date = :NEW.tc_vdp07,                 -- Quotation date
+             tip_top_number = :NEW.tc_vdp02,              -- Tip-Top Order No.
+             confirm_date = :NEW.tc_vdp08,                     -- Confirm Date
+             payment_date = :NEW.tc_vdp18                      -- Payment Date
+       WHERE v2_p_order_header.order_header_id = :NEW.tc_vdp01;
+   END IF;
+
+-- DELETE Order (Tip-Top void Order)
+    IF ((:NEW.tc_vdp12 = 'DE') AND (:NEW.tc_vdp13 = 'Y')) THEN
+        UPDATE v2_p_order_header
+           SET status = 'VD'
+            WHERE v2_p_order_header.order_header_id = :NEW.tc_vdp01;
+    END IF;
+
+-- DELIVERY Order
+    IF ((:NEW.tc_vdp12 = 'DL') AND (:NEW.tc_vdp13 = 'Y')) THEN
+        UPDATE v2_p_order_header
+           SET
+            delivery_date = :NEW.TC_VDP09,
+            shipping_date = :NEW.TC_VDP10,
+			auto_in_stock_date = :NEW.TC_VDP10
+        WHERE v2_p_order_header.order_header_id = :NEW.tc_vdp01;
+    END IF;
+
+-- REJECT Order: Pending
+
+END;
+
+-- Start of DDL Script for Trigger VDMS.UPDATE_TC_VDQ_FILE
+-- Generated 9/28/2009 12:25:29 PM from VDMS@VDMS
+
+CREATE OR REPLACE TRIGGER update_tc_vdq_file
+ BEFORE
+  UPDATE
+ ON tc_vdq_file
+REFERENCING NEW AS NEW OLD AS OLD
+ FOR EACH ROW
+declare
+    p_Part_Code varchar2(100);
+
+    orderHeaderID number;
+    reference_root_id_parent number;
+    tempOrderRoot number;
+    countOrderHeader number;
+    detailID number;
+    newID number;
+    orderExist boolean;
+    messageID number;
+    orderLineNo number;
+    tempLineNo number;
+
+    flag varchar2(20);   -- for store TC_VDP_FILE.TC_VDP12 (Flag)
+    dealerCode varchar2(100);
+    toLocation varchar2(100);
+    tt_process varchar2(100);
+    message varchar2(100);
+    tiptop_OrderNo varchar2(100);
+
+
+    -- Select all data from Interface Order Header
+    CURSOR c_TC_VDP_FILE IS
+       SELECT
+            tc_vdp01, -- Order header ID
+            tc_vdp03, -- Dealer Code
+            tc_vdp04, -- To Location
+            tc_vdp12, -- Flag
+            tc_vdp13, -- TT_Process
+            tc_vdp02 -- Tip-Top Order No
+        FROM TC_VDP_FILE WHERE TC_VDP01 = :NEW.TC_VDQ01;
+
+BEGIN
+    -- get the current part code
+    SELECT Part_Code into p_Part_Code from V2_P_ORDER_DETAIL
+        WHERE V2_P_ORDER_DETAIL.Order_Header_Id = :NEW.TC_VDQ01 and V2_P_ORDER_DETAIL.line_number = :NEW.TC_VDQ02;
+
+    -- if current part code <> new part code then save log
+    if p_Part_Code <> :NEW.TC_VDQ03 then
+        update V2_P_ORDER_DETAIL set Modify_Flag = 'Y', Part_Code_History = concat(concat(Part_Code_History, p_Part_Code), ';')
+            WHERE V2_P_ORDER_DETAIL.Order_Header_Id = :NEW.TC_VDQ01 and V2_P_ORDER_DETAIL.line_number = :NEW.TC_VDQ02;
+    end if;
+
+    -- update all data in detail interace to order detail
+    UPDATE V2_P_ORDER_DETAIL SET
+        Part_Code = :NEW.TC_VDQ03,
+        Order_Quantity = NVL(:NEW.TC_VDQ04,0),
+        Quotation_Quantity = NVL(:NEW.TC_VDQ05,0),
+        Unit_Price = :NEW.TC_VDQ06
+        WHERE V2_P_ORDER_DETAIL.Order_Header_Id = :NEW.TC_VDQ01 and V2_P_ORDER_DETAIL.line_number = :NEW.TC_VDQ02;
+
+    -- update amount of header as the total of part code * unit price
+    UPDATE V2_P_Order_Header SET
+        AMOUNT = (SELECT sum(QUOTATION_QUANTITY * UNIT_PRICE)
+                    FROM V2_P_ORDER_DETAIL
+                    WHERE V2_P_ORDER_DETAIL.order_header_id = V2_P_Order_Header.order_header_id)
+        WHERE V2_P_Order_Header.order_header_id = :NEW.TC_VDQ01;
+
+    -- Check & Make Sub-Order
+
+        -- Fetch data
+        -- Begin cursor processing.
+           OPEN c_TC_VDP_FILE;
+           LOOP
+            -- Retreive one row.
+             FETCH c_TC_VDP_FILE INTO orderHeaderID, dealerCode, toLocation, flag, tt_process, tiptop_OrderNo ;
+             EXIT WHEN c_TC_VDP_FILE%NOTFOUND;
+           END LOOP;
+           CLOSE c_TC_VDP_FILE;
+
+        -- Is payment case?
+           orderExist := TRUE;
+           IF ((flag = 'CF') AND (tt_process = 'Y')) THEN -- Yes, payment case
+            -- check need make Sub-Order?
+            IF (:NEW.tc_vdq05 < :NEW.tc_vdq04) THEN -- yes, need make Sub-Order
+                -- Insert Order Header
+                SELECT count(*) INTO countOrderHeader FROM v2_p_order_header WHERE reference_id = :NEW.tc_vdq01;
+                IF (countOrderHeader = 0) THEN -- need insert Header
+                           -- get new ID
+                           SELECT V2_SEQ_ORDERHEADER.nextval INTO newID FROM dual;
+                           -- first sub order?
+                           SELECT reference_root_id INTO tempOrderRoot FROM v2_p_order_header WHERE order_header_id = orderHeaderID;
+                           IF (tempOrderRoot > 0) THEN
+                                reference_root_id_parent := tempOrderRoot;
+                           ELSE
+                                reference_root_id_parent := orderHeaderID;
+                           END IF;
+
+                           INSERT INTO v2_p_order_header (order_header_id, reference_id, created_date, created_by, status, order_type,
+                                       order_source, to_dealer, dealer_code, to_location, order_date, confirm_date,
+                                       quotation_date, payment_date, delivery_date, shipping_date, already_in_stock,
+                                       can_undo_auto_receive, change_remark, tip_top_number, tip_top_processed,
+                                       amount, sent_warning_over_quotation, sent_warning_over_shipping,reference_root_id)
+                           VALUES
+                            (   newID, -- Order header ID
+                                orderHeaderID, -- Reference ID, keep its parent ID
+                                SYSDATE(), -- Create Date
+                                'VDMS', -- Created by
+                                'OP', -- Status = Open (New)
+                                'S', -- Order type: S - Sub Order
+                                'T', -- Order source: T - Tip-Top
+                                dealerCode, -- To Dealer = Dealer Code
+                                dealerCode, -- Dealer Code = Dealer Code
+                                (SELECT TO_NUMBER (warehouse_id)
+                                    FROM v2_p_warehouse a
+                                    WHERE (a.dealer_code = dealerCode AND a.code = toLocation AND a.type='P')), -- To Location
+                                SYSDATE(), -- Order Date
+                                null, -- Confirm Date
+                                null, -- Quotation Date
+                                null, -- Payment Date
+                                null, -- Delivery Date
+                                null, -- Shipping Date
+                                0, -- Already in stock
+                                1, -- Can undo Auto Receive
+                                'N', -- Change remark: N: no
+                                null, -- Tip-Top Number
+                                'Y', -- Tip-Top Processed
+                                0, -- Amount
+                                0, -- Send warning over quotation
+                                0,  -- Send waring over shipping
+                                reference_root_id_parent); -- keep root order ID
+                                 orderExist := FALSE;
+                                 /*
+                                 -- SEND MESAGE TO DEALER
+                                    -- Insert into v2_data_message
+                                    -- make new ID
+                                    SELECT v2_seq_Message.NEXTVAL INTO messageID FROM DUAL;
+                                    INSERT INTO v2_data_message (message_id, parent_id, body, created_date, created_by, flag)
+                                    VALUES (
+                                        messageID, -- messageID
+                                        null, -- parent ID
+                                        CONCAT('Sub-Order da duoc tao boi he thong, tu don hang goc: ', tiptop_OrderNo), -- body
+                                        sysdate(), -- create date
+                                        'system', -- create by
+                                        'S' -- : message is created by system when make Sub-Order
+                                    );
+                                    -- End insert into v2_data_message
+                                    -- Insert into MessageBox
+                                    INSERT INTO v2_data_message_box (message_box_id, message_id, from_user, to_user, flag, position)
+                                    VALUES (
+                                        0, -- messageBox ID, system auto create
+                                        messageID, -- messageID
+                                        'system', -- from user
+                                        dealerCode, -- to dealer
+                                        'S', -- flag
+                                        'I' -- position: Inbox
+                                    );
+                                    -- End insert MessageBox
+                                 -- END SEND MESSAGE TO DEALER
+                                 */
+                END IF;
+                -- get childrent ID
+                IF (orderExist = FALSE) THEN
+                    detailID := newID;
+                ELSE
+                    SELECT order_header_id into detailID FROM v2_p_order_header WHERE reference_id = :NEW.tc_vdq01;
+                END IF;
+                -- Get Order line No
+                orderLineNo :=1;
+                SELECT max(line_number) into tempLineNo FROM v2_p_order_detail WHERE order_header_id = detailID;
+                IF (tempLineNo > 0) THEN
+                    orderLineNo := tempLineNo + 1;
+                END IF;
+                -- End get Order line No
+
+
+                -- Insert Order detail
+                    INSERT INTO v2_p_order_detail (order_detail_id, order_header_id, line_number, part_code, order_quantity, quotation_quantity,
+                                    unit_price, modify_flag, status, note, part_code_history)
+                    VALUES
+                        ( 0, -- System automatically create
+                        detailID, -- VDMS Order No.
+                        orderLineNo, -- Order line No.
+                        :NEW.tc_vdq03, -- Part Code
+                        :NEW.tc_vdq04 - :NEW.tc_vdq05, -- Order Qty
+                        0, -- Confirm Qty
+                        :NEW.tc_vdq06, -- Unit Price
+                        'N', -- Modify Plag
+                        null, -- Status
+                        null, -- note
+                        null -- Part Code history
+                        );
+
+
+            END IF; -- End need make Sub-Order
+           END IF; -- End payment case
+        -- End check & make Sub-Order
+END;
+/
+
+-- End of DDL Script for Trigger VDMS.UPDATE_TC_VDQ_FILE
+
+-- end change triggers for to_location
+
+
+-- change VDMS-I interface trigger for new request
+
+CREATE OR REPLACE TRIGGER VDMS.UPDATE_TC_VDT_FILE
+  BEFORE UPDATE OF "TC_VDT02", "TC_VDT03", "TC_VDT04", "TC_VDT05", "TC_VDT07", "TC_VDT16", "TC_VDT17", "TC_VDT18", "TC_VDT11", "TC_VDT13" ON VDMS.TC_VDT_FILE FOR EACH ROW
+DECLARE 
+    shipDate DATE;
+    status NUMBER;
+BEGIN
+IF (:NEW.tc_vdt19 = 'T') THEN -- processed by tiptop 
+--    if(
+--        ((:NEW.tc_vdt02 = null) and ((:NEW.tc_vdt13 = 'QU') or (:NEW.tc_vdt13 = 'CF'))) or 
+--        ((:NEW.tc_vdt02 <> null) and (:NEW.tc_vdt13 = 'QU'))
+--      ) THEN  -- approved
+--        status := 4;  
+--    ELSE IF ((:NEW.tc_vdt02 <> null) and (:NEW.tc_vdt13 = 'CF')) THEN -- totally confirmed
+--            status := 2;  
+--         ELSE -- sent
+--            status := 1;  
+--         END IF;
+--    END IF; 
+
+    -- set to void
+    IF (:NEW.tc_vdt13 = 'NE') THEN
+        IF ((:NEW.tc_vdt02 IS NULL) OR (:NEW.tc_vdt02 = '')) THEN
+            -- reopen order
+            UPDATE SALE_ORDERHEADER H SET H.STATUS = 1 WHERE H.ORDERID = :NEW.tc_vdt01;
+        ELSE
+            -- to change order 
+            UPDATE SALE_ORDERHEADER H SET H.STATUS = 4 WHERE H.ORDERID = :NEW.tc_vdt01; -- approved
+        END IF;
+    END IF;
+    -- delete
+    IF (:NEW.tc_vdt13 = 'DE') THEN
+        UPDATE SALE_ORDERHEADER H SET H.STATUS = 3 WHERE H.ORDERID = :NEW.tc_vdt01;
+    END IF;
+    -- confirm
+    IF((:NEW.tc_vdt13 = 'CF') AND (:NEW.tc_vdt14 = 'Y') AND ((:OLD.tc_vdt13 = 'NE') OR (:OLD.tc_vdt13 = 'DE'))) THEN
+        UPDATE SALE_ORDERHEADER H 
+        SET H.STATUS = 2
+        WHERE H.ORDERID = :NEW.tc_vdt01;
+    END IF;
+
+    IF(:NEW.tc_vdt11 = NULL)THEN
+        shipDate := TO_DATE('01/01/0001', 'dd/mm/yyyy');
+    ELSE
+        shipDate := :NEW.tc_vdt11;
+    END IF;
+
+    UPDATE SALE_ORDERHEADER H 
+    SET H.ORDERNUMBER = :NEW.tc_vdt02,
+        H.DEALERCODE = :NEW.tc_vdt03,
+        H.SHIPPINGTO = :NEW.tc_vdt04,
+        H.SECONDARYSHIPPINGCODE = :NEW.tc_vdt05,
+        H.ORDERDATE = :NEW.tc_vdt07,
+        --H.DEALERCOMMENT = :NEW.tc_vdt15,
+        H.VMEPCOMMENT = :NEW.tc_vdt16,
+        H.DATABASECODE = :NEW.tc_vdt17,
+        H.AREACODE = :NEW.tc_vdt18,
+        H.LASTEDITEDDATE = SYSDATE(),
+        H.LASTEDITEDBY = 'TIPTOP',
+        --H.status = status,
+        H.SHIPPINGDATE = shipDate,
+        H.SECONDARYSHIPPINGTO = (SELECT address FROM V2_P_WAREHOUSE W WHERE W.CODE = :NEW.tc_vdt05 AND W.TYPE = 'V' AND W.DEALER_CODE = :NEW.tc_vdt04)
+    WHERE H.ORDERID = :NEW.tc_vdt01;
+END IF;
+END;
+/
+
+--Tieng viet
+ALTER TABLE ASPNET_ROLES MODIFY("APPLICATIONNAME"  NVARCHAR2(255), "ROLENAME" NVARCHAR2(255));
+
+
+----------------------- Delete Sub-Order khi Undo confirm
+-- Start of DDL Script for Table VDMS.TC_VDY_FILE
+-- Generated 9-Nov-2009 10:33:36 from VDMS@VDMS
+
+CREATE TABLE tc_vdy_file
+    (tc_vdy01                       NUMBER(10,0) NOT NULL,
+    tc_vdy02                       VARCHAR2(10) NOT NULL,
+    tc_vdy03                       DATE,
+    tc_vdy04                       VARCHAR2(30))
+  PCTFREE     10
+  INITRANS    1
+  MAXTRANS    255
+  TABLESPACE  dbs1
+  STORAGE   (
+    INITIAL     65536
+    MINEXTENTS  1
+    MAXEXTENTS  2147483645
+  )
+/
+
+
+
+
+-- Triggers for TC_VDY_FILE
+
+CREATE OR REPLACE TRIGGER undo_confirm_del_sub_order
+ AFTER
+  INSERT
+ ON tc_vdy_file
+REFERENCING NEW AS NEW OLD AS OLD
+ FOR EACH ROW
+declare
+    orderHeaderID number;
+    referenceID number; -- Order ID parent
+    countSubOrder number; -- count sub-order is exist or not at VDMS side.
+    countSubOrderInterface number; -- count sub-order is exist or not at Interface side.
+    tiptopProcess char;
+
+BEGIN
+    -- CHECK AND DELETE SUB-ORDER WHEN RE-QUOTATION
+    -- CASE: Undo confirm (Tip-Top do "UNDO CONFIRM" then do re-Quote --> Payment confirm again).
+    -- So need delete sub-order before do Quote
+
+        -- Check sub-Order is existed or not?
+        SELECT count(*) INTO countSubOrder FROM v2_p_order_header WHERE reference_id = :NEW.tc_vdy01;
+            IF (countSubOrder > 0) THEN -- Sub-Order is existed
+                -- Get Order Header ID
+                SELECT order_header_id into orderHeaderID FROM v2_p_order_header WHERE reference_id = :NEW.tc_vdy01;
+            -- Check Interface
+                SELECT count(*) INTO countSubOrderInterface FROM TC_VDQ_FILE WHERE TC_VDQ01 = orderHeaderID;
+                    -- Interface is existed
+                    IF (countSubOrderInterface > 0) THEN
+                    -- Sub-Order in Interface is existed need delete Interface and VDMS side
+                    -- Check Tip-Top process flag, If TT_Process='N' then delete, else do nothing
+                        SELECT TC_VDP13 into tiptopProcess FROM TC_VDP_FILE WHERE TC_VDP01 = orderHeaderID;
+                        IF (tiptopProcess = 'N') THEN
+                        -- Delete Interface field
+                            DELETE FROM TC_VDQ_FILE WHERE TC_VDQ01 = orderHeaderID;
+                            DELETE FROM TC_VDP_FILE WHERE TC_VDP01 = orderHeaderID;
+                        -- Delete VDMS side (Order table)
+                            DELETE FROM V2_P_ORDER_DETAIL WHERE order_header_id = orderHeaderID;
+                            DELETE FROM V2_P_ORDER_HEADER WHERE order_header_id = orderHeaderID;
+                        END IF;
+                    END IF;
+                    -- Interface does not existed
+                    -- Delete only at VDMS side
+                    IF (countSubOrderInterface = 0) THEN
+                    -- Delete VDMS side (Order table)
+                            DELETE FROM V2_P_ORDER_DETAIL WHERE order_header_id = orderHeaderID;
+                            DELETE FROM V2_P_ORDER_HEADER WHERE order_header_id = orderHeaderID;
+                    END IF;
+               END IF;
+   END;
+/
+
+
+-- Comments for TC_VDY_FILE
+
+COMMENT ON COLUMN tc_vdy_file.tc_vdy01 IS 'VDMS Order ID'
+/
+COMMENT ON COLUMN tc_vdy_file.tc_vdy02 IS 'Tip-Top Order No'
+/
+COMMENT ON COLUMN tc_vdy_file.tc_vdy03 IS 'Un-do Confirm Date'
+/
+COMMENT ON COLUMN tc_vdy_file.tc_vdy04 IS 'Remarks'
+/
+
+-- End of DDL Script for Table VDMS.TC_VDY_FILE
+
+
+-- cap nhat loi tren trigger 11/11/2009
+CREATE OR REPLACE TRIGGER VDMS.INSERT_TC_VDU
+  BEFORE INSERT ON VDMS.TC_VDU_FILE FOR EACH ROW
+DECLARE
+    nextID NUMBER;
+BEGIN
+    IF(:NEW.TC_VDU08 = 'T') THEN
+        SELECT seq_ORDERDETAIL.NEXTVAL INTO nextID FROM DUAL;
+
+        INSERT INTO SALE_ORDERDETAIL (CREATEDBY,CREATEDDATE,LASTEDITEDBY,LASTEDITEDDATE,
+                                        ITEMCODE,ORDERDETAILID,ORDERID,ORDERPRIORITY,
+                                        ORDERQTY,UNITPRICE,UNITPRICEDISCOUNT) 
+        VALUES (
+            'TIPTOP',SYSDATE(),'TIPTOP',SYSDATE(),
+            :NEW.TC_VDU03,nextID * -1,:NEW.TC_VDU01,:NEW.TC_VDU07,
+            :NEW.TC_VDU04,:NEW.TC_VDU06,0
+        );
+
+        :NEW.TC_VDU02 := nextID;
+    END IF;
+END;
+/
+
+CREATE OR REPLACE TRIGGER VDMS.INSERT_SEND_ODTOINTERFACE
+  BEFORE INSERT ON VDMS.SALE_ORDERDETAIL FOR EACH ROW
+DECLARE
+    exist NUMBER;
+    h_Status NUMBER;
+BEGIN
+
+IF(:NEW.ORDERDETAILID > 0) THEN
+    SELECT Status INTO h_Status FROM SALE_ORDERHEADER H WHERE H.ORDERID = :NEW.ORDERID;
+    IF((h_Status > 0) AND (h_Status <> 3)) THEN
+        DELETE FROM TC_VDU_FILE U WHERE U.TC_VDU01 = :NEW.ORDERID AND U.TC_VDU02 = :NEW.ORDERDETAILID;
+
+        SELECT COUNT(*) INTO exist FROM TC_VDT_FILE WHERE TC_VDT01 = :NEW.ORDERID;
+        IF(exist>0) THEN
+            INSERT INTO TC_VDU_FILE(TC_VDU01,TC_VDU02,TC_VDU03,TC_VDU04,TC_VDU06,TC_VDU07,TC_VDU08)
+            VALUES( :NEW.ORDERID, :NEW.ORDERDETAILID, :NEW.ITEMCODE, :NEW.ORDERQTY, :NEW.UNITPRICE, :NEW.ORDERPRIORITY, 'V' );
+        END IF;
+    END IF;
+ELSE
+    :NEW.ORDERDETAILID := :NEW.ORDERDETAILID * -1;
+END IF;
+END;
+/
+
+CREATE OR REPLACE TRIGGER VDMS.UPDATE_SEND_OHTOINTERFACE
+  BEFORE INSERT OR UPDATE OF "STATUS", "ORDERNUMBER", "ORDERDATE", "DEALERCODE", "DEALERCOMMENT", "VMEPCOMMENT", "AREACODE", "DATABASECODE", "SECONDARYSHIPPINGCODE", "SHIPPINGTO" ON VDMS.SALE_ORDERHEADER FOR EACH ROW
+DECLARE 
+    exist NUMBER;
+    dupONo NUMBER;
+    islocked VARCHAR2(1);
+    flag VARCHAR2(2);
+BEGIN
+IF(:NEW.ORDERID > 0) THEN
+    SELECT COUNT(*) INTO exist FROM TC_VDT_FILE H WHERE H.TC_VDT01 = :NEW.ORDERID; 
+
+    -- tach sau confirm 2 lan cung 1 so' 
+    IF(exist=0) THEN
+        SELECT COUNT(*) INTO dupONo FROM TC_VDT_FILE H WHERE H.TC_VDT02 = :NEW.ORDERNUMBER; 
+        IF(dupONo>0) THEN
+            -- remove detail
+            UPDATE TC_VDU_FILE U SET U.TC_VDU08 = 'V', U.TC_VDU02 = U.TC_VDU02 * -1 
+            WHERE u.TC_VDU01 IN (SELECT H.TC_VDT01 FROM TC_VDT_FILE H WHERE H.TC_VDT02 = :NEW.ORDERNUMBER);
+            DELETE FROM TC_VDU_FILE U 
+            WHERE u.TC_VDU01 IN (SELECT H.TC_VDT01 FROM TC_VDT_FILE H WHERE H.TC_VDT02 = :NEW.ORDERNUMBER);
+            -- remove header
+            DELETE FROM TC_VDT_FILE H WHERE H.TC_VDT02 = :NEW.ORDERNUMBER;
+        END IF;
+    END IF;
+
+    -- lock status
+    islocked := 'N';
+    IF((:NEW.STATUS > 1) AND (:NEW.STATUS <> 3)) THEN islocked := 'Y'; END IF;
+
+    -- order flag
+    IF((exist >0) AND (:NEW.STATUS <> 3)) THEN 
+        SELECT TC_VDT13 INTO flag FROM TC_VDT_FILE H WHERE H.TC_VDT01 = :NEW.ORDERID;
+        IF(flag = NULL) THEN flag := 'NE'; END IF;
+    ELSE 
+        IF(:NEW.STATUS = 3) THEN flag := 'DE'; ELSE flag := 'NE'; END IF;
+    END IF;
+    IF(:NEW.STATUS = 2) THEN flag := 'CF'; END IF;
+
+    -- do update to interface
+    IF (:NEW.STATUS > 0) THEN
+        IF (exist >0) THEN
+            UPDATE TC_VDU_FILE U SET U.TC_VDU08 = 'V', U.TC_VDU02 = 0 WHERE u.TC_VDU01 = :NEW.ORDERID;  -- to avoid delete od in VDMS by trigger
+            DELETE FROM TC_VDU_FILE U WHERE U.TC_VDU01 = :NEW.ORDERID;
+            --delete from TC_VDT_FILE T where T.TC_VDT01 = :NEW.ORDERID;
+        END IF;
+        -- header
+        IF(exist>0)THEN
+            --if(TTP = 'N')then
+                UPDATE TC_VDT_FILE SET 
+                    TC_VDT02 = :NEW.ORDERNUMBER,
+                    TC_VDT03 = :NEW.DEALERCODE,
+                    TC_VDT04 = :NEW.SHIPPINGTO,
+                    TC_VDT05 = :NEW.SECONDARYSHIPPINGCODE,
+                    TC_VDT07 = :NEW.ORDERDATE,
+                    TC_VDT13 = flag,
+                    TC_VDT14 = islocked,
+                    TC_VDT15 = :NEW.DEALERCOMMENT,
+                    TC_VDT16 = :NEW.VMEPCOMMENT,
+                    TC_VDT17 = :NEW.DATABASECODE,
+                    TC_VDT18 = :NEW.AREACODE,
+                    TC_VDT19 = 'V'
+                WHERE TC_VDT01 = :NEW.ORDERID;
+            --end if;
+        ELSE
+            INSERT INTO TC_VDT_FILE (TC_VDT01,TC_VDT02,TC_VDT03,TC_VDT04,TC_VDT05,TC_VDT07,TC_VDT12,TC_VDT13,TC_VDT14,
+                                 TC_VDT15,TC_VDT16,TC_VDT17,TC_VDT18,TC_VDT19)
+            VALUES (:NEW.ORDERID,:NEW.ORDERNUMBER,:NEW.DEALERCODE,:NEW.SHIPPINGTO,:NEW.SECONDARYSHIPPINGCODE,:NEW.ORDERDATE,
+                'M',flag,islocked,:NEW.DEALERCOMMENT,:NEW.VMEPCOMMENT,:NEW.DATABASECODE,:NEW.AREACODE,'V');
+        END IF;
+        -- detail
+        --if(TTP = 'N')then
+            INSERT INTO TC_VDU_FILE(TC_VDU01,TC_VDU02,TC_VDU03,TC_VDU04,TC_VDU06,TC_VDU07,TC_VDU08)
+                SELECT d.ORDERID, d.ORDERDETAILID, d.ITEMCODE, d.ORDERQTY, d.UNITPRICE, d.ORDERPRIORITY, 'V' 
+                FROM SALE_ORDERDETAIL d WHERE d.ORDERID = :new.ORDERID;
+        --end if;
+    END IF;
+ELSE
+    :NEW.ORDERID := :NEW.ORDERID * -1;
+END IF;
+END;
+/
+
+CREATE OR REPLACE TRIGGER VDMS.UPDATE_TC_VDT_FILE
+  BEFORE UPDATE OF "TC_VDT02", "TC_VDT03", "TC_VDT04", "TC_VDT05", "TC_VDT07", "TC_VDT16", "TC_VDT17", "TC_VDT18", "TC_VDT11", "TC_VDT13" ON VDMS.TC_VDT_FILE FOR EACH ROW
+DECLARE 
+    shipDate DATE;
+    status NUMBER;
+BEGIN
+IF (:NEW.tc_vdt19 = 'T') THEN -- processed by tiptop 
+    -- set to void
+    IF (:NEW.tc_vdt13 = 'NE') THEN
+        IF ((:NEW.tc_vdt02 IS NULL) OR (:NEW.tc_vdt02 = '')) THEN
+            -- reopen order
+            UPDATE SALE_ORDERHEADER H SET h.ORDERID = h.ORDERID * -1, H.STATUS = 1 WHERE H.ORDERID = :NEW.tc_vdt01;
+        ELSE
+            -- to change order 
+            UPDATE SALE_ORDERHEADER H SET h.ORDERID = h.ORDERID * -1, H.STATUS = 4 WHERE H.ORDERID = :NEW.tc_vdt01; -- approved
+        END IF;
+    END IF;
+    -- delete
+    IF (:NEW.tc_vdt13 = 'DE') THEN
+        UPDATE SALE_ORDERHEADER H SET h.ORDERID = h.ORDERID * -1, H.STATUS = 3 WHERE H.ORDERID = :NEW.tc_vdt01;
+    END IF;
+    -- confirm
+    IF((:NEW.tc_vdt13 = 'CF') AND (:NEW.tc_vdt14 = 'Y') AND ((:OLD.tc_vdt13 = 'NE') OR (:OLD.tc_vdt13 = 'DE'))) THEN
+        UPDATE SALE_ORDERHEADER H 
+        SET H.STATUS = 2, h.ORDERID = h.ORDERID * -1
+        WHERE H.ORDERID = :NEW.tc_vdt01;
+    END IF;
+
+    IF(:NEW.tc_vdt11 IS NULL)THEN
+        shipDate := TO_DATE('01/01/0001', 'dd/mm/yyyy');
+    ELSE
+        shipDate := :NEW.tc_vdt11;
+    END IF;
+
+    UPDATE SALE_ORDERHEADER H 
+    SET 
+        H.ORDERID = H.ORDERID * -1,
+        H.ORDERNUMBER = :NEW.tc_vdt02,
+        H.DEALERCODE = :NEW.tc_vdt03,
+        H.SHIPPINGTO = :NEW.tc_vdt04,
+        H.SECONDARYSHIPPINGCODE = :NEW.tc_vdt05,
+        H.ORDERDATE = :NEW.tc_vdt07,
+        --H.DEALERCOMMENT = :NEW.tc_vdt15,
+        H.VMEPCOMMENT = :NEW.tc_vdt16,
+        H.DATABASECODE = :NEW.tc_vdt17,
+        H.AREACODE = :NEW.tc_vdt18,
+        H.LASTEDITEDDATE = SYSDATE(),
+        H.LASTEDITEDBY = 'TIPTOP',
+        --H.status = status,
+        H.SHIPPINGDATE = shipDate,
+        H.SECONDARYSHIPPINGTO = (SELECT address FROM V2_P_WAREHOUSE W WHERE W.CODE = :NEW.tc_vdt05 AND W.TYPE = 'V' AND W.DEALER_CODE = :NEW.tc_vdt04)
+    WHERE H.ORDERID = :NEW.tc_vdt01;
+END IF;
+END;
+/
+-----------------------------------------------------------------------------------------------
+
+---------------------------------- de cap nhat phieu xuat xe khi xac nhan don hang VDMS-I
+ALTER TABLE tc_vdx_file
+ADD CONSTRAINT pk_tc_vdx_file1 PRIMARY KEY (tc_vdx01, tc_vdx06);
+/
+
+ALTER TABLE tc_vdv_file DROP CONSTRAINT pk_tc_vdv_file1;
+
+ALTER TABLE tc_vdv_file
+ADD CONSTRAINT pk_tc_vdv_file1 PRIMARY KEY (tc_vdv01, TC_VDV05);
+/
+
+---------------------------------- /de cap nhat phieu xuat xe khi xac nhan don hang VDMS-I
+
+---------------------------------- tim kiem linh kiem theo: so may => model
+CREATE OR REPLACE VIEW VDMS.VIEW_ALL_TC_VDN_FILE (
+  MODEL,
+  FLAG,
+  PARENT,
+  CHILD,
+  EFFECTIVE,
+  END_DATE,
+  GROUPCODE,
+  UNITCODE,
+  DESCRIPT,
+  CREATEDATE,
+  DATABASECODE
+)
+AS
+  SELECT SUBSTR(PARENT, 1, INSTR(PARENT,'-', 1, 1) - 1) AS MODEL, 
+"FLAG","PARENT","CHILD","EFFECTIVE","END_DATE","GROUPCODE","UNITCODE",'DESCRIPT' AS DESCRIPT,"CREATEDATE", 'DNF' AS DatabaseCode FROM tc_vdn_file@dnp_dblink
+WHERE unitcode='MD'
+UNION ALL
+SELECT SUBSTR(PARENT, 1, INSTR(PARENT,'-', 1, 1) - 1) AS MODEL, 
+"FLAG","PARENT","CHILD","EFFECTIVE","END_DATE","GROUPCODE","UNITCODE",'DESCRIPT' AS DESCRIPT,"CREATEDATE", 'HTF' AS DatabaseCode FROM tc_vdn_file@htp_dblink
+WHERE unitcode='MD'
+;
+/
+
+CREATE OR REPLACE VIEW VDMS.VIEW_ALL_TC_SPM_FILE (
+  ENGINENUMBER,
+  COLOR,
+  OUTSTOCKDATE,
+  MODEL,
+  ITEMCODE,
+  DATABASECODE
+)
+AS
+  SELECT engno AS enginenumber, Color, outstockdate, MODEL, itemno AS itemcode,  factory AS DATABASEcode FROM tc_spm_file@htf_dblink 
+UNION ALL
+  SELECT engno AS enginenumber, Color, outstockdate, MODEL, itemno AS itemcode,  factory AS DATABASEcode FROM tc_spm_file@dnf_dblink
+;
+/
+
+CREATE OR REPLACE VIEW VDMS.VIEW_HTP_TC_VDN_FILE (
+  MODEL,
+  FLAG,
+  PARENT,
+  CHILD,
+  EFFECTIVE,
+  END_DATE,
+  GROUPCODE,
+  UNITCODE,
+  DESCRIPT,
+  CREATEDATE
+)
+AS
+  SELECT SUBSTR(PARENT, 1, INSTR(PARENT,'-', 1, 1) - 1) AS MODEL, "FLAG","PARENT","CHILD","EFFECTIVE","END_DATE","GROUPCODE","UNITCODE",'DESCRIPT' AS "DESCRIPT","CREATEDATE" FROM tc_vdn_file@htp_dblink
+WITH READ ONLY;
+/
+
+CREATE OR REPLACE VIEW VDMS.VIEW_DNP_TC_VDN_FILE (
+  MODEL,
+  FLAG,
+  PARENT,
+  CHILD,
+  EFFECTIVE,
+  END_DATE,
+  GROUPCODE,
+  UNITCODE,
+  DESCRIPT,
+  CREATEDATE
+)
+AS
+  SELECT SUBSTR(PARENT, 1, INSTR(PARENT,'-', 1, 1) - 1) AS MODEL, "FLAG","PARENT","CHILD","EFFECTIVE","END_DATE","GROUPCODE","UNITCODE",'DESCRIPT' AS "DESCRIPT","CREATEDATE" FROM tc_vdn_file@dnp_dblink
+WITH READ ONLY;
+/
+
+---------------------------------- /tim kiem linh kiem theo: so may => model
+
+
+------------- lock-unlock warehouse 
+ALTER TABLE V2_P_WAREHOUSE 
+    ADD ("STATUS" CHAR(2));
+    
+update V2_P_WAREHOUSE set STATUS = 'N';   
+------------- /lock-unlock warehouse 
+    
+----- report chua loc theo dai ly
+CREATE OR REPLACE PACKAGE VDMS.report
+    IS
+    TYPE T_CURSOR IS REF CURSOR;
+
+    PROCEDURE report_selling_daily(
+        P_FromDate IN DATE,
+        p_ToDate IN DATE,
+        p_dealercode IN VARCHAR2,
+        p_branchcode IN VARCHAR2,
+        p_databasecode IN VARCHAR2,
+        cur_Locations OUT T_CURSOR);
+    PROCEDURE report_selling_daily_debtonly(
+        P_FromDate IN DATE,
+        p_ToDate IN DATE,
+        p_dealercode IN VARCHAR2,
+        p_branchcode IN VARCHAR2,
+        p_databasecode IN VARCHAR2,
+        --p_areacode        IN VARCHAR2,
+        cur_Locations OUT T_CURSOR);
+    PROCEDURE search_rest_money_cus(
+        p_date IN DATE,
+        p_identifynumber IN VARCHAR2,
+        p_dealercode IN VARCHAR2,
+        cur_locations OUT T_CURSOR
+        );
+    PROCEDURE search_rest_money(
+        p_date IN DATE,
+        p_dealercode IN VARCHAR2,
+        cur_locations OUT T_CURSOR
+        );
+    PROCEDURE Check_Order( p_orderheaderid IN NUMBER, cur_locations OUT T_CURSOR);
+END;
+/
+
+CREATE OR REPLACE PACKAGE BODY VDMS.REPORT
+IS
+      PROCEDURE report_selling_daily (
+      p_fromdate      IN       DATE,
+      p_todate        IN       DATE,
+      p_dealercode    IN       VARCHAR2,
+      p_branchcode    IN       VARCHAR2,
+      p_databasecode IN VARCHAR2,
+      cur_locations   OUT      t_cursor
+   )
+   IS
+     /*
+   p_year             NUMBER := 0;
+   p_month            NUMBER := 0;
+   p_actionfromdate   NUMBER := 0;
+   p_actiontodate     NUMBER := 0;
+   */
+   BEGIN
+      OPEN cur_locations FOR
+         SELECT ROWNUM AS stt, fullname,
+                (   --address || ', '
+                 (CASE WHEN address IS NOT NULL THEN address || ', '
+                    END)
+                 ||
+                 (CASE WHEN precinct IS NOT NULL THEN precinct || ', '
+                    END)
+                 ||
+                 (CASE WHEN districtid IS NOT NULL THEN districtid || ', '
+                    END)
+                 || (CASE WHEN p_databasecode = 'DNF' THEN
+                 (SELECT tc_inv020
+                       FROM view_dnf_tc_inv_file
+                      WHERE tc_invacti = 'Y' AND tc_inv010 = provinceid)
+                    ELSE
+                    (SELECT tc_inv020
+                       FROM view_htf_tc_inv_file
+                      WHERE tc_invacti = 'Y' AND tc_inv010 = provinceid)
+                    END
+                      )
+                ) AS address,
+                itemcode AS "MODEL", mainsql.enginenumber AS "ENGINENO",
+                colorname AS "COLOR", pricebeforetax AS "PRICE",
+                selldate AS "SELLDATE",
+                (CASE
+                    WHEN (SELECT SUM (amount)
+                            FROM sale_payment
+                           WHERE status > 0
+                                 AND sellitemid = mainsql.sellitemid) IS NULL
+                       THEN 0
+                    ELSE (SELECT SUM (amount)
+                            FROM sale_payment
+                           WHERE status > 0
+                                 AND sellitemid = mainsql.sellitemid)
+                 END
+                ) AS tratruoc,
+                (CASE
+                    WHEN mainsql.paymenttype = 0
+                       THEN 0
+                    ELSE (  pricebeforetax
+                          - CASE
+                               WHEN (SELECT SUM (amount)
+                                       FROM sale_payment
+                                      WHERE status > 0
+                                        AND sellitemid = mainsql.sellitemid) IS NULL
+                                  THEN 0
+                               ELSE (SELECT SUM (amount)
+                                       FROM sale_payment
+                                      WHERE status > 0
+                                        AND sellitemid = mainsql.sellitemid)
+                            END
+                         )
+                 END
+                ) AS dept
+           FROM (SELECT saleinv.enginenumber AS enginenumber,
+                        saleinv.createddate, saleinv.selldate, branchcode, saleinv.dealercode,
+                        pricebeforetax, paymenttype, sellitemid AS sellitemid,
+                        itemcode, dt.colorname AS colorname, districtid,
+                        precinct, address, provinceid, fullname
+                   FROM sale_invoice saleinv JOIN sale_sellitem USING (sellitemid)
+                        JOIN sym_customer USING (customerid)
+                        JOIN data_iteminstance di USING (iteminstanceid)
+                        JOIN data_item dt USING (itemcode)
+                        ) mainsql
+          WHERE selldate BETWEEN p_fromdate AND p_todate
+            AND branchcode LIKE p_branchcode
+            AND dealercode LIKE p_dealercode;
+   END;
+
+   PROCEDURE report_selling_daily_debtonly (
+      p_fromdate      IN       DATE,
+      p_todate        IN       DATE,
+      p_dealercode    IN       VARCHAR2,
+      p_branchcode    IN       VARCHAR2,
+      p_databasecode IN VARCHAR2,
+      --p_areacode        IN VARCHAR2,
+      cur_locations   OUT      t_cursor
+   )
+   IS
+     /*
+   p_year             NUMBER := 0;
+   p_month            NUMBER := 0;
+   p_actionfromdate   NUMBER := 0;
+   p_actiontodate     NUMBER := 0;
+   */
+   BEGIN
+      OPEN cur_locations FOR
+         SELECT ROWNUM AS stt, fullname,
+                (   --address|| ', '||precinct|| ', '||districtid|| ', '
+                 (CASE WHEN address IS NOT NULL THEN address || ', '
+                    END)
+                 ||
+                 (CASE WHEN precinct IS NOT NULL THEN precinct || ', '
+                    END)
+                 ||
+                 (CASE WHEN districtid IS NOT NULL THEN districtid || ', '
+                    END)
+                 || (CASE WHEN p_databasecode = 'DNF' THEN
+                 (SELECT tc_inv020
+                       FROM view_dnf_tc_inv_file
+                      WHERE tc_invacti = 'Y' AND tc_inv010 = provinceid)
+                    ELSE
+                    (SELECT tc_inv020
+                       FROM view_htf_tc_inv_file
+                      WHERE tc_invacti = 'Y' AND tc_inv010 = provinceid)
+                    END
+                      )
+                ) AS address,
+                itemcode AS "MODEL", mainsql.enginenumber AS "ENGINENO",
+                colorname AS "COLOR", pricebeforetax AS "PRICE",
+                (CASE
+                    WHEN (SELECT SUM (amount)
+                            FROM sale_payment
+                           WHERE status > 0
+                                 AND sellitemid = mainsql.sellitemid) IS NULL
+                       THEN 0
+                    ELSE (SELECT SUM (amount)
+                            FROM sale_payment
+                           WHERE status > 0
+                                 AND sellitemid = mainsql.sellitemid)
+                 END
+                ) AS tratruoc,
+                (CASE
+                    WHEN mainsql.paymenttype = 0
+                       THEN 0
+                    ELSE (  pricebeforetax
+                          - CASE
+                               WHEN (SELECT SUM (amount)
+                                       FROM sale_payment
+                                      WHERE status > 0
+                                        AND sellitemid = mainsql.sellitemid) IS NULL
+                                  THEN 0
+                               ELSE (SELECT SUM (amount)
+                                       FROM sale_payment
+                                      WHERE status > 0
+                                        AND sellitemid = mainsql.sellitemid)
+                            END
+                         )
+                 END
+                ) AS dept
+           FROM (SELECT saleinv.enginenumber AS enginenumber,
+                        saleinv.createddate, saleinv.selldate, branchcode, saleinv.dealercode,
+                        pricebeforetax, paymenttype, sellitemid AS sellitemid,
+                        itemcode, dt.colorname AS colorname, districtid,
+                        precinct, address, provinceid, fullname
+                   FROM sale_invoice saleinv JOIN sale_sellitem USING (sellitemid)
+                        JOIN sym_customer USING (customerid)
+                        JOIN data_iteminstance di USING (iteminstanceid)
+                        JOIN data_item dt USING (itemcode)
+                        ) mainsql
+          WHERE (CASE
+                    WHEN mainsql.paymenttype = 0
+                       THEN 0
+                    ELSE (  pricebeforetax
+                          - CASE
+                               WHEN (SELECT SUM (amount)
+                                       FROM sale_payment
+                                      WHERE status > 0
+                                        AND sellitemid = mainsql.sellitemid) IS NULL
+                                  THEN 0
+                               ELSE (SELECT SUM (amount)
+                                       FROM sale_payment
+                                      WHERE status > 0
+                                        AND sellitemid = mainsql.sellitemid)
+                            END
+                         )
+                 END
+                ) > 0
+            AND selldate BETWEEN p_fromdate AND p_todate
+            AND branchcode LIKE p_branchcode;
+   --Commit;
+   END;
+
+-- Du lieu thu tien tra gop cho dai ly - filter theo cus
+-- 06 Aug 2008: add function NVL()
+--          => tranh mat data khi chua thu $ lan nao -> "recofmoney" == null
+   PROCEDURE search_rest_money_cus (
+      p_date             IN       DATE,
+      p_identifynumber   IN       VARCHAR2,
+      p_dealercode       IN       VARCHAR2,
+      cur_locations      OUT      t_cursor
+   )
+   IS
+   BEGIN
+      OPEN cur_locations FOR
+         SELECT indexrow, enginenumber, fullname, identifynumber,
+                paymentdate, sellitemid,
+                (SELECT paymentdate
+                   FROM (SELECT   *
+                             FROM sale_payment
+                         ORDER BY paymentdate DESC)
+                  WHERE ROWNUM = 1
+                    AND paymentdate < mainsql.paymentdate
+                    AND sellitemid = mainsql.sellitemid) AS prevousdate,
+                pricebeforetax,     -- tong so phai thu
+                (SELECT NVL(SUM (amount), 0)
+                   FROM sale_payment
+                  WHERE sellitemid = mainsql.sellitemid
+                    AND status > 0) AS recofmoney,      -- so tien da thu dc
+                (  pricebeforetax
+                 - (SELECT NVL(SUM (amount), 0)
+                      FROM sale_payment
+                     WHERE sellitemid = mainsql.sellitemid AND status > 0)
+                ) AS restofmoney,       -- so tien con lai
+                '1' AS "TRAGOP"
+           FROM (SELECT ROWNUM AS indexrow, inv.enginenumber AS enginenumber,
+                        cus.fullname AS fullname, cus.identifynumber,
+                        pm.paymentdate AS paymentdate, sellitemid,
+                        pricebeforetax
+                   FROM sale_sellitem si JOIN sale_payment pm USING (sellitemid)
+                        JOIN sale_invoice inv USING (sellitemid)
+                        JOIN sym_customer cus USING (customerid)
+                        JOIN data_iteminstance item USING (iteminstanceid)
+                  WHERE si.paymenttype > 0
+                    AND inv.dealercode = p_dealercode
+                    AND pm.status = 0
+                    AND pm.paymentdate = p_date
+                    AND cus.identifynumber LIKE
+                                             ('%' || p_identifynumber || '%'
+                                             )) mainsql;
+   END;
+
+-- Du lieu thu tien tra gop cho dai ly
+-- 06 Aug 2008: add function NVL()
+--          => tranh mat data khi chua thu $ lan nao -> "recofmoney" == null
+   PROCEDURE search_rest_money (
+      p_date          IN       DATE,
+      p_dealercode    IN       VARCHAR2,
+      --p_identifynumber   IN       VARCHAR2,
+      cur_locations   OUT      t_cursor
+   )
+   IS
+   BEGIN
+      OPEN cur_locations FOR
+         SELECT indexrow, enginenumber, fullname, identifynumber,
+                paymentdate, sellitemid,
+                (SELECT paymentdate
+                   FROM (SELECT   *
+                             FROM sale_payment
+                         ORDER BY paymentdate DESC)
+                  WHERE ROWNUM = 1
+                    AND paymentdate < mainsql.paymentdate
+                    AND sellitemid = mainsql.sellitemid) AS prevousdate,
+                pricebeforetax, -- sell Price
+                (SELECT NVL(SUM (amount), 0)
+                   FROM sale_payment
+                  WHERE sellitemid = mainsql.sellitemid
+                    AND status > 0) AS recofmoney,  -- da thanh toan
+                ( pricebeforetax
+                    -
+                  (SELECT NVL(SUM (amount), 0)
+                   FROM sale_payment
+                   WHERE sellitemid = mainsql.sellitemid AND status > 0)
+                ) AS restofmoney,   -- phan chua thanh toan
+                '1' AS "TRAGOP"
+           FROM (SELECT ROWNUM AS indexrow, inv.enginenumber AS enginenumber,
+                        cus.fullname AS fullname, cus.identifynumber,
+                        pm.paymentdate AS paymentdate, sellitemid,
+                        pricebeforetax
+                   FROM sale_sellitem si JOIN sale_payment pm USING (sellitemid)
+                        JOIN sale_invoice inv USING (sellitemid)
+                        JOIN sym_customer cus USING (customerid)
+                        JOIN data_iteminstance item USING (iteminstanceid)
+                  WHERE si.paymenttype > 0
+                    AND inv.dealercode = p_dealercode
+                    AND pm.status = 0
+                    AND pm.paymentdate = p_date) mainsql;
+   --AND cus.identifynumber = p_identifynumber;
+   END;
+
+   PROCEDURE check_order (p_orderheaderid IN NUMBER, cur_locations OUT t_cursor)
+   IS
+   BEGIN
+      OPEN cur_locations FOR
+         SELECT DISTINCT orderdetai0_.itemcode AS itemcode,
+                         SUM (orderdetai0_.orderqty) AS orderqty
+                    FROM sale_orderdetail orderdetai0_
+                   WHERE orderdetai0_.orderid = p_orderheaderid
+                GROUP BY itemcode;
+   END;
+END;
+
+/
+
+-----------------------------------------------------------
+
+
+-- 17/01/2010
+-- Them 2 column
+ALTER TABLE V2_P_ORDER_DETAIL 
+ADD ("ORIGINALQTY" NUMBER(38, 0))
+;
+
+ALTER TABLE V2_P_ORDER_DETAIL 
+ADD ("QUO_STATUS" CHAR(1 BYTE))
+;
+
+ALTER TABLE V2_P_DEALER 
+ADD ("QUO_CF_STATUS" NUMBER(1,0))
+;
+
+COMMENT ON COLUMN V2_P_DEALER."QUO_CF_STATUS" IS 'Cho phep dai ly xac nhan so luong linh kien bao gia tu nhan vien kinh doanh'
+;
+
+ALTER TABLE TC_VDQ_FILE
+ADD ("TC_VDQ12" NUMBER(38,0))
+;
+ALTER TABLE TC_VDQ_FILE
+ADD ("TC_VDQ13" CHAR(1 BYTE))
+;
+
+
+

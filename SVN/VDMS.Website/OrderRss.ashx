@@ -1,0 +1,1 @@
+﻿<%@ WebHandler Language="C#" Class="VDMS.I.Vehicle.OrderRss" %>

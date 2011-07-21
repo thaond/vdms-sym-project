@@ -1,0 +1,8 @@
+﻿<asp:ImageButton SkinID="UpdateProgress" ImageUrl="~/Images/Spinner.gif" runat="server" />
+<vdms:PageGridView runat="server" CssClass="datatable" CellPadding="0" CellSpacing="0" AllowPaging="true"
+	GridLines="None" Style="border-collapse: separate;" RowStyle-CssClass="even" AutoGenerateColumns="false"
+	AlternatingRowStyle-CssClass="odd" PagerStyle-CssClass="pager" PagerInfoCssClass="pagerInfo">
+	<HeaderStyle Wrap="false" />
+</vdms:PageGridView>
+<asp:Label SkinID="MessageOk" runat="server" ForeColor="Blue"></asp:Label>
+<asp:Label SkinID="MessageError" runat="server" ForeColor="Red" Font-Bold="true"></asp:Label>

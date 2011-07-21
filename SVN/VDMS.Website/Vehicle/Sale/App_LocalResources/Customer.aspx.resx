@@ -1,0 +1,996 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnAddResource1.Text" xml:space="preserve">
+    <value>Add new</value>
+  </data>
+  <data name="btnAddResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCancelResource1.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="btnCancelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCheckValidResource1.Text" xml:space="preserve">
+    <value>Check data</value>
+  </data>
+  <data name="btnCheckValidResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCloseResource1.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="btnCloseResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnEditResource1.Text" xml:space="preserve">
+    <value>Modify</value>
+  </data>
+  <data name="btnEditResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSaveResource1.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="btnSaveResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnTestResource1.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="btnTestResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmdFirstResource1.Text" xml:space="preserve">
+    <value>First</value>
+  </data>
+  <data name="cmdFirstResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmdLastResource1.Text" xml:space="preserve">
+    <value>Last</value>
+  </data>
+  <data name="cmdLastResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmdNextResource1.Text" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="cmdNextResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmdPreviousResource1.Text" xml:space="preserve">
+    <value>Prev</value>
+  </data>
+  <data name="cmdPreviousResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CommandFieldResource1.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CommandFieldResource1.CancelText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CommandFieldResource1.DeleteText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="CommandFieldResource1.EditText" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="CommandFieldResource1.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CommandFieldResource1.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CommandFieldResource1.InsertText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="CommandFieldResource1.NewText" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="CommandFieldResource1.SelectText" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="CommandFieldResource1.UpdateText" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="ddlPaymentMethodResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DropDownList4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DropDownList5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DropDownList7Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FHPDaysRangeFormat.ErrorMessage" xml:space="preserve">
+    <value>Days of Fixed instalments must is number format or greater than 0!</value>
+  </data>
+  <data name="FHPDaysRangeFormat.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="FHPPaidDateLastResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FHPPaidDateLastResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FirstLiquidateFormat.ErrorMessage" xml:space="preserve">
+    <value>First time Cost must is number format or greater than 0!</value>
+  </data>
+  <data name="FirstLiquidateFormat.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="GetCustomerIDResource1.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="GetCustomerIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Image2Resource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Image2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Image3Resource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Image3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ImageButton5Resource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ImageButton5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ImageButton6Resource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ImageButton6Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imageResource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imageResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgIntend1Resource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgIntend1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgIntend2Resource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgIntend2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgIntend3Resource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgIntend3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgIntend4Resource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgIntend4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgIntend5Resource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgIntend5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbCustomerFullNameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbCustomerFullNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbMesResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbMesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbMoneyOfTimesResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbMoneyOfTimesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="liColorResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="liColorResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="liColorTitleResource1.Text" xml:space="preserve">
+    <value>Color:</value>
+  </data>
+  <data name="liDealerCodeResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="liDealerCodeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="liDealerCodeTitleResource1.Text" xml:space="preserve">
+    <value>Dealer Code:</value>
+  </data>
+  <data name="LiEngineNoResource1.Text" xml:space="preserve">
+    <value>Engine No:</value>
+  </data>
+  <data name="liFHPLastHPdateResource1.Text" xml:space="preserve">
+    <value>The last Date</value>
+  </data>
+  <data name="liINSERTFixedHPurchaseResource1.Text" xml:space="preserve">
+    <value>Pay by Fixed instalments</value>
+  </data>
+  <data name="liMotorTypeResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="liMotorTypeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LiPriceinCludeTaxResource1.Text" xml:space="preserve">
+    <value>Price (include tax):</value>
+  </data>
+  <data name="liRecDateResource1.Text" xml:space="preserve">
+    <value>Receive Money Date:</value>
+  </data>
+  <data name="liResource1.Text" xml:space="preserve">
+    <value>Selling Date:</value>
+  </data>
+  <data name="ListItemResource1.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource1.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource2.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ListItemResource2.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ListItemResource3.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource3.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource4.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ListItemResource4.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ListItemResource5.Text" xml:space="preserve">
+    <value>Pay all in one time</value>
+  </data>
+  <data name="ListItemResource5.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource6.Text" xml:space="preserve">
+    <value>Pay by Fixed installments</value>
+  </data>
+  <data name="ListItemResource6.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource7.Text" xml:space="preserve">
+    <value>Pay by Unfixed installments</value>
+  </data>
+  <data name="ListItemResource7.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ListItemResource8.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource8.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource9.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ListItemResource9.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="liTaxResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="liTaxResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Literal10Resource1.Text" xml:space="preserve">
+    <value>Tax:</value>
+  </data>
+  <data name="Literal11Resource1.Text" xml:space="preserve">
+    <value>Store Code:</value>
+  </data>
+  <data name="Literal12Resource1.Text" xml:space="preserve">
+    <value>Payment Method:</value>
+  </data>
+  <data name="Literal13Resource1.Text" xml:space="preserve">
+    <value>Selling Type:</value>
+  </data>
+  <data name="Literal14Resource1.Text" xml:space="preserve">
+    <value>Estimated Date for Paying:</value>
+  </data>
+  <data name="Literal15Resource1.Text" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="Literal16Resource1.Text" xml:space="preserve">
+    <value>Customer:</value>
+  </data>
+  <data name="Literal17Resource1.Text" xml:space="preserve">
+    <value>Date to Get Number Plate:</value>
+  </data>
+  <data name="Literal18Resource1.Text" xml:space="preserve">
+    <value>Number Plate:</value>
+  </data>
+  <data name="Literal18Resource1xxx.Text" xml:space="preserve">
+    <value>&lt;H4&gt;Select vehicle :&lt;/H4&gt;</value>
+  </data>
+  <data name="Literal19Resource1.Text" xml:space="preserve">
+    <value>Estimated Cost: (VND)</value>
+  </data>
+  <data name="Literal1Resource1.Text" xml:space="preserve">
+    <value> (Days)</value>
+  </data>
+  <data name="Literal2Resource1.Text" xml:space="preserve">
+    <value>Days of Fixed instalments:</value>
+  </data>
+  <data name="Literal3Resource1.Text" xml:space="preserve">
+    <value>Each time Cost:</value>
+  </data>
+  <data name="Literal4Resource1.Text" xml:space="preserve">
+    <value>First time Cost:</value>
+  </data>
+  <data name="Literal5Resource1.Text" xml:space="preserve">
+    <value>Sub-total Cost:</value>
+  </data>
+  <data name="Literal6Resource1.Text" xml:space="preserve">
+    <value>Instalment Times:</value>
+  </data>
+  <data name="Literal7Resource1.Text" xml:space="preserve">
+    <value>Pay by Unfixed instalments</value>
+  </data>
+  <data name="Literal8Resource1.Text" xml:space="preserve">
+    <value>Type:</value>
+  </data>
+  <data name="Literal9Resource1.Text" xml:space="preserve">
+    <value>Bill No:</value>
+  </data>
+  <data name="Localize1Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="loPageTitleResource1.Text" xml:space="preserve">
+    <value>Sell Motor For Customer</value>
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>Sell Motor For Customer</value>
+  </data>
+  <data name="RadioButton4Resource1.Text" xml:space="preserve">
+    <value>Branchs:</value>
+  </data>
+  <data name="RadioButton4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadioButton5Resource1.Text" xml:space="preserve">
+    <value>Sub Store:</value>
+  </data>
+  <data name="RadioButton5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadioButton7Resource1.Text" xml:space="preserve">
+    <value>Branch:</value>
+  </data>
+  <data name="RadioButton7Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RangeValidator2Resource1.ErrorMessage" xml:space="preserve">
+    <value>Price (include tax) is not in right format of currency!</value>
+  </data>
+  <data name="RangeValidator2Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RangeValidator2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RangeValidator3Resource1.ErrorMessage" xml:space="preserve">
+    <value>Price (include tax) is not in right format of currency!</value>
+  </data>
+  <data name="RangeValidator3Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RangeValidator3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RangeValidator4Resource1.ErrorMessage" xml:space="preserve">
+    <value>Price (include tax) is in not right format of currency!</value>
+  </data>
+  <data name="RangeValidator4Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RangeValidator4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RangeValidator5Resource1.ErrorMessage" xml:space="preserve">
+    <value>Price (include tax) is not in right format of currency!</value>
+  </data>
+  <data name="RangeValidator5Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RangeValidator5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RangeValidator6Resource1.ErrorMessage" xml:space="preserve">
+    <value>Price (include tax) is not in right format of currency!</value>
+  </data>
+  <data name="RangeValidator6Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RangeValidator6Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rbtnCCustomerResource1.Text" xml:space="preserve">
+    <value>Customer ID:</value>
+  </data>
+  <data name="rbtnCCustomerResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RegularExpressionValidator2Resource1.ErrorMessage" xml:space="preserve">
+    <value>Price (include tax) must be in number format only!</value>
+  </data>
+  <data name="RegularExpressionValidator2Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RegularExpressionValidator2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator1Resource1.ErrorMessage" xml:space="preserve">
+    <value>Price can not be blank!</value>
+  </data>
+  <data name="RequiredFieldValidator1Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RequiredFieldValidator1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator2Resource1.ErrorMessage" xml:space="preserve">
+    <value>Receive Money Date can not be blank!</value>
+  </data>
+  <data name="RequiredFieldValidator2Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RequiredFieldValidator2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvBillNoResource1.ErrorMessage" xml:space="preserve">
+    <value>Bill No can not be blank!</value>
+  </data>
+  <data name="rfvBillNoResource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rfvBillNoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvCustomerNameResource1.ErrorMessage" xml:space="preserve">
+    <value>Customer Name can not be blank!</value>
+  </data>
+  <data name="rfvCustomerNameResource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rfvCustomerNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvEngineNoResource1.ErrorMessage" xml:space="preserve">
+    <value>Engine No can not be blank!</value>
+  </data>
+  <data name="rfvEngineNoResource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rfvEngineNoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvFHPFirstliquidateResource1.ErrorMessage" xml:space="preserve">
+    <value>First Cost can not be blank!</value>
+  </data>
+  <data name="rfvFHPFirstliquidateResource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rfvFHPFirstliquidateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvFHPPaidMoneyDateResource1.ErrorMessage" xml:space="preserve">
+    <value>Days of Instalments can not be blank!</value>
+  </data>
+  <data name="rfvFHPPaidMoneyDateResource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rfvFHPPaidMoneyDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvFHPTimesResource1.ErrorMessage" xml:space="preserve">
+    <value>Instalment Times can not be blank!</value>
+  </data>
+  <data name="rfvFHPTimesResource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rfvFHPTimesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvPriceResource1.ErrorMessage" xml:space="preserve">
+    <value>Price can not be blank!</value>
+  </data>
+  <data name="rfvPriceResource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rfvPriceResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvRecCDateResource1.ErrorMessage" xml:space="preserve">
+    <value>Receive Money Date can not be blank!</value>
+  </data>
+  <data name="rfvRecCDateResource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rfvRecCDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvRecDate.ErrorMessage" xml:space="preserve">
+    <value>Receive money Date is not in date format!</value>
+  </data>
+  <data name="rfvRecDate.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rfvRecDate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvsellDate.ErrorMessage" xml:space="preserve">
+    <value>Selling date is not valid (cannot greater than current day)!</value>
+  </data>
+  <data name="rfvsellDate.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rfvsellDate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvSellingDateResource1.ErrorMessage" xml:space="preserve">
+    <value>Selling Date can not be blank!</value>
+  </data>
+  <data name="rfvSellingDateResource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rfvSellingDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rvFHPTimes.ErrorMessage" xml:space="preserve">
+    <value>Fixed instalment times must be ranged 2-5!</value>
+  </data>
+  <data name="rvFHPTimes.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rvTakingPlateDate.ErrorMessage" xml:space="preserve">
+    <value>Taking No Plate Date is not in date format!</value>
+  </data>
+  <data name="rvTakingPlateDate.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rvTakingPlateDate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rvUHP1.ErrorMessage" xml:space="preserve">
+    <value>Intented Date 1 is not in date format!</value>
+  </data>
+  <data name="rvUHP1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rvUHP1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rvUHP2.ErrorMessage" xml:space="preserve">
+    <value>Intented Date 2 is not in date format!</value>
+  </data>
+  <data name="rvUHP2.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rvUHP2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rvUHP3.ErrorMessage" xml:space="preserve">
+    <value>Intented Date 3 is not in date format!</value>
+  </data>
+  <data name="rvUHP3.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rvUHP3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rvUHP4.ErrorMessage" xml:space="preserve">
+    <value>Intented Date 4 is not in date format!</value>
+  </data>
+  <data name="rvUHP4.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rvUHP4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rvUHP5.ErrorMessage" xml:space="preserve">
+    <value>Intented Date 5 is not in date format!</value>
+  </data>
+  <data name="rvUHP5.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rvUHP5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SellingTitleLiteral.Text" xml:space="preserve">
+    <value>Selling Data</value>
+  </data>
+  <data name="TemplateFieldResource10.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource10.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource10.HeaderText" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="TemplateFieldResource11.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource11.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource11.HeaderText" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="TemplateFieldResource12.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource12.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource12.HeaderText" xml:space="preserve">
+    <value>Import date</value>
+  </data>
+  <data name="TemplateFieldResource9.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource9.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource9.HeaderText" xml:space="preserve">
+    <value>Engine number</value>
+  </data>
+  <data name="txtBillNoResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBillNoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCommentResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCommentResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCustomerIdentifyNumberResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCustomerIdentifyNumberResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtEngineNoResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtEngineNoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtFHPAllMoneyResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtFHPAllMoneyResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtFHPFirstMoneyResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtFHPFirstMoneyResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtFHPPaidMoneyDateResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtFHPPaidMoneyDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtFHPTimesResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtFHPTimesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtIntentDatePay1.ErrorMessage" xml:space="preserve">
+    <value>Estimated Cost 1st must is number format or greater than 0!</value>
+  </data>
+  <data name="txtIntentDatePay1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="txtIntentDatePay1Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtIntentDatePay1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtIntentDatePay2.ErrorMessage" xml:space="preserve">
+    <value>Estimated Cost 2nd must is number format or greater than 0!</value>
+  </data>
+  <data name="txtIntentDatePay2.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="txtIntentDatePay2Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtIntentDatePay2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtIntentDatePay3.ErrorMessage" xml:space="preserve">
+    <value>Estimated Cost 3rd must is number format or greater than 0!</value>
+  </data>
+  <data name="txtIntentDatePay3.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="txtIntentDatePay3Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtIntentDatePay3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtIntentDatePay4.ErrorMessage" xml:space="preserve">
+    <value>Estimated Cost 4th must is number format or greater than 0!</value>
+  </data>
+  <data name="txtIntentDatePay4.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="txtIntentDatePay4Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtIntentDatePay4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtIntentDatePay5.ErrorMessage" xml:space="preserve">
+    <value>Estimated Cost 5th must is number format or greater than 0!</value>
+  </data>
+  <data name="txtIntentDatePay5.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="txtIntentDatePay5Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtIntentDatePay5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPlateNoResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPlateNoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPriceTaxResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPriceTaxResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRecCDateResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRecCDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSellingDateResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSellingDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSellingTypeResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSellingTypeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTakPlateNoDateResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTakPlateNoDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UHPtxtMoney1Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UHPtxtMoney1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UHPtxtMoney2Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UHPtxtMoney2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UHPtxtMoney3Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UHPtxtMoney3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UHPtxtMoney4Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UHPtxtMoney4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UHPtxtMoney5Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UHPtxtMoney5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ValidationSummary1Resource1.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ValidationSummary1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ValidationSummary2Resource1.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ValidationSummary2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ValidationSummary3Resource1.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ValidationSummary3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="liKho.Text" xml:space="preserve">
+    <value>Warehouse:</value>
+  </data>
+  <data name="_lnkFindCustResource1.Text" xml:space="preserve">
+    <value>Select customer</value>
+  </data>
+  <data name="_lnkFindCustResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+</root>

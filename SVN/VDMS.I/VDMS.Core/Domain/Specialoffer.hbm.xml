@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="VDMS.Core.Domain.Specialoffer, VDMS.Core" table="SALE_SPECIALOFFER" lazy="false">
+		<id name="Id" type="Int64" unsaved-value="0">
+			<column name="SPECIALOFFERID" sql-type="NUMBER" not-null="true" unique="true" index="PK_SPECIALOFFER_SPECIALOFFERID"/>
+			<generator class="sequence">
+				<param name="sequence">SEQ_Specialoffer</param>
+			</generator>
+		</id>
+		<property name="Createddate" type="DateTime">
+			<column name="CREATEDDATE" sql-type="TIMESTAMP(6)" not-null="true"/>
+		</property>
+		<property name="Createdby" type="String">
+			<column name="CREATEDBY" length="512" sql-type="NVARCHAR2" not-null="true"/>
+		</property>
+		<property name="Lastediteddate" type="DateTime">
+			<column name="LASTEDITEDDATE" sql-type="TIMESTAMP(6)" not-null="true"/>
+		</property>
+		<property name="Lasteditedby" type="String">
+			<column name="LASTEDITEDBY" length="512" sql-type="NVARCHAR2" not-null="true"/>
+		</property>
+		<property name="Description" type="String">
+			<column name="DESCRIPTION" length="512" sql-type="NVARCHAR2" not-null="true"/>
+		</property>
+		<property name="Discountpct" type="Int64">
+			<column name="DISCOUNTPCT" sql-type="NUMBER" not-null="true"/>
+		</property>
+		<property name="Startdate" type="DateTime">
+			<column name="STARTDATE" sql-type="TIMESTAMP(6)" not-null="true"/>
+		</property>
+		<property name="Enddate" type="DateTime">
+			<column name="ENDDATE" sql-type="TIMESTAMP(6)" not-null="true"/>
+		</property>
+		<property name="Minqty" type="Decimal">
+			<column name="MINQTY" sql-type="NUMBER" not-null="true"/>
+		</property>
+		<property name="Maxqty" type="Decimal">
+			<column name="MAXQTY" sql-type="NUMBER" not-null="false"/>
+		</property>
+	</class>
+</hibernate-mapping>

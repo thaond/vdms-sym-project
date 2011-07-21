@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="VDMS" EntityNamespace="VDMS.II.Entity" ContextNamespace="VDMS.II.Linq" Class="SecurityDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="User Id=vdms;Server=vdms;Home=orahome92;Unicode=True" Provider="Devart.Data.Oracle" />
+  <Table Name="VDMS.V2_APP_ROLE_IN_PATH" Member="RoleInPaths">
+    <Type Name="RoleInPath">
+      <Column Name="ROLE_PATH_ID" Member="RolePathId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ROLE_NAME" Member="RoleName" Type="System.String" DbType="VARCHAR2(255) NOT NULL" CanBeNull="false" />
+      <Column Name="APPLICATION_NAME" Member="ApplicationName" Type="System.String" DbType="VARCHAR2(255) NOT NULL" CanBeNull="false" />
+      <Column Name="PATH_ID" Member="PathId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Association Name="SiteMap_RoleInPath" Member="SiteMap" ThisKey="PathId" OtherKey="PathId" Type="SiteMap" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_APP_ROLE_IN_TASK" Member="RoleInTasks">
+    <Type Name="RoleInTask">
+      <Column Name="ROLE_TASK_ID" Member="RoleTaskId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(38) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TASK_ID" Member="TaskId" Type="System.Int64" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="ROLE_NAME" Member="RoleName" Type="System.String" DbType="VARCHAR2(255) NOT NULL" CanBeNull="false" />
+      <Column Name="APPLICATION_NAME" Member="ApplicationName" Type="System.String" DbType="VARCHAR2(255) NOT NULL" CanBeNull="false" />
+      <Association Name="Task_RoleInTask" Member="Task" ThisKey="TaskId" OtherKey="TaskId" Type="Task" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_APP_SITE_MAP" Member="SiteMaps">
+    <Type Name="SiteMap">
+      <Column Name="PATH_ID" Member="PathId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="URL" Member="Url" Type="System.String" DbType="VARCHAR2(4000) NOT NULL" CanBeNull="false" />
+      <Association Name="SiteMap_RoleInPath" Member="RoleInPaths" ThisKey="PathId" OtherKey="PathId" Type="RoleInPath" />
+      <Association Name="SiteMap_Task" Member="Tasks" ThisKey="PathId" OtherKey="PathId" Type="Task" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_APP_TASK" Member="Tasks">
+    <Type Name="Task">
+      <Column Name="TASK_ID" Member="TaskId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(38) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PATH_ID" Member="PathId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TASK_NAME" Member="TaskName" Type="System.String" DbType="NVARCHAR2(150) NOT NULL" CanBeNull="false" />
+      <Column Name="COMMAND_NAME" Member="CommandName" Type="System.String" DbType="VARCHAR2(30)" CanBeNull="true" />
+      <Association Name="Task_RoleInTask" Member="RoleInTasks" ThisKey="TaskId" OtherKey="TaskId" Type="RoleInTask" />
+      <Association Name="SiteMap_Task" Member="SiteMap" ThisKey="PathId" OtherKey="PathId" Type="SiteMap" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_APP_USER_PROFILE" Member="UserProfiles">
+    <Type Name="UserProfile">
+      <Column Name="USER_NAME" Member="UserName" Type="System.String" DbType="NVARCHAR2(768) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DEALER_CODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30)" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DATABASE_CODE" Member="DatabaseCode" Type="System.String" DbType="CHAR(10)" CanBeNull="true" />
+      <Column Name="AREA_CODE" Member="AreaCode" Type="System.String" DbType="CHAR(25)" CanBeNull="true" />
+      <Column Name="DEPT" Member="Dept" Type="System.String" DbType="CHAR(2) NOT NULL" CanBeNull="true" />
+      <Column Name="POSITION" Member="Position" Type="System.String" DbType="VARCHAR2(1) NOT NULL" CanBeNull="true" />
+      <Column Name="N_G_LEVEL" Member="NGLevel" Type="System.Int32" DbType="NUMBER(3)" CanBeNull="true" />
+      <Column Name="Full_Name" Member="FullName" Type="System.String" DbType="NVARCHAR2(150) NOT NULL" CanBeNull="true" />
+      <Column Name="Warehouse_Id" Member="WarehouseId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="true" />
+      <Column Name="V_Warehouse_Id" Member="VWarehouseId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.ASPNET_ROLES" Member="Roles">
+    <Type Name="Role">
+      <Column Name="ROLEID" Member="RoleId" Type="System.Guid" DbType="RAW(16) NOT NULL" CanBeNull="false" />
+      <Column Name="ROLEINDEX" Member="RoleIndex" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="APPLICATIONNAME" Member="ApplicationName" Type="System.String" DbType="VARCHAR2(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ROLENAME" Member="RoleName" Type="System.String" DbType="VARCHAR2(255) NOT NULL" CanBeNull="false" />
+      <Column Name="PARENTROLEINDEX" Member="ParentRoleIndex" Type="System.Int64" DbType="NUMBER(10)" CanBeNull="true" />
+      <Association Name="Role_Role" Member="Roles" ThisKey="RoleIndex" OtherKey="ParentRoleIndex" Type="Role" />
+      <Association Name="Role_Role" Member="Role1" Storage="_Role" ThisKey="ParentRoleIndex" OtherKey="RoleIndex" Type="Role" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

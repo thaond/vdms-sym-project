@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="VDMS-II">
+</Property><Property Name="Solution File" Value="D:\Projects\VDMS\VDMS-II.sln">
+</Property><Property Name="Date" Value="Friday, August 06, 2010">
+</Property><Property Name="Time" Value="10:48:58 AM">
+</Property></Properties><Event ErrorLevel="0" Project="Excel" Source="Common\Excel\Excel.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Excel" Source="Common\Excel\Excel.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Excel" Source="Common\Excel\Excel.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

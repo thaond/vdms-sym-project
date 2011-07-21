@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActionSucessful" xml:space="preserve">
+    <value>Cập nhật dữ liệu thành công.</value>
+  </data>
+  <data name="AddBroken_BrokenCodeExist" xml:space="preserve">
+    <value>Mã hư hỏng đã tồn tại!</value>
+  </data>
+  <data name="Adjustment_EmptyBranchList" xml:space="preserve">
+    <value>Không tìm thấy kho để chuyển xe!</value>
+  </data>
+  <data name="Adjustment_InvalidBranch" xml:space="preserve">
+    <value>Xe không thuộc chi nhánh hiện thời!</value>
+  </data>
+  <data name="Adjustment_InvalidDealer" xml:space="preserve">
+    <value>Xe này không thuộc đại lý/miền hiện tại!</value>
+  </data>
+  <data name="Adjustment_InvalidEngineNumber" xml:space="preserve">
+    <value>Sai số máy. Có thể xe không tồn tại!</value>
+  </data>
+  <data name="Adjustment_InvalidStatus" xml:space="preserve">
+    <value>Trạng thái xe hiện tại không cho phép thực hiện điiều chỉnh!</value>
+  </data>
+  <data name="Adjustment_SaveDataFailed" xml:space="preserve">
+    <value>Cập nhật dữ liệu vào CSDL thất bại!</value>
+  </data>
+  <data name="AtleastOneItemSelected" xml:space="preserve">
+    <value>Bạn phải chọn ít nhất một xe!</value>
+  </data>
+  <data name="BrokenCodeInUse" xml:space="preserve">
+    <value>Mã hư hỏng đã được sử dụng, không xóa được!</value>
+  </data>
+  <data name="Cus_HaveNotBuyItem" xml:space="preserve">
+    <value>Khách hàng này chưa mua xe nào của chúng ta!</value>
+  </data>
+  <data name="Cus_NoCustomer" xml:space="preserve">
+    <value>Số CMND/mã số công ty của khách hàng này chưa tồn tại trong cơ sở dữ liệu!</value>
+  </data>
+  <data name="Cus_SaveErr" xml:space="preserve">
+    <value>Số CMND/mã số công ty của khách hàng đã tồn tại trong cơ sở dữ liệu!</value>
+  </data>
+  <data name="Cus_SumMoneyInvalid" xml:space="preserve">
+    <value>Số lần nộp tiền phải có giá trị tổng bằng với giá xe(bao gồm thuế)</value>
+  </data>
+  <data name="DataLost" xml:space="preserve">
+    <value>Mất dữ liệu!</value>
+  </data>
+  <data name="DataNotFound" xml:space="preserve">
+    <value>Không tìm thấy dữ liệu!</value>
+  </data>
+  <data name="DateConditionErr" xml:space="preserve">
+    <value>Ngày trước trong điều kiện không được lớn hơn với ngày sau.</value>
+  </data>
+  <data name="EngineNoBatchInvoiceFound" xml:space="preserve">
+    <value>Số máy này đã được bán cho cửa hàng phụ!</value>
+  </data>
+  <data name="EngineNumberIsHaved" xml:space="preserve">
+    <value>Mã máy đã tồn tại!</value>
+  </data>
+  <data name="EngineNumberNotFound" xml:space="preserve">
+    <value>Không tìm thấy số máy này hoặc số máy này chưa được bán.</value>
+  </data>
+  <data name="EngineNumberNotFoundInDB" xml:space="preserve">
+    <value>Không tìm thấy số máy này hoặc số máy này đã được bán.</value>
+  </data>
+  <data name="GeneralError" xml:space="preserve">
+    <value>Một lỗi tổng quát xuất hiện! Lỗi được thông báo là: {0}</value>
+  </data>
+  <data name="InventoryLocked" xml:space="preserve">
+    <value>Ngày trả xe thuộc vào hoặc trước tháng khóa sổ  {0}</value>
+  </data>
+  <data name="Invoice_BillDuplicated" xml:space="preserve">
+    <value>Số hóa đơn này đã tồn tại!</value>
+  </data>
+  <data name="IsExistItem" xml:space="preserve">
+    <value>Item này đã có trong Order. Bạn không thể thêm Item này vào Order</value>
+  </data>
+  <data name="ListMotoSale_CantDelete_Childrow" xml:space="preserve">
+    <value>Không xóa xe này được. Nó đã được tham chiếu tới từ hệ thống/đối tượng khác.</value>
+  </data>
+  <data name="ListMotoSale_NoItemFound" xml:space="preserve">
+    <value>Không tìm được!</value>
+  </data>
+  <data name="LoadCustomerErr" xml:space="preserve">
+    <value>Bạn phải lấy thông tin của xe trước khi chọn khách hàng</value>
+  </data>
+  <data name="NotEnoughtPermission" xml:space="preserve">
+    <value>Bạn không có đủ thẩm quyền để thực thi hành động này.</value>
+  </data>
+  <data name="NotFoundInDB" xml:space="preserve">
+    <value>Không tìm thấy hoặc đã được bán!</value>
+  </data>
+  <data name="Order_NewOrderDetailCountMsg" xml:space="preserve">
+    <value>Tổng số xe đặt hàng: {0}</value>
+  </data>
+  <data name="Order_NewOrderMsg" xml:space="preserve">
+    <value>Đơn hàng mới từ {0} vào ngày {1}</value>
+  </data>
+  <data name="OrderForm_ApprovedConfirmedOrderError1" xml:space="preserve">
+    <value>Đơn hàng này đã được xác nhận. Bạn không thể sửa đổi nó.</value>
+  </data>
+  <data name="OrderForm_EditConfirmedOrderError" xml:space="preserve">
+    <value>Đơn hàng này đã được xác nhận. Bạn không thể sửa đổi nó.</value>
+  </data>
+  <data name="PagingInfo" xml:space="preserve">
+    <value>Trang: &lt;b&gt;{0}&lt;/b&gt;/&lt;b&gt;{1}&lt;/b&gt; (Tổng số: &lt;b&gt;{2}&lt;/b&gt; mục)</value>
+  </data>
+  <data name="Part_AddNewFailed" xml:space="preserve">
+    <value>Mã phụ tùng đã tồn tại trong cơ sở dữ liệu!</value>
+  </data>
+  <data name="PartCodeExisted" xml:space="preserve">
+    <value>Mã phụ tùng đang được sử dụng, không thể xóa được!</value>
+  </data>
+  <data name="PartNotFound" xml:space="preserve">
+    <value>Không tìm thấy phụ tùng!</value>
+  </data>
+  <data name="Payment_NotFound" xml:space="preserve">
+    <value>Khách hàng này không tham gia vào hình thức trả góp!</value>
+  </data>
+  <data name="Reformation_ApplyCase1" xml:space="preserve">
+    <value>Số máy (xe) mới phải có thực &amp; đúng chủng loại với số máy (xe) cũ!</value>
+  </data>
+  <data name="Reformation_ApplyCase2" xml:space="preserve">
+    <value>Số máy cũ lúc này không còn trong danh sách các số máy của đơn xuất hàng!</value>
+  </data>
+  <data name="Reformation_ApplyCase3" xml:space="preserve">
+    <value>Số máy (xe) mới không tồn tại trong đơn xuất hàng, hoặc là bị trùng lặp số máy (xe) nhiều lần trong cơ sở dữ liệu Tip-Top.</value>
+  </data>
+  <data name="SaveStateFailed" xml:space="preserve">
+    <value>Trạng thái trang web không chính xác. Vui lòng thử lại!</value>
+  </data>
+  <data name="Security_ErrorDeleteRole" xml:space="preserve">
+    <value>Lỗi khi xóa nhóm quyền. Có thể nhóm quyền có tồn tại người dùng.</value>
+  </data>
+  <data name="Security_ErrorEditRole" xml:space="preserve">
+    <value>Lỗi khi soạn thảo nhóm quyền. Có thể nhóm quyền bị trùng tên.</value>
+  </data>
+  <data name="Selling_SubStoreNotFound" xml:space="preserve">
+    <value>Không tìm thấy cửa hàng phụ!</value>
+  </data>
+  <data name="Shipping_EnterAllException" xml:space="preserve">
+    <value>Bạn phải nhập diễn giải bất thường cho những xe cần thiết!</value>
+  </data>
+  <data name="Shipping_InvalidExportInvoiceNumber" xml:space="preserve">
+    <value>Số đơn xuất hàng không tồn tại, hoặc dành cho Đại lý khác!</value>
+  </data>
+  <data name="Shipping_ItemNotExit" xml:space="preserve">
+    <value>Một số xe chưa tồn tại trong hệ thống VDMS!</value>
+  </data>
+  <data name="Shipping_UpdateFailed" xml:space="preserve">
+    <value>Cập nhật dữ liệu thất bại!</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Tổng cộng:</value>
+  </data>
+  <data name="UpdateDataFailed_WrongData" xml:space="preserve">
+    <value>Cập nhật thất bại do dữ liệu sai!</value>
+  </data>
+  <data name="VehicleAlreadyHasVoucher" xml:space="preserve">
+    <value>Xe này đã đủ chứng từ!</value>
+  </data>
+  <data name="WarrantyCondition_PartcodeLength" xml:space="preserve">
+    <value>Mã phụ tùng phải có độ dài lớn hơn 5!</value>
+  </data>
+  <data name="WarrantyContent_BrokenCodeNotFound" xml:space="preserve">
+    <value>Mã hiện hư hỏng không đúng!</value>
+  </data>
+  <data name="WarrantyContent_EmptySpareList" xml:space="preserve">
+    <value>Chưa có phụ tùng trong danh sách!</value>
+  </data>
+  <data name="WarrantyContent_EngineNumberNotFound" xml:space="preserve">
+    <value>Không tìm thấy số máy này. Xe có thể không được bảo hành!</value>
+  </data>
+  <data name="WarrantyContent_EnterFee" xml:space="preserve">
+    <value>Dữ liệu "tiền công" không được để trống!</value>
+  </data>
+  <data name="WarrantyContent_ExchangeNumberNotFound" xml:space="preserve">
+    <value>Số phiếu bảo hành  không đúng!</value>
+  </data>
+  <data name="WarrantyContent_InvalidDateTimeValue" xml:space="preserve">
+    <value>Dữ liệu ngày tháng không đúng!</value>
+  </data>
+  <data name="WarrantyContent_InvalidEngineNumber" xml:space="preserve">
+    <value>Số máy không tồn tại. Bạn phải nhập số máy tồn tại trong hệ thống!</value>
+  </data>
+  <data name="WarrantyContent_InvalidExchangeSparesList" xml:space="preserve">
+    <value>Danh sách phụ tùng bảo hành không đúng. Hãy thử thao tác lại!</value>
+  </data>
+  <data name="WarrantyContent_InvalidServiceType" xml:space="preserve">
+    <value>Dịch vụ không hợp lệ!</value>
+  </data>
+  <data name="WarrantyContent_InvalidSpareCode" xml:space="preserve">
+    <value>Mã số phụ tùng không đúng!</value>
+  </data>
+  <data name="WarrantyContent_ItemNotSold" xml:space="preserve">
+    <value>Xe chưa được bán!</value>
+  </data>
+  <data name="WarrantyContent_ItemSoldByOtherDealer" xml:space="preserve">
+    <value>Xe này được bán bởi đại lý khác!</value>
+  </data>
+  <data name="WarrantyContent_ItemTypeNotFound" xml:space="preserve">
+    <value>Không tìm thấy chủng loại xe!</value>
+  </data>
+  <data name="WarrantyContent_LastKmChanged" xml:space="preserve">
+    <value>Số km lần trước đã bị thay đổi trong lúc lập phiếu (giá trị cũ là {0} km)!</value>
+  </data>
+  <data name="WarrantyContent_NoItemSold" xml:space="preserve">
+    <value>Chưa có xe nào được bán!</value>
+  </data>
+  <data name="WarrantyContent_SaveDetailFailed" xml:space="preserve">
+    <value>Lưu danh sách phụ tùng thất bại!</value>
+  </data>
+  <data name="WarrantyContent_SaveExchDetailFailed" xml:space="preserve">
+    <value>Lưu dữ liệu chi tiết phụ tùng bảo hành thất bại!</value>
+  </data>
+  <data name="WarrantyContent_SaveExchHeaderFailed" xml:space="preserve">
+    <value>Lưu dữ liệu phụ tùng bảo hành thất bại!</value>
+  </data>
+  <data name="WarrantyContent_SaveHeaderFailed" xml:space="preserve">
+    <value>Lưu bản đăng ký phuc vụ thất bại!</value>
+  </data>
+  <data name="WarrantyContent_ServiceSheetNumberNotFound" xml:space="preserve">
+    <value>Không tìm thấy phiếu dịch vụ nào!</value>
+  </data>
+  <data name="WarrantyContent_SpareNumberNotFound" xml:space="preserve">
+    <value>Không tìm thấy Mã số phụ tùng!</value>
+  </data>
+  <data name="WarrantyContent_StringTooLong" xml:space="preserve">
+    <value>Dữ liệu văn bản quá dài!</value>
+  </data>
+  <data name="WarrantyContent_UpdateDataFailed" xml:space="preserve">
+    <value>Cập nhật dữ liệu thất bại!</value>
+  </data>
+  <data name="WarrantyInfo_DBCodePermission" xml:space="preserve">
+    <value>Số máy của miền khác.</value>
+  </data>
+  <data name="WarrantyInfo_EditStatus" xml:space="preserve">
+    <value>Số xe này đã tồn tại trong thông tin bảo hành!</value>
+  </data>
+  <data name="WarrantyInfo_EngineNumberInvalid" xml:space="preserve">
+    <value>Số máy không chính xác!</value>
+  </data>
+  <data name="WarrantyInfo_InsertDuplicate" xml:space="preserve">
+    <value>Thông tin bảo hành đã tồn tại trong cơ sở dữ liệu!</value>
+  </data>
+  <data name="WarrantyInfo_PurchaseDateInvalid" xml:space="preserve">
+    <value>Ngày bán hàng không đúng định dạng!</value>
+  </data>
+  <data name="WarrantyInfo_WrongDealercode" xml:space="preserve">
+    <value>Thông tin Đại lý bán xe khác với tiptop!</value>
+  </data>
+  <data name="WarrantyInfo_WrongSellSDate" xml:space="preserve">
+    <value>Ngày bán khác với ngày của Đại lý ghi nhận!</value>
+  </data>
+  <data name="AccessDenied" xml:space="preserve">
+    <value>Thao tác không hợp lệ!</value>
+  </data>
+  <data name="Reject_CancelRequestFailed" xml:space="preserve">
+    <value>Huỷ yêu cầu trả xe thất bại!</value>
+  </data>
+  <data name="Reject_CanNotSendToVMEP" xml:space="preserve">
+    <value>Gửi thông tin cho VMEP thất bại!</value>
+  </data>
+  <data name="Reject_FinishReturnFailed" xml:space="preserve">
+    <value>Không lưu thông tin vào CSDL được. Vui lòng thử lại!</value>
+  </data>
+  <data name="Reject_ItemHasOutOfStock" xml:space="preserve">
+    <value>Xe đã không còn trong kho!</value>
+  </data>
+  <data name="Reject_ShippingDetailError" xml:space="preserve">
+    <value>Lấy thông tin nhập xe thất bại!</value>
+  </data>
+  <data name="Reject_VerhicleNotExist" xml:space="preserve">
+    <value>Số máy không tồn tại hoặc xe không thuộc Đại lý/chi nhánh hiện tại!</value>
+  </data>
+  <data name="WarrantyContent_InCompleteSpares" xml:space="preserve">
+    <value>Thông tin phụ tùng chưa đầy đủ!</value>
+  </data>
+  <data name="ItemAlreadyExist" xml:space="preserve">
+    <value>"{0}" đã tồn tại trong cơ sở dữ liệu!</value>
+  </data>
+  <data name="YouMustBeAdmin" xml:space="preserve">
+    <value>Bạn phải có quyền quản trị hệ thống!</value>
+  </data>
+  <data name="YouMustBeDealer" xml:space="preserve">
+    <value>Chức năng này chỉ dành cho đại lý!</value>
+  </data>
+  <data name="SomeItemHasError" xml:space="preserve">
+    <value>Có một số mục gây lỗi!</value>
+  </data>
+  <data name="DataFormatWrong" xml:space="preserve">
+    <value>Định dạng dữ liệu không đúng!</value>
+  </data>
+  <data name="DataValueWrong" xml:space="preserve">
+    <value>Giá trị dữ liệu không đúng!</value>
+  </data>
+  <data name="InvalidSoldDateRange" xml:space="preserve">
+    <value>Ngày bán phải  từ  {0} đến ngày {1}!</value>
+  </data>
+  <data name="Shipping_OrdersDoesNotConfirmed" xml:space="preserve">
+    <value>Chưa có đơn hàng nào được xác nhận!</value>
+  </data>
+  <data name="MoneyInvalid" xml:space="preserve">
+    <value>Số tiền không đúng!</value>
+  </data>
+  <data name="ImportExcelError" xml:space="preserve">
+    <value>Dòng {0} xảy ra lỗi.</value>
+  </data>
+  <data name="NoVehicle" xml:space="preserve">
+    <value>Sai số máy hoặc xe chưa được nhập!</value>
+  </data>
+  <data name="NoPrice" xml:space="preserve">
+    <value>Giá bán chưa được nhập!</value>
+  </data>
+  <data name="VehicleError" xml:space="preserve">
+    <value>Xe thứ {0} có lỗi: {1}</value>
+  </data>
+  <data name="Adjustment_InvalidDate" xml:space="preserve">
+    <value>Ngày điều chuyển không hợp lệ!</value>
+  </data>
+  <data name="ImportExcelSuccessful" xml:space="preserve">
+    <value>Đã nhập {0} xe.</value>
+  </data>
+  <data name="WrongVehiceNumber" xml:space="preserve">
+    <value>Sai số máy</value>
+  </data>
+  <data name="VehicleNotArrived" xml:space="preserve">
+    <value>Xe này chưa được nhập!</value>
+  </data>
+  <data name="BankFied" xml:space="preserve">
+    <value>Các cột bắt buộc: </value>
+  </data>
+  <data name="ReleaseMoreThanImport" xml:space="preserve">
+    <value>Ngày trả xe phải lớn hơn hoặc bằng ngày nhập xe</value>
+  </data>
+  <data name="ReleaseMoreThanNow" xml:space="preserve">
+    <value>Ngày trả xe phải nhỏ hơn ngày hiện tại</value>
+  </data>
+</root>

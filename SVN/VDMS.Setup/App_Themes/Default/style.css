@@ -1,0 +1,83 @@
+﻿html, body
+{
+	width: 98.4%;
+}
+
+body
+{
+	font-family: Verdana;
+	font-size: small;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#header
+{
+	background-color: #99ccff;
+	color: navy;
+	font-size: 1.2em;
+	padding: 10px;
+	font-weight: bold;
+}
+
+#footer
+{
+	background-color: #99ccff;
+	color: navy;
+	font-size: 0.9em;
+	padding: 10px;
+	height: 30px;
+	clear: both;
+}
+
+.paragraph
+{
+	padding: 5px;
+}
+
+.button
+{
+	cursor: pointer;
+}
+
+.homeTable
+{
+	margin-top: 1em;
+	margin-bottom: 0.3em;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #999999;
+	font-size: 100%;
+	border-collapse: collapse;
+	margin-left: 5px;
+}
+
+.sampleHeader
+{
+	width: 30%;
+	background-color: gainsboro;
+	padding: 10px;
+	font-size: small;
+	font-weight: bold;
+}
+
+.descriptionHeader
+{
+	width: 70%;
+	background-color: gainsboro;
+	padding: 10px;
+	font-size: small;
+	font-weight: bold;
+}
+
+.sample
+{
+	width: 30%;
+	padding: 10px;
+}
+
+.description
+{
+	width: 70%;
+	padding: 10px;
+}

@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="VDMS" EntityNamespace="VDMS.I.Entity" ContextNamespace="VDMS.I.Linq" Class="ServiceDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="User Id=vdms;Password=vdms;Server=vdms;Home=orahome92;Unicode=True;Persist Security Info=True" Provider="Devart.Data.Oracle" />
+  <Table Name="VDMS.SER_EXCHANGEPARTDETAIL" Member="ExchangePartDetails">
+    <Type Name="ExchangePartDetail">
+      <Column Name="EXCHANGEPARTDETAILID" Member="ExchangePartDetailId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PARTCODEO" Member="PartCodeO" Type="System.String" DbType="VARCHAR2(35) NOT NULL" CanBeNull="false" />
+      <Column Name="PARTCODEM" Member="PartCodeM" Type="System.String" DbType="VARCHAR2(35) NOT NULL" CanBeNull="false" />
+      <Column Name="BROKENID" Member="BrokenId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="EXCHANGEPARTHEADERID" Member="ExchangePartHeaderId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="SERIALNUMBER" Member="SerialNumber" Type="System.String" DbType="VARCHAR2(30)" CanBeNull="true" />
+      <Column Name="UNITPRICEM" Member="UnitPriceM" Type="System.Decimal" DbType="NUMBER(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TOTALFEEO" Member="TotalFeeO" Type="System.Decimal" DbType="NUMBER(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TOTALFEEM" Member="TotalFeeM" Type="System.Decimal" DbType="NUMBER(20) NOT NULL" CanBeNull="false" />
+      <Column Name="UNITPRICEO" Member="UnitPriceO" Type="System.Decimal" DbType="NUMBER(20) NOT NULL" CanBeNull="false" />
+      <Column Name="PARTQTYO" Member="PartQtyO" Type="System.Int32" DbType="NUMBER(5) NOT NULL" CanBeNull="false" />
+      <Column Name="PARTQTYM" Member="PartQtyM" Type="System.Int32" DbType="NUMBER(5) NOT NULL" CanBeNull="false" />
+      <Column Name="VMEPCOMMENT" Member="VMEPComment" Type="System.String" DbType="NVARCHAR2(2048)" CanBeNull="true" />
+      <Association Name="ExchangePartHeader_ExchangePartDetail" Member="ExchangePartHeader" ThisKey="ExchangePartHeaderId" OtherKey="ExchangePartHeaderId" Type="ExchangePartHeader" IsForeignKey="true" />
+      <Association Name="Broken_ExchangePartDetail" Member="Broken" ThisKey="BrokenId" OtherKey="BrokenId" Type="Broken" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.SER_EXCHANGEPARTHEADER" Member="ExchangePartHeaders">
+    <Type Name="ExchangePartHeader">
+      <Column Name="EXCHANGEPARTHEADERID" Member="ExchangePartHeaderId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ENGINENUMBER" Member="EngineNumber" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="DAMAGEDDATE" Member="DamagedDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="KMCOUNT" Member="KmCount" Type="System.Double" DbType="NUMBER(15) NOT NULL" CanBeNull="false" />
+      <Column Name="EXCHANGEDDATE" Member="ExchangedDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="DEALERCODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="AREACODE" Member="AreaCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="FEEAMOUNT" Member="FeeAmount" Type="System.Decimal" DbType="NUMBER(30) NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS" Member="Status" Type="System.Int32" DbType="NUMBER(2) NOT NULL" CanBeNull="false" />
+      <Column Name="ROAD" Member="Road" Type="System.Int32" DbType="NUMBER(2) NOT NULL" CanBeNull="false" />
+      <Column Name="WEATHER" Member="Weather" Type="System.Int32" DbType="NUMBER(2) NOT NULL" CanBeNull="false" />
+      <Column Name="SPEED" Member="Speed" Type="System.Int32" DbType="NUMBER(2) NOT NULL" CanBeNull="false" />
+      <Column Name="USAGE" Member="Usage" Type="System.Int32" DbType="NUMBER(2) NOT NULL" CanBeNull="false" />
+      <Column Name="ENGINE" Member="Engine" Type="System.String" DbType="NVARCHAR2(1024)" CanBeNull="true" />
+      <Column Name="FRAME" Member="Frame" Type="System.String" DbType="NVARCHAR2(1024)" CanBeNull="true" />
+      <Column Name="ELECTRIC" Member="Electric" Type="System.String" DbType="NVARCHAR2(1024)" CanBeNull="true" />
+      <Column Name="DAMAGED" Member="Damaged" Type="System.String" DbType="NVARCHAR2(2048) NOT NULL" CanBeNull="false" />
+      <Column Name="REASON" Member="Reason" Type="System.String" DbType="NVARCHAR2(2048) NOT NULL" CanBeNull="false" />
+      <Column Name="SERVICEHEADERID" Member="ServiceHeaderId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CUSTOMERID" Member="CustomerId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="COMMENTS" Member="Comments" Type="System.String" DbType="NVARCHAR2(4000)" CanBeNull="true" />
+      <Column Name="VOUCHERNUMBER" Member="VoucherNumber" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="FRAMENUMBER" Member="FrameNumber" Type="System.String" DbType="VARCHAR2(30)" CanBeNull="true" />
+      <Column Name="PURCHASEDATE" Member="PurchaseDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="EXPORTDATE" Member="ExportDate" Type="System.DateTime" DbType="TIMESTAMP" CanBeNull="true" />
+      <Column Name="MODEL" Member="Model" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="FINALVOUCHERNUMBER" Member="FinalVoucherNumber" Type="System.String" DbType="VARCHAR2(30)" CanBeNull="true" />
+      <Column Name="PROPOSEFEEAMOUNT" Member="ProposeFeeAmount" Type="System.Decimal" DbType="NUMBER(30) NOT NULL" CanBeNull="false" />
+      <Column Name="LASTPROCESSEDDATE" Member="LastProcessedDate" Type="System.DateTime" DbType="TIMESTAMP" CanBeNull="true" />
+      <Association Name="ExchangePartHeader_ExchangePartDetail" Member="ExchangePartDetails" ThisKey="ExchangePartHeaderId" OtherKey="ExchangePartHeaderId" Type="ExchangePartDetail" />
+      <Association Name="ServiceHeader_ExchangePartHeader" Member="ServiceHeader" ThisKey="ServiceHeaderId" OtherKey="ServiceHeaderId" Type="ServiceHeader" IsForeignKey="true" />
+      <Association Name="Customer_ExchangePartHeader" Member="Customer" ThisKey="CustomerId" OtherKey="CustomerId" Type="Customer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.SER_EXCHANGEVOUCHERHEADER" Member="ExchangeVoucherHeaders">
+    <Type Name="ExchangeVoucherHeader">
+      <Column Name="FINALVOUCHERNUMBER" Member="FinalVoucherNumber" Type="System.String" DbType="VARCHAR2(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CREATEDDATE" Member="CreatedDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="LASTPROCESSEDDATE" Member="LastProcessedDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="DEALERCODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30)" CanBeNull="true" />
+      <Column Name="STATUS" Member="Status" Type="System.Int32" DbType="NUMBER(2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.SER_SERVICEDETAIL" Member="ServiceDetails">
+    <Type Name="ServiceDetail">
+      <Column Name="SERVICEDETAILID" Member="ServiceDetailId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SERVICEHEADERID" Member="ServiceHeaderId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PARTCODE" Member="PartCode" Type="System.String" DbType="VARCHAR2(35) NOT NULL" CanBeNull="false" />
+      <Column Name="PARTNAME" Member="PartName" Type="System.String" DbType="NVARCHAR2(512)" CanBeNull="true" />
+      <Column Name="PARTQTY" Member="PartQty" Type="System.Int32" DbType="NUMBER(5) NOT NULL" CanBeNull="false" />
+      <Column Name="UNITPRICE" Member="UnitPrice" Type="System.Decimal" DbType="NUMBER(30) NOT NULL" CanBeNull="false" />
+      <Column Name="SERIALNUMBER" Member="SerialNumber" Type="System.String" DbType="VARCHAR2(30)" CanBeNull="true" />
+      <Association Name="ServiceHeader_ServiceDetail" Member="ServiceHeader" ThisKey="ServiceHeaderId" OtherKey="ServiceHeaderId" Type="ServiceHeader" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.SER_SERVICEHEADER" Member="ServiceHeaders">
+    <Type Name="ServiceHeader">
+      <Column Name="SERVICEHEADERID" Member="ServiceHeaderId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(11) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ENGINENUMBER" Member="EngineNumber" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="CUSTOMERID" Member="CustomerId" Type="System.Int64" DbType="NUMBER(10)" CanBeNull="true" />
+      <Column Name="SERVICEDATE" Member="ServiceDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="SERVICETYPE" Member="ServiceType" Type="System.Int32" DbType="NUMBER(2)" CanBeNull="true" />
+      <Column Name="DAMAGED" Member="Damaged" Type="System.String" DbType="NVARCHAR2(4000)" CanBeNull="true" />
+      <Column Name="REPAIRRESULT" Member="RepairResult" Type="System.String" DbType="NVARCHAR2(4000)" CanBeNull="true" />
+      <Column Name="KMCOUNT" Member="KmCount" Type="System.Double" DbType="NUMBER(15) NOT NULL" CanBeNull="false" />
+      <Column Name="COMMENTS" Member="Comments" Type="System.String" DbType="NVARCHAR2(4000)" CanBeNull="true" />
+      <Column Name="SERVICESHEETNUMBER" Member="ServiceSheetNumber" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="FEEAMOUNT" Member="FeeAmount" Type="System.Double" DbType="NUMBER(15) NOT NULL" CanBeNull="false" />
+      <Column Name="TOTALAMOUNT" Member="TotalAmount" Type="System.Double" DbType="NUMBER(15) NOT NULL" CanBeNull="false" />
+      <Column Name="NUMBERPLATE" Member="NumberPlate" Type="System.String" DbType="VARCHAR2(15)" CanBeNull="true" />
+      <Column Name="FRAMENUMBER" Member="FrameNumber" Type="System.String" DbType="VARCHAR2(30)" CanBeNull="true" />
+      <Column Name="PURCHASEDATE" Member="PurchaseDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="ITEMTYPE" Member="ItemType" Type="System.String" DbType="VARCHAR2(50)" CanBeNull="true" />
+      <Column Name="COLORCODE" Member="ColorCode" Type="System.String" DbType="VARCHAR2(30)" CanBeNull="true" />
+      <Column Name="DEALERCODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="BRANCHCODE" Member="BranchCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS" Member="Status" Type="System.Double" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CREATEBY" Member="CreateBy" Type="System.String" DbType="VARCHAR2(30)" CanBeNull="true" />
+      <Association Name="ServiceHeader_ExchangePartHeader" Member="ExchangePartHeaders" ThisKey="ServiceHeaderId" OtherKey="ServiceHeaderId" Type="ExchangePartHeader" />
+      <Association Name="ServiceHeader_ServiceDetail" Member="ServiceDetails" ThisKey="ServiceHeaderId" OtherKey="ServiceHeaderId" Type="ServiceDetail" />
+      <Association Name="Customer_ServiceHeader" Member="Customer" ThisKey="CustomerId" OtherKey="CustomerId" Type="Customer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.SER_WARRANTYINFO" Member="WarrantyInfos">
+    <Type Name="WarrantyInfo">
+      <Column Name="ENGINENUMBER" Member="EngineNumber" Type="System.String" DbType="VARCHAR2(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PURCHASEDATE" Member="PurchaseDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="KMCOUNT" Member="KmCount" Type="System.Int32" DbType="NUMBER(9) NOT NULL" CanBeNull="false" />
+      <Column Name="ITEMCODE" Member="ItemCode" Type="System.String" DbType="VARCHAR2(50) NOT NULL" CanBeNull="false" />
+      <Column Name="COLOR" Member="Color" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="SELLDEALERCODE" Member="SellDealerCode" Type="System.String" DbType="VARCHAR2(30)" CanBeNull="true" />
+      <Column Name="DATABASECODE" Member="DatabaseCode" Type="System.String" DbType="VARCHAR2(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CUSTOMERID" Member="CustomerId" Type="System.Int64" DbType="NUMBER(10)" CanBeNull="true" />
+      <Column Name="CREATEDATE" Member="CreatedDate" Type="System.DateTime" DbType="TIMESTAMP" CanBeNull="true" />
+      <Association Name="Customer_WarrantyInfo" Member="Customer" ThisKey="CustomerId" OtherKey="CustomerId" Type="Customer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.SYM_CUSTOMER" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="CUSTOMERID" Member="CustomerId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDENTIFYNUMBER" Member="IdentifyNumber" Type="System.String" DbType="VARCHAR2(20)" CanBeNull="true" />
+      <Column Name="FULLNAME" Member="FullName" Type="System.String" DbType="NVARCHAR2(100) NOT NULL" CanBeNull="false" />
+      <Column Name="GENDER" Member="Gender" Type="System.Boolean" DbType="NUMBER(1)" CanBeNull="true" />
+      <Column Name="BIRTHDATE" Member="BirthDate" Type="System.DateTime" DbType="TIMESTAMP" CanBeNull="true" />
+      <Column Name="ADDRESS" Member="Address" Type="System.String" DbType="NVARCHAR2(512)" CanBeNull="true" />
+      <Column Name="PROVINCEID" Member="ProvinceId" Type="System.String" DbType="VARCHAR2(20)" CanBeNull="true" />
+      <Column Name="DISTRICTID" Member="DistrictId" Type="System.String" DbType="NVARCHAR2(512)" CanBeNull="true" />
+      <Column Name="JOBTYPEID" Member="JobTypeId" Type="System.Int32" DbType="NUMBER(2)" CanBeNull="true" />
+      <Column Name="EMAIL" Member="Email" Type="System.String" DbType="VARCHAR2(256)" CanBeNull="true" />
+      <Column Name="TEL" Member="Tel" Type="System.String" DbType="VARCHAR2(20)" CanBeNull="true" />
+      <Column Name="MOBILE" Member="Mobile" Type="System.String" DbType="VARCHAR2(20)" CanBeNull="true" />
+      <Column Name="CUSTOMERTYPE" Member="CustomerType" Type="System.Int32" DbType="NUMBER(2)" CanBeNull="true" />
+      <Column Name="CUSTOMERDESCRIPTION" Member="CustomerDescription" Type="System.String" DbType="NVARCHAR2(4000)" CanBeNull="true" />
+      <Column Name="PRECINCT" Member="Precinct" Type="System.String" DbType="NVARCHAR2(512)" CanBeNull="true" />
+      <Column Name="PRIORITY" Member="Priority" Type="System.Int32" DbType="NUMBER(2)" CanBeNull="true" />
+      <Column Name="DEALERCODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="FORSERVICE" Member="ForService" Type="System.Boolean" DbType="NUMBER(1) NOT NULL" CanBeNull="false" />
+      <Association Name="Customer_ExchangePartHeader" Member="ExchangePartHeaders" ThisKey="CustomerId" OtherKey="CustomerId" Type="ExchangePartHeader" />
+      <Association Name="Customer_ServiceHeader" Member="ServiceHeaders" ThisKey="CustomerId" OtherKey="CustomerId" Type="ServiceHeader" />
+      <Association Name="Customer_WarrantyInfo" Member="WarrantyInfos" ThisKey="CustomerId" OtherKey="CustomerId" Type="WarrantyInfo" />
+      <Association Name="Customer_Invoice" Member="SaleInvoices" Storage="_Invoices" ThisKey="CustomerId" OtherKey="CustomerId" Type="Invoice" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.DATA_BROKEN" Member="Brokens">
+    <Type Name="Broken">
+      <Column Name="BROKENNAME" Member="BrokenName" Type="System.String" DbType="VARCHAR2(256) NOT NULL" CanBeNull="false" />
+      <Column Name="LASTUPDATE" Member="LastUpdate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="EDITBY" Member="EditBy" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="BROKENCODE" Member="BrokenCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="BROKENID" Member="BrokenId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="Broken_ExchangePartDetail" Member="ExchangePartDetails" ThisKey="BrokenId" OtherKey="BrokenId" Type="ExchangePartDetail" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.DATA_WARRANTYCONDITION" Member="WarrantyConditions">
+    <Type Name="WarrantyCondition">
+      <Column Name="WARRANTYCONDITIONID" Member="WarrantyConditionId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(38) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PARTCODE" Member="PartCode" Type="System.String" DbType="VARCHAR2(35) NOT NULL" CanBeNull="false" />
+      <Column Name="PARTNAMEVN" Member="PartNameVN" Type="System.String" DbType="NVARCHAR2(512) NOT NULL" CanBeNull="false" />
+      <Column Name="PARTNAMEEN" Member="PartNameEN" Type="System.String" DbType="NVARCHAR2(512) NOT NULL" CanBeNull="false" />
+      <Column Name="MOTORCODE" Member="MotorCode" Type="System.String" DbType="VARCHAR2(12)" CanBeNull="true" />
+      <Column Name="WARRANTYTIME" Member="WarrantyTime" Type="System.Int32" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="WARRANTYLENGTH" Member="WarrantyLength" Type="System.Int64" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="LABOUR" Member="Labour" Type="System.Int64" DbType="NUMBER(38)" CanBeNull="true" />
+      <Column Name="MANPOWER" Member="ManPower" Type="System.String" DbType="VARCHAR2(10)" CanBeNull="true" />
+      <Column Name="UNITPRICE" Member="UnitPrice" Type="System.Int64" DbType="NUMBER(38)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.SALE_INVOICE" Member="Invoices">
+    <Type Name="Invoice">
+      <Column Name="INVOICEID" Member="InvoiceId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ITEMINSTANCEID" Member="ItemInstanceId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="SELLITEMID" Member="SellItemId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CUSTOMERID" Member="CustomerId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ENGINENUMBER" Member="EngineNumber" Type="System.String" DbType="VARCHAR2(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DEALERCODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CREATEDDATE" Member="CreatedDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="CREATEDBY" Member="CreatedBy" Type="System.String" DbType="NVARCHAR2(512) NOT NULL" CanBeNull="false" />
+      <Column Name="INVOICENUMBER" Member="InvoiceNumber" Type="System.String" DbType="VARCHAR2(30)" CanBeNull="true" />
+      <Column Name="SELLDATE" Member="SellDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Association Name="Customer_Invoice" Member="Customer" ThisKey="CustomerId" OtherKey="CustomerId" Type="Customer" IsForeignKey="true" />
+      <Association Name="DataIteminstance_Invoice" Member="DataIteminstance" ThisKey="ItemInstanceId" OtherKey="ItemInstanceId" Type="DataIteminstance" IsForeignKey="true" />
+      <Association Name="SaleSellitem_Invoice" Member="SaleSellitem" ThisKey="SellItemId" OtherKey="SellItemId" Type="SaleSellitem" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.DATA_ITEMINSTANCE" Member="DataIteminstances">
+    <Type Name="DataIteminstance">
+      <Column Name="ITEMINSTANCEID" Member="ItemInstanceId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ITEMCODE" Member="ItemCode" Type="System.String" DbType="VARCHAR2(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DEALERCODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ENGINENUMBER" Member="EngineNumber" Type="System.String" DbType="VARCHAR2(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ITEMTYPE" Member="ItemType" Type="System.String" DbType="NVARCHAR2(512) NOT NULL" CanBeNull="false" />
+      <Column Name="COLOR" Member="Color" Type="System.String" DbType="NVARCHAR2(60) NOT NULL" CanBeNull="false" />
+      <Column Name="IMPORTEDDATE" Member="ImportedDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS" Member="Status" Type="System.Int32" DbType="NUMBER(2) NOT NULL" CanBeNull="false" />
+      <Column Name="MADEDATE" Member="MadeDate" Type="System.DateTime" DbType="TIMESTAMP" CanBeNull="true" />
+      <Column Name="VMEPINVOICE" Member="VMEPInvoice" Type="System.String" DbType="VARCHAR2(256)" CanBeNull="true" />
+      <Column Name="COMMENTS" Member="Comments" Type="System.String" DbType="NVARCHAR2(4000)" CanBeNull="true" />
+      <Column Name="BRANCHCODE" Member="BranchCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="CREATEDDATE" Member="CreatedDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="RELEASEDDATE" Member="ReleasedDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="DATABASECODE" Member="DatabaseCode" Type="System.String" DbType="VARCHAR2(10) NOT NULL" CanBeNull="false" />
+      <Association Name="DataIteminstance_Invoice" Member="Invoices" ThisKey="ItemInstanceId" OtherKey="ItemInstanceId" Type="Invoice" />
+      <Association Name="DataItem_DataIteminstance" Member="DataItem" ThisKey="ItemCode" OtherKey="ItemCode" Type="DataItem" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.SALE_SELLITEM" Member="SaleSellitems">
+    <Type Name="SaleSellitem">
+      <Column Name="SELLITEMID" Member="SellItemId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PRICEBEFORETAX" Member="PriceBeforeTax" Type="System.Int64" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="TAXAMT" Member="TaxAmt" Type="System.Int32" DbType="NUMBER(3) NOT NULL" CanBeNull="false" />
+      <Column Name="PAYMENTTYPE" Member="PaymentType" Type="System.Int32" DbType="NUMBER(1) NOT NULL" CanBeNull="false" />
+      <Column Name="NUMBERPLATE" Member="NumberPlate" Type="System.String" DbType="VARCHAR2(10)" CanBeNull="true" />
+      <Column Name="SELLTYPE" Member="SellType" Type="System.String" DbType="NVARCHAR2(512)" CanBeNull="true" />
+      <Column Name="PAYMENTDATE" Member="PaymentDate" Type="System.DateTime" DbType="TIMESTAMP" CanBeNull="true" />
+      <Column Name="NUMPLATERECDATE" Member="NumPlaterecdate" Type="System.DateTime" DbType="TIMESTAMP" CanBeNull="true" />
+      <Column Name="COMMENTSELLITEM" Member="CommentSellItem" Type="System.String" DbType="NVARCHAR2(512)" CanBeNull="true" />
+      <Association Name="SaleSellitem_Invoice" Member="Invoices" ThisKey="SellItemId" OtherKey="SellItemId" Type="Invoice" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.DATA_ITEM" Member="DataItems">
+    <Type Name="DataItem">
+      <Column Name="ITEMCODE" Member="ItemCode" Type="System.String" DbType="VARCHAR2(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ITEMNAME" Member="ItemName" Type="System.String" DbType="NVARCHAR2(100) NOT NULL" CanBeNull="false" />
+      <Column Name="COLORCODE" Member="ColorCode" Type="System.String" DbType="VARCHAR2(20) NOT NULL" CanBeNull="false" />
+      <Column Name="COLORNAME" Member="ColorName" Type="System.String" DbType="NVARCHAR2(60) NOT NULL" CanBeNull="false" />
+      <Column Name="ITEMTYPE" Member="ItemType" Type="System.String" DbType="VARCHAR2(50)" CanBeNull="true" />
+      <Column Name="DATABASECODE" Member="DatabaseCode" Type="System.String" DbType="VARCHAR2(10)" CanBeNull="true" />
+      <Column Name="HTFPRICE" Member="HTFPrice" Type="System.Decimal" DbType="NUMBER(18)" CanBeNull="true" />
+      <Column Name="DNFPRICE" Member="DNFPrice" Type="System.Decimal" DbType="NUMBER(18)" CanBeNull="true" />
+      <Column Name="FORHTF" Member="ForHTF" Type="System.Int32" DbType="NUMBER(1)" CanBeNull="true" />
+      <Column Name="FORDNF" Member="ForDNF" Type="System.Int32" DbType="NUMBER(1)" CanBeNull="true" />
+      <Association Name="DataItem_DataIteminstance" Member="DataIteminstances" ThisKey="ItemCode" OtherKey="ItemCode" Type="DataIteminstance" />
+    </Type>
+  </Table>
+</Database>

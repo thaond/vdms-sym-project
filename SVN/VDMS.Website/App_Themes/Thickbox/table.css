@@ -1,0 +1,106 @@
+﻿/* Common Styles */
+.grid
+{
+    font-size:11px;
+    font-family:Tahoma;
+    border:solid 1px #333;
+    background-color:#fff;
+    padding:1px;
+}
+.grid .title
+{
+	background:#323A4B;
+	color:#fff;
+	height:30px;
+	text-align:center;
+	height:30px;
+	line-height:30px;
+	font-size:16px;	  
+	font-weight:bold;  
+}
+.grid .datatable
+{
+	width:100%;
+}
+.grid .datatable TH
+{
+	cursor: pointer; 
+	text-align:left;
+	height:17px;
+	line-height:17px;
+	padding:0px 4px;
+	background:url(/Images/gray_hd_bg.png) repeat-x;
+	border-right:solid 1px #9e9e9e;
+	color:#333;
+}
+.grid .datatable TD
+{
+	color:#222;
+	text-align:left;
+	padding:2px 4px;
+	border-right:solid 1px #d9d9d9;
+}
+.grid .datatable TR.even { background-color:#fff; }
+.grid .datatable TR.odd { background-color:#f1f5fa; }      
+
+/* Sorting Styles */
+.grid .datatable TR TH.asc,
+.grid .datatable TR TH.desc
+{
+    background:url(/Images/hd_bg_sort.png) repeat-x;
+}
+.grid .datatable TH .sort { padding-right:21px; }
+.grid .datatable TH.asc .sort
+{
+    background:url(/Images/asc.gif) no-repeat center right;
+}
+.grid .datatable TH.desc .sort
+{
+    background:url(/Images/desc.gif) no-repeat center right;
+}
+.grid .datatable .pager td
+{
+	border-width:0px;
+}
+.grid .footer
+{
+	text-align:right;
+	padding:8px;
+}
+/* Theme specific styles */
+.blue .grid .datatable TH
+{
+	background:url(/Images/blue_hd_bg.png) repeat-x;
+}
+.blue .grid .title
+{
+	background:#495265;
+}
+.gray .grid .datatable TH
+{
+	background:url(/Images/gray_hd_bg.png) repeat-x;
+}
+.gray .grid .title
+{
+	background:#323A4B;
+}
+
+/* star gmail */
+.gmstar
+{
+	background: transparent url(/images/icons1b.png) no-repeat scroll -20px -20px;
+	margin-top: 1px;
+	vertical-align: top;
+	height: 15px;
+	width: 15px;
+	cursor: pointer;
+}
+.gmnostar
+{
+	background: transparent url(/images/icons1b.png) no-repeat scroll 0 -20px;
+	margin-top: 1px;
+	vertical-align: top;
+	height: 15px;
+	width: 15px;
+	cursor: pointer;
+}

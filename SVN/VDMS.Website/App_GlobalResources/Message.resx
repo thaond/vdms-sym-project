@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActionSucessful" xml:space="preserve">
+    <value>Update data sucessfully.</value>
+  </data>
+  <data name="AddBroken_BrokenCodeExist" xml:space="preserve">
+    <value>Broken code already exist!</value>
+  </data>
+  <data name="Adjustment_EmptyBranchList" xml:space="preserve">
+    <value>Can not find any place in this dealer to shift vehicle!</value>
+  </data>
+  <data name="Adjustment_InvalidBranch" xml:space="preserve">
+    <value>This vehicle does not belong to current branch!</value>
+  </data>
+  <data name="Adjustment_InvalidDealer" xml:space="preserve">
+    <value>This vehicle does not belong to your dealer/region!</value>
+  </data>
+  <data name="Adjustment_InvalidEngineNumber" xml:space="preserve">
+    <value>Wrong engine number has been entered!</value>
+  </data>
+  <data name="Adjustment_InvalidStatus" xml:space="preserve">
+    <value>Vehicle status does not allow adjustment!</value>
+  </data>
+  <data name="Adjustment_SaveDataFailed" xml:space="preserve">
+    <value>Save data to database failed!</value>
+  </data>
+  <data name="AtleastOneItemSelected" xml:space="preserve">
+    <value>You must chose atleast one motor!</value>
+  </data>
+  <data name="BrokenCodeInUse" xml:space="preserve">
+    <value>This broken code has been used, cannot be delete!</value>
+  </data>
+  <data name="Cus_HaveNotBuyItem" xml:space="preserve">
+    <value>This customer have not buy any our motor!</value>
+  </data>
+  <data name="Cus_NoCustomer" xml:space="preserve">
+    <value>That customer ID/company ID have not existed in database!</value>
+  </data>
+  <data name="Cus_SaveErr" xml:space="preserve">
+    <value>That  customer ID/company ID had existed database!</value>
+  </data>
+  <data name="Cus_SumMoneyInvalid" xml:space="preserve">
+    <value>All your money input at unfixed hire-purchase must be sumary equals price(include tax)</value>
+  </data>
+  <data name="DataLost" xml:space="preserve">
+    <value>Data has been lost!</value>
+  </data>
+  <data name="DataNotFound" xml:space="preserve">
+    <value>No data has been found!</value>
+  </data>
+  <data name="DateConditionErr" xml:space="preserve">
+    <value>DateFrom can not be greater than DateTo.</value>
+  </data>
+  <data name="EngineNoBatchInvoiceFound" xml:space="preserve">
+    <value>This engine number was sold for sub-store!</value>
+  </data>
+  <data name="EngineNumberIsHaved" xml:space="preserve">
+    <value>The engine number exists!</value>
+  </data>
+  <data name="EngineNumberNotFound" xml:space="preserve">
+    <value>Can not find that engine number or that engine number have not been sold!</value>
+  </data>
+  <data name="EngineNumberNotFoundInDB" xml:space="preserve">
+    <value>Can not find that engine number or that engine number has been sold!</value>
+  </data>
+  <data name="GeneralError" xml:space="preserve">
+    <value>An general error occur! Error message: {0}</value>
+  </data>
+  <data name="InventoryLocked" xml:space="preserve">
+    <value>Return date on or before inventory lock date {0}</value>
+  </data>
+  <data name="Invoice_BillDuplicated" xml:space="preserve">
+    <value>That bill number has been existed!</value>
+  </data>
+  <data name="IsExistItem" xml:space="preserve">
+    <value>This item is exist. You can not add Item to this Order</value>
+  </data>
+  <data name="ListMotoSale_CantDelete_Childrow" xml:space="preserve">
+    <value>Can not delete this vehicle. It has been referenced by other object(s).</value>
+  </data>
+  <data name="ListMotoSale_NoItemFound" xml:space="preserve">
+    <value>Not found!</value>
+  </data>
+  <data name="LoadCustomerErr" xml:space="preserve">
+    <value>You must get a motor before insert a customer</value>
+  </data>
+  <data name="NotEnoughtPermission" xml:space="preserve">
+    <value>You have not enought permission to do this action.</value>
+  </data>
+  <data name="NotFoundInDB" xml:space="preserve">
+    <value>Not found or be sold!</value>
+  </data>
+  <data name="Order_NewOrderDetailCountMsg" xml:space="preserve">
+    <value>Items order quantity: {0}</value>
+  </data>
+  <data name="Order_NewOrderMsg" xml:space="preserve">
+    <value>New order from {0} at {1}</value>
+  </data>
+  <data name="OrderForm_ApprovedConfirmedOrderError" xml:space="preserve">
+    <value>This order has been confirmed. It cannot be approved.</value>
+  </data>
+  <data name="OrderForm_DeleteConfirmedOrderError" xml:space="preserve">
+    <value>This order has been confirmed. It cannot be edited.</value>
+  </data>
+  <data name="PagingInfo" xml:space="preserve">
+    <value>Page: &lt;b&gt;{0}&lt;/b&gt;/&lt;b&gt;{1}&lt;/b&gt; (Total: &lt;b&gt;{2}&lt;/b&gt; items)</value>
+  </data>
+  <data name="Part_AddNewFailed" xml:space="preserve">
+    <value>The part code was inputed has been in database!</value>
+  </data>
+  <data name="PartCodeExisted" xml:space="preserve">
+    <value>Partcode is used, can not delete!</value>
+  </data>
+  <data name="PartNotFound" xml:space="preserve">
+    <value>Part not found!</value>
+  </data>
+  <data name="Payment_NotFound" xml:space="preserve">
+    <value>That customer do not use any hire-purchase method!</value>
+  </data>
+  <data name="Reformation_ApplyCase1" xml:space="preserve">
+    <value>Engine No must be real and the same to the old Engine No!</value>
+  </data>
+  <data name="Reformation_ApplyCase2" xml:space="preserve">
+    <value>The old Engine No is not in Issue Voucher list at this time!</value>
+  </data>
+  <data name="Reformation_ApplyCase3" xml:space="preserve">
+    <value>Engine No does not exist in Issue Voucher, or duplicate in Tip-Top database!</value>
+  </data>
+  <data name="SaveStateFailed" xml:space="preserve">
+    <value>Web state has an error. Please try again!</value>
+  </data>
+  <data name="Security_ErrorDeleteRole" xml:space="preserve">
+    <value>Error occur when delete role. Maybe user is exist in role.</value>
+  </data>
+  <data name="Security_ErrorEditRole" xml:space="preserve">
+    <value>Error occur when edit role. Maybe role name is in used.</value>
+  </data>
+  <data name="Selling_SubStoreNotFound" xml:space="preserve">
+    <value>Sub-store not found!</value>
+  </data>
+  <data name="Shipping_EnterAllException" xml:space="preserve">
+    <value>You must enter all needed exceptions!</value>
+  </data>
+  <data name="Shipping_InvalidExportInvoiceNumber" xml:space="preserve">
+    <value>Your entered Export Invoice number does not exist or for other dealer!</value>
+  </data>
+  <data name="Shipping_ItemNotExit" xml:space="preserve">
+    <value>Some item does not exist in VDMS system!</value>
+  </data>
+  <data name="Shipping_UpdateFailed" xml:space="preserve">
+    <value>Update data to database failed!</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total:</value>
+  </data>
+  <data name="UpdateDataFailed_WrongData" xml:space="preserve">
+    <value>Update failed. Input data are invalid!</value>
+  </data>
+  <data name="VehicleAlreadyHasVoucher" xml:space="preserve">
+    <value>This vehile already has voucher!</value>
+  </data>
+  <data name="WarrantyCondition_PartcodeLength" xml:space="preserve">
+    <value>Part code must have length greater than 5!</value>
+  </data>
+  <data name="WarrantyContent_BrokenCodeNotFound" xml:space="preserve">
+    <value>Invalid Broken Coder!</value>
+  </data>
+  <data name="WarrantyContent_EmptySpareList" xml:space="preserve">
+    <value>No Spare in list!</value>
+  </data>
+  <data name="WarrantyContent_EngineNumberNotFound" xml:space="preserve">
+    <value>Can not find this engine number. Vehicle may be avoid warranty!</value>
+  </data>
+  <data name="WarrantyContent_EnterFee" xml:space="preserve">
+    <value>Fee amount can not be black!</value>
+  </data>
+  <data name="WarrantyContent_ExchangeNumberNotFound" xml:space="preserve">
+    <value>Invalid Exchange number!</value>
+  </data>
+  <data name="WarrantyContent_InvalidDateTimeValue" xml:space="preserve">
+    <value>Invalid date-time value!</value>
+  </data>
+  <data name="WarrantyContent_InvalidEngineNumber" xml:space="preserve">
+    <value>Can not find this engine number. You must enter engine number that exist in VDMS system!</value>
+  </data>
+  <data name="WarrantyContent_InvalidExchangeSparesList" xml:space="preserve">
+    <value>Invalid Exchange spares. Try again please!</value>
+  </data>
+  <data name="WarrantyContent_InvalidServiceType" xml:space="preserve">
+    <value>Invalid selected services!</value>
+  </data>
+  <data name="WarrantyContent_InvalidSpareCode" xml:space="preserve">
+    <value>Invalid Spare number!</value>
+  </data>
+  <data name="WarrantyContent_ItemNotSold" xml:space="preserve">
+    <value>This item has not been sold!</value>
+  </data>
+  <data name="WarrantyContent_ItemSoldByOtherDealer" xml:space="preserve">
+    <value>This vehicle has been sold by other dealer!</value>
+  </data>
+  <data name="WarrantyContent_ItemTypeNotFound" xml:space="preserve">
+    <value>Model not found!</value>
+  </data>
+  <data name="WarrantyContent_LastKmChanged" xml:space="preserve">
+    <value>Last km count has been changed when editting (old value is {0} km)!</value>
+  </data>
+  <data name="WarrantyContent_NoItemSold" xml:space="preserve">
+    <value>No item sold!</value>
+  </data>
+  <data name="WarrantyContent_SaveDetailFailed" xml:space="preserve">
+    <value>Save Spares list failed!</value>
+  </data>
+  <data name="WarrantyContent_SaveExchDetailFailed" xml:space="preserve">
+    <value>Save Exchange spares list failed!</value>
+  </data>
+  <data name="WarrantyContent_SaveExchHeaderFailed" xml:space="preserve">
+    <value>Save Exchange failed!</value>
+  </data>
+  <data name="WarrantyContent_SaveHeaderFailed" xml:space="preserve">
+    <value>Save service record sheet failed!</value>
+  </data>
+  <data name="WarrantyContent_ServiceSheetNumberNotFound" xml:space="preserve">
+    <value>No Service record sheet was found!</value>
+  </data>
+  <data name="WarrantyContent_SpareNumberNotFound" xml:space="preserve">
+    <value>Spare number not found!</value>
+  </data>
+  <data name="WarrantyContent_StringTooLong" xml:space="preserve">
+    <value>Input text too long!</value>
+  </data>
+  <data name="WarrantyContent_UpdateDataFailed" xml:space="preserve">
+    <value>Update data failed!</value>
+  </data>
+  <data name="WarrantyInfo_DBCodePermission" xml:space="preserve">
+    <value>Engine number is belonged to other database!</value>
+  </data>
+  <data name="WarrantyInfo_EditStatus" xml:space="preserve">
+    <value>This engine number is existed on warranty infomation!</value>
+  </data>
+  <data name="WarrantyInfo_EngineNumberInvalid" xml:space="preserve">
+    <value>Engine number is invalid!</value>
+  </data>
+  <data name="WarrantyInfo_InsertDuplicate" xml:space="preserve">
+    <value>Warranty information is existed in databse!</value>
+  </data>
+  <data name="WarrantyInfo_PurchaseDateInvalid" xml:space="preserve">
+    <value>Purchase date is not right date format!</value>
+  </data>
+  <data name="WarrantyInfo_WrongDealercode" xml:space="preserve">
+    <value>Selling Dealer in VDMS does not equal to TIPTOP!</value>
+  </data>
+  <data name="WarrantyInfo_WrongSellSDate" xml:space="preserve">
+    <value>Selling date does not equal to Dealer's value!</value>
+  </data>
+  <data name="AccessDenied" xml:space="preserve">
+    <value>Access denied!</value>
+  </data>
+  <data name="Reject_CancelRequestFailed" xml:space="preserve">
+    <value>Cancel reject request failed!</value>
+  </data>
+  <data name="Reject_CanNotSendToVMEP" xml:space="preserve">
+    <value>Can not send infomations to VMEP!</value>
+  </data>
+  <data name="Reject_FinishReturnFailed" xml:space="preserve">
+    <value>Can not save infomations to database. Please try again!</value>
+  </data>
+  <data name="Reject_ItemHasOutOfStock" xml:space="preserve">
+    <value>Item has been out of stock!</value>
+  </data>
+  <data name="Reject_ShippingDetailError" xml:space="preserve">
+    <value>Can not obtain shipping informations!</value>
+  </data>
+  <data name="Reject_VerhicleNotExist" xml:space="preserve">
+    <value>Engine number does not exist or not for current dealer/branch!</value>
+  </data>
+  <data name="WarrantyContent_InCompleteSpares" xml:space="preserve">
+    <value>Spares list has some incomplete infomation!</value>
+  </data>
+  <data name="WarrantyContent_InvalidServiceType1" xml:space="preserve">
+    <value>Invalid selected services!</value>
+  </data>
+  <data name="ItemAlreadyExist" xml:space="preserve">
+    <value>Item "{0}" already exist!</value>
+  </data>
+  <data name="YouMustBeAdmin" xml:space="preserve">
+    <value>You must be an administrator!</value>
+  </data>
+  <data name="YouMustBeDealer" xml:space="preserve">
+    <value>You must be a dealer!</value>
+  </data>
+  <data name="SomeItemHasError" xml:space="preserve">
+    <value>Some item has been made error!</value>
+  </data>
+  <data name="DataFormatWrong" xml:space="preserve">
+    <value>Data format has been wrong!</value>
+  </data>
+  <data name="DataValueWrong" xml:space="preserve">
+    <value>Data value has been wrong!</value>
+  </data>
+  <data name="InvalidSoldDateRange" xml:space="preserve">
+    <value>Purchase date must be from {0} to {1}!</value>
+  </data>
+  <data name="Shipping_OrdersDoesNotConfirmed" xml:space="preserve">
+    <value>All order hasnot been confirmed!</value>
+  </data>
+  <data name="MoneyInvalid" xml:space="preserve">
+    <value>Money amount is invalid1</value>
+  </data>
+  <data name="ImportExcelError" xml:space="preserve">
+    <value>Errors on rows {1}.</value>
+  </data>
+  <data name="NoVehicle" xml:space="preserve">
+    <value>Wrong number or the vehicle may be imported</value>
+  </data>
+  <data name="NoPrice" xml:space="preserve">
+    <value>Price must be specified!</value>
+  </data>
+  <data name="VehicleError" xml:space="preserve">
+    <value>Vehicle number {0} has an error: {1}</value>
+  </data>
+  <data name="Adjustment_InvalidDate" xml:space="preserve">
+    <value>Adjust date is invalid!</value>
+  </data>
+  <data name="ImportExcelSuccessful" xml:space="preserve">
+    <value>Imported {0}.</value>
+  </data>
+  <data name="WrongVehiceNumber" xml:space="preserve">
+    <value>WrongVehiceNumber</value>
+  </data>
+  <data name="VehicleNotArrived" xml:space="preserve">
+    <value>Vehicle not arrived !</value>
+  </data>
+  <data name="BankFied" xml:space="preserve">
+    <value>Requied Blank Fields:</value>
+  </data>
+  <data name="ReleaseMoreThanImport" xml:space="preserve">
+    <value>Return date must more or equal than Import date</value>
+  </data>
+  <data name="ReleaseMoreThanNow" xml:space="preserve">
+    <value>Return Date must less than now</value>
+  </data>
+</root>

@@ -1,0 +1,257 @@
+﻿<%@ Master Language="C#" AutoEventWireup="false" CodeFile="MasterPage.master.cs"
+    Inherits="MasterPage" %>
+
+<%@ Register TagPrefix="cc1" Namespace="VDMS.II.WebControls" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%--<%@ Register Assembly="ScriptReferenceProfiler" TagPrefix="cc1" Namespace="ScriptReferenceProfiler" %>--%>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    <script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
+
+    <script type="text/javascript">
+
+        var queryUnload = false;
+        $(document).ready(function() {
+            $('input.number').keypress(function(e) {
+                if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                    return false;
+                };
+            });
+
+            $(window).bind("beforeunload", function(e) {
+                if (queryUnload) return confirm(SysMsg[3]);
+            });
+        });
+        function pageLoad(sender, args) {
+            if (args.get_isPartialLoad()) {
+                //  reapply the thick box stuff
+                //tb_init('a.thickbox');
+            }
+            var isAsyncPostback = Sys.WebForms.PageRequestManager.getInstance().get_isInAsyncPostBack();
+            if (isAsyncPostback) {
+                //tb_init('a.thickbox, area.thickbox, input.thickbox');
+                $('input.number').keypress(function(e) {
+                    if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                        return false;
+                    };
+                });
+            }
+        }
+        function showchangefont() {
+            if ($("#changeFont").is(":hidden")) {
+                $("#changeFont").show("slow");
+            } else {
+            $("#changeFont").slideUp();
+            }
+        }
+
+
+        $(document).ready(function() {
+            // Reset Font Size
+            var originalFontSize = $('body').css('font-size');
+            var orginalFontSizeGrid = $('.grid').css('font-size');
+            $(".resetFont").click(function() {
+                $('body, .title').css('font-size', originalFontSize);
+            });
+            // Increase Font Size
+            $(".increaseFont").click(function() {
+                var currentFontSize = $('body, .title').css('font-size');
+                var currentFontSizeNum = parseFloat(currentFontSize, 10);
+                var newFontSize = currentFontSizeNum * 1.2;
+                $('body, .title').css('font-size', newFontSize);
+                return false;
+            });
+            // Decrease Font Size
+            $(".decreaseFont").click(function() {
+                var currentFontSize = $('body, .title').css('font-size');
+                var currentFontSizeNum = parseFloat(currentFontSize, 10);
+                var newFontSize = currentFontSizeNum * 0.8;
+                $('body, .title').css('font-size', newFontSize);
+                return false;
+            });
+
+            $(".resetFontGrid").click(function() {
+                $('.grid').css('font-size', orginalFontSizeGrid);
+            });
+            // Increase Font Size
+            $(".increaseFontGrid").click(function() {
+                var currentFontSize = $('.grid').css('font-size');
+                var currentFontSizeNum = parseFloat(currentFontSize, 10);
+                var newFontSize = currentFontSizeNum * 1.2;
+                $('.grid').css('font-size', newFontSize);
+                return false;
+            });
+            // Decrease Font Size
+            $(".decreaseFontGrid").click(function() {
+                var currentFontSize = $('.grid').css('font-size');
+                var currentFontSizeNum = parseFloat(currentFontSize, 10);
+                var newFontSize = currentFontSizeNum * 0.8;
+                $('.grid').css('font-size', newFontSize);
+                return false;
+            });
+
+        });
+
+    </script>
+
+    <asp:ContentPlaceHolder ID="h" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="main">
+        <form id="form1" runat="server">
+        <!-- Head -->
+        <div id="head">
+            <!-- Logo -->
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="" width="200px" height="73px" /></a>
+            </div>
+            <!-- End Logo -->
+            <!-- Select Agent -->
+            <div id="select-agent">
+                <asp:LoginName ID="ln" runat="server" FormatString="Hello, {0}" />
+                <asp:PlaceHolder ID="phVirtualDealer" runat="server">
+                    <asp:TextBox ID="txtVirtualDealerCode" runat="server"></asp:TextBox>
+                    <asp:ImageButton ID="imbUpdateVirtualDealerCode" ImageUrl="~/Images/update.gif" runat="server"
+                        Style="width: 16px" OnClick="imbUpdateVirtualDealerCode_Click" CausesValidation="false" />
+                </asp:PlaceHolder>
+                <div class="cl">
+                </div>
+                <cc1:DealerPlaceHolder ID="dph2" runat="server" VisibleBy="Dealer" AdminOnly="true">
+                    V<cc1:WarehouseList ID="dlVWarehouse" Type="V" UseVIdAsValue="true" runat="server">
+                    </cc1:WarehouseList>
+                    P<cc1:WarehouseList ID="dlWarehouse" Type="P" runat="server">
+                    </cc1:WarehouseList>
+                    <asp:ImageButton ID="ibUW" ImageUrl="~/Images/update.gif" runat="server" Style="width: 16px"
+                        OnClick="ibUW_Click" CausesValidation="false" />
+                </cc1:DealerPlaceHolder>
+            </div>
+            <!-- End Select Agent -->
+            <!-- Right Links -->
+            <div class="right-links">
+                <asp:HyperLink ID="l1" runat="server" Text="Homepage" NavigateUrl="~/Default.aspx"></asp:HyperLink>&nbsp;|&nbsp;
+                <asp:HyperLink ID="l2" runat="server" Text="Profile" NavigateUrl="~/profile.aspx"></asp:HyperLink>&nbsp;|&nbsp;
+                <asp:LoginStatus ID="ls" runat="server" OnLoggedOut="ls_LoggedOut" />
+            </div>
+            <!-- ENd Right Links -->
+            <!-- Nav -->
+            <div id="myslidemenu" class="jqueryslidemenu">
+                <asp:Menu ID="menu" runat="server" MaximumDynamicDisplayLevels="2" DataSourceID="smds">
+                </asp:Menu>
+                <img src="/images/cmd/fontsize.png" alt="Change Font Size" style="float: right; margin-top: 4px;
+                    cursor: pointer;" onclick="javascript:showchangefont()" />
+                <br style="clear: left" />
+            </div>
+            <div class="shadow">
+            </div>
+            <!-- End Nav -->
+            <div id="changeFont">
+                <span>Font:</span> <a href="#" class="increaseFont">Increase</a> <a href="#" class="decreaseFont">
+                    Decrease</a> <a href="#" class="resetFont">Reset</a> <span>Table:</span> <a hrelf="#"
+                        class="increaseFontGrid">Increase</a> <a href="#" class="decreaseFontGrid">Decrease</a>
+                <a href="#" class="resetFontGrid">Reset</a>
+            </div>
+        </div>
+        <!-- End Head -->
+        <!-- Add Bar -->
+        <ul class="add-bar">
+            <li>
+                <asp:Literal ID="litTitle" runat="server"></asp:Literal></li>
+            <asp:SiteMapPath ID="smp" runat="server" CssClass="mappath">
+            </asp:SiteMapPath>
+            <asp:SiteMapDataSource ID="smds" runat="server" ShowStartingNode="False" />
+        </ul>
+        <!-- End Add Bar -->
+        <asp:ScriptManager ID="ScriptManager1" runat="Server" EnablePageMethods="True">
+            <CompositeScript ScriptMode="Release">
+                <Scripts>
+                    <asp:ScriptReference Name="MicrosoftAjax.js" />
+                    <asp:ScriptReference Name="MicrosoftAjaxWebForms.js" />
+                    <asp:ScriptReference Name="AjaxControlToolkit.Common.Common.js" Assembly="AjaxControlToolkit, Version=3.0.20229.20843, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e" />
+                    <asp:ScriptReference Name="AjaxControlToolkit.ExtenderBase.BaseScripts.js" Assembly="AjaxControlToolkit, Version=3.0.20229.20843, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e" />
+                    <asp:ScriptReference Name="AjaxControlToolkit.Tabs.Tabs.js" Assembly="AjaxControlToolkit, Version=3.0.20229.20843, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e" />
+                    <asp:ScriptReference Name="AjaxControlToolkit.DynamicPopulate.DynamicPopulateBehavior.js"
+                        Assembly="AjaxControlToolkit, Version=3.0.20229.20843, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e" />
+                    <asp:ScriptReference Name="AjaxControlToolkit.Compat.Timer.Timer.js" Assembly="AjaxControlToolkit, Version=3.0.20229.20843, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e" />
+                    <asp:ScriptReference Name="AjaxControlToolkit.MaskedEdit.MaskedEditValidator.js"
+                        Assembly="AjaxControlToolkit, Version=3.0.20229.20843, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e" />
+                    <asp:ScriptReference Name="AjaxControlToolkit.MaskedEdit.MaskedEditBehavior.js" Assembly="AjaxControlToolkit, Version=3.0.20229.20843, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e" />
+                </Scripts>
+            </CompositeScript>
+        </asp:ScriptManager>
+        <asp:ScriptManagerProxy ID="ScriptManager2" runat="Server">
+            <CompositeScript ScriptMode="Release">
+                <Scripts>
+                    <asp:ScriptReference Name="AjaxControlToolkit.Common.DateTime.js" Assembly="AjaxControlToolkit, Version=3.0.20229.20843, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e" />
+                    <asp:ScriptReference Name="AjaxControlToolkit.Animation.Animations.js" Assembly="AjaxControlToolkit, Version=3.0.20229.20843, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e" />
+                    <asp:ScriptReference Name="AjaxControlToolkit.Animation.AnimationBehavior.js" Assembly="AjaxControlToolkit, Version=3.0.20229.20843, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e" />
+                    <asp:ScriptReference Name="AjaxControlToolkit.PopupExtender.PopupBehavior.js" Assembly="AjaxControlToolkit, Version=3.0.20229.20843, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e" />
+                    <asp:ScriptReference Name="AjaxControlToolkit.Common.Threading.js" Assembly="AjaxControlToolkit, Version=3.0.20229.20843, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e" />
+                    <asp:ScriptReference Name="AjaxControlToolkit.Calendar.CalendarBehavior.js" Assembly="AjaxControlToolkit, Version=3.0.20229.20843, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e" />
+                    <asp:ScriptReference Path="~/js/jqueryslidemenu.js" />
+                    <asp:ScriptReference Path="~/js/jtip.js" />
+                    <asp:ScriptReference Path="~/js/imgPre.js" />
+                    <asp:ScriptReference Path="~/js/thickbox-compressed.js" />
+                </Scripts>
+            </CompositeScript>
+        </asp:ScriptManagerProxy>
+
+        <script type="text/javascript">
+            var pbControl = null;
+            var prm = Sys.WebForms.PageRequestManager.getInstance();
+            prm.add_beginRequest(BeginRequestHandler);
+            prm.add_endRequest(EndRequestHandler);
+            function BeginRequestHandler(sender, args) {
+                pbControl = args.get_postBackElement();  //the control causing the postback
+                pbControl.disabled = true;
+            }
+            function EndRequestHandler(sender, args) {
+                pbControl.disabled = false;
+                pbControl = null;
+            }
+
+
+            function sessionKeepAlive() {
+                var wRequest = new Sys.Net.WebRequest();
+                wRequest.set_url("/ska.aspx");
+                wRequest.set_httpVerb("POST");
+                wRequest.add_completed(sessionKeepAlive_Callback);
+                wRequest.set_body();
+                wRequest.get_headers()["Content-Length"] = 0;
+                wRequest.invoke();
+            }
+
+            function sessionKeepAlive_Callback(executor, eventArgs) {
+            }
+
+            window.setInterval('sessionKeepAlive()', 2 * 60 * 1000);
+        </script>
+
+        <div id="content">
+            <asp:ContentPlaceHolder ID="c" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="footer">
+            <a href="http://thanglongsoftware.net" title="Power by Thang Long Software" class="fr">
+                <img height="55px" style="border-width: 0px;" src="/Images/power.png" alt="Thang Long Software" /></a>
+            <a href="#" style="display: none" class="imgPre">Fix</a> © 2008 Bản quyền thuộc
+            về VMEP Vietnam Co., Ltd. Bảo lưu mọi quyền.
+            <br />
+            User:
+            <%=VDMS.Helper.UserHelper.DealerName %>
+            <br />
+            P_WarehouseId:
+            <%=VDMS.Helper.UserHelper.ProfileWarehouseId%>
+            <asp:Label ID="WW" runat="server" ForeColor="Red">You are working with different part warehouses.</asp:Label><br />
+            V_WarehouseCode:
+            <%=VDMS.Helper.UserHelper.ProfileVBranch%>
+            <asp:Label ID="WW2" runat="server" ForeColor="Red">You are working with different vehicle warehouses.</asp:Label><br />
+        </div>
+        </form>
+    </div>
+    <%--<cc1:ScriptReferenceProfiler ID="srp" runat="server" />--%>
+</body>
+</html>

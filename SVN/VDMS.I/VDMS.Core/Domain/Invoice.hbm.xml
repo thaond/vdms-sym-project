@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="VDMS.Core.Domain.Invoice, VDMS.Core" table="SALE_INVOICE" lazy="false">
+		<id name="Id" type="Int64" unsaved-value="0">
+			<column name="INVOICEID" sql-type="NUMBER" not-null="true" unique="true" index="PK_SALE_INVOICEID"/>
+			<generator class="sequence">
+				<param name="sequence">seq_Invoice</param>
+			</generator>
+		</id>
+		<property name="Enginenumber" type="String">
+			<column name="ENGINENUMBER" length="20" sql-type="VARCHAR2" not-null="true" unique="true" index="UNI_ENGINENUMBER"/>
+		</property>
+		<property name="Dealercode" type="String">
+			<column name="DEALERCODE" length="20" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+    <property name="Branchcode" type="String">
+      <column name="BranchCODE" length="30" sql-type="VARCHAR2" not-null="true"/>
+    </property>
+    <property name="Createddate" type="DateTime">
+			<column name="CREATEDDATE" sql-type="TIMESTAMP(6)" not-null="true"/>
+		</property>
+		<property name="Createdby" type="String">
+			<column name="CREATEDBY" length="512" sql-type="NVARCHAR2" not-null="true"/>
+		</property>
+    <property name="Selldate" type="DateTime">
+      <column name="SELLDATE" sql-type="TIMESTAMP(6)" not-null="true"/>
+    </property>
+		<property name="Invoicenumber" type="String">
+			<column name="INVOICENUMBER" length="30" sql-type="VARCHAR2" not-null="false"/>
+		</property>
+		<many-to-one name="Customer" class="VDMS.Core.Domain.Customer, VDMS.Core">
+			<column name="CUSTOMERID" sql-type="NUMBER" not-null="true"/>
+		</many-to-one>
+		<many-to-one name="Iteminstance" class="VDMS.Core.Domain.Iteminstance, VDMS.Core">
+			<column name="ITEMINSTANCEID" sql-type="NUMBER" not-null="true"/>
+		</many-to-one>
+		<many-to-one name="Sellitem" class="VDMS.Core.Domain.Sellitem, VDMS.Core">
+			<column name="SELLITEMID" sql-type="NUMBER" not-null="true"/>
+		</many-to-one>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,170 @@
+﻿<?xml version='1.0'?>
+<?mso-application progid='Excel.Sheet'?>
+<s:Workbook xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:s="urn:schemas-microsoft-com:office:spreadsheet">
+  <o:DocumentProperties>
+    <o:Title>Stock monthly report</o:Title>
+    <o:Author>ThangLong</o:Author>
+    <o:Created>2010-07-26T14:44:48</o:Created>
+  </o:DocumentProperties>
+  <x:ExcelWorkbook>
+    <x:ActiveSheet>1</x:ActiveSheet>
+    <x:ProtectStructure>False</x:ProtectStructure>
+    <x:ProtectWindows>False</x:ProtectWindows>
+  </x:ExcelWorkbook>
+  <s:Styles>
+    <s:Style s:ID="HeaderStyle">
+      <s:Alignment s:Horizontal="Center" s:Vertical="Center" />
+      <s:Borders>
+        <s:Border s:Position="Bottom" s:LineStyle="Continuous" s:Weight="1" />
+        <s:Border s:Position="Left" s:LineStyle="Continuous" s:Weight="1" />
+        <s:Border s:Position="Right" s:LineStyle="Continuous" s:Weight="1" />
+        <s:Border s:Position="Top" s:LineStyle="Continuous" s:Weight="1" />
+      </s:Borders>
+      <s:Font s:Bold="1" s:Color="White" />
+      <s:Interior s:Color="#555555" s:Pattern="Solid" />
+    </s:Style>
+    <s:Style s:ID="Group">
+      <s:Alignment s:Vertical="Center" />
+      <s:Borders>
+        <s:Border s:Position="Bottom" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Left" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Right" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Top" s:LineStyle="Continuous" s:Weight="0" />
+      </s:Borders>
+      <s:Interior s:Color="#CCCCCC" s:Pattern="Solid" />
+    </s:Style>
+    <s:Style s:ID="GroupCenter">
+      <s:Alignment s:Horizontal="Center" s:Vertical="Center" />
+      <s:Borders>
+        <s:Border s:Position="Bottom" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Left" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Right" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Top" s:LineStyle="Continuous" s:Weight="0" />
+      </s:Borders>
+      <s:Interior s:Color="#CCCCCC" s:Pattern="Solid" />
+    </s:Style>
+    <s:Style s:ID="DetailOdd">
+      <s:Alignment s:Vertical="Center" />
+      <s:Borders>
+        <s:Border s:Position="Bottom" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Left" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Right" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Top" s:LineStyle="Continuous" s:Weight="0" />
+      </s:Borders>
+    </s:Style>
+    <s:Style s:ID="DetailEven">
+      <s:Alignment s:Vertical="Center" />
+      <s:Borders>
+        <s:Border s:Position="Bottom" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Left" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Right" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Top" s:LineStyle="Continuous" s:Weight="0" />
+      </s:Borders>
+      <s:Interior s:Color="#f1f5fa" s:Pattern="Solid" />
+    </s:Style>
+    <s:Style s:ID="DetailOddCenter">
+      <s:Alignment s:Horizontal="Center" s:Vertical="Center" />
+      <s:Borders>
+        <s:Border s:Position="Bottom" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Left" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Right" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Top" s:LineStyle="Continuous" s:Weight="0" />
+      </s:Borders>
+    </s:Style>
+    <s:Style s:ID="DetailEvenCenter">
+      <s:Alignment s:Horizontal="Center" s:Vertical="Center" />
+      <s:Borders>
+        <s:Border s:Position="Bottom" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Left" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Right" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Top" s:LineStyle="Continuous" s:Weight="0" />
+      </s:Borders>
+      <s:Interior s:Color="#f1f5fa" s:Pattern="Solid" />
+    </s:Style>
+    <s:Style s:ID="Default">
+      <s:Alignment s:Vertical="Center" />
+      <s:Borders>
+        <s:Border s:Position="Bottom" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Left" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Right" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Top" s:LineStyle="Continuous" s:Weight="0" />
+      </s:Borders>
+    </s:Style>
+  </s:Styles>
+  <s:Worksheet s:Name="NC001A.NC001A">
+    <s:Table>
+      <s:Column s:Width="20" s:AutoFitWidth="1" />
+      <s:Column s:Width="30" s:AutoFitWidth="1" />
+      <s:Column s:AutoFitWidth="1" />
+      <s:Column s:Width="100" />
+      <s:Column s:Width="100" />
+      <s:Column s:Width="30" s:AutoFitWidth="1" />
+      <s:Column s:AutoFitWidth="1" />
+      <s:Column s:Width="100" />
+      <s:Column s:AutoFitWidth="1" />
+      <s:Column s:AutoFitWidth="1" />
+      <s:Column s:AutoFitWidth="1" />
+      <s:Column s:AutoFitWidth="1" />
+      <s:Column s:AutoFitWidth="1" />
+      <s:Column s:AutoFitWidth="1" />
+      <s:Row>
+        <s:Cell s:MergeAcross="4" s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Part</s:Data>
+        </s:Cell>
+        <s:Cell s:MergeAcross="2" s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Report for</s:Data>
+        </s:Cell>
+        <s:Cell s:MergeDown="1" s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Begin</s:Data>
+        </s:Cell>
+        <s:Cell s:MergeAcross="1" s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">In</s:Data>
+        </s:Cell>
+        <s:Cell s:MergeAcross="1" s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Out</s:Data>
+        </s:Cell>
+        <s:Cell s:MergeDown="1" s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Balance</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">No</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Type</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Code</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">English name</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Vietnamese name</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Type</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Code</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Name</s:Data>
+        </s:Cell>
+        <s:Cell s:Index="10" s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Quantity</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Amount</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Quantity</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Amount</s:Data>
+        </s:Cell>
+      </s:Row>
+    </s:Table>
+  </s:Worksheet>
+</s:Workbook>

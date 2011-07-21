@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="VDMS" EntityNamespace="VDMSDataContext" ContextNamespace="VDMSDataContext" Class="VDMSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="User Id=vdms;Password=vdms;Server=vdms" Provider="Devart.Data.Oracle" />
+  <Table Name="VDMS.V2_P_ORDER_HEADER" Member="V2POrderHeaders">
+    <Type Name="V2POrderHeader">
+      <Column Name="ORDER_HEADER_ID" Member="OrderHeaderId" AutoSync="Never" Type="System.Double" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="REFERENCE_ID" Member="ReferenceId" AutoSync="Never" Type="System.Double" DbType="NUMBER(10)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="STATUS" Member="Status" AutoSync="Never" Type="System.String" DbType="CHAR(2) NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="ORDER_TYPE" Member="OrderType" AutoSync="Never" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="ORDER_SOURCE" Member="OrderSource" AutoSync="Never" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="TO_DEALER" Member="ToDealer" AutoSync="Never" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="DEALER_CODE" Member="DealerCode" AutoSync="Never" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="TO_LOCATION" Member="ToLocation" AutoSync="Never" Type="System.Double" DbType="NUMBER(10) NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="ORDER_DATE" Member="OrderDate" AutoSync="Never" Type="System.DateTime" DbType="TIMESTAMP(6) NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="QUOTATION_DATE" Member="QuotationDate" AutoSync="Never" Type="System.DateTime" DbType="TIMESTAMP(6)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="PAYMENT_DATE" Member="PaymentDate" AutoSync="Never" Type="System.DateTime" DbType="TIMESTAMP(6)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="SHIPPING_DATE" Member="ShippingDate" AutoSync="Never" Type="System.DateTime" DbType="TIMESTAMP(6)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CAN_UNDO_AUTO_RECEIVE" Member="CanUndoAutoReceive" AutoSync="Never" Type="System.Int32" DbType="NUMBER(1) NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="CHANGE_REMARK" Member="ChangeRemark" AutoSync="Never" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="TIP_TOP_NUMBER" Member="TipTopNumber" AutoSync="Never" Type="System.String" DbType="VARCHAR2(10)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CONFIRM_DATE" Member="ConfirmDate" AutoSync="Never" Type="System.DateTime" DbType="TIMESTAMP(6)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CREATED_DATE" Member="CreatedDate" AutoSync="Never" Type="System.DateTime" DbType="TIMESTAMP(6) NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="CREATED_BY" Member="CreatedBy" AutoSync="Never" Type="System.String" DbType="NVARCHAR2(2250) NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="TIP_TOP_PROCESSED" Member="TipTopProcessed" AutoSync="Never" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Association Name="V2POrderHeader_V2POrderHeader" Member="V2POrderHeaders" ThisKey="OrderHeaderId" OtherKey="ReferenceId" Type="V2POrderHeader" />
+      <Association Name="V2POrderHeader_V2POrderHeader" Member="V2POrderHeader1" Storage="_V2POrderHeader" ThisKey="ReferenceId" OtherKey="OrderHeaderId" Type="V2POrderHeader" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="VDMS.Core.Domain.Broken, VDMS.Core" table="DATA_BROKEN" lazy="false">
+		<id name="Id" type="Int64" unsaved-value="0">
+			<column name="BROKENID" sql-type="NUMBER" not-null="true" unique="true" index="PK_BROKEN"/>
+			<generator class="sequence">
+				<param name="sequence">seq_Broken</param>
+			</generator>
+		</id>
+		<property name="Brokenname" type="String">
+			<column name="BROKENNAME" length="256" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+		<property name="Lastupdate" type="DateTime">
+			<column name="LASTUPDATE" sql-type="TIMESTAMP(6)" not-null="true"/>
+		</property>
+		<property name="Editby" type="String">
+			<column name="EDITBY" length="30" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+		<property name="Brokencode" type="String">
+			<column name="BROKENCODE" length="30" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+	</class>
+</hibernate-mapping>

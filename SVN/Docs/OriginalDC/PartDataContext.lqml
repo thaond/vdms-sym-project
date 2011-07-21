@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="VDMS" EntityNamespace="VDMS.II.Entity" ContextNamespace="VDMS.II.Linq" Class="PartDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="User Id=vdms;Password=vdms;Server=vdms;Home=orahome92;Unicode=True;Persist Security Info=True" Provider="Devart.Data.Oracle" />
+  <Table Name="VDMS.V2_P_ACCESSORY" Member="Accessories">
+    <Type Name="Accessory">
+      <Column Name="ACCESSORY_ID" Member="AccessoryId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ACCESSORY_CODE" Member="AccessoryCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ENGLISH_NAME" Member="EnglishName" Type="System.String" DbType="NVARCHAR2(768)" CanBeNull="true" />
+      <Column Name="DEALER_CODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ACCESSORY_TYPE_CODE" Member="AccessoryTypeCode" Type="System.String" DbType="CHAR(2) NOT NULL" CanBeNull="false" />
+      <Column Name="VIETNAM_NAME" Member="VietnamName" Type="System.String" DbType="NVARCHAR2(768)" CanBeNull="true" />
+      <Association Name="AccessoryType_Accessory" Member="AccessoryType" ThisKey="AccessoryTypeCode" OtherKey="AccessoryTypeCode" Type="AccessoryType" IsForeignKey="true" />
+      <Association Name="Dealer_Accessory" Member="Dealer" ThisKey="DealerCode" OtherKey="DealerCode" Type="Dealer" IsForeignKey="true" />
+      <Association Name="Accessory_PartInfo" Member="PartInfos" ThisKey="AccessoryId" OtherKey="AccessoryId" Type="PartInfo" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_P_ACCESSORY_TYPE" Member="AccessoryTypes">
+    <Type Name="AccessoryType">
+      <Column Name="ACCESSORY_TYPE_CODE" Member="AccessoryTypeCode" Type="System.String" DbType="CHAR(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ACCESSORY_TYPE_NAME" Member="AccessoryTypeName" Type="System.String" DbType="NVARCHAR2(150) NOT NULL" CanBeNull="false" />
+      <Association Name="AccessoryType_Accessory" Member="Accessories" ThisKey="AccessoryTypeCode" OtherKey="AccessoryTypeCode" Type="Accessory" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_P_CATEGORY" Member="Categories">
+    <Type Name="Category">
+      <Column Name="CATEGORY_ID" Member="CategoryId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DEALER_CODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="CODE" Member="Code" Type="System.String" DbType="CHAR(5) NOT NULL" CanBeNull="false" />
+      <Column Name="NAME" Member="Name" Type="System.String" DbType="NVARCHAR2(768) NOT NULL" CanBeNull="false" />
+      <Association Name="Dealer_Category" Member="Dealer" ThisKey="DealerCode" OtherKey="DealerCode" Type="Dealer" IsForeignKey="true" />
+      <Association Name="Category_PartInfo" Member="PartInfos" ThisKey="CategoryId" OtherKey="CategoryId" Type="PartInfo" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_P_CONTACT" Member="Contacts">
+    <Type Name="Contact">
+      <Column Name="CONTACT_ID" Member="ContactId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FULL_NAME" Member="FullName" Type="System.String" DbType="NVARCHAR2(150)" CanBeNull="true" />
+      <Column Name="ADDRESS" Member="Address" Type="System.String" DbType="NVARCHAR2(765)" CanBeNull="true" />
+      <Column Name="PHONE" Member="Phone" Type="System.String" DbType="VARCHAR2(20)" CanBeNull="true" />
+      <Column Name="EMAIL" Member="Email" Type="System.String" DbType="VARCHAR2(255)" CanBeNull="true" />
+      <Column Name="ADDITIONAL_INFO" Member="AdditionalInfo" Type="System.String" DbType="NVARCHAR2(765)" CanBeNull="true" />
+      <Association Name="Contact_Customer" Member="Customers" ThisKey="ContactId" OtherKey="ContactId" Type="Customer" />
+      <Association Name="Contact_Dealer" Member="Dealers" ThisKey="ContactId" OtherKey="ContactId" Type="Dealer" />
+      <Association Name="Contact_Vendor" Member="Vendors" ThisKey="ContactId" OtherKey="ContactId" Type="Vendor" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_P_CUSTOMER" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="CUSTOMER_ID" Member="CustomerId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DEALER_CODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="CONTACT_ID" Member="ContactId" Type="System.Int64" DbType="NUMBER(10)" CanBeNull="true" />
+      <Column Name="CODE" Member="Code" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="NAME" Member="Name" Type="System.String" DbType="NVARCHAR2(765) NOT NULL" CanBeNull="false" />
+      <Association Name="Contact_Customer" Member="Contact" ThisKey="ContactId" OtherKey="ContactId" Type="Contact" IsForeignKey="true" />
+      <Association Name="Dealer_Customer" Member="Dealer" ThisKey="DealerCode" OtherKey="DealerCode" Type="Dealer" IsForeignKey="true" />
+      <Association Name="Customer_SalesHeader" Member="SalesHeaders" ThisKey="CustomerId" OtherKey="CustomerId" Type="SalesHeader" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_P_DEALER" Member="Dealers">
+    <Type Name="Dealer">
+      <Column Name="DEALER_CODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PARENT_CODE" Member="ParentCode" Type="System.String" DbType="VARCHAR2(30)" CanBeNull="true" />
+      <Column Name="CONTACT_ID" Member="ContactId" Type="System.Int64" DbType="NUMBER(10)" CanBeNull="true" />
+      <Column Name="DEALER_NAME" Member="DealerName" Type="System.String" DbType="NVARCHAR2(768) NOT NULL" CanBeNull="false" />
+      <Column Name="DATABASE_CODE" Member="DatabaseCode" Type="System.String" DbType="VARCHAR2(10) NOT NULL" CanBeNull="false" />
+      <Column Name="AREA_CODE" Member="AreaCode" Type="System.String" DbType="VARCHAR2(25) NOT NULL" CanBeNull="false" />
+      <Column Name="RECEIVE_SPAN" Member="ReceiveSpan" Type="System.Int32" DbType="NUMBER(3) NOT NULL" CanBeNull="false" />
+      <Column Name="DEFAULT_WAREHOUSE_ID" Member="DefaultWarehouseId" Type="System.Int64" DbType="NUMBER(38)" CanBeNull="true" />
+      <Association Name="Dealer_Accessory" Member="Accessories" ThisKey="DealerCode" OtherKey="DealerCode" Type="Accessory" />
+      <Association Name="Dealer_Category" Member="Categories" ThisKey="DealerCode" OtherKey="DealerCode" Type="Category" />
+      <Association Name="Contact_Dealer" Member="Contact" ThisKey="ContactId" OtherKey="ContactId" Type="Contact" IsForeignKey="true" />
+      <Association Name="Dealer_Customer" Member="Customers" ThisKey="DealerCode" OtherKey="DealerCode" Type="Customer" />
+      <Association Name="Dealer_Dealer" Member="Dealers" ThisKey="DealerCode" OtherKey="ParentCode" Type="Dealer" />
+      <Association Name="Dealer_Dealer" Member="Dealer1" Storage="_Dealer" ThisKey="ParentCode" OtherKey="DealerCode" Type="Dealer" IsForeignKey="true" />
+      <Association Name="Dealer_Favorite" Member="Favorites" ThisKey="DealerCode" OtherKey="DealerCode" Type="Favorite" />
+      <Association Name="Dealer_Inventory" Member="Inventories" ThisKey="DealerCode" OtherKey="DealerCode" Type="Inventory" />
+      <Association Name="Dealer_NGFormHeader" Member="NGFormHeaders" ThisKey="DealerCode" OtherKey="DealerCode" Type="NGFormHeader" />
+      <Association Name="Dealer_OrderHeader" Member="OrderHeaders" ThisKey="DealerCode" OtherKey="ToDealer" Type="OrderHeader" />
+      <Association Name="Dealer_OrderHeader1" Member="OrderHeaders1" Storage="_OrderHeaders" ThisKey="DealerCode" OtherKey="DealerCode" Type="OrderHeader" />
+      <Association Name="Dealer_PartInfo" Member="PartInfos" ThisKey="DealerCode" OtherKey="DealerCode" Type="PartInfo" />
+      <Association Name="Dealer_ReceiveHeader" Member="ReceiveHeaders" ThisKey="DealerCode" OtherKey="DealerCode" Type="ReceiveHeader" />
+      <Association Name="Dealer_SalesHeader" Member="SalesHeaders" ThisKey="DealerCode" OtherKey="DealerCode" Type="SalesHeader" />
+      <Association Name="Dealer_TransactionHistory" Member="TransactionHistories" ThisKey="DealerCode" OtherKey="DealerCode" Type="TransactionHistory" />
+      <Association Name="Dealer_Vendor" Member="Vendors" ThisKey="DealerCode" OtherKey="DealerCode" Type="Vendor" />
+      <Association Name="Dealer_Warehouse" Member="Warehouses" ThisKey="DealerCode" OtherKey="DealerCode" Type="Warehouse" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_P_FAVORITE" Member="Favorites">
+    <Type Name="Favorite">
+      <Column Name="FAVORITE_ID" Member="FavoriteId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DEALER_CODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="PART_INFO_ID" Member="PartInfoId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="RANK" Member="Rank" Type="System.Int32" DbType="NUMBER(5) NOT NULL" CanBeNull="false" />
+      <Column Name="TYPE" Member="Type" Type="System.String" DbType="CHAR(2) NOT NULL" CanBeNull="false" />
+      <Association Name="Dealer_Favorite" Member="Dealer" ThisKey="DealerCode" OtherKey="DealerCode" Type="Dealer" IsForeignKey="true" />
+      <Association Name="PartInfo_Favorite" Member="PartInfo" ThisKey="PartInfoId" OtherKey="PartInfoId" Type="PartInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_P_INVENTORY" Member="Inventories">
+    <Type Name="Inventory">
+      <Column Name="INVENTORY_ID" Member="InventoryId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DEALER_CODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="WAREHOUSE_ID" Member="WarehouseId" Type="System.Int64" DbType="NUMBER(10)" CanBeNull="true" />
+      <Column Name="PART_INFO_ID" Member="PartInfoId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="QUANTITY" Member="Quantity" Type="System.Int32" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="MONTH" Member="Month" Type="System.Int32" DbType="NUMBER(3) NOT NULL" CanBeNull="false" />
+      <Column Name="YEAR" Member="Year" Type="System.Int32" DbType="NUMBER(5) NOT NULL" CanBeNull="false" />
+      <Association Name="Dealer_Inventory" Member="Dealer" ThisKey="DealerCode" OtherKey="DealerCode" Type="Dealer" IsForeignKey="true" />
+      <Association Name="PartInfo_Inventory" Member="PartInfo" ThisKey="PartInfoId" OtherKey="PartInfoId" Type="PartInfo" IsForeignKey="true" />
+      <Association Name="Warehouse_Inventory" Member="Warehouse" ThisKey="WarehouseId" OtherKey="WarehouseId" Type="Warehouse" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_P_N_G_FORM_DETAIL" Member="NGFormDetails">
+    <Type Name="NGFormDetail">
+      <Column Name="N_G_FORM_DETAIL_ID" Member="NGFormDetailId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="N_G_FORM_HEADER_ID" Member="NGFormHeaderId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PART_CODE" Member="PartCode" Type="System.String" DbType="VARCHAR2(40) NOT NULL" CanBeNull="false" />
+      <Column Name="PART_STATUS" Member="PartStatus" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Request_Quantity" Member="RequestQuantity" Type="System.Int32" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="DEALER_COMMENT" Member="DealerComment" Type="System.String" DbType="NVARCHAR2(750) NOT NULL" CanBeNull="false" />
+      <Column Name="Approved_Quantity" Member="ApprovedQuantity" Type="System.Int32" DbType="NUMBER(38)" CanBeNull="true" />
+      <Column Name="Feed_Back" Member="FeedBack" Type="System.String" DbType="NVARCHAR2(750)" CanBeNull="true" />
+      <Column Name="Broken_Code" Member="BrokenCode" Type="System.String" DbType="varchar2(40)" CanBeNull="true" />
+      <Association Name="NGFormHeader_NGFormDetail" Member="NGFormHeader" ThisKey="NGFormHeaderId" OtherKey="NGFormHeaderId" Type="NGFormHeader" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_P_N_G_FORM_HEADER" Member="NGFormHeaders">
+    <Type Name="NGFormHeader">
+      <Column Name="N_G_FORM_HEADER_ID" Member="NGFormHeaderId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DEALER_CODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="RECEIVE_HEADER_ID" Member="ReceiveHeaderId" Type="System.Int64" DbType="NUMBER(10)" CanBeNull="true" />
+      <Column Name="CREATED_DATE" Member="CreatedDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS" Member="Status" Type="System.String" DbType="CHAR(2) NOT NULL" CanBeNull="false" />
+      <Column Name="NOT_GOOD_NUMBER" Member="NotGoodNumber" Type="System.String" DbType="VARCHAR2(20)" CanBeNull="true" />
+      <Column Name="APPROVE_DATE" Member="ApproveDate" Type="System.DateTime" DbType="TIMESTAMP" CanBeNull="true" />
+      <Column Name="N_G_Type" Member="NGType" Type="System.String" DbType="char(1) not null" CanBeNull="false" />
+      <Column Name="APPROVE_LEVEL" Member="ApproveLevel" Type="System.Byte" DbType="NUMBER(1) NOT NULL" CanBeNull="false" />
+      <Association Name="Dealer_NGFormHeader" Member="Dealer" ThisKey="DealerCode" OtherKey="DealerCode" Type="Dealer" IsForeignKey="true" />
+      <Association Name="NGFormHeader_NGFormDetail" Member="NGFormDetails" ThisKey="NGFormHeaderId" OtherKey="NGFormHeaderId" Type="NGFormDetail" />
+      <Association Name="ReceiveHeader_NGFormHeader" Member="ReceiveHeader" ThisKey="ReceiveHeaderId" OtherKey="ReceiveHeaderId" Type="ReceiveHeader" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_P_ORDER_DETAIL" Member="OrderDetails">
+    <Type Name="OrderDetail">
+      <Column Name="ORDER_DETAIL_ID" Member="OrderDetailId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ORDER_HEADER_ID" Member="OrderHeaderId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LINE_NUMBER" Member="LineNumber" Type="System.Int32" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="PART_CODE" Member="PartCode" Type="System.String" DbType="VARCHAR2(40) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDER_QUANTITY" Member="OrderQuantity" Type="System.Int32" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="QUOTATION_QUANTITY" Member="QuotationQuantity" Type="System.Int32" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="UNIT_PRICE" Member="UnitPrice" Type="System.Int32" DbType="NUMBER(18) NOT NULL" CanBeNull="false" />
+      <Column Name="MODIFY_FLAG" Member="ModifyFlag" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS" Member="Status" Type="System.String" DbType="CHAR(1)" CanBeNull="true" />
+      <Column Name="PART_CODE_HISTORY" Member="PartCodeHistory" Type="System.String" DbType="VARCHAR2(1000)" CanBeNull="true" />
+      <Column Name="NOTE" Member="Note" Type="System.String" DbType="VARCHAR2(250)" CanBeNull="true" />
+      <Association Name="OrderHeader_OrderDetail" Member="OrderHeader" ThisKey="OrderHeaderId" OtherKey="OrderHeaderId" Type="OrderHeader" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_P_ORDER_HEADER" Member="OrderHeaders">
+    <Type Name="OrderHeader">
+      <Column Name="ORDER_HEADER_ID" Member="OrderHeaderId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REFERENCE_ID" Member="ReferenceId" Type="System.Int64" DbType="NUMBER(10)" CanBeNull="true" />
+      <Column Name="CREATED_DATE" Member="CreatedDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="CREATED_BY" Member="CreatedBy" Type="System.String" DbType="NVARCHAR2(768) NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS" Member="Status" Type="System.String" DbType="CHAR(2) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDER_TYPE" Member="OrderType" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDER_SOURCE" Member="OrderSource" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" />
+      <Column Name="TO_DEALER" Member="ToDealer" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="DEALER_CODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="TO_LOCATION" Member="ToLocation" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDER_DATE" Member="OrderDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="CONFIRM_DATE" Member="ConfirmDate" Type="System.DateTime" DbType="TIMESTAMP" CanBeNull="true" />
+      <Column Name="QUOTATION_DATE" Member="QuotationDate" Type="System.DateTime" DbType="TIMESTAMP" CanBeNull="true" />
+      <Column Name="PAYMENT_DATE" Member="PaymentDate" Type="System.DateTime" DbType="TIMESTAMP" CanBeNull="true" />
+      <Column Name="SHIPPING_DATE" Member="ShippingDate" Type="System.DateTime" DbType="TIMESTAMP" CanBeNull="true" />
+      <Column Name="CAN_UNDO_AUTO_RECEIVE" Member="CanUndoAutoReceive" Type="System.Boolean" DbType="NUMBER(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CHANGE_REMARK" Member="ChangeRemark" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" />
+      <Column Name="TIP_TOP_NUMBER" Member="TipTopNumber" Type="System.String" DbType="VARCHAR2(10)" CanBeNull="true" />
+      <Column Name="TIP_TOP_PROCESSED" Member="TipTopProcessed" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" />
+      <Column Name="AMOUNT" Member="Amount" Type="System.Int32" DbType="NUMBER(19) NOT NULL" CanBeNull="false" />
+      <Column Name="DELIVERY_DATE" Member="DeliveryDate" Type="System.DateTime" DbType="TIMESTAMP" CanBeNull="true" />
+      <Column Name="SENT_WARNING_OVER_QUOTATION" Member="SentWarningOverQuotation" Type="System.Boolean" DbType="NUMBER(1) NOT NULL" CanBeNull="false" />
+      <Column Name="SENT_WARNING_OVER_SHIPPING" Member="SentWarningOverShipping" Type="System.Boolean" DbType="NUMBER(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ALREADY_IN_STOCK" Member="AlreadyInStock" Type="System.Boolean" DbType="NUMBER(1) NOT NULL" CanBeNull="false" />
+      <Association Name="Dealer_OrderHeader" Member="Dealer" ThisKey="ToDealer" OtherKey="DealerCode" Type="Dealer" IsForeignKey="true" />
+      <Association Name="Dealer_OrderHeader1" Member="Dealer1" Storage="_Dealer" ThisKey="DealerCode" OtherKey="DealerCode" Type="Dealer" IsForeignKey="true" />
+      <Association Name="OrderHeader_OrderDetail" Member="OrderDetails" ThisKey="OrderHeaderId" OtherKey="OrderHeaderId" Type="OrderDetail" />
+      <Association Name="OrderHeader_OrderHeader" Member="OrderHeaders" ThisKey="OrderHeaderId" OtherKey="ReferenceId" Type="OrderHeader" />
+      <Association Name="OrderHeader_OrderHeader" Member="OrderHeader1" Storage="_OrderHeader" ThisKey="ReferenceId" OtherKey="OrderHeaderId" Type="OrderHeader" IsForeignKey="true" />
+      <Association Name="OrderHeader_ReceiveDetail" Member="ReceiveDetails" ThisKey="OrderHeaderId" OtherKey="OrderHeaderId" Type="ReceiveDetail" />
+      <Association Name="OrderHeader_ReceiveHeader" Member="ReceiveHeaders" ThisKey="OrderHeaderId" OtherKey="OrderHeaderId" Type="ReceiveHeader" />
+      <Association Name="SystemData_OrderHeader" Member="SystemData" ThisKey="Status" OtherKey="Code" Type="SystemData" IsForeignKey="true" />
+      <Association Name="Warehouse_OrderHeader" Member="Warehouse" ThisKey="ToLocation" OtherKey="WarehouseId" Type="Warehouse" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_P_PART_INFO" Member="PartInfos">
+    <Type Name="PartInfo">
+      <Column Name="PART_INFO_ID" Member="PartInfoId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DEALER_CODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="CATEGORY_ID" Member="CategoryId" Type="System.Int64" DbType="NUMBER(10)" CanBeNull="true" />
+      <Column Name="PART_CODE" Member="PartCode" Type="System.String" DbType="VARCHAR2(40) NOT NULL" CanBeNull="false" />
+      <Column Name="ACCESSORY_ID" Member="AccessoryId" Type="System.Int64" DbType="NUMBER(10)" CanBeNull="true" />
+      <Column Name="PART_TYPE" Member="PartType" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" />
+      <Column Name="PRICE" Member="Price" Type="System.Int32" DbType="NUMBER(19)" CanBeNull="true" />
+      <Association Name="Accessory_PartInfo" Member="Accessory" ThisKey="AccessoryId" OtherKey="AccessoryId" Type="Accessory" IsForeignKey="true" />
+      <Association Name="Category_PartInfo" Member="Category" ThisKey="CategoryId" OtherKey="CategoryId" Type="Category" IsForeignKey="true" />
+      <Association Name="Dealer_PartInfo" Member="Dealer" ThisKey="DealerCode" OtherKey="DealerCode" Type="Dealer" IsForeignKey="true" />
+      <Association Name="PartInfo_Favorite" Member="Favorites" ThisKey="PartInfoId" OtherKey="PartInfoId" Type="Favorite" />
+      <Association Name="PartInfo_Inventory" Member="Inventories" ThisKey="PartInfoId" OtherKey="PartInfoId" Type="Inventory" />
+      <Association Name="PartInfo_PartSafety" Member="PartSafeties" ThisKey="PartInfoId" OtherKey="PartInfoId" Type="PartSafety" />
+      <Association Name="PartInfo_SalesDetail" Member="SalesDetails" ThisKey="PartInfoId" OtherKey="PartInfoId" Type="SalesDetail" />
+      <Association Name="PartInfo_TransactionHistory" Member="TransactionHistories" ThisKey="PartInfoId" OtherKey="PartInfoId" Type="TransactionHistory" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_P_PART_SAFETY" Member="PartSafeties">
+    <Type Name="PartSafety">
+      <Column Name="WAREHOUSE_ID" Member="WarehouseId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PART_INFO_ID" Member="PartInfoId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SAFETY_QUANTITY" Member="SafetyQuantity" Type="System.Int32" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="CURRENT_STOCK" Member="CurrentStock" Type="System.Int32" DbType="NUMBER(38)" CanBeNull="false" />
+      <Association Name="PartInfo_PartSafety" Member="PartInfo" ThisKey="PartInfoId" OtherKey="PartInfoId" Type="PartInfo" IsForeignKey="true" />
+      <Association Name="Warehouse_PartSafety" Member="Warehouse" ThisKey="WarehouseId" OtherKey="WarehouseId" Type="Warehouse" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_P_RECEIVE_DETAIL" Member="ReceiveDetails">
+    <Type Name="ReceiveDetail">
+      <Column Name="RECEIVE_DETAIL_ID" Member="ReceiveDetailId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RECEIVE_HEADER_ID" Member="ReceiveHeaderId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDER_HEADER_ID" Member="OrderHeaderId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PART_CODE" Member="PartCode" Type="System.String" DbType="VARCHAR2(40) NOT NULL" CanBeNull="false" />
+      <Column Name="QUOTATION" Member="Quotation" Type="System.Int32" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="GOOD_QUANTITY" Member="GoodQuantity" Type="System.Int32" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="BROKEN_QUANTITY" Member="BrokenQuantity" Type="System.Int32" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="WRONG_QUANTITY" Member="WrongQuantity" Type="System.Int32" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="LACK_QUANTITY" Member="LackQuantity" Type="System.Int32" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS" Member="Status" Type="System.String" DbType="CHAR(1)" CanBeNull="true" />
+      <Column Name="DEALER_COMMENT" Member="DealerComment" Type="System.String" DbType="NVARCHAR2(750)" CanBeNull="true" />
+      <Association Name="OrderHeader_ReceiveDetail" Member="OrderHeader" ThisKey="OrderHeaderId" OtherKey="OrderHeaderId" Type="OrderHeader" IsForeignKey="true" />
+      <Association Name="ReceiveHeader_ReceiveDetail" Member="ReceiveHeader" ThisKey="ReceiveHeaderId" OtherKey="ReceiveHeaderId" Type="ReceiveHeader" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_P_RECEIVE_HEADER" Member="ReceiveHeaders">
+    <Type Name="ReceiveHeader">
+      <Column Name="RECEIVE_HEADER_ID" Member="ReceiveHeaderId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ORDER_HEADER_ID" Member="OrderHeaderId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="DEALER_CODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="WAREHOUSE_ID" Member="WarehouseId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ISSUE_NUMBER" Member="IssueNumber" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="RECEIVE_DATE" Member="ReceiveDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="IS_LOCKED" Member="IsLocked" Type="System.Boolean" DbType="NUMBER(1) NOT NULL" CanBeNull="false" />
+      <Column Name="IS_AUTOMATIC" Member="IsAutomatic" Type="System.Boolean" DbType="NUMBER(1) NOT NULL" CanBeNull="false" />
+      <Column Name="HAS_UNDO" Member="HasUndo" Type="System.Boolean" DbType="NUMBER(1) NOT NULL" CanBeNull="false" />
+      <Column Name="HAS_N_G_FORM" Member="HasNGForm" Type="System.Boolean" DbType="NUMBER(1) NOT NULL" CanBeNull="false" />
+      <Association Name="Dealer_ReceiveHeader" Member="Dealer" ThisKey="DealerCode" OtherKey="DealerCode" Type="Dealer" IsForeignKey="true" />
+      <Association Name="ReceiveHeader_NGFormHeader" Member="NGFormHeaders" ThisKey="ReceiveHeaderId" OtherKey="ReceiveHeaderId" Type="NGFormHeader" />
+      <Association Name="OrderHeader_ReceiveHeader" Member="OrderHeader" ThisKey="OrderHeaderId" OtherKey="OrderHeaderId" Type="OrderHeader" IsForeignKey="true" />
+      <Association Name="ReceiveHeader_ReceiveDetail" Member="ReceiveDetails" ThisKey="ReceiveHeaderId" OtherKey="ReceiveHeaderId" Type="ReceiveDetail" />
+      <Association Name="Warehouse_ReceiveHeader" Member="Warehouse" ThisKey="WarehouseId" OtherKey="WarehouseId" Type="Warehouse" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_P_SALES_DETAIL" Member="SalesDetails">
+    <Type Name="SalesDetail">
+      <Column Name="SALES_DETAIL_ID" Member="SalesDetailId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SALES_HEADER_ID" Member="SalesHeaderId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PART_INFO_ID" Member="PartInfoId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PART_CODE" Member="PartCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDER_QUANTITY" Member="OrderQuantity" Type="System.Int32" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="UNIT_PRICE" Member="UnitPrice" Type="System.Int32" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="PERCENT_DISCOUNT" Member="PercentDiscount" Type="System.Int32" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="LINE_TOTAL" Member="LineTotal" Type="System.Int32" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="MODIFIED_DATE" Member="ModifiedDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="PART_NAME" Member="PartName" Type="System.String" DbType="NVARCHAR2(768) NOT NULL" CanBeNull="true" />
+      <Column Name="Part_Type" Member="PartType" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" />
+      <Association Name="PartInfo_SalesDetail" Member="PartInfo" ThisKey="PartInfoId" OtherKey="PartInfoId" Type="PartInfo" IsForeignKey="true" />
+      <Association Name="SalesHeader_SalesDetail" Member="SalesHeader" ThisKey="SalesHeaderId" OtherKey="SalesHeaderId" Type="SalesHeader" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_P_SALES_HEADER" Member="SalesHeaders">
+    <Type Name="SalesHeader">
+      <Column Name="SALES_HEADER_ID" Member="SalesHeaderId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DEALER_CODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="CUSTOMER_ID" Member="CustomerId" Type="System.Int64" DbType="NUMBER(10)" CanBeNull="true" />
+      <Column Name="SALES_DATE" Member="SalesDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS" Member="Status" Type="System.String" DbType="CHAR(2) NOT NULL" CanBeNull="false" />
+      <Column Name="SALES_ORDER_NUMBER" Member="SalesOrderNumber" Type="System.String" DbType="VARCHAR2(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CUSTOMER_NAME" Member="CustomerName" Type="System.String" DbType="NVARCHAR2(150)" CanBeNull="true" />
+      <Column Name="SALES_PERSON" Member="SalesPerson" Type="System.String" DbType="NVARCHAR2(765) NOT NULL" CanBeNull="false" />
+      <Column Name="SUB_TOTAL" Member="SubTotal" Type="System.Int32" DbType="NUMBER(19) NOT NULL" CanBeNull="false" />
+      <Column Name="TAX_AMOUNT" Member="TaxAmount" Type="System.Int32" DbType="NUMBER(19) NOT NULL" CanBeNull="false" />
+      <Column Name="DISCOUNT" Member="Discount" Type="System.Int32" DbType="NUMBER(19) NOT NULL" CanBeNull="false" />
+      <Column Name="MODIFIED_DATE" Member="ModifiedDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="Warehouse_Id" Member="WarehouseId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Association Name="Customer_SalesHeader" Member="Customer" ThisKey="CustomerId" OtherKey="CustomerId" Type="Customer" IsForeignKey="true" />
+      <Association Name="Dealer_SalesHeader" Member="Dealer" ThisKey="DealerCode" OtherKey="DealerCode" Type="Dealer" IsForeignKey="true" />
+      <Association Name="SalesHeader_SalesDetail" Member="SalesDetails" ThisKey="SalesHeaderId" OtherKey="SalesHeaderId" Type="SalesDetail" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_P_SYSTEM_DATA" Member="SystemDatas">
+    <Type Name="SystemData">
+      <Column Name="CODE" Member="Code" Type="System.String" DbType="CHAR(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TYPE" Member="Type" Type="System.String" DbType="CHAR(2) NOT NULL" CanBeNull="false" />
+      <Column Name="TERM" Member="Term" Type="System.String" DbType="NVARCHAR2(150) NOT NULL" CanBeNull="false" />
+      <Association Name="SystemData_OrderHeader" Member="OrderHeaders" ThisKey="Code" OtherKey="Status" Type="OrderHeader" />
+      <Association Name="SystemData_TransactionHistory" Member="TransactionHistories" ThisKey="Code" OtherKey="TransactionCode" Type="TransactionHistory" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_P_TRANSACTION_HISTORY" Member="TransactionHistories">
+    <Type Name="TransactionHistory">
+      <Column Name="TRANSACTION_HISTORY_ID" Member="TransactionHistoryId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DEALER_CODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="INVOICE_NUMBER" Member="InvoiceNumber" Type="System.String" DbType="VARCHAR2(50)" CanBeNull="true" />
+      <Column Name="TRANSACTION_DATE" Member="TransactionDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="TRANSACTION_CODE" Member="TransactionCode" Type="System.String" DbType="CHAR(2) NOT NULL" CanBeNull="false" />
+      <Column Name="VENDOR_ID" Member="VendorId" Type="System.Int64" DbType="NUMBER(10)" CanBeNull="true" />
+      <Column Name="QUANTITY" Member="Quantity" Type="System.Int32" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="ACTUAL_COST" Member="ActualCost" Type="System.Int32" DbType="NUMBER(19) NOT NULL" CanBeNull="false" />
+      <Column Name="CREATED_BY" Member="CreatedBy" Type="System.String" DbType="NVARCHAR2(768) NOT NULL" CanBeNull="false" />
+      <Column Name="CREATED_DATE" Member="CreatedDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="TRANSACTION_COMMENT" Member="TransactionComment" Type="System.String" DbType="NVARCHAR2(750)" CanBeNull="true" />
+      <Column Name="PART_INFO_ID" Member="PartInfoId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Warehouse_Id" Member="WarehouseId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Transfer_To_Warehouse_Id" Member="TransferToWarehouseId" Type="System.Int64" DbType="NUMBER(10)" CanBeNull="true" />
+      <Association Name="Dealer_TransactionHistory" Member="Dealer" ThisKey="DealerCode" OtherKey="DealerCode" Type="Dealer" IsForeignKey="true" />
+      <Association Name="PartInfo_TransactionHistory" Member="PartInfo" ThisKey="PartInfoId" OtherKey="PartInfoId" Type="PartInfo" IsForeignKey="true" />
+      <Association Name="SystemData_TransactionHistory" Member="SystemData" ThisKey="TransactionCode" OtherKey="Code" Type="SystemData" IsForeignKey="true" />
+      <Association Name="Vendor_TransactionHistory" Member="Vendor" ThisKey="VendorId" OtherKey="VendorId" Type="Vendor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_P_VENDOR" Member="Vendors">
+    <Type Name="Vendor">
+      <Column Name="VENDOR_ID" Member="VendorId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DEALER_CODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="CONTACT_ID" Member="ContactId" Type="System.Int64" DbType="NUMBER(10)" CanBeNull="true" />
+      <Column Name="CODE" Member="Code" Type="System.String" DbType="CHAR(30) NOT NULL" CanBeNull="false" />
+      <Column Name="NAME" Member="Name" Type="System.String" DbType="NVARCHAR2(750) NOT NULL" CanBeNull="false" />
+      <Association Name="Contact_Vendor" Member="Contact" ThisKey="ContactId" OtherKey="ContactId" Type="Contact" IsForeignKey="true" />
+      <Association Name="Dealer_Vendor" Member="Dealer" ThisKey="DealerCode" OtherKey="DealerCode" Type="Dealer" IsForeignKey="true" />
+      <Association Name="Vendor_TransactionHistory" Member="TransactionHistories" ThisKey="VendorId" OtherKey="VendorId" Type="TransactionHistory" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_P_WAREHOUSE" Member="Warehouses">
+    <Type Name="Warehouse">
+      <Column Name="WAREHOUSE_ID" Member="WarehouseId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DEALER_CODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="WAREHOUSE_CODE" Member="WarehouseCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="NAME" Member="Name" Type="System.String" DbType="NVARCHAR2(765)" CanBeNull="true" />
+      <Column Name="ADDRESS" Member="Address" Type="System.String" DbType="NVARCHAR2(765)" CanBeNull="true" />
+      <Association Name="Dealer_Warehouse" Member="Dealer" ThisKey="DealerCode" OtherKey="DealerCode" Type="Dealer" IsForeignKey="true" />
+      <Association Name="Warehouse_Inventory" Member="Inventories" ThisKey="WarehouseId" OtherKey="WarehouseId" Type="Inventory" />
+      <Association Name="Warehouse_OrderHeader" Member="OrderHeaders" ThisKey="WarehouseId" OtherKey="ToLocation" Type="OrderHeader" />
+      <Association Name="Warehouse_PartSafety" Member="PartSafeties" ThisKey="WarehouseId" OtherKey="WarehouseId" Type="PartSafety" />
+      <Association Name="Warehouse_ReceiveHeader" Member="ReceiveHeaders" ThisKey="WarehouseId" OtherKey="WarehouseId" Type="ReceiveHeader" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.VIEW_ALL_IMA_FILE" Member="Parts">
+    <Type Name="Part">
+      <Column Name="PARTCODE" Member="PartCode" Type="System.String" DbType="VARCHAR2(30)" CanBeNull="true" />
+      <Column Name="ENAME" Member="EnglishName" Type="System.String" DbType="VARCHAR2(40)" CanBeNull="true" />
+      <Column Name="VNAME" Member="VietnamName" Type="System.String" DbType="VARCHAR2(120)" CanBeNull="true" />
+      <Column Name="CAT" Member="Category" Type="System.String" DbType="VARCHAR2(1)" CanBeNull="true" />
+      <Column Name="DATABASECODE" Member="DatabaseCode" Type="System.String" DbType="CHAR(3)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,29 @@
+﻿<asp:ImageButton runat="server" SkinID="CalendarImageButton" ImageUrl="/Images/minical.gif"/>
+<asp:ImageButton SkinID="UpdateProgress" ImageUrl="~/Images/Spinner.gif" runat="server" />
+<vdms:PageGridView runat="server" CssClass="datatable" CellPadding="0" CellSpacing="0" SelectedRowStyle-BackColor="#CBFBB5"
+	GridLines="None" Style="border-collapse: separate;" RowStyle-CssClass="even" AutoGenerateColumns="false"
+	AlternatingRowStyle-CssClass="odd" PagerStyle-CssClass="pager" PagerInfoCssClass="pagerInfo">
+	<HeaderStyle Wrap="false" />
+    <PagerSettings Mode="NumericFirstLast" Position="Bottom" />
+</vdms:PageGridView>
+<vdms:EmptyGridViewEx runat="server" CssClass="datatable" SelectedRowStyle-BackColor="#CBFBB5"
+	GridLines="Both" Style="border-collapse: collapse;" AutoGenerateColumns="false"
+    PagerStyle-CssClass="pager" PagerInfoCssClass="pagerInfo">
+	<HeaderStyle Wrap="false" />
+    <PagerSettings Mode="NumericFirstLast" Position="Bottom" />
+</vdms:EmptyGridViewEx>
+
+<vdms:DataPager WrapCssClass="datatable" InfoCssClass="pagerInfo" runat="server">
+    <Fields>
+        <asp:NextPreviousPagerField FirstPageText="<<" ShowNextPageButton="false" ShowPreviousPageButton="false" ShowFirstPageButton="true" ButtonType="Link" />
+        <asp:NumericPagerField ButtonType="Link" ButtonCount="10" />
+        <asp:NextPreviousPagerField LastPageText=">>" ShowNextPageButton="false" ShowPreviousPageButton="false" ShowLastPageButton="true" ButtonType="Link" />
+    </Fields>
+</vdms:DataPager>
+
+<asp:TextBox SkinID="InGrid" runat="server" Columns="10"></asp:TextBox>
+<asp:Image runat="server" SkinID="RequireField" ImageUrl="~/Images/required.gif" style="padding-right:4px" />
+<asp:Image runat="server" SkinID="RequireFieldNon" ImageUrl="~/Images/spacer.gif" style="padding-right:4px Width="9px" Height="9px" />
+<asp:Label SkinID="MessageOk" runat="server" ForeColor="Blue" Font-Bold="true"></asp:Label>
+<asp:Label SkinID="MessageError" runat="server" ForeColor="Red" Font-Bold="true"></asp:Label>
+<asp:Label SkinID="TextField" runat="server" Font-Bold="true"></asp:Label>

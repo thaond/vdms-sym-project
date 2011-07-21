@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="VDMS.Core.Domain.Customer, VDMS.Core" table="SYM_CUSTOMER" lazy="false">
+		<id name="Id" type="Int64" unsaved-value="0">
+			<column name="CUSTOMERID" sql-type="NUMBER" not-null="true" unique="true" index="PK12"/>
+			<generator class="sequence">
+				<param name="sequence">seq_Customer</param>
+			</generator>
+		</id>
+		<property name="Identifynumber" type="String">
+			<column name="IDENTIFYNUMBER" length="20" sql-type="VARCHAR2" not-null="false"/>
+		</property>
+		<property name="Fullname" type="String">
+			<column name="FULLNAME" length="100" sql-type="NVARCHAR2" not-null="true"/>
+		</property>
+		<property name="Gender" type="Boolean">
+			<column name="GENDER" sql-type="NUMBER" not-null="false"/>
+		</property>
+		<property name="Birthdate" type="DateTime">
+			<column name="BIRTHDATE" sql-type="TIMESTAMP(6)" not-null="false"/>
+		</property>
+		<property name="Address" type="String">
+			<column name="ADDRESS" length="256" sql-type="NVARCHAR2" not-null="false"/>
+		</property>
+		<property name="Provinceid" type="String">
+			<column name="PROVINCEID" length="20" sql-type="VARCHAR2" not-null="false"/>
+		</property>
+		<property name="Districtid" type="String">
+			<column name="DISTRICTID" length="256" sql-type="NVARCHAR2" not-null="false"/>
+		</property>
+		<property name="Jobtypeid" type="Int32">
+			<column name="JOBTYPEID" sql-type="NUMBER" not-null="false"/>
+		</property>
+		<property name="Email" type="String">
+			<column name="EMAIL" length="256" sql-type="VARCHAR2" not-null="false"/>
+		</property>
+		<property name="Tel" type="String">
+			<column name="TEL" length="20" sql-type="VARCHAR2" not-null="false"/>
+		</property>
+		<property name="Mobile" type="String">
+			<column name="MOBILE" length="20" sql-type="VARCHAR2" not-null="false"/>
+		</property>
+		<property name="Customertype" type="Int32">
+			<column name="CUSTOMERTYPE" sql-type="NUMBER" not-null="false"/>
+		</property>
+		<property name="Customerdescription" type="String">
+			<column name="CUSTOMERDESCRIPTION" length="4000" sql-type="NVARCHAR2" not-null="false"/>
+		</property>
+		<property name="Precinct" type="String">
+			<column name="PRECINCT" length="256" sql-type="NVARCHAR2" not-null="false"/>
+		</property>
+		<property name="Priority" type="Int32">
+			<column name="PRIORITY" sql-type="NUMBER" not-null="false"/>
+		</property>
+		<property name="Dealercode" type="String">
+			<column name="DEALERCODE" length="30" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+		<property name="Forservice" type="Boolean">
+			<column name="FORSERVICE" sql-type="NUMBER" not-null="true"/>
+		</property>
+	</class>
+</hibernate-mapping>

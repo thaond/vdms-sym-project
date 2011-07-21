@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="VDMS.Core.Domain.Subshop, VDMS.Core" table="DATA_SUBSHOP" lazy="false">
+		<id name="Id" type="Int64" unsaved-value="0">
+			<column name="SUBSHOPID" sql-type="NUMBER" not-null="true" unique="true" index="PK17"/>
+			<generator class="sequence">
+				<param name="sequence">seq_Subshop</param>
+			</generator>
+		</id>
+		<property name="Dealercode" type="String">
+			<column name="DEALERCODE" length="30" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+		<property name="Name" type="String">
+			<column name="NAME" length="512" sql-type="NVARCHAR2" not-null="true"/>
+		</property>
+		<property name="Code" type="String">
+			<column name="CODE" length="30" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+		<property name="Status" type="Boolean">
+			<column name="STATUS" sql-type="NUMBER" not-null="true"/>
+		</property>
+		<property name="Address" type="String">
+			<column name="ADDRESS" length="1024" sql-type="NVARCHAR2" not-null="true"/>
+		</property>
+	</class>
+</hibernate-mapping>

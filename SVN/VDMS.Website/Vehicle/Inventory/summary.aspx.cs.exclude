@@ -1,0 +1,148 @@
+using System;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using VDMS.Helper;
+using Resources;
+using VDMS.I.Vehicle;
+using VDMS.Data.DAL2;
+
+public partial class Sales_Inventory_summary : BasePage
+{
+	string errData = "";    // thong tin chi tiet cho moi error
+
+	protected const int ErrNone = 0;
+	protected const int ErrHasLocked = 1;
+	protected const int ErrHasUnLocked = 2;
+	protected const int ErrPrevMonthWasNotLocked = 3;
+	protected const int ErrNextMonthWasNotUnLocked = 4;
+	protected const int ErrCannotLock = 5;
+	protected const int ErrCannotUnLock = 5;
+	protected const int ErrCommonError = 5;
+	protected const int ErrCannotLockFitstMonth = 6;
+
+	protected void Page_Load(object sender, EventArgs e)
+	{
+		if (!Page.IsPostBack)
+		{
+			LoadStatus();
+			txtSummary.Text = DateTime.Now.ToString("MM/yyyy");
+			AddWaring();
+		}
+	}
+
+	private void LoadStatus()
+	{
+		if (InventoryHelper.IsInventoryLock(DateTime.Now, UserHelper.DealerCode))
+			litStatus.Text = (string)GetLocalResourceObject("_Lock");
+		else litStatus.Text = (string)GetLocalResourceObject("_Open");
+
+		DateTime dt = InventoryHelper.GetLockedDate(UserHelper.DealerCode);
+		litLastLocked.Text = (dt > DateTime.MinValue.AddDays(15)) ? dt.ToString("MM/yyyy") :
+			(!UserHelper.IsDealer ? "" : Message.DataNotFound);
+
+		//if (InventoryHelper.IsFirstLockMonth(dt.Month, dt.Year, UserHelper.DealerCode))
+		//{
+		//    litLastLocked.Text += "    (" + litFirstMonthAlr.Text + ")";
+		//}
+	}
+
+	void AddWaring()
+	{
+		//if (DateTime.Now.Day > 5 && DateTime.Now.Day < 25 && ddlType.SelectedIndex == 0)
+		//    cmdSummary.OnClientClick = CreateConfirmScript((string)GetLocalResourceObject("_WarningLock"));
+		//else cmdSummary.OnClientClick = string.Empty;
+	}
+
+	protected DateTime DateAtNextMonth(int month, int year)
+	{
+		return (month < 12) ? new DateTime(year, month + 1, 1) : new DateTime(year + 1, 1, 1);
+	}
+	protected DateTime DateAtPrevMonth(int month, int year)
+	{
+		return (month > 1) ? new DateTime(year, month - 1, 1) : new DateTime(year - 1, 12, 1);
+	}
+	protected DateTime DateAtMonth(int month, int year)
+	{
+		return new DateTime(year, month, 1);
+	}
+
+	protected int UnLockInventory(int month, int year, string dealerCode)
+	{
+		if (!InventoryHelper.IsInventoryLock(DateAtMonth(month, year), dealerCode))
+			return ErrHasUnLocked;
+
+		DateTime next = DateAtNextMonth(month, year);
+		if (InventoryHelper.GetInventoryLock(next, dealerCode) == InventoryLockStatus.Locked)
+		{
+			errData = next.ToString("MM/yyyy");
+			return ErrNextMonthWasNotUnLocked;
+		}
+		return InventoryDao.UnlockInventory(month, year, dealerCode) ? ErrNone : ErrCannotUnLock;
+	}
+
+	protected int LockInventory(int month, int year, string dealerCode)
+	{
+		if (InventoryHelper.IsInventoryLock(DateAtMonth(month, year), dealerCode))
+		{
+			return ErrHasLocked;
+		}
+
+		DateTime prev = DateAtPrevMonth(month, year);
+		if (InventoryHelper.GetInventoryLock(prev, dealerCode) == InventoryLockStatus.Unlocked)
+		{
+			errData = prev.ToString("MM/yyyy");
+			return ErrPrevMonthWasNotLocked;
+		}
+		if (InventoryHelper.IsFirstLockMonth(month, year, dealerCode))
+		{
+			return InventoryHelper.LockInventory(month, year, dealerCode) ? ErrNone : ErrCannotLockFitstMonth;
+		}
+		return InventoryDao.DoInventory(month, year, dealerCode) ? ErrNone : ErrCannotLock;
+	}
+
+	protected void cmdSummary_Click(object sender, EventArgs e)
+	{
+		if (!Page.IsValid) return;
+		int Month, Year;
+		string[] s = txtSummary.Text.Split('/');
+		Month = int.Parse(s[0]);
+		Year = int.Parse(s[1]);
+		int result;
+
+		if (ddlType.SelectedIndex == 0) result = LockInventory(Month, Year, UserHelper.DealerCode);
+		else result = UnLockInventory(Month, Year, UserHelper.DealerCode);
+
+		mvResult.ActiveViewIndex = result;
+		LoadStatus();
+	}
+
+	protected void ddlType_SelectedIndexChanged(object sender, EventArgs e)
+	{
+		AddWaring();
+	}
+
+	// check summary for current and prev month only
+	protected void cvSummary_ServerValidate(object source, ServerValidateEventArgs args)
+	{
+		//int Month, Year;
+		//string[] s = args.Value.Split('/');
+		//Month = int.Parse(s[0]);
+		//Year = int.Parse(s[1]);
+		//args.IsValid = false;
+		//if (Year == DateTime.Now.Year && Month == DateTime.Now.Month) args.IsValid = true;
+		//if (Year == DateTime.Now.AddMonths(-1).Year && Month == DateTime.Now.AddMonths(-1).Month) args.IsValid = true;
+	}
+
+	protected void SetErrorData(object sender, EventArgs e)
+	{
+		if (sender is Label)
+		{
+			(sender as Label).Text = string.Format((sender as Label).Text, errData);
+		}
+		else if (sender is Literal)
+		{
+			(sender as Literal).Text = string.Format((sender as Literal).Text, errData);
+		}
+	}
+
+}

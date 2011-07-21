@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="VDMS.Core.Domain.Servicedetail, VDMS.Core" table="SER_SERVICEDETAIL" lazy="false">
+		<id name="Id" type="Int64" unsaved-value="0">
+			<column name="SERVICEDETAILID" sql-type="NUMBER" not-null="true" unique="true" index="PK_SERVICEDETAIL"/>
+			<generator class="sequence">
+				<param name="sequence">seq_Servicedetail</param>
+			</generator>
+		</id>
+		<property name="Partcode" type="String">
+			<column name="PARTCODE" length="30" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+		<property name="Partname" type="String">
+			<column name="PARTNAME" length="256" sql-type="NVARCHAR2" not-null="false"/>
+		</property>
+		<property name="Partqty" type="Int32">
+			<column name="PARTQTY" sql-type="NUMBER" not-null="true"/>
+		</property>
+		<property name="Unitprice" type="Int64">
+			<column name="UNITPRICE" sql-type="NUMBER" not-null="true"/>
+		</property>
+		<property name="Serialnumber" type="String">
+			<column name="SERIALNUMBER" length="30" sql-type="VARCHAR2" not-null="false"/>
+		</property>
+		<many-to-one name="Serviceheader" class="VDMS.Core.Domain.Serviceheader, VDMS.Core">
+			<column name="SERVICEHEADERID" sql-type="NUMBER" not-null="true"/>
+		</many-to-one>
+	</class>
+</hibernate-mapping>

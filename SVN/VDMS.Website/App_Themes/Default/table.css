@@ -1,0 +1,282 @@
+﻿.normalSum
+{
+    font-weight: bold;
+}
+/* Common Styles */
+.space
+{
+    width: 50px;
+}
+
+.grid
+{
+    font-size: 11px;
+    font-family: Tahoma;
+    border: solid 1px #333;
+    background-color: #fff;
+    padding: 1px;
+}
+.grid a.showDetail
+{
+    text-decoration: none;
+    font-weight: normal;
+    color: #000099;
+}
+.grid .warnLine
+{
+    background-color: #FFFF4F;
+}
+.grid .errLine
+{
+    background-color: #FF2222;
+}
+.grid .datatable .groupHeader
+{
+    padding: 0px;
+}
+.grid .title, .grid .datatable caption, .grid .GridView caption
+{
+    background: none repeat scroll 0 0 #E02525;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 25px;
+    text-align: center;
+}
+.grid .datatable
+{
+    width: 100%;
+}
+.grid .datatable TH, .grid .GridView TH
+{
+    background: url("images/box-sub-title.png") repeat-x scroll center bottom transparent;
+    border-bottom: 1px solid #B7B7B7;
+    color: #333333;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    border-right: 1px solid #BCBCBC;
+}
+.grid .datatable .altCol1
+{
+    color: #770000;
+}
+.grid .datatable .altCol2
+{
+    color: #0000cc;
+}
+.grid .datatable TH.double, .grid .GridView TH.double
+{
+    background: url(/Images/gray_hd_bg_2.png) repeat-x;
+    white-space: nowrap;
+}
+.grid .datatable .groupHeader th, .grid .datatable .groupHeader td
+{
+    height: 1;
+    line-height: 1;
+    padding: 0px 2px;
+}
+.grid .datatable TD
+{
+    color: #222; /*text-align:left;*/
+    padding: 2px 2px;
+    border-right: solid 1px #d9d9d9;
+}
+.grid .calendar TD
+{
+    border: 0px;
+    padding: 0px;
+}
+
+.grid .GridView TD
+{
+    padding: 2px 2px;
+    border: solid 1 #222222;
+}
+.grid .nCellInDataTable TD
+{
+    padding: 1px 1px;
+    border-right: solid 0px #d9d9d9;
+}
+.grid .datatable TD.right, .grid .datatable TD.number, .grid .datatable TD.pagerInfo, .grid .datatable TD input.number
+{
+    text-align: right;
+}
+.grid .datatable TD.center
+{
+    text-align: center;
+}
+.grid .datatable tr.summary
+{
+    background: #eee;
+    font-weight: bold;
+}
+.grid .datatable tr.break
+{
+    border-bottom: solid 5px white;
+}
+.grid .datatable TR.footer
+{
+    background-color: #FFFF77;
+}
+.grid .datatable .sumLine
+{
+    background-color: #C0C0C0;
+    font-size: larger;
+    font-weight: bold;
+    color: #FF0000;
+}
+.grid .datatable tr.readOnlyRow
+{
+    background-color: #cdedff;
+}
+.grid .datatable TR.even
+{
+    background-color: #FFFFFF;
+}
+.grid .datatable TR.odd
+{
+    background-color: #f1f5fa;
+}
+.grid .datatable TR.duplicate
+{
+    background-color: Blue;
+}
+.grid .datatable TR.even2
+{
+    background-color: #FFFFFF;
+}
+.grid .datatable TR.odd2
+{
+    background-color: #F7F4F7;
+}
+.grid .datatable TR.hlText td, .grid .datatable TR.hlText th, .grid .datatable td.hlText
+{
+    color: blue;
+}
+.grid .datatable TR.errorText td, .grid .datatable TR.errorText th, .grid .datatable td.errorText
+{
+    color: Red;
+}
+.grid .datatable TR.error
+{
+    background-color: #f2146d;
+}
+.grid .datatable TR.selected
+{
+    background-color: #CBFBB5;
+    font-weight: bolder;
+}
+.grid .datatable TR.group
+{
+    background-color: #cecece;
+    font-weight: bold;
+}
+.grid .datatable TR.subGroup
+{
+    background-color: #DDDDDD;
+    font-weight: bold;
+}
+.grid .datatable TR.group td.normal
+{
+    font-weight: normal;
+}
+.grid .datatable TR.group2
+{
+    background-color: #DBDBDB;
+    font-weight: bold;
+}
+.grid .datatable TR.group1
+{
+    border-bottom: solid 1px #9e9e9e;
+}
+.grid .datatable TR.end TD
+{
+    background-color: #dbdbdb;
+    font-weight: bold;
+    border-bottom: solid 1px #9e9e9e;
+    text-align: right;
+}
+.grid .datatable .info .fieldName
+{
+    width: 1%;
+}
+.grid .datatable .info
+{
+    font-weight: normal;
+    border-width: 0px;
+}
+.grid .datatable .info TR TH
+{
+    font-weight: bold;
+    cursor: default;
+    background-image: none;
+    border-width: 0px;
+    text-align: left;
+}
+.grid .datatable .info TR TD
+{
+    border-width: 0px;
+}
+
+/*.grid input[type=text], .grid select
+{
+	border: 1px solid #888;
+    background-color: #F8F8F8; 
+}
+.grid input[type=text]:focus, .grid select:focus
+{
+	border-color: #000;  
+    background-color: #FFFE9D;
+}
+.grid input[type=submit]
+{
+	border: 1px solid #888;
+}
+.grid input[type=submit]:hover
+{
+	background-color: #FFFF9D;
+	cursor: pointer;
+}*/
+
+/* Sorting Styles */
+.grid .datatable TR TH.asc, .grid .datatable TR TH.desc
+{
+    background: url(/Images/hd_bg_sort.png) repeat-x;
+}
+.grid .datatable TH .sort
+{
+    padding-right: 21px;
+}
+.grid .datatable TH.asc .sort
+{
+    background: url(/Images/asc.gif) no-repeat center right;
+}
+.grid .datatable TH.desc .sort
+{
+    background: url(/Images/desc.gif) no-repeat center right;
+}
+.grid .pager, .grid .datatable TR.pager
+{
+    border-width: 0px;
+    border-top: solid 1px #d9d9d9;
+    font-size: 110%;
+}
+
+/* Theme specific styles */
+.blue .grid .datatable TH
+{
+    background: url(/Images/blue_hd_bg.png) repeat-x;
+}
+.blue .grid .title
+{
+    background: #495265;
+}
+.gray .grid .datatable TH
+{
+    background: url(/Images/gray_hd_bg.png) repeat-x;
+}
+.gray .grid .title
+{
+    background: #323A4B;
+}

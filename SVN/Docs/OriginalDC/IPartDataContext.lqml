@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="VDMS" EntityNamespace="VDMS.II.Interface.Entity" ContextNamespace="VDMS.II.Interface.Linq" Class="IPartDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="User Id=vdms;Server=vdms;Unicode=True" Provider="Devart.Data.Oracle" />
+  <Table Name="VDMS.TC_VDP_FILE" Member="IOrderHeaders">
+    <Type Name="IOrderHeader">
+      <Column Name="TC_VDP01" Member="VDMSOrderId" Type="System.Int64" DbType="NUMBER(19) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TC_VDP02" Member="TipTopOrderNumber" Type="System.String" DbType="VARCHAR2(30)" CanBeNull="true" />
+      <Column Name="TC_VDP03" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="TC_VDP04" Member="DeliveryCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="TC_VDP05" Member="InvoiceCode" Type="System.String" DbType="VARCHAR2(30)" CanBeNull="true" />
+      <Column Name="TC_VDP06" Member="OrderDate" Type="System.DateTime" DbType="TIMESTAMP(6) NOT NULL" CanBeNull="false" />
+      <Column Name="TC_VDP07" Member="QuotationDate" Type="System.DateTime" DbType="TIMESTAMP(6)" CanBeNull="true" />
+      <Column Name="TC_VDP08" Member="PaymentDate" Type="System.DateTime" DbType="TIMESTAMP(6)" CanBeNull="true" />
+      <Column Name="TC_VDP09" Member="DeliveryDate" Type="System.DateTime" DbType="TIMESTAMP(6)" CanBeNull="true" />
+      <Column Name="TC_VDP10" Member="ShippingDate" Type="System.DateTime" DbType="TIMESTAMP(6)" CanBeNull="true" />
+      <Column Name="TC_VDP11" Member="OrderType" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" />
+      <Column Name="TC_VDP12" Member="Flag" Type="System.String" DbType="CHAR(2)" CanBeNull="true" />
+      <Column Name="TC_VDP13" Member="TipTopProcess" Type="System.String" DbType="CHAR(1)" CanBeNull="true" />
+      <Column Name="TC_VDP14" Member="OrderComment" Type="System.String" DbType="VARCHAR2(250)" CanBeNull="true" />
+      <Column Name="TC_VDP15" Member="DatabaseCode" Type="System.String" DbType="CHAR(3)" CanBeNull="true" />
+      <Column Name="TC_VDP16" Type="System.String" DbType="VARCHAR2(200)" CanBeNull="true" />
+      <Column Name="TC_VDP17" Type="System.Double" DbType="NUMBER(10)" CanBeNull="true" />
+      <Column Name="TC_VDP18" Type="System.DateTime" DbType="TIMESTAMP(6)" CanBeNull="true" />
+      <Association Name="IOrderHeader_IOrderDetail" Member="IOrderDetails" ThisKey="VDMSOrderId" OtherKey="VDMSOrderId" Type="IOrderDetail" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.TC_VDQ_FILE" Member="IOrderDetails">
+    <Type Name="IOrderDetail">
+      <Column Name="TC_VDQ01" Member="VDMSOrderId" Type="System.Int64" DbType="NUMBER(19) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TC_VDQ02" Member="LineNumber" Type="System.Int32" DbType="NUMBER(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TC_VDQ03" Member="PartCode" Type="System.String" DbType="VARCHAR2(30)" CanBeNull="true" />
+      <Column Name="TC_VDQ04" Member="OrderQuantity" Type="System.Int32" DbType="NUMBER(38)" CanBeNull="true" />
+      <Column Name="TC_VDQ05" Member="ConfirmQuantity" Type="System.Int32" DbType="NUMBER(38)" CanBeNull="true" />
+      <Column Name="TC_VDQ06" Member="Price" Type="System.Int64" DbType="NUMBER(19) NOT NULL" CanBeNull="false" />
+      <Column Name="TC_VDQ07" Type="System.String" DbType="VARCHAR2(299)" CanBeNull="true" />
+      <Column Name="TC_VDQ08" Type="System.Double" DbType="NUMBER(10)" CanBeNull="true" />
+      <Column Name="TC_VDQ09" Type="System.DateTime" DbType="TIMESTAMP(6)" CanBeNull="true" />
+      <Column Name="TC_VDQ10" Type="System.String" DbType="varchar2(1)" CanBeNull="true" />
+      <Column Name="TC_VDQ11" Type="System.String" DbType="varchar2(250)" CanBeNull="true" />
+      <Association Name="IOrderHeader_IOrderDetail" Member="IOrderHeader" ThisKey="VDMSOrderId" OtherKey="VDMSOrderId" Type="IOrderHeader" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.TC_VDR_FILE" Member="IShippings">
+    <Type Name="IShipping">
+      <Column Name="TC_VDR01" Member="VDMSOrderId" Type="System.Int64" DbType="NUMBER(19) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TC_VDR02" Member="LineNumber" Type="System.Int32" DbType="NUMBER(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TC_VDR03" Member="IssueNumber" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="TC_VDR04" Member="PartCode" Type="System.String" DbType="VARCHAR2(40) NOT NULL" CanBeNull="false" />
+      <Column Name="TC_VDR05" Member="ShippingQuantity" Type="System.Int32" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="TC_VDR06" Member="ShippingDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="TC_VDR07" Member="Flag" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,25 @@
+﻿Linh iwnd: hi anh Giang
+Linh iwnd: em hỏi tí về cái trạng thái của linh kiện
+Linh iwnd: trạng thái đấy là lấy từ tiptop sang hay tự quản lý ạ
+a Giang SYM: Hi
+a Giang SYM: anh vua ra ngoai
+Linh iwnd: vâng
+a Giang SYM: y cua em la ve trang thai nouse ay ha
+a Giang SYM: No Use
+Linh iwnd: vâgn
+a Giang SYM: Lich su no nhu the nay:
+a Giang SYM: Hoi dau views ima_file lay tat ca, k filter nouse nen k gap van de nhu Tuan de cap
+a Giang SYM: Sau do thi cai nay phat sinh van de, vi No Use y la k cho dai ly dat hang nhung linh kien do nua => anh tam sua views filter theo No Use de chan dai ly chon ma khi tao don => nay sinh loi khi ban hang ma Tuan neu ra
+a Giang SYM: Khi dai ly ban hang k chon duoc nhung ma No Use (do views da bi filter) ma dieu nay k dung, vi linh kien dai ly co the nhap tu nhieu nguon nen bao gom tat ca cac ma
+Linh iwnd: tức là hiện tại cái ima nó đang chỉ chứa các part USE thôi
+Linh iwnd: còn lúc bán hàng thì mình cần bán nhiều hơn
+a Giang SYM: thuc ra the nay: Tiptop.ima_file (Use+No Use) => views VDMS ima_file (Use)
+Linh iwnd: vâng
+Linh iwnd: ý em là thế
+Linh iwnd: giờ VDMS lúc bán hàng nó cũng check từ ima
+Linh iwnd: nên thiếu
+Linh iwnd: view ima
+a Giang SYM is typing...
+a Giang SYM: anh nghi la se sua lai views VDMS ima_file (Use+NoUse) => ban hang OK, & ben em chi can sua tren code de filter No Use (hoac tao 1 view VDMS ima khac Use only) chuyen phuc vu cho doan tao don hang cua dai ly la OK
+Linh iwnd: vậy ok
+Linh iwnd: lúc nào anh sửa xong up giúp em nhé

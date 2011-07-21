@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="VDMS" EntityNamespace="VDMS.II.Entity.Order" ContextNamespace="VDMS.II.Linq.Order" Class="OrderDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="User Id=vdms;Password=vdms;Server=vdms;Home=orahome92;Persist Security Info=True" Provider="Devart.Data.Oracle" />
+  <Table Name="VDMS.V2_P_ORDER_DETAIL" Member="OrderDetails">
+    <Type Name="OrderDetail">
+      <Column Name="ORDER_DETAIL_ID" Member="OrderDetailId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ORDER_HEADER_ID" Member="OrderHeaderId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LINE_NUMBER" Member="LineNumber" Type="System.Int32" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="PART_CODE" Member="PartCode" Type="System.String" DbType="VARCHAR2(40) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDER_QUANTITY" Member="OrderQuantity" Type="System.Int32" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="QUOTATION_QUANTITY" Member="QuotationQuantity" Type="System.Int32" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="UNIT_PRICE" Member="UnitPrice" Type="System.Int32" DbType="NUMBER(18) NOT NULL" CanBeNull="false" />
+      <Column Name="MODIFY_FLAG" Member="ModifyFlag" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS" Member="Status" Type="System.String" DbType="CHAR(1)" CanBeNull="true" />
+      <Column Name="PART_CODE_HISTORY" Member="PartCodeHistory" Type="System.String" DbType="VARCHAR2(1000)" CanBeNull="true" />
+      <Column Name="NOTE" Member="Note" Type="System.String" DbType="VARCHAR2(250)" CanBeNull="true" />
+      <Association Name="OrderHeader_OrderDetail" Member="OrderHeader" ThisKey="OrderHeaderId" OtherKey="OrderHeaderId" Type="OrderHeader" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_P_ORDER_HEADER" Member="OrderHeaders">
+    <Type Name="OrderHeader">
+      <Column Name="ORDER_HEADER_ID" Member="OrderHeaderId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REFERENCE_ID" Member="ReferenceId" Type="System.Int32" DbType="NUMBER(10)" CanBeNull="true" />
+      <Column Name="CREATED_DATE" Member="CreatedDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="CREATED_BY" Member="CreatedBy" Type="System.String" DbType="NVARCHAR2(768) NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS" Member="Status" Type="System.String" DbType="CHAR(2) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDER_TYPE" Member="OrderType" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDER_SOURCE" Member="OrderSource" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" />
+      <Column Name="TO_DEALER" Member="ToDealer" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="DEALER_CODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="TO_LOCATION" Member="ToLocation" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDER_DATE" Member="OrderDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="CONFIRM_DATE" Member="ConfirmDate" Type="System.DateTime" DbType="TIMESTAMP" CanBeNull="true" />
+      <Column Name="QUOTATION_DATE" Member="QuotationDate" Type="System.DateTime" DbType="TIMESTAMP" CanBeNull="true" />
+      <Column Name="PAYMENT_DATE" Member="PaymentDate" Type="System.DateTime" DbType="TIMESTAMP" CanBeNull="true" />
+      <Column Name="SHIPPING_DATE" Member="ShippingDate" Type="System.DateTime" DbType="TIMESTAMP" CanBeNull="true" />
+      <Column Name="CAN_UNDO_AUTO_RECEIVE" Member="CanUndoAutoReceive" Type="System.Boolean" DbType="NUMBER(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CHANGE_REMARK" Member="ChangeRemark" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" />
+      <Column Name="TIP_TOP_NUMBER" Member="TipTopNumber" Type="System.String" DbType="VARCHAR2(10)" CanBeNull="true" />
+      <Column Name="TIP_TOP_PROCESSED" Member="TipTopProcessed" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" />
+      <Column Name="AMOUNT" Member="Amount" Type="System.Int64" DbType="NUMBER(19) NOT NULL" CanBeNull="false" />
+      <Column Name="DELIVERY_DATE" Member="DeliveryDate" Type="System.DateTime" DbType="TIMESTAMP" CanBeNull="true" />
+      <Column Name="SENT_WARNING_OVER_QUOTATION" Member="SentWarningOverQuotation" Type="System.Boolean" DbType="NUMBER(1) NOT NULL" CanBeNull="false" />
+      <Column Name="SENT_WARNING_OVER_SHIPPING" Member="SentWarningOverShipping" Type="System.Boolean" DbType="NUMBER(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ALREADY_IN_STOCK" Member="AlreadyInStock" Type="System.Boolean" DbType="NUMBER(1) NOT NULL" CanBeNull="false" />
+      <Association Name="OrderHeader_OrderDetail" Member="OrderDetails" ThisKey="OrderHeaderId" OtherKey="OrderHeaderId" Type="OrderDetail" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="VDMS.Core.Domain.Serviceheader, VDMS.Core" table="SER_SERVICEHEADER" lazy="false">
+		<id name="Id" type="Int64" unsaved-value="0">
+			<column name="SERVICEHEADERID" sql-type="NUMBER" not-null="true" unique="true" index="PK_SERVICEHEADER"/>
+			<generator class="sequence">
+				<param name="sequence">seq_Serviceheader</param>
+			</generator>
+		</id>
+		<property name="Enginenumber" type="String">
+			<column name="ENGINENUMBER" length="30" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+		<property name="Servicedate" type="DateTime">
+			<column name="SERVICEDATE" sql-type="TIMESTAMP(1)" not-null="true"/>
+		</property>
+		<property name="Servicetype" type="Int32">
+			<column name="SERVICETYPE" sql-type="NUMBER" not-null="false"/>
+		</property>
+		<property name="Damaged" type="String">
+			<column name="DAMAGED" length="1000" sql-type="NVARCHAR2" not-null="false"/>
+		</property>
+		<property name="Repairresult" type="String">
+			<column name="REPAIRRESULT" length="1000" sql-type="NVARCHAR2" not-null="false"/>
+		</property>
+		<property name="Kmcount" type="Int64">
+			<column name="KMCOUNT" sql-type="NUMBER" not-null="true"/>
+		</property>
+		<property name="Comments" type="String">
+			<column name="COMMENTS" length="1000" sql-type="NVARCHAR2" not-null="false"/>
+		</property>
+		<property name="Servicesheetnumber" type="String">
+			<column name="SERVICESHEETNUMBER" length="30" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+		<property name="Feeamount" type="Int64">
+			<column name="FEEAMOUNT" sql-type="NUMBER" not-null="true"/>
+		</property>
+		<property name="Totalamount" type="Int64">
+			<column name="TOTALAMOUNT" sql-type="NUMBER" not-null="true"/>
+		</property>
+		<property name="Numberplate" type="String">
+			<column name="NUMBERPLATE" length="15" sql-type="VARCHAR2" not-null="false"/>
+		</property>
+		<property name="Framenumber" type="String">
+			<column name="FRAMENUMBER" length="30" sql-type="VARCHAR2" not-null="false"/>
+		</property>
+		<property name="Purchasedate" type="DateTime">
+			<column name="PURCHASEDATE" sql-type="TIMESTAMP(1)" not-null="true"/>
+		</property>
+		<property name="Itemtype" type="String">
+			<column name="ITEMTYPE" length="50" sql-type="VARCHAR2" not-null="false"/>
+		</property>
+		<property name="Colorcode" type="String">
+			<column name="COLORCODE" length="30" sql-type="VARCHAR2" not-null="false"/>
+		</property>
+		<property name="Dealercode" type="String">
+			<column name="DEALERCODE" length="30" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+		<property name="Branchcode" type="String">
+			<column name="BRANCHCODE" length="30" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+		<property name="Createby" type="String">
+			<column name="CREATEBY" length="30" sql-type="VARCHAR2" not-null="false"/>
+		</property>
+		<many-to-one name="Customer" class="VDMS.Core.Domain.Customer, VDMS.Core">
+			<column name="CUSTOMERID" sql-type="NUMBER" not-null="false"/>
+		</many-to-one>
+		<property name="Status" type="Int32">
+			<column name="STATUS" sql-type="NUMBER" not-null="true"/>
+		</property>
+	</class>
+</hibernate-mapping>

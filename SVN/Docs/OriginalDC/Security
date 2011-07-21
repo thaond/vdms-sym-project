@@ -1,0 +1,116 @@
+--
+-- ER/Studio 8.0 SQL Code Generation
+-- Company :      Thang Long Software
+-- Project :      VDMS-II.DM1
+-- Author :       Quang Minh
+--
+-- Date Created : Monday, March 02, 2009 14:49:06
+-- Target DBMS : Oracle 9i
+--
+
+-- 
+-- TABLE: v2_app_RoleInPath 
+--
+
+CREATE TABLE v2_app_RoleInPath(
+    RolePathId         NUMBER(10, 0)    NOT NULL,
+    RoleName           VARCHAR2(255)    NOT NULL,
+    ApplicationName    VARCHAR2(255)    NOT NULL,
+    PathId             NUMBER(10, 0)    NOT NULL,
+    CONSTRAINT v2_PK02 PRIMARY KEY (RolePathId)
+)
+;
+
+
+
+-- 
+-- TABLE: v2_app_RoleInTask 
+--
+
+CREATE TABLE v2_app_RoleInTask(
+    RoleTaskId         NUMBER(38, 0)    NOT NULL,
+    TaskId             NUMBER(38, 0)    NOT NULL,
+    RoleName           VARCHAR2(255)    NOT NULL,
+    ApplicationName    VARCHAR2(255)    NOT NULL,
+    CONSTRAINT v2_PK04 PRIMARY KEY (RoleTaskId)
+)
+;
+
+
+
+-- 
+-- TABLE: v2_app_SiteMap 
+--
+
+CREATE TABLE v2_app_SiteMap(
+    PathId    NUMBER(10, 0)     NOT NULL,
+    URL       VARCHAR2(4000)    NOT NULL,
+    CONSTRAINT v2_PK10 PRIMARY KEY (PathId)
+)
+;
+
+
+
+-- 
+-- TABLE: v2_app_Task 
+--
+
+CREATE TABLE v2_app_Task(
+    TaskId         NUMBER(38, 0)    NOT NULL,
+    PathId         NUMBER(10, 0)    NOT NULL,
+    TaskName       NVARCHAR2(50)    NOT NULL,
+    CommandName    VARCHAR2(30),
+    CONSTRAINT v2_PK13 PRIMARY KEY (TaskId)
+)
+;
+
+
+
+-- 
+-- TABLE: v2_app_User_Profile 
+--
+
+CREATE TABLE v2_app_User_Profile(
+    User_Name        NVARCHAR2(256)    NOT NULL,
+    Dealer_Code      VARCHAR2(30),
+    Database_Code    CHAR(10),
+    Area_Code        CHAR(25),
+    Dept             CHAR(2)           NOT NULL,
+    Position         VARCHAR2(5)       NOT NULL,
+    N_G_Level        NUMBER(3, 0),
+    CONSTRAINT v2_PK29 PRIMARY KEY (User_Name)
+)
+;
+
+
+
+-- 
+-- TABLE: v2_app_RoleInPath 
+--
+
+ALTER TABLE v2_app_RoleInPath ADD CONSTRAINT Refv2_app_SiteMap232 
+    FOREIGN KEY (PathId)
+    REFERENCES v2_app_SiteMap(PathId)
+;
+
+
+-- 
+-- TABLE: v2_app_RoleInTask 
+--
+
+ALTER TABLE v2_app_RoleInTask ADD CONSTRAINT Refv2_app_Task233 
+    FOREIGN KEY (TaskId)
+    REFERENCES v2_app_Task(TaskId)
+;
+
+
+-- 
+-- TABLE: v2_app_Task 
+--
+
+ALTER TABLE v2_app_Task ADD CONSTRAINT Refv2_app_SiteMap234 
+    FOREIGN KEY (PathId)
+    REFERENCES v2_app_SiteMap(PathId)
+;
+
+

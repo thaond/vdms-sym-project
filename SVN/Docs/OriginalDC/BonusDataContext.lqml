@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="VDMS" EntityNamespace="VDMS.Bonus.Entity" ContextNamespace="VDMS.II.Linq" Class="BonusDataContext" FilePerClass="false" Provider="Devart.Data.Oracle.Linq.Provider.OracleDataProvider, Devart.Data.Oracle.Linq" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="User Id=vdms;Password=vdms;Server=vdms;Home=orahome92;Persist Security Info=True" Provider="Devart.Data.Oracle" />
+  <Table Name="VDMS.V2_P_DEALER" Member="Dealers">
+    <Type Name="Dealer">
+      <Column Name="DEALER_CODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PARENT_CODE" Member="ParentCode" Type="System.String" DbType="VARCHAR2(30)" CanBeNull="true" />
+      <Column Name="CONTACT_ID" Member="ContactId" Type="System.Int64" DbType="NUMBER(10)" CanBeNull="true" />
+      <Column Name="DEALER_NAME" Member="DealerName" Type="System.String" DbType="NVARCHAR2(512) NOT NULL" CanBeNull="false" />
+      <Column Name="DEALER_TYPE" Member="DealerType" Type="System.String" DbType="CHAR(2)" CanBeNull="true" />
+      <Column Name="ADDRESS" Member="Address" Type="System.String" DbType="NVARCHAR2(512)" CanBeNull="true" />
+      <Column Name="DATABASE_CODE" Member="DatabaseCode" Type="System.String" DbType="VARCHAR2(10) NOT NULL" CanBeNull="false" />
+      <Column Name="AREA_CODE" Member="AreaCode" Type="System.String" DbType="VARCHAR2(25) NOT NULL" CanBeNull="false" />
+      <Column Name="RECEIVE_SPAN" Member="ReceiveSpan" Type="System.Int32" DbType="NUMBER(3) NOT NULL" CanBeNull="false" />
+      <Column Name="DEFAULT_WAREHOUSE_ID" Member="DefaultWarehouseId" Type="System.Int64" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="DEFAULT_V_WAREHOUSE_ID" Member="DefaultVWarehouseId" Type="System.Int64" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDER_DATE_CONTROL" Member="OrderDateControl" Type="System.Int64" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Association Name="Dealer_Dealer" Member="Dealers" ThisKey="DealerCode" OtherKey="ParentCode" Type="Dealer" />
+      <Association Name="Dealer_Dealer" Member="Dealer1" Storage="_Dealer" ThisKey="ParentCode" OtherKey="DealerCode" Type="Dealer" IsForeignKey="true" />
+      <Association Name="Dealer_BonusPlanDetail" Member="BonusPlanDetails" ThisKey="DealerCode" OtherKey="DealerCode" Type="BonusPlanDetail" />
+      <Association Name="Dealer_Bonus" Member="Bonus" ThisKey="DealerCode" OtherKey="DealerCode" Type="Bonus" />
+      <Association Name="Dealer_BonusTransaction" Member="BonusTransactions" ThisKey="DealerCode" OtherKey="DealerCode" Type="BonusTransaction" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_DEALER_BONUS_PLAN_HEADER" Member="BonusPlanHeaders">
+    <Type Name="BonusPlanHeader">
+      <Column Name="BONUS_PLAN_HEADER_ID" Member="BonusPlanHeaderId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BONUS_PLAN_NAME" Member="BonusPlanName" Type="System.String" DbType="NVARCHAR2(512) NOT NULL" CanBeNull="false" />
+      <Column Name="CREATED_DATE" Member="CreatedDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="FROM_DATE" Member="FromDate" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" />
+      <Column Name="TO_DATE" Member="ToDate" Type="System.DateTime" DbType="DATE" CanBeNull="true" />
+      <Column Name="USER_NAME" Member="UserName" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS" Member="Status" Type="System.String" DbType="CHAR(2)" CanBeNull="true" />
+      <Column Name="PLAN_TYPE" Member="PlanType" Type="System.String" DbType="CHAR(2)" CanBeNull="true" />
+      <Column Name="DESCRIPTION" Member="Description" Type="System.String" DbType="NVARCHAR2(1024)" CanBeNull="true" />
+      <Column Name="Database_Code" Member="DatabaseCode" Type="System.String" DbType="varchar2(30)" CanBeNull="false" />
+      <Association Name="BonusPlanHeader_BonusPlanDetail" Member="BonusPlanDetails" ThisKey="BonusPlanHeaderId" OtherKey="BonusPlanHeaderId" Type="BonusPlanDetail" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_DEALER_BONUS_SOURCE" Member="BonusSources">
+    <Type Name="BonusSource">
+      <Column Name="BONUS_SOURCE_ID" Member="BonusSourceId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BONUS_SOURCE_NAME" Member="BonusSourceName" Type="System.String" DbType="NVARCHAR2(512) NOT NULL" CanBeNull="false" />
+      <Column Name="DESCRIPTION" Member="Description" Type="System.String" DbType="NVARCHAR2(1024)" CanBeNull="true" />
+      <Association Name="BonusSource_BonusPlanDetail" Member="BonusPlanDetails" ThisKey="BonusSourceId" OtherKey="BonusSourceId" Type="BonusPlanDetail" />
+      <Association Name="BonusSource_BonusTransaction" Member="BonusTransactions" ThisKey="BonusSourceId" OtherKey="BonusSourceId" Type="BonusTransaction" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_DEALER_BONUS_PLAN_DETAIL" Member="BonusPlanDetails">
+    <Type Name="BonusPlanDetail">
+      <Column Name="BONUS_PLAN_DETAIL_ID" Member="BonusPlanDetailId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BONUS_PLAN_HEADER_ID" Member="BonusPlanHeaderId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="BONUS_SOURCE_ID" Member="BonusSourceId" Type="System.Int64" DbType="NUMBER(10)" CanBeNull="true" />
+      <Column Name="DEALER_CODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="BONUS_DATE" Member="BonusDate" Type="System.DateTime" DbType="DATE" CanBeNull="true" />
+      <Column Name="AMOUNT" Member="Amount" Type="System.Int64" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="CREATED_DATE" Member="CreatedDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="USER_NAME" Member="UserName" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS" Member="Status" Type="System.String" DbType="CHAR(2) NOT NULL" CanBeNull="false" />
+      <Column Name="PLAN_TYPE" Member="PlanType" Type="System.String" DbType="CHAR(2) NOT NULL" CanBeNull="false" />
+      <Column Name="DESCRIPTION" Member="Description" Type="System.String" DbType="NVARCHAR2(1024)" CanBeNull="true" />
+      <Association Name="Dealer_BonusPlanDetail" Member="Dealer" ThisKey="DealerCode" OtherKey="DealerCode" Type="Dealer" IsForeignKey="true" />
+      <Association Name="BonusPlanHeader_BonusPlanDetail" Member="BonusPlanHeader" ThisKey="BonusPlanHeaderId" OtherKey="BonusPlanHeaderId" Type="BonusPlanHeader" IsForeignKey="true" />
+      <Association Name="BonusSource_BonusPlanDetail" Member="BonusSource" ThisKey="BonusSourceId" OtherKey="BonusSourceId" Type="BonusSource" IsForeignKey="true" />
+      <Association Name="BonusPlanDetail_BonusTransaction" Member="BonusTransactions" ThisKey="BonusPlanDetailId" OtherKey="BonusPlanDetailId" Type="BonusTransaction" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_DEALER_BONUS" Member="Bonus">
+    <Type Name="Bonus">
+      <Column Name="DEALER_CODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AMOUNT" Member="Amount" Type="System.Int64" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="LOCK_DATE" Member="LockDate" Type="System.DateTime" DbType="DATE" CanBeNull="true" />
+      <Association Name="Dealer_Bonus" Member="Dealer" ThisKey="DealerCode" OtherKey="DealerCode" Type="Dealer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.SALE_ORDERHEADER" Member="SaleOrderheaders">
+    <Type Name="OrderHeader">
+      <Column Name="ORDERID" Member="OrderHeaderId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CREATEDDATE" Member="CreatedDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="CREATEDBY" Member="CreatedBy" Type="System.String" DbType="NVARCHAR2(512) NOT NULL" CanBeNull="false" />
+      <Column Name="LASTEDITEDDATE" Member="LastEditedDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="LASTEDITEDBY" Member="LastEditedBy" Type="System.String" DbType="NVARCHAR2(512) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDERNUMBER" Member="OrderNumber" Type="System.String" DbType="VARCHAR2(30)" CanBeNull="true" />
+      <Column Name="ORDERDATE" Member="OrderDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="ORDERTIMES" Member="OrderTimes" Type="System.Decimal" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="SHIPPINGDATE" Member="ShippingDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="SHIPPINGTO" Member="ShippingTo" Type="System.String" DbType="NVARCHAR2(512)" CanBeNull="true" />
+      <Column Name="STATUS" Member="Status" Type="System.Int32" DbType="NUMBER(3) NOT NULL" CanBeNull="false" />
+      <Column Name="DEALERCODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="SUBTOTAL" Member="SubTotal" Type="System.Int64" DbType="NUMBER(18)" CanBeNull="true" />
+      <Column Name="TAXAMT" Member="TaxAmt" Type="System.Int64" DbType="NUMBER(18)" CanBeNull="true" />
+      <Column Name="FREIGHT" Member="Freight" Type="System.Int64" DbType="NUMBER(18)" CanBeNull="true" />
+      <Column Name="DEALERCOMMENT" Member="DealerComment" Type="System.String" DbType="NVARCHAR2(4000)" CanBeNull="true" />
+      <Column Name="VMEPCOMMENT" Member="VMEPComment" Type="System.String" DbType="NVARCHAR2(4000)" CanBeNull="true" />
+      <Column Name="REFERENCEORDERID" Member="ReferenceOrderId" Type="System.Int64" DbType="NUMBER(10)" CanBeNull="true" />
+      <Column Name="AREACODE" Member="AreaCode" Type="System.String" DbType="VARCHAR2(10) NOT NULL" CanBeNull="false" />
+      <Column Name="DATABASECODE" Member="DatabaseCode" Type="System.String" DbType="VARCHAR2(10)" CanBeNull="true" />
+      <Column Name="DELIVEREDSTATUS" Member="DeliveredStatus" Type="System.Int32" DbType="NUMBER(2)" CanBeNull="true" />
+      <Column Name="SECONDARYSHIPPINGTO" Member="SecondaryShippingTo" Type="System.String" DbType="VARCHAR2(512)" CanBeNull="true" />
+      <Column Name="SECONDARYSHIPPINGCODE" Member="SecondaryShippingCode" Type="System.String" DbType="VARCHAR2(128)" CanBeNull="true" />
+      <Column Name="STATISTICDATE" Member="StatisticDate" Type="System.DateTime" DbType="DATE" CanBeNull="true" />
+      <Column Name="PAYMENTAMOUNT" Member="PaymentAmount" Type="System.Int64" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="BonusAmount" Type="System.Int64" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="BONUSSTATUS" Member="BonusStatus" Type="System.String" DbType="CHAR(1)" CanBeNull="true" />
+      <Column Name="FIN_COMMENT" Member="FinComment" Type="System.String" DbType="NVARCHAR2(1024)" CanBeNull="true" />
+      <Column Name="FIN_VOUCHER" Member="FinVoucher" Type="System.String" DbType="VARCHAR2(30)" CanBeNull="true" />
+      <Association Name="OrderHeader_BonusTransaction" Member="BonusTransactions" ThisKey="OrderHeaderId" OtherKey="OrderId" Type="BonusTransaction" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_DEALER_BONUS_TRANSACTION" Member="BonusTransactions">
+    <Type Name="BonusTransaction">
+      <Column Name="TRANSACTION_ID" Member="TransactionId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BONUS_PLAN_DETAIL_ID" Member="BonusPlanDetailId" Type="System.Int64" DbType="NUMBER(10)" CanBeNull="true" />
+      <Column Name="ORDER_ID" Member="OrderId" Type="System.Int64" DbType="NUMBER(10)" CanBeNull="true" />
+      <Column Name="DEALER_CODE" Member="DealerCode" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="AMOUNT" Member="Amount" Type="System.Decimal" DbType="NUMBER(38) NOT NULL" CanBeNull="false" />
+      <Column Name="TRANSACTION_DATE" Member="TransactionDate" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" />
+      <Column Name="CREATED_DATE" Member="CreatedDate" Type="System.DateTime" DbType="TIMESTAMP NOT NULL" CanBeNull="false" />
+      <Column Name="USER_NAME" Member="UserName" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="BONUS_SOURCE_ID" Member="BonusSourceId" Type="System.Int64" DbType="NUMBER(10)" CanBeNull="true" />
+      <Column Name="TRANSACTION_TYPE" Member="TransactionType" Type="System.String" DbType="CHAR(2) NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS" Member="Status" Type="System.String" DbType="CHAR(2)" CanBeNull="true" />
+      <Column Name="DESCRIPTION" Member="Description" Type="System.String" DbType="NVARCHAR2(1024)" CanBeNull="true" />
+      <Association Name="Dealer_BonusTransaction" Member="Dealer" ThisKey="DealerCode" OtherKey="DealerCode" Type="Dealer" IsForeignKey="true" />
+      <Association Name="BonusSource_BonusTransaction" Member="BonusSource" ThisKey="BonusSourceId" OtherKey="BonusSourceId" Type="BonusSource" IsForeignKey="true" />
+      <Association Name="BonusPlanDetail_BonusTransaction" Member="BonusPlanDetail" ThisKey="BonusPlanDetailId" OtherKey="BonusPlanDetailId" Type="BonusPlanDetail" IsForeignKey="true" />
+      <Association Name="OrderHeader_BonusTransaction" Member="OrderHeader" ThisKey="OrderId" OtherKey="OrderHeaderId" Type="OrderHeader" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,84 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1439911B-BE4E-48A0-9208-927321992C67}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSSFriendly</RootNamespace>
+    <AssemblyName>CSSFriendly</AssemblyName>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChangePasswordAdapter.cs" />
+    <Compile Include="CompositeDataBoundControlAdapter.cs" />
+    <Compile Include="CheckBoxListAdapter.cs" />
+    <Compile Include="CreateUserWizardAdapter.cs" />
+    <Compile Include="DataListAdapter.cs" />
+    <Compile Include="DetailsViewAdapter.cs" />
+    <Compile Include="FormViewAdapter.cs" />
+    <Compile Include="GridViewAdapter.cs" />
+    <Compile Include="Helpers.cs" />
+    <Compile Include="LoginAdapter.cs" />
+    <Compile Include="LoginStatusAdapter.cs" />
+    <Compile Include="MenuAdapter.cs" />
+    <Compile Include="PasswordRecoveryAdapter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RadioButtonListAdapter.cs" />
+    <Compile Include="TreeViewAdapter.cs" />
+    <Compile Include="WebControlAdapterExtender.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="JavaScript\AdapterUtils.js" />
+    <EmbeddedResource Include="JavaScript\MenuAdapter.js" />
+    <EmbeddedResource Include="JavaScript\TreeViewAdapter.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CSS\BrowserSpecific\IEMenu6.css" />
+    <EmbeddedResource Include="CSS\DetailsView.css" />
+    <EmbeddedResource Include="CSS\Menu.css" />
+    <EmbeddedResource Include="CSS\TreeView.css" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

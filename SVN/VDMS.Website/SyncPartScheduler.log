@@ -1,0 +1,1407 @@
+3/21/2011 5:29:30 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/21/2011 5:30:02 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+3/22/2011 4:42:16 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/22/2011 8:42:32 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/23/2011 8:10:06 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/23/2011 9:06:51 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/24/2011 4:40:03 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+3/24/2011 4:57:54 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+3/24/2011 5:26:01 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+3/24/2011 5:33:54 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/24/2011 5:37:59 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/26/2011 9:18:33 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 9:18:37 AM: Starting synchronize Automaticaly ----------
+3/26/2011 9:18:37 AM: Inserting new parts...  done! 0 rows inserted
+3/26/2011 9:18:40 AM: Updating price...  done! 10258 rows updated
+3/26/2011 9:19:06 AM: Synchronization finished ----------
+ 
+ 
+3/26/2011 9:21:59 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 9:22:03 AM: Starting synchronize Automaticaly ----------
+3/26/2011 9:22:03 AM: Inserting new parts...  done! 0 rows inserted
+3/26/2011 9:22:08 AM: Updating price...  done! 10258 rows updated
+3/26/2011 9:22:27 AM: Synchronization finished ----------
+ 
+ 
+3/26/2011 9:27:38 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 9:27:44 AM: Starting synchronize Automaticaly ----------
+3/26/2011 9:27:44 AM: Inserting new parts...  done! 0 rows inserted
+3/26/2011 9:27:46 AM: Updating price...  done! 10258 rows updated
+3/26/2011 9:28:20 AM: Synchronization finished ----------
+ 
+ 
+3/26/2011 9:33:26 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 9:33:30 AM: Starting synchronize Automaticaly ----------
+3/26/2011 9:33:30 AM: Inserting new parts...  done! 0 rows inserted
+3/26/2011 9:33:32 AM: Updating price...  done! 10258 rows updated
+3/26/2011 9:33:51 AM: Synchronization finished ----------
+ 
+ 
+3/26/2011 9:40:48 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 9:40:51 AM: Starting synchronize Automaticaly ----------
+3/26/2011 9:40:51 AM: Inserting new parts...  done! 0 rows inserted
+3/26/2011 9:40:53 AM: Updating price...  done! 10258 rows updated
+3/26/2011 9:41:06 AM: Synchronization finished ----------
+ 
+3/26/2011 9:54:43 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/26/2011 9:55:44 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 9:55:48 AM: Starting synchronize Automaticaly ----------
+3/26/2011 9:55:48 AM: Inserting new parts...  done! 0 rows inserted
+3/26/2011 9:55:51 AM: Updating price...  failed: Thread was being aborted.
+ 
+3/26/2011 9:56:29 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 9:56:32 AM: Starting synchronize Automaticaly ----------
+3/26/2011 9:56:32 AM: Inserting new parts...  done! 0 rows inserted
+3/26/2011 9:56:33 AM: Updating price...  done! 10258 rows updated
+3/26/2011 9:56:47 AM: Synchronization finished ----------
+ 
+ 
+3/26/2011 9:59:35 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 9:59:38 AM: Starting synchronize Automaticaly ----------
+3/26/2011 9:59:38 AM: Inserting new parts...  done! 0 rows inserted
+3/26/2011 9:59:40 AM: Updating price...  done! 10258 rows updated
+3/26/2011 9:59:53 AM: Synchronization finished ----------
+ 
+ 
+3/26/2011 10:03:58 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+3/26/2011 10:06:49 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+3/26/2011 10:24:45 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+3/26/2011 10:42:41 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 10:45:12 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/26/2011 10:46:36 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 10:59:15 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/26/2011 11:00:01 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 11:06:20 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/26/2011 11:08:38 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 11:14:25 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/26/2011 11:15:24 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 11:22:17 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/26/2011 11:23:31 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+3/26/2011 11:28:51 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+3/26/2011 11:38:50 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 11:40:09 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/26/2011 11:41:57 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+3/26/2011 11:44:59 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+3/26/2011 11:48:22 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+3/26/2011 11:52:31 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+3/26/2011 11:53:50 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+3/26/2011 11:54:55 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 1:12:50 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/26/2011 1:14:51 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+3/26/2011 1:19:35 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 1:27:58 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/26/2011 1:28:41 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 1:51:59 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/26/2011 1:53:34 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 1:54:09 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/26/2011 1:55:30 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+3/26/2011 2:02:48 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+3/26/2011 2:58:48 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 4:11:33 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/26/2011 4:13:31 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 4:23:56 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/26/2011 4:25:12 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 4:27:25 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/26/2011 4:28:15 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 4:34:35 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/26/2011 4:35:31 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 4:51:59 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/26/2011 4:53:56 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/26/2011 5:14:24 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/29/2011 12:35:45 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/29/2011 1:10:45 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/29/2011 1:11:29 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/29/2011 7:28:59 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/29/2011 7:30:38 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/29/2011 7:36:28 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/29/2011 7:40:46 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/29/2011 7:45:16 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/29/2011 7:46:40 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/29/2011 7:53:51 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/29/2011 7:55:02 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/29/2011 7:57:32 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/29/2011 7:57:50 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/29/2011 8:30:29 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/29/2011 8:31:01 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/29/2011 9:00:00 AM: Starting synchronize Automaticaly ----------
+3/29/2011 9:00:00 AM: Inserting new parts...  failed: ORA-04068: existing state of packages has been discarded
+ORA-04063: package body "VDMS.PART" has errors
+ORA-06508: PL/SQL: could not find program unit being called
+ORA-06512: at line 1
+
+3/29/2011 9:00:00 AM: Updating price...  failed: ORA-04068: existing state of packages has been discarded
+ORA-04063: package body "VDMS.PART" has errors
+ORA-06508: PL/SQL: could not find program unit being called
+ORA-06512: at line 1
+
+3/29/2011 9:00:00 AM: Synchronization finished ----------
+ 
+3/29/2011 12:33:52 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/29/2011 5:27:05 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/29/2011 8:29:48 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/30/2011 3:52:26 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/30/2011 4:03:51 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/30/2011 4:04:18 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/30/2011 4:09:26 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/30/2011 4:11:24 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+3/30/2011 4:30:44 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+3/30/2011 5:08:47 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/30/2011 5:25:16 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/30/2011 5:26:55 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/30/2011 5:39:23 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/30/2011 5:39:41 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/30/2011 5:42:49 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/30/2011 5:43:12 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/30/2011 5:48:10 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/30/2011 5:48:28 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/30/2011 7:12:12 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/30/2011 7:13:58 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/30/2011 7:19:15 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/30/2011 7:19:33 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/30/2011 7:30:46 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/30/2011 7:31:04 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/30/2011 7:41:57 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/30/2011 7:42:20 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/30/2011 7:42:26 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/30/2011 7:43:17 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/30/2011 7:50:46 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/30/2011 7:52:17 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/30/2011 8:47:58 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/31/2011 10:57:26 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/31/2011 11:59:21 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/31/2011 12:00:06 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/31/2011 12:11:55 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/31/2011 12:12:33 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/31/2011 12:18:38 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/31/2011 12:38:12 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/31/2011 12:39:09 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/31/2011 12:39:25 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+3/31/2011 12:39:52 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/31/2011 12:39:56 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+3/31/2011 12:45:30 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/31/2011 12:46:52 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/31/2011 12:52:26 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/31/2011 12:59:16 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/31/2011 1:05:39 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/31/2011 1:07:43 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/31/2011 1:41:39 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/31/2011 1:42:09 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/31/2011 1:42:45 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/31/2011 1:43:42 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/31/2011 1:44:49 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/31/2011 1:45:44 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3/31/2011 1:46:19 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+3/31/2011 1:47:44 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+4/1/2011 9:29:25 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/1/2011 9:29:32 AM: Starting synchronize Automaticaly ----------
+4/1/2011 9:29:32 AM: Inserting new parts...  failed: ORA-04068: existing state of packages has been discarded
+ORA-04063: package body "VDMS.PART" has errors
+ORA-06508: PL/SQL: could not find program unit being called
+ORA-06512: at line 1
+
+4/1/2011 9:29:40 AM: Updating price...  failed: ORA-04068: existing state of packages has been discarded
+ORA-04063: package body "VDMS.PART" has errors
+ORA-06508: PL/SQL: could not find program unit being called
+ORA-06512: at line 1
+
+4/1/2011 9:29:40 AM: Synchronization finished ----------
+ 
+4/1/2011 9:30:57 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/1/2011 9:33:17 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/1/2011 9:33:21 AM: Starting synchronize Automaticaly ----------
+4/1/2011 9:33:21 AM: Inserting new parts...  failed: ORA-04068: existing state of packages has been discarded
+ORA-04063: package body "VDMS.PART" has errors
+ORA-06508: PL/SQL: could not find program unit being called
+ORA-06512: at line 1
+
+4/1/2011 9:33:21 AM: Updating price...  failed: ORA-04068: existing state of packages has been discarded
+ORA-04063: package body "VDMS.PART" has errors
+ORA-06508: PL/SQL: could not find program unit being called
+ORA-06512: at line 1
+
+4/1/2011 9:33:21 AM: Synchronization finished ----------
+ 
+4/1/2011 9:36:30 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/1/2011 9:38:16 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/1/2011 9:38:20 AM: Starting synchronize Automaticaly ----------
+4/1/2011 9:38:21 AM: Inserting new parts...  failed: ORA-04068: existing state of packages has been discarded
+ORA-04063: package body "VDMS.PART" has errors
+ORA-06508: PL/SQL: could not find program unit being called
+ORA-06512: at line 1
+
+4/1/2011 9:38:21 AM: Updating price...  failed: ORA-04068: existing state of packages has been discarded
+ORA-04063: package body "VDMS.PART" has errors
+ORA-06508: PL/SQL: could not find program unit being called
+ORA-06512: at line 1
+
+4/1/2011 9:38:21 AM: Synchronization finished ----------
+ 
+ 
+4/1/2011 11:46:07 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/1/2011 1:07:04 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/1/2011 1:08:52 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/1/2011 1:09:28 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/1/2011 1:10:47 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+4/1/2011 3:52:24 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/1/2011 4:26:48 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/1/2011 4:27:54 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/1/2011 4:48:46 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/1/2011 4:49:25 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/1/2011 4:55:51 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/1/2011 4:57:16 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/1/2011 4:58:48 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/1/2011 4:59:15 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/1/2011 4:59:24 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/1/2011 4:59:49 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/1/2011 5:13:00 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/1/2011 5:13:17 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+4/1/2011 5:15:16 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/1/2011 5:18:45 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/1/2011 5:19:09 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/1/2011 5:21:53 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/1/2011 5:23:15 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/1/2011 5:23:28 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/1/2011 5:25:19 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/1/2011 5:26:58 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/1/2011 5:27:19 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/1/2011 5:28:03 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/1/2011 5:28:39 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+4/2/2011 9:27:59 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/2/2011 9:28:04 AM: Starting synchronize Automaticaly ----------
+4/2/2011 9:28:04 AM: Inserting new parts...  failed: ORA-04068: existing state of packages has been discarded
+ORA-04063: package body "VDMS.PART" has errors
+ORA-06508: PL/SQL: could not find program unit being called
+ORA-06512: at line 1
+
+4/2/2011 9:28:06 AM: Updating price...  failed: ORA-04068: existing state of packages has been discarded
+ORA-04063: package body "VDMS.PART" has errors
+ORA-06508: PL/SQL: could not find program unit being called
+ORA-06512: at line 1
+
+4/2/2011 9:28:06 AM: Synchronization finished ----------
+ 
+4/2/2011 9:30:21 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/2/2011 9:31:17 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/2/2011 9:31:21 AM: Starting synchronize Automaticaly ----------
+4/2/2011 9:31:21 AM: Inserting new parts...  failed: ORA-04068: existing state of packages has been discarded
+ORA-04063: package body "VDMS.PART" has errors
+ORA-06508: PL/SQL: could not find program unit being called
+ORA-06512: at line 1
+
+4/2/2011 9:31:21 AM: Updating price...  failed: ORA-04068: existing state of packages has been discarded
+ORA-04063: package body "VDMS.PART" has errors
+ORA-06508: PL/SQL: could not find program unit being called
+ORA-06512: at line 1
+
+4/2/2011 9:31:21 AM: Synchronization finished ----------
+ 
+4/2/2011 9:56:15 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/2/2011 10:44:56 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/2/2011 10:56:28 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/2/2011 11:50:39 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/2/2011 12:39:50 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/2/2011 12:41:02 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/2/2011 12:53:31 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/2/2011 12:55:46 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/2/2011 12:56:50 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/2/2011 1:59:55 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/2/2011 2:35:04 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/2/2011 2:36:09 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/2/2011 2:39:58 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/2/2011 2:41:02 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/2/2011 4:07:14 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/7/2011 10:24:11 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/7/2011 10:32:28 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/7/2011 10:33:04 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/7/2011 10:36:31 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/7/2011 10:38:02 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/7/2011 12:00:00 PM: Starting synchronize Automaticaly ----------
+4/7/2011 12:00:00 PM: Inserting new parts...  failed: ORA-04068: existing state of packages has been discarded
+ORA-04063: package body "VDMS.PART" has errors
+ORA-06508: PL/SQL: could not find program unit being called
+ORA-06512: at line 1
+
+4/7/2011 12:00:01 PM: Updating price...  failed: ORA-04068: existing state of packages has been discarded
+ORA-04063: package body "VDMS.PART" has errors
+ORA-06508: PL/SQL: could not find program unit being called
+ORA-06512: at line 1
+
+4/7/2011 12:00:01 PM: Synchronization finished ----------
+ 
+ 
+4/8/2011 5:56:00 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/8/2011 5:59:14 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/8/2011 6:00:40 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/8/2011 6:05:46 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/8/2011 6:06:28 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/8/2011 6:08:23 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/8/2011 6:10:33 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/8/2011 6:21:25 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/9/2011 8:06:48 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/9/2011 8:36:20 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 1:34:28 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 1:35:48 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 1:39:05 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 1:41:54 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 1:44:09 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 1:50:47 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 1:52:29 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 2:04:32 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 2:05:32 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 2:07:56 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 2:10:06 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+4/13/2011 2:16:41 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+4/13/2011 2:18:30 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 2:38:04 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 2:39:25 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+4/13/2011 3:13:19 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 3:13:57 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 3:14:47 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 3:20:39 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 3:23:03 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 3:31:42 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 3:34:18 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 3:55:17 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 3:56:29 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 4:04:42 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 4:06:23 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+4/13/2011 4:28:41 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 4:29:18 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 4:30:36 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 4:34:09 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 4:37:55 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+4/13/2011 4:43:39 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 4:49:56 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 4:50:58 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 5:15:52 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 5:18:13 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 5:18:19 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 5:19:24 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 6:25:25 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 6:26:34 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 6:32:58 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 6:34:45 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 6:40:03 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 6:42:16 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 6:46:37 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 6:47:51 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 6:53:41 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 6:54:40 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 7:02:15 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 7:03:26 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 7:05:44 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 7:08:54 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 7:13:47 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 7:14:55 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 7:16:24 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 7:19:15 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 7:21:28 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 7:22:36 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 7:24:44 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 7:25:46 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 7:31:46 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 7:33:16 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 7:33:53 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 7:34:08 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 7:35:59 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 9:56:48 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 10:02:47 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 10:03:13 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 10:06:40 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/13/2011 10:07:01 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+4/13/2011 10:18:41 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/13/2011 10:23:13 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 10:55:46 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+4/14/2011 11:31:12 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 11:32:43 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 11:34:21 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 11:51:05 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 12:06:44 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 12:06:50 PM: Starting synchronize Automaticaly ----------
+4/14/2011 12:06:50 PM: Inserting new parts...  failed: ORA-04068: existing state of packages has been discarded
+ORA-04063: package body "VDMS.PART" has errors
+ORA-06508: PL/SQL: could not find program unit being called
+ORA-06512: at line 1
+
+4/14/2011 12:06:53 PM: Updating price...  failed: ORA-04068: existing state of packages has been discarded
+ORA-04063: package body "VDMS.PART" has errors
+ORA-06508: PL/SQL: could not find program unit being called
+ORA-06512: at line 1
+
+4/14/2011 12:06:53 PM: Synchronization finished ----------
+ 
+4/14/2011 12:16:23 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 3:42:35 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 3:55:26 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 3:56:31 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 4:29:58 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 4:31:21 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 5:04:53 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 5:06:00 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 5:36:42 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 5:37:51 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 5:47:58 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 5:49:00 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 5:50:16 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 5:51:20 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 5:52:16 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 5:54:30 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+4/14/2011 5:54:36 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 6:05:38 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 6:08:41 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 6:08:48 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 6:10:31 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 6:14:06 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 6:15:10 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 6:15:16 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 6:16:27 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 6:19:42 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 6:21:01 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 6:23:17 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 6:24:34 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 6:26:41 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 6:28:02 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 6:28:56 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 6:30:04 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 6:39:52 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 6:40:55 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 6:49:30 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 6:51:06 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 6:57:34 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 6:58:45 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 7:10:10 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 7:11:11 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 7:30:57 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 7:32:04 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 7:42:48 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 7:44:11 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 7:47:01 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 7:48:08 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 7:55:43 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 7:58:15 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 8:29:45 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 8:32:14 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 8:32:49 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/14/2011 8:34:10 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/14/2011 8:43:07 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 9:15:02 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 9:21:54 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 9:24:05 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 9:29:11 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 9:30:27 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 10:01:23 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 11:57:03 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 12:00:01 PM: Starting synchronize Automaticaly ----------
+4/15/2011 12:00:01 PM: Inserting new parts...  done! 0 rows inserted
+4/15/2011 12:00:06 PM: Updating price...  done! 11369 rows updated
+4/15/2011 12:00:44 PM: Synchronization finished ----------
+ 
+4/15/2011 1:22:05 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 1:24:15 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 2:30:40 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 2:32:36 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+4/15/2011 2:33:08 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 2:33:13 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+4/15/2011 2:39:04 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 2:40:17 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 2:42:33 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 2:44:18 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 2:46:11 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 2:47:14 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 2:59:50 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 3:01:50 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 3:10:28 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 3:11:30 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 3:12:10 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 3:12:28 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+4/15/2011 3:19:40 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+4/15/2011 3:20:09 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 3:20:18 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 3:26:08 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 3:26:10 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+4/15/2011 3:27:00 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 3:27:29 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 3:56:50 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 3:58:44 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 4:11:37 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 4:13:25 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+4/15/2011 4:14:00 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 4:14:01 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+4/15/2011 4:24:31 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 4:25:42 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 4:33:15 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 4:34:21 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 4:44:12 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 4:45:19 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 5:06:36 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 5:07:37 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 5:21:17 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 5:22:35 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 5:26:07 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 5:27:13 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 5:27:55 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 5:28:05 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 5:32:13 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 5:33:22 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 5:39:44 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 5:41:43 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 6:05:57 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 6:07:33 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 6:08:04 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 6:09:28 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 6:13:12 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 6:15:35 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 6:20:20 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 6:24:08 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 6:36:13 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 6:37:26 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 6:55:08 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 6:56:12 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 6:59:28 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 7:00:37 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+4/15/2011 7:01:12 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 7:02:30 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 7:03:55 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 7:06:36 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 7:08:38 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 7:13:56 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 7:14:54 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 7:19:10 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 7:20:37 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 7:29:54 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 7:30:59 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 7:42:21 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 7:43:26 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+4/15/2011 7:53:54 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 8:36:10 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 8:37:19 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 8:40:55 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 8:41:56 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 8:43:32 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 8:45:13 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 8:54:10 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 8:55:20 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 8:58:52 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 8:59:54 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 9:03:00 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 9:04:13 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 9:06:52 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 9:08:10 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 9:26:18 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 9:27:28 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 9:32:44 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/15/2011 9:35:15 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/15/2011 9:39:34 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 9:07:04 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 9:22:05 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 9:23:54 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 9:30:46 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 9:32:00 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 9:44:17 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 9:45:35 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 9:51:04 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 9:52:06 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 10:03:19 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 10:04:44 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 10:34:00 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 10:35:11 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 10:45:16 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 10:46:27 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 12:00:02 PM: Starting synchronize Automaticaly ----------
+4/19/2011 12:00:02 PM: Inserting new parts...  done! 0 rows inserted
+4/19/2011 12:00:21 PM: Updating price...  done! 11375 rows updated
+4/19/2011 12:00:32 PM: Synchronization finished ----------
+ 
+4/19/2011 1:07:40 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 1:57:47 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 2:17:05 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 2:18:28 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 2:22:16 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 2:24:45 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 2:26:51 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 2:28:04 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 2:35:28 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 2:36:42 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+4/19/2011 2:41:49 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 2:45:15 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 2:46:38 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 3:21:04 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+4/19/2011 3:36:27 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 3:37:38 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 3:50:34 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 3:55:39 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 4:10:09 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 4:11:54 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 4:15:27 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 4:16:36 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 4:28:15 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 4:29:28 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 4:30:07 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 4:30:09 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 4:34:32 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 4:35:40 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 4:39:03 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 4:40:08 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 5:13:08 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 5:14:21 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 5:16:34 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 5:17:40 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 5:24:25 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 5:25:41 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 5:37:02 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 5:38:14 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 5:51:01 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 5:52:49 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 6:00:17 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/19/2011 6:03:14 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/19/2011 6:08:03 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/25/2011 9:37:49 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/25/2011 10:31:04 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+4/26/2011 1:58:49 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/26/2011 2:21:01 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/26/2011 2:22:08 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/26/2011 2:49:59 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/26/2011 2:51:48 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/26/2011 3:06:42 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/26/2011 3:28:13 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/26/2011 3:41:48 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/26/2011 3:43:48 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/26/2011 3:55:41 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/26/2011 3:57:56 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/26/2011 4:12:39 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/26/2011 4:15:37 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/26/2011 4:17:07 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/26/2011 4:18:28 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/26/2011 4:21:02 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/26/2011 4:24:05 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/26/2011 4:25:42 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/26/2011 4:32:54 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/26/2011 4:35:19 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/26/2011 4:36:43 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+4/26/2011 4:53:25 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/26/2011 4:54:46 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/26/2011 4:55:51 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+4/26/2011 5:16:31 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/26/2011 5:23:31 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/26/2011 5:27:47 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/26/2011 5:56:58 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/26/2011 6:05:40 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/26/2011 6:09:37 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/26/2011 6:10:29 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/26/2011 6:14:19 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/26/2011 6:32:22 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/26/2011 6:43:05 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/27/2011 8:58:47 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/27/2011 10:12:32 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+4/27/2011 10:13:31 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/27/2011 10:22:33 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+4/27/2011 10:23:40 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+4/27/2011 10:46:30 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4/27/2011 11:07:06 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/4/2011 2:06:44 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/4/2011 2:07:52 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/4/2011 2:09:10 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/4/2011 2:32:23 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/4/2011 2:33:21 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/4/2011 2:51:31 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/4/2011 2:53:22 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/4/2011 2:57:58 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/4/2011 5:02:11 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/4/2011 5:11:58 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/4/2011 5:13:50 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/4/2011 5:16:25 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/4/2011 5:17:34 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/4/2011 5:21:31 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/4/2011 5:22:51 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/4/2011 5:24:22 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/4/2011 5:25:30 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/4/2011 5:46:17 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/4/2011 5:47:50 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/4/2011 6:23:11 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 9:29:45 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 9:34:21 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 9:35:29 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 9:44:21 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 9:45:22 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 10:00:40 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 10:01:52 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 10:12:35 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 10:13:37 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 10:17:47 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 10:18:53 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 10:58:40 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 11:00:00 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 11:00:05 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 11:01:52 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 11:13:08 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 11:14:06 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+5/5/2011 11:29:06 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 11:32:49 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 11:34:02 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 11:55:07 AM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 11:56:14 AM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 12:00:00 PM: Starting synchronize Automaticaly ----------
+5/5/2011 12:00:00 PM: Inserting new parts...  done! 0 rows inserted
+5/5/2011 12:00:02 PM: Updating price...  done! 11427 rows updated
+5/5/2011 12:00:14 PM: Synchronization finished ----------
+ 
+5/5/2011 1:10:57 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 1:12:38 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+5/5/2011 1:20:54 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 1:54:57 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 1:57:47 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 3:46:14 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 3:48:32 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+5/5/2011 3:48:59 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 3:49:09 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+5/5/2011 3:50:53 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 3:52:16 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 3:53:58 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 3:55:04 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 3:57:42 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 3:58:50 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 4:13:40 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 4:14:49 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+5/5/2011 4:18:48 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 4:47:19 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 4:48:34 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+5/5/2011 4:55:04 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 4:55:34 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 4:56:36 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 4:57:14 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 4:58:21 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 5:02:36 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 5:04:24 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+5/5/2011 5:04:41 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 5:12:28 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 5:13:30 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 5:16:10 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 5:18:50 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 5:25:42 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 5:52:26 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 5:54:35 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 5:55:54 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 6:43:19 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 6:49:31 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 6:51:26 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 6:52:58 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 7:03:22 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 7:04:31 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 7:11:30 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+ 
+5/5/2011 7:12:36 PM: Starting Service >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5/5/2011 7:20:41 PM: Shutting down service <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
