@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="VDMS.Core.Domain.RolesInPaths, VDMS.Core" table="APP_ROLESINPATHS" lazy="false">
+		<id name="Id" type="Int32" unsaved-value="0">
+			<column name="ID" sql-type="NUMBER" not-null="true" unique="true" index="KEY1"/>
+			<generator class="sequence">
+				<param name="sequence">SEQ_RolesInPaths</param>
+			</generator>
+		</id>
+		<property name="Pathid" type="String">
+			<column name="PATHID" length="100" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+		<property name="Roleid" type="String">
+			<column name="ROLEID" length="100" sql-type="NVARCHAR2" not-null="true"/>
+		</property>
+	</class>
+</hibernate-mapping>

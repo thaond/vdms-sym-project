@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="VDMS.Core.Domain.ShippingHeader, VDMS.Core" table="SALE_SHIPPINGHEADER" lazy="false">
+		<id name="Id" type="Int64" unsaved-value="0">
+			<column name="SHIPPINGID" sql-type="NUMBER" not-null="true" unique="true" index="PK31"/>
+			<generator class="sequence">
+				<param name="sequence">seq_Shippingheader</param>
+			</generator>
+		</id>
+		<property name="Createddate" type="DateTime">
+			<column name="CREATEDDATE" sql-type="TIMESTAMP(6)" not-null="true"/>
+		</property>
+		<property name="Createdby" type="String">
+			<column name="CREATEDBY" length="512" sql-type="NVARCHAR2" not-null="true"/>
+		</property>
+		<property name="Dealercode" type="String">
+			<column name="DEALERCODE" length="30" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+		<property name="Shippingnumber" type="String">
+			<column name="SHIPPINGNUMBER" length="30" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+		<property name="Shippingdate" type="DateTime">
+			<column name="SHIPPINGDATE" sql-type="TIMESTAMP(6)" not-null="true"/>
+		</property>
+		<property name="Shippingto" type="String">
+			<column name="SHIPPINGTO" length="512" sql-type="NVARCHAR2" not-null="true"/>
+		</property>
+		<property name="Itemcount" type="Int32">
+			<column name="ITEMCOUNT" sql-type="NUMBER" not-null="true"/>
+		</property>
+		<property name="Areacode" type="String">
+			<column name="AREACODE" length="10" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+	</class>
+</hibernate-mapping>

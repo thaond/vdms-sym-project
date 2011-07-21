@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="VDMS.Core.Domain.Sellitem, VDMS.Core" table="SALE_SELLITEM" lazy="false">
+    <id name="Id" type="Int64" unsaved-value="0">
+      <column name="SELLITEMID" sql-type="NUMBER" not-null="true" unique="true" index="PK_SALE_SELLITEMID"/>
+      <generator class="sequence">
+        <param name="sequence">SEQ_SELLITEM</param>
+      </generator>
+    </id>
+    <property name="Pricebeforetax" type="Decimal">
+      <column name="PRICEBEFORETAX" sql-type="NUMBER" not-null="false"/>
+    </property>
+    <property name="Taxamt" type="Int32">
+      <column name="TAXAMT" sql-type="NUMBER" not-null="false"/>
+    </property>
+    <property name="Paymenttype" type="Int32">
+      <column name="PAYMENTTYPE" sql-type="NUMBER" not-null="false"/>
+    </property>
+    <property name="Numberplate" type="String">
+      <column name="NUMBERPLATE" length="10" sql-type="VARCHAR2" not-null="false"/>
+    </property>
+    <property name="Selltype" type="String">
+      <column name="SELLTYPE" length="512" sql-type="NVARCHAR2" not-null="false"/>
+    </property>
+    <property name="Paymentdate" type="DateTime">
+      <column name="PAYMENTDATE" sql-type="TIMESTAMP(6)" not-null="false"/>
+    </property>
+    <property name="Numplaterecdate" type="DateTime">
+      <column name="NUMPLATERECDATE" sql-type="TIMESTAMP(6)" not-null="false"/>
+    </property>
+    <property name="Commentsellitem" type="String">
+      <column name="COMMENTSELLITEM" length="512" sql-type="NVARCHAR2" not-null="false"/>
+    </property>
+  </class>
+</hibernate-mapping>

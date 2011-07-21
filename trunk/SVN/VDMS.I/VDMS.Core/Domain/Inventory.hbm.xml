@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="VDMS.Core.Domain.Saleinventory, VDMS.Core" table="SALE_INVENTORY" lazy="false">
+		<id name="Id" type="Int64" unsaved-value="0">
+			<column name="INVENTORYID" sql-type="NUMBER" not-null="true" unique="true" index="PK47"/>
+			<generator class="sequence">
+				<param name="sequence">seq_Saleinventory</param>
+			</generator>
+		</id>
+		<property name="Month" type="Int32">
+			<column name="`MONTH`" sql-type="NUMBER" not-null="true"/>
+		</property>
+		<property name="Year" type="Int32">
+			<column name="`YEAR`" sql-type="NUMBER" not-null="true"/>
+		</property>
+		<property name="Quantity" type="Int32">
+			<column name="QUANTITY" sql-type="NUMBER" not-null="true"/>
+		</property>
+		<property name="Dealercode" type="String">
+			<column name="DEALERCODE" length="30" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+		<property name="Branchcode" type="String">
+			<column name="BRANCHCODE" length="30" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+		<many-to-one name="Item" class="VDMS.Core.Domain.Item, VDMS.Core">
+			<column name="ITEMCODE" length="50" sql-type="VARCHAR2" not-null="true"/>
+		</many-to-one>
+	</class>
+</hibernate-mapping>

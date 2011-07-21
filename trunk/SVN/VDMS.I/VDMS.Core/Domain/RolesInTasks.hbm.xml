@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="VDMS.Core.Domain.RolesInTasks, VDMS.Core" table="APP_ROLESINTASKS" lazy="false">
+		<id name="Id" type="Int32" unsaved-value="0">
+			<column name="ID" sql-type="NUMBER" not-null="true" unique="true" index="KEY"/>
+			<generator class="sequence">
+				<param name="sequence">SEQ_RolesInTasks</param>
+			</generator>
+		</id>
+		<property name="Taskid" type="Int32">
+			<column name="TASKID" sql-type="NUMBER" not-null="true"/>
+		</property>
+		<property name="Roleid" type="String">
+			<column name="ROLEID" length="100" sql-type="NVARCHAR2" not-null="true"/>
+		</property>
+	</class>
+</hibernate-mapping>

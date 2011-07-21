@@ -1,0 +1,173 @@
+﻿.foo
+{
+}
+/* W3C CSS validator likes CSS files to start with a class rather than a comment. Soooooo.... */
+
+/* This style sheet is intended to contain OFTEN CHANGED rules used when the TreeView control adapter is enabled. */
+/* Empty rules are provided merely as a convenience for your future use or experimentation. */
+
+.PrettyTree
+{
+	position: relative;
+}
+
+.PrettyTree div.AspNet-TreeView ul li
+{
+	white-space: nowrap;
+	padding: 3px 0 2px 0;
+	font-size: small;
+	font-family: Tahoma;
+}
+
+.PrettyTree div.AspNet-TreeView ul ul
+{
+	margin: 2px 0 2px 12px;
+}
+
+.PrettyTree div.AspNet-TreeView ul li img
+{
+	border: none;
+	vertical-align: middle;
+	margin: 0 4px 0 0;
+}
+
+.PrettyTree div.AspNet-TreeView li a
+{
+	text-decoration: none;
+	padding-left: 4px;
+}
+
+.PrettyTree div.AspNet-TreeView li.AspNet-TreeView-Root
+{
+	background: url(images/bg-fade-light.png) repeat-x bottom;
+	border-top: solid 1px #E7E7E7;
+	border-right: solid 1px #D2D2D2;
+	border-bottom: solid 1px #D2D2D2;
+	border-left: solid 1px #E7E7E7;
+	margin: 0 4px 6px 0;
+}
+
+.PrettyTree div.AspNet-TreeView li.AspNet-TreeView-Parent
+{
+	background: url(images/bg-fade-light.png) repeat-x bottom;
+	border-top: solid 1px #E7E7E7;
+	border-right: solid 1px #D2D2D2;
+	border-bottom: solid 1px #D2D2D2;
+	border-left: solid 1px #E7E7E7;
+	margin: 0 4px 6px 0;
+}
+
+.PrettyTree div.AspNet-TreeView li.AspNet-TreeView-Leaf
+{
+	position: relative;
+	background: url(images/arrow.png) 0 -1px no-repeat;
+	width: 15px;
+	line-height: 20px;
+	padding-left: 3px;
+}
+
+.PrettyTree div.AspNet-TreeView .AspNet-TreeView-Collapse
+{
+	position: relative;
+	background: url(images/collapse.gif) 0 -1px no-repeat;
+	width: 15px;
+	float: left;
+	cursor: n-resize;
+	font-family: Courier;
+	font-size: xx-large;
+	line-height: 20px;
+}
+
+.PrettyTree div.AspNet-TreeView .AspNet-TreeView-Expand
+{
+	position: relative;
+	background: url(images/expand.gif) 0 -1px no-repeat;
+	width: 15px;
+	float: left;
+	cursor: n-resize;
+	font-family: Courier;
+	font-size: xx-large;
+	line-height: 20px;
+}
+
+.PrettyTree div.AspNet-TreeView a, .PrettyTree div.AspNet-TreeView a:visited, .PrettyTree div.AspNet-TreeView a:active, .PrettyTree div.AspNet-TreeView a:hover, .PrettyTree div.AspNet-TreeView a:link
+{
+	color: #00008B;
+}
+
+.PrettyTree div.AspNet-TreeView .AspNet-TreeView-Selected a
+{
+	font-weight: bold !important;
+	color: #006400 !important;
+}
+
+.PrettyTree div.AspNet-TreeView .AspNet-TreeView-Selected ul a
+{
+	font-weight: normal !important;
+	color: #00008B !important;
+}
+
+/* ------------------------------------------------------------------- */
+/* Specific to this sample web site. */
+/* These rules are probably not useful in your site. */
+
+/*#SampleTreeView
+{
+    border:3px solid #959595;
+    position: relative;
+    width: 100%;
+}
+
+#SampleTreeView #Sample-Control
+{
+    width: 16em;
+    position: relative;
+    float: left;    
+    z-index: 500;
+}
+
+#SampleTreeView #Sample-Content
+{
+    padding: 5px;
+    color: #006400;
+    position: relative;
+    font-size: small;
+    font-family: Times New Roman;
+}
+
+#SampleTreeView #Sample-Content h1,
+#SampleTreeView #Sample-Content p
+{
+    margin: 0;
+}
+
+#SampleTreeView .clearing
+{
+    clear:both;
+    height: 1px;
+}*/
+
+/* --------------------------------------------------------------------------------------------------- */
+/* Used when the TreeView adapter is NOT used. */
+/* These styles are used by the TreeView's skin, found in this theme's skin file. */
+/*
+td.TreeView-Skin-Node a
+{
+    text-decoration: none;
+    padding-left:4px;
+}
+
+td.TreeView-Skin-Node {
+    background:url(bg-fade-light-short.png) repeat-x bottom;
+    padding:1px 0 1px 2px;
+    width:100%;
+}
+
+.TreeView-Skin-Root table 
+{
+    margin:4px 0;
+}
+
+.TreeView-Skin-Leaf {
+    padding:0 0 0 2px;
+}*/

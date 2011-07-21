@@ -1,0 +1,678 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnAbortProcessResource1.Text" xml:space="preserve">
+    <value>Abort Process</value>
+  </data>
+  <data name="btnAbortProcessResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAddNewPartsResource1.Text" xml:space="preserve">
+    <value>Add new parts</value>
+  </data>
+  <data name="btnAddNewPartsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCloseInvINowResource1.Text" xml:space="preserve">
+    <value>Close all to previous month</value>
+  </data>
+  <data name="btnCloseInvINowResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRefreshResource1.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="btnRefreshResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnUpdatePriceResource1.Text" xml:space="preserve">
+    <value>Update price</value>
+  </data>
+  <data name="btnUpdatePriceResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chbAutoCloseInvIResource1.Text" xml:space="preserve">
+    <value>Allow auto close vehicle inventory at</value>
+  </data>
+  <data name="chbAutoCloseInvIResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chbAutoSyncPartResource1.Text" xml:space="preserve">
+    <value>Allow auto Synchronize VDMS-I parts list at </value>
+  </data>
+  <data name="chbAutoSyncPartResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkAllowChangeOrderDateResource1.Text" xml:space="preserve">
+    <value>Allow Dealer to change Order Date</value>
+  </data>
+  <data name="chkAllowChangeOrderDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkCheckEngineNoForPartsChangeResource1.Text" xml:space="preserve">
+    <value>Must check engine number when input parts change voucher</value>
+  </data>
+  <data name="chkCheckEngineNoForPartsChangeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkCheckEngineNoForServiceResource1.Text" xml:space="preserve">
+    <value>Must check engine number when input service record sheet</value>
+  </data>
+  <data name="chkCheckEngineNoForServiceResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkCheckOrderPartNotDuplicateBeforeConfirmWhenSendResource1.Text" xml:space="preserve">
+    <value>Do not allow dealer re-order duplicate part before confirm</value>
+  </data>
+  <data name="chkCheckOrderPartNotDuplicateBeforeConfirmWhenSendResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkCheckWarrantyInfoDatabaseResource1.Text" xml:space="preserve">
+    <value>Must check database code when input warranty informations</value>
+  </data>
+  <data name="chkCheckWarrantyInfoDatabaseResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkDNFOrderDateControlResource1.Text" xml:space="preserve">
+    <value>Apply Order Date Control to South</value>
+  </data>
+  <data name="chkDNFOrderDateControlResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkHTFOrderDateControlResource1.Text" xml:space="preserve">
+    <value>Apply Order Date Control to North</value>
+  </data>
+  <data name="chkHTFOrderDateControlResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmdSaveResource1.Text" xml:space="preserve">
+    <value>Save setting</value>
+  </data>
+  <data name="cmdSaveResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ibFromDateResource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ibFromDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="image1Resource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="image1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="image2Resource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="image2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="image3Resource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="image3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="image4Resource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="image4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="image5Resource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="image5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="image6Resource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="image6Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="image7Resource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="image7Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="l1Resource2.Text" xml:space="preserve">
+    <value>Order Excel Start Row:</value>
+  </data>
+  <data name="l2Resource2.Text" xml:space="preserve">
+    <value>Part Code Column</value>
+  </data>
+  <data name="l3Resource2.Text" xml:space="preserve">
+    <value>Quantity Column</value>
+  </data>
+  <data name="l4Resource2.Text" xml:space="preserve">
+    <value>Model Column</value>
+  </data>
+  <data name="l5Resource2.Text" xml:space="preserve">
+    <value>Order Excel Start Row:</value>
+  </data>
+  <data name="l6Resource2.Text" xml:space="preserve">
+    <value>Part Code Column</value>
+  </data>
+  <data name="l7Resource2.Text" xml:space="preserve">
+    <value>Quantity Column</value>
+  </data>
+  <data name="l8Resource2.Text" xml:space="preserve">
+    <value>Part Type</value>
+  </data>
+  <data name="lblSaveErrorResource1.Text" xml:space="preserve">
+    <value>The system setting has been failed to save.</value>
+  </data>
+  <data name="lblSaveErrorResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSaveOkResource1.Text" xml:space="preserve">
+    <value>The system setting has been save successful.</value>
+  </data>
+  <data name="lblSaveOkResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="litAddingPartsResource1.Text" xml:space="preserve">
+    <value>Adding new parts...</value>
+  </data>
+  <data name="Literal10Resource1.Text" xml:space="preserve">
+    <value>Shipping span:</value>
+  </data>
+  <data name="Literal11Resource1.Text" xml:space="preserve">
+    <value>days</value>
+  </data>
+  <data name="Literal12Resource1.Text" xml:space="preserve">
+    <value>Auto instock span:</value>
+  </data>
+  <data name="Literal13Resource1.Text" xml:space="preserve">
+    <value>h</value>
+  </data>
+  <data name="Literal14Resource1.Text" xml:space="preserve">
+    <value>o'clock in day </value>
+  </data>
+  <data name="Literal15Resource1.Text" xml:space="preserve">
+    <value>days from</value>
+  </data>
+  <data name="Literal16Resource1.Text" xml:space="preserve">
+    <value> o'clock every </value>
+  </data>
+  <data name="Literal1Resource1.Text" xml:space="preserve">
+    <value>months</value>
+  </data>
+  <data name="Literal2Resource1.Text" xml:space="preserve">
+    <value>If over shipping span, send email to:</value>
+  </data>
+  <data name="Literal3Resource1.Text" xml:space="preserve">
+    <value>Maximum months allow reopen:</value>
+  </data>
+  <data name="Literal4Resource1.Text" xml:space="preserve">
+    <value>Maximum months allow reopen (vehicle):</value>
+  </data>
+  <data name="Literal5Resource1.Text" xml:space="preserve">
+    <value>months</value>
+  </data>
+  <data name="Literal6Resource1.Text" xml:space="preserve">
+    <value>Payment span:</value>
+  </data>
+  <data name="Literal7Resource1.Text" xml:space="preserve">
+    <value>days</value>
+  </data>
+  <data name="Literal8Resource1.Text" xml:space="preserve">
+    <value>days</value>
+  </data>
+  <data name="Literal9Resource1.Text" xml:space="preserve">
+    <value>Quotation span:</value>
+  </data>
+  <data name="litUpdatingPriceResource1.Text" xml:space="preserve">
+    <value>Updating price...</value>
+  </data>
+  <data name="Localize1Resource1.Text" xml:space="preserve">
+    <value>Start Row:</value>
+  </data>
+  <data name="Localize2Resource1.Text" xml:space="preserve">
+    <value>Part Code Column</value>
+  </data>
+  <data name="Localize3Resource1.Text" xml:space="preserve">
+    <value>Quantity Column</value>
+  </data>
+  <data name="Localize6Resource1.Text" xml:space="preserve">
+    <value>Commnent column</value>
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>Setting for VDMS system</value>
+  </data>
+  <data name="RequiredFieldValidator1Resource1.ErrorMessage" xml:space="preserve">
+    <value>Shipping span cannot be empty!</value>
+  </data>
+  <data name="RequiredFieldValidator1Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RequiredFieldValidator1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator2Resource1.ErrorMessage" xml:space="preserve">
+    <value>Start Row cannot be empty!</value>
+  </data>
+  <data name="RequiredFieldValidator2Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RequiredFieldValidator2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator3Resource1.ErrorMessage" xml:space="preserve">
+    <value>Maximum months allow reopen (vehicle), cannot be blank!</value>
+  </data>
+  <data name="RequiredFieldValidator3Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RequiredFieldValidator3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator4Resource1.ErrorMessage" xml:space="preserve">
+    <value>Commnent column cannot be empty!</value>
+  </data>
+  <data name="RequiredFieldValidator4Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RequiredFieldValidator4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator5Resource1.ErrorMessage" xml:space="preserve">
+    <value>Start date cannot be blank!</value>
+  </data>
+  <data name="RequiredFieldValidator5Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RequiredFieldValidator5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator7Resource1.ErrorMessage" xml:space="preserve">
+    <value>Maximum months allow reopen cannot be blank!</value>
+  </data>
+  <data name="RequiredFieldValidator7Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RequiredFieldValidator7Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfv1Resource1.ErrorMessage" xml:space="preserve">
+    <value>Payment span cannot be empty!</value>
+  </data>
+  <data name="rfv1Resource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rfv1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvCCPCResource1.ErrorMessage" xml:space="preserve">
+    <value>Part Code Column cannot be empty!</value>
+  </data>
+  <data name="rfvCCPCResource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rfvCCPCResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvCCQtyResource1.ErrorMessage" xml:space="preserve">
+    <value>Quantity Column cannot be empty!</value>
+  </data>
+  <data name="rfvCCQtyResource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rfvCCQtyResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvQuotationResource1.ErrorMessage" xml:space="preserve">
+    <value>Quotation span cannot be empty!</value>
+  </data>
+  <data name="rfvQuotationResource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rfvQuotationResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvtbAISResource1.ErrorMessage" xml:space="preserve">
+    <value>Auto instock span cannot be empty!</value>
+  </data>
+  <data name="rfvtbAISResource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rfvtbAISResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tbAISResource1.Text" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="tbAISResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tbEMailResource1.Text" xml:space="preserve">
+    <value>300</value>
+  </data>
+  <data name="tbEMailResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tbPSResource1.Text" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tbPSResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tbQSResource1.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tbQSResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tbSSResource1.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tbSSResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAutoCloseInvDayIResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAutoCloseInvDayIResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAutoCloseInvTimeIResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAutoCloseInvTimeIResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCCCommentResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCCCommentResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCCPCResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCCPCResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCCQtyResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCCQtyResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCCSRResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCCSRResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMaxMonthAllowReopen1Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMaxMonthAllowReopen1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMaxMonthAllowReopenResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMaxMonthAllowReopenResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtOEMCResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtOEMCResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtOEPCCResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtOEPCCResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtOEQCResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtOEQCResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtOESRResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtOESRResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSEPCCResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSEPCCResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSEPTCResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSEPTCResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSEQCResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSEQCResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSESRResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSESRResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSyncPdaysResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSyncPdaysResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSyncPfromDateResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSyncPfromDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSyncPHourResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSyncPHourResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ValidationSummary1Resource1.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ValidationSummary1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="t1Resource1.Text" xml:space="preserve">
+    <value>Parameters Setting</value>
+  </data>
+  <data name="t2Resource1.Text" xml:space="preserve">
+    <value>Order Excel file</value>
+  </data>
+  <data name="t3Resource1.Text" xml:space="preserve">
+    <value>Sales Excel file</value>
+  </data>
+  <data name="TabPanel1Resource1.Text" xml:space="preserve">
+    <value>Cycle count Excel file</value>
+  </data>
+  <data name="chkApplySubOrderResource1.Text" xml:space="preserve">
+    <value>Also apply for sub-order</value>
+  </data>
+  <data name="Literal6Resource1z.Text" xml:space="preserve">
+    <value>Default Labour when auto sync (vehicle):</value>
+  </data>
+  <data name="t2Resource1xxx.Text" xml:space="preserve">
+    <value>Payment Excel file</value>
+  </data>
+  <data name="Literal23Resource1.Text" xml:space="preserve">
+    <value>Part spec Excel file</value>
+  </data>
+  <data name="Localize10Resource1.Text" xml:space="preserve">
+    <value>Part Code Column</value>
+  </data>
+  <data name="Localize11Resource1.Text" xml:space="preserve">
+    <value>Packing Column</value>
+  </data>
+  <data name="Localize12Resource1.Text" xml:space="preserve">
+    <value>Unit Column</value>
+  </data>
+  <data name="Localize13Resource1.Text" xml:space="preserve">
+    <value>Quantity Column</value>
+  </data>
+  <data name="Localize4Resource1.Text" xml:space="preserve">
+    <value>Excel Start Row</value>
+  </data>
+  <data name="Localize5Resource1.Text" xml:space="preserve">
+    <value>Old Part Code Column</value>
+  </data>
+  <data name="Localize7Resource1.Text" xml:space="preserve">
+    <value>New Part Code Column</value>
+  </data>
+  <data name="Localize8Resource1.Text" xml:space="preserve">
+    <value>Status Column</value>
+  </data>
+  <data name="Localize9Resource1.Text" xml:space="preserve">
+    <value>Excel Start Row</value>
+  </data>
+  <data name="Literal24Resource1.Text" xml:space="preserve">
+    <value>Part replace Excel file</value>
+  </data>
+  <data name="t0Resource1.Text" xml:space="preserve">
+    <value>Part Excel File</value>
+  </data>
+  <data name="tSaleResource.Text" xml:space="preserve">
+    <value>Vehicle Excel File</value>
+  </data>
+  <data name="Literal27Resource1.Text" xml:space="preserve">
+    <value>Vehicle Sale Excel file</value>
+  </data>
+</root>

@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage"
+	EnableTheming="true" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<title></title>
+	<asp:ContentPlaceHolder ID="h" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+	<form id="form1" runat="server">
+	<div id="header">
+		<table style="width: 100%;">
+			<tr>
+				<td align="left">
+					VDMS-II Setting
+				</td>
+				<td align="right">
+					<%--<asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" Font-Size="0.8em"
+						PathSeparator=" / ">
+						<PathSeparatorStyle Font-Bold="True" ForeColor="#507CD1" />
+						<CurrentNodeStyle ForeColor="#333333" />
+						<NodeStyle Font-Bold="False" ForeColor="#284E98" />
+						<RootNodeStyle Font-Bold="False" ForeColor="#507CD1" />
+					</asp:SiteMapPath>--%>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="width:100%; padding:10px 0;">
+            <div style="float: left; padding-right: 30px; width:48%;">
+            <a href="Default.aspx">Home</a>
+            </div>
+            <div style="float: left; width:49%; text-align:right;">
+                <asp:LoginView ID="loginView" runat="server">
+                    <LoggedInTemplate>
+                        Current user:
+                        <asp:LoginName ID="loginName" runat="server" />
+                        .
+                    </LoggedInTemplate>
+                </asp:LoginView>
+                <asp:LoginStatus ID="loginStatus" runat="server" />
+            </div>
+        </div>
+	<div id="content" style="clear:both;">
+		<asp:ContentPlaceHolder ID="c" runat="server">
+		</asp:ContentPlaceHolder>
+	</div>
+	<div id="footer">
+            <table width="100%">
+                <tr>
+                    <td align="left">
+                        Copyright (c) 2007 Sanyang Industry Co., Ltd. All right reserved.
+                    </td>
+                    <td align="right">
+                        <a href="http://www.thanglongsoftware.net">Power by TLS</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+	</form>
+</body>
+</html>

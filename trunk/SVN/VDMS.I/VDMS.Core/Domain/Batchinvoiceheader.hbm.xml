@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="VDMS.Core.Domain.Batchinvoiceheader, VDMS.Core" table="SALE_BATCHINVOICEHEADER" lazy="false">
+		<id name="Id" type="Int64" unsaved-value="0">
+			<column name="BATCHINVOICEHEADERID" sql-type="NUMBER" not-null="true" unique="true" index="PK_BATCHINVOICEHEADER"/>
+			<generator class="sequence">
+				<param name="sequence">seq_Batchinvoiceheader</param>
+			</generator>
+		</id>
+		<property name="Dealercode" type="String">
+			<column name="DEALERCODE" length="20" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+    <property name="Branchcode" type="String">
+      <column name="BranchCODE" length="30" sql-type="VARCHAR2" not-null="true"/>
+    </property>
+    <property name="Createddate" type="DateTime">
+			<column name="CREATEDDATE" sql-type="TIMESTAMP(6)" not-null="true"/>
+		</property>
+		<property name="Createdby" type="String">
+			<column name="CREATEDBY" length="512" sql-type="NVARCHAR2" not-null="true"/>
+		</property>
+		<property name="Batchinvoicenumber" type="String">
+			<column name="BATCHINVOICENUMBER" length="60" sql-type="NVARCHAR2" not-null="false"/>
+		</property>
+		<many-to-one name="Sellitem" class="VDMS.Core.Domain.Sellitem, VDMS.Core">
+			<column name="SELLITEMID" sql-type="NUMBER" not-null="true"/>
+		</many-to-one>
+		<many-to-one name="Subshop" class="VDMS.Core.Domain.Subshop, VDMS.Core">
+			<column name="SUBSHOPID" sql-type="NUMBER" not-null="true"/>
+		</many-to-one>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,129 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/MP/MasterPage.master" AutoEventWireup="true"
+	CodeFile="Summary.aspx.cs" Inherits="Sales_Inventory_summary" Title="Process monthly inventory"
+	Culture="auto" meta:resourcekey="PageResource1" UICulture="auto" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="c" runat="Server">
+	<div class="form" style="width: 450px">
+		<asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="Save"
+			meta:resourcekey="ValidationSummary1Resource1" />
+		<br />
+		<table style="width: 100%;">
+			<tr>
+				<td>
+				</td>
+				<td>
+					<asp:Label ID="lblCurrentDate" runat="server" Font-Bold="True" meta:resourcekey="lblCurrentDateResource1"
+						Text="Current Date:"></asp:Label>
+				</td>
+				<td>
+					<%=DateTime.Now.ToString("MM/yyyy") %>
+					(<asp:Label ID="litStatus" runat="server" ForeColor="Red" meta:resourcekey="litStatusResource1"></asp:Label>)
+				</td>
+			</tr>
+			<tr>
+				<td>
+				</td>
+				<td>
+					<asp:Label ID="lbLastLocked" runat="server" Font-Bold="True" meta:resourcekey="lblLockDateResource1"
+						Text="Last locked month:"></asp:Label>
+				</td>
+				<td>
+					<asp:Literal ID="litLastLocked" runat="server" meta:resourcekey="litLastLockedResource1"></asp:Literal>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top">
+					<asp:Image ID="image" runat="server" SkinID="RequireField" meta:resourcekey="imageResource1" />
+				</td>
+				<td valign="top">
+					<asp:Localize ID="litSummary" runat="server" Text="Month to summary:" meta:resourcekey="litSummaryResource1"></asp:Localize>
+				</td>
+				<td valign="top">
+					<asp:TextBox ID="txtSummary" runat="server" Width="194px" meta:resourcekey="txtSummaryResource1"></asp:TextBox>
+					<asp:RequiredFieldValidator ID="rfvSummary" runat="server" SetFocusOnError="True"
+						ValidationGroup="Save" ControlToValidate="txtSummary" ErrorMessage='Month to summary is require.'
+						meta:resourcekey="rfvSummaryResource1" Text="*"></asp:RequiredFieldValidator>
+					<asp:CustomValidator ID="cvSummary" runat="server" ErrorMessage="The month to summary is invalid. Only be this month or last month."
+						ControlToValidate="txtSummary" meta:resourcekey="cvSummaryResource1" OnServerValidate="cvSummary_ServerValidate"
+						SetFocusOnError="True" ValidationGroup="Save" Text="*"></asp:CustomValidator>
+					<ajaxToolkit:MaskedEditExtender ID="meeSummary" runat="server" TargetControlID="txtSummary"
+						Mask="99/9999" BehaviorID="meeSummary" ClearMaskOnLostFocus="false" Enabled="true" />
+				</td>
+			</tr>
+			<tr>
+				<td valign="top">
+					<asp:Image ID="image1" runat="server" SkinID="RequireFieldNon" meta:resourcekey="image1Resource1" />
+				</td>
+				<td valign="top">
+					<asp:Localize ID="litType" runat="server" Text="Type:" meta:resourcekey="litTypeResource1"></asp:Localize>
+				</td>
+				<td valign="top">
+					<asp:DropDownList ID="ddlType" runat="server" Width="198px" meta:resourcekey="ddlTypeResource1"
+						OnSelectedIndexChanged="ddlType_SelectedIndexChanged">
+						<asp:ListItem Text="Summary and lock" Value="1" meta:resourcekey="ListItemResource1"></asp:ListItem>
+						<asp:ListItem Text="Unlock to modify stock" Value="2" meta:resourcekey="ListItemResource2"></asp:ListItem>
+					</asp:DropDownList>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td valign="top" colspan="2">
+					<asp:Button ID="cmdSummary" runat="server" Text="Do Summary" ValidationGroup="Save"
+						OnClick="cmdSummary_Click" meta:resourcekey="cmdSummaryResource1" />
+					<asp:Button ID="cmdCancel" runat="server" Text="Back" OnClientClick="javascript:location.href='/default.aspx'; return false;"
+						meta:resourcekey="cmdCancelResource1" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&nbsp;
+				</td>
+				<td>
+					&nbsp;
+				</td>
+				<td>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td>
+				</td>
+				<td>
+					<asp:Literal ID="litResult" runat="server" Text="Result" meta:resourcekey="litResult"></asp:Literal>
+				</td>
+				<td>
+					<asp:MultiView ID="mvResult" runat="server">
+						<asp:View ID="view1" runat="server">
+							<asp:Label ID="lblOk" runat="server" Text="Ok, the inventory process has been done with no error."
+								meta:resourcekey="lblOkResource1" EnableViewState="False" OnPreRender="SetErrorData"></asp:Label>
+						</asp:View>
+						<asp:View ID="view2" runat="server">
+							<asp:Label ID="lblError" runat="server" Text="This month has been locked." meta:resourcekey="lblErrorResource1"
+								EnableViewState="False" OnPreRender="SetErrorData"></asp:Label>
+						</asp:View>
+						<asp:View ID="View3" runat="server">
+							<asp:Literal ID="Literal1" runat="server" Text="This month has been unlocked." meta:resourcekey="Literal1Resource1"
+								EnableViewState="False" OnPreRender="SetErrorData"></asp:Literal></asp:View>
+						<asp:View ID="View4" runat="server">
+							<asp:Literal ID="litErrPrevMonthWasNotLocked" runat="server" Text="Previous month must be locked."
+								meta:resourcekey="litErrPrevMonthWasNotLockedResource1" EnableViewState="False"
+								OnPreRender="SetErrorData"></asp:Literal></asp:View>
+						<asp:View ID="View5" runat="server">
+							<asp:Literal ID="Literal2" runat="server" Text="Next month must be unlocked." meta:resourcekey="Literal2Resource1"
+								EnableViewState="False" OnPreRender="SetErrorData"></asp:Literal></asp:View>
+						<asp:View ID="View6" runat="server">
+							<asp:Literal ID="Literal3" runat="server" Text="There is an error during process."
+								meta:resourcekey="Literal3Resource1"></asp:Literal></asp:View>
+						<asp:View ID="View7" runat="server">
+							<asp:Literal ID="litFirstMonthAlr" runat="server" meta:resourcekey="Literal4Resource1"
+								Text="This is the first month of inventory."></asp:Literal>
+						</asp:View>
+					</asp:MultiView>
+				</td>
+			</tr>
+		</table>
+	</div>
+</asp:Content>

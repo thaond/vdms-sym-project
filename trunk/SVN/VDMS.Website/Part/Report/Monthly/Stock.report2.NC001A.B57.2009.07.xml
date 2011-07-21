@@ -1,0 +1,2314 @@
+﻿<?xml version='1.0'?>
+<?mso-application progid='Excel.Sheet'?>
+<s:Workbook xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:s="urn:schemas-microsoft-com:office:spreadsheet">
+  <o:DocumentProperties>
+    <o:Title>Stock monthly report by components</o:Title>
+    <o:Author>ThangLong</o:Author>
+    <o:Created>2010-07-06T10:23:32</o:Created>
+  </o:DocumentProperties>
+  <x:ExcelWorkbook>
+    <x:ActiveSheet>1</x:ActiveSheet>
+    <x:ProtectStructure>False</x:ProtectStructure>
+    <x:ProtectWindows>False</x:ProtectWindows>
+  </x:ExcelWorkbook>
+  <s:Styles>
+    <s:Style s:ID="HeaderStyle">
+      <s:Alignment s:Horizontal="Center" s:Vertical="Center" />
+      <s:Borders>
+        <s:Border s:Position="Bottom" s:LineStyle="Continuous" s:Weight="1" />
+        <s:Border s:Position="Left" s:LineStyle="Continuous" s:Weight="1" />
+        <s:Border s:Position="Right" s:LineStyle="Continuous" s:Weight="1" />
+        <s:Border s:Position="Top" s:LineStyle="Continuous" s:Weight="1" />
+      </s:Borders>
+      <s:Font s:Bold="1" s:Color="White" />
+      <s:Interior s:Color="#555555" s:Pattern="Solid" />
+    </s:Style>
+    <s:Style s:ID="Group">
+      <s:Alignment s:Vertical="Center" />
+      <s:Borders>
+        <s:Border s:Position="Bottom" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Left" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Right" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Top" s:LineStyle="Continuous" s:Weight="0" />
+      </s:Borders>
+      <s:Interior s:Color="#CCCCCC" s:Pattern="Solid" />
+    </s:Style>
+    <s:Style s:ID="GroupCenter">
+      <s:Alignment s:Horizontal="Center" s:Vertical="Center" />
+      <s:Borders>
+        <s:Border s:Position="Bottom" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Left" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Right" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Top" s:LineStyle="Continuous" s:Weight="0" />
+      </s:Borders>
+      <s:Interior s:Color="#CCCCCC" s:Pattern="Solid" />
+    </s:Style>
+    <s:Style s:ID="DetailOdd">
+      <s:Alignment s:Vertical="Center" />
+      <s:Borders>
+        <s:Border s:Position="Bottom" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Left" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Right" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Top" s:LineStyle="Continuous" s:Weight="0" />
+      </s:Borders>
+    </s:Style>
+    <s:Style s:ID="DetailEven">
+      <s:Alignment s:Vertical="Center" />
+      <s:Borders>
+        <s:Border s:Position="Bottom" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Left" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Right" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Top" s:LineStyle="Continuous" s:Weight="0" />
+      </s:Borders>
+      <s:Interior s:Color="#f1f5fa" s:Pattern="Solid" />
+    </s:Style>
+    <s:Style s:ID="DetailOddCenter">
+      <s:Alignment s:Horizontal="Center" s:Vertical="Center" />
+      <s:Borders>
+        <s:Border s:Position="Bottom" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Left" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Right" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Top" s:LineStyle="Continuous" s:Weight="0" />
+      </s:Borders>
+    </s:Style>
+    <s:Style s:ID="DetailEvenCenter">
+      <s:Alignment s:Horizontal="Center" s:Vertical="Center" />
+      <s:Borders>
+        <s:Border s:Position="Bottom" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Left" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Right" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Top" s:LineStyle="Continuous" s:Weight="0" />
+      </s:Borders>
+      <s:Interior s:Color="#f1f5fa" s:Pattern="Solid" />
+    </s:Style>
+    <s:Style s:ID="Default">
+      <s:Alignment s:Vertical="Center" />
+      <s:Borders>
+        <s:Border s:Position="Bottom" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Left" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Right" s:LineStyle="Continuous" s:Weight="0" />
+        <s:Border s:Position="Top" s:LineStyle="Continuous" s:Weight="0" />
+      </s:Borders>
+    </s:Style>
+  </s:Styles>
+  <s:Worksheet s:Name="NC001A.B57">
+    <s:Table>
+      <s:Column s:Width="30" s:AutoFitWidth="1" />
+      <s:Column s:AutoFitWidth="1" />
+      <s:Column s:Width="100" />
+      <s:Column s:Width="20" s:AutoFitWidth="1" />
+      <s:Column s:Width="30" s:AutoFitWidth="1" />
+      <s:Column s:AutoFitWidth="1" />
+      <s:Column s:Width="100" />
+      <s:Column s:Width="100" />
+      <s:Column s:AutoFitWidth="1" />
+      <s:Column s:AutoFitWidth="1" />
+      <s:Column s:AutoFitWidth="1" />
+      <s:Column s:AutoFitWidth="1" />
+      <s:Column s:AutoFitWidth="1" />
+      <s:Column s:AutoFitWidth="1" />
+      <s:Row>
+        <s:Cell s:MergeAcross="2" s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Report for</s:Data>
+        </s:Cell>
+        <s:Cell s:MergeAcross="4" s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Part</s:Data>
+        </s:Cell>
+        <s:Cell s:MergeDown="1" s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Begin</s:Data>
+        </s:Cell>
+        <s:Cell s:MergeAcross="1" s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">In</s:Data>
+        </s:Cell>
+        <s:Cell s:MergeAcross="1" s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Out</s:Data>
+        </s:Cell>
+        <s:Cell s:MergeDown="1" s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Balance</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Type</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Code</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Name</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">No</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Type</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Code</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">English name</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Vietnamese name</s:Data>
+        </s:Cell>
+        <s:Cell s:Index="10" s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Quantity</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Amount</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Quantity</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Amount</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">W</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">B57</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">B57 Khu phố 3 - P. Đông Hưng Thuận - Quận 12 - HCM</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">1MHPO-150</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">HYPOID GEAR OIL (SYM-150CC)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Nhớt hộp số 150cc</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">1134B-H3B-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">L. COVER DUCT ASS'Y</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Bộ ống dẫn gío làm mát</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">16100-M9B-0005-01</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">CARBURETOR ASSY (CG)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Bộ chế hòa khí (CG)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">83751-M9P-0001-IF</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">RR CENTER LOWER COVER (GY-097)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Miếng chụp đuôi (Màu xám rêu)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">5</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">3340A-SA1-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">FR. WINKER ASSY</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Bộ đèn xi nhan trước (Trái-Phải)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">6</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">50506-M9B-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">STOPPER RUBBER COLLAR</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Ống lót cao su</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">7</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">53100-SA1-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">HANDLE PIPE COMP.</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Tay lái</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">8</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">22121-M9B-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">WEIGHR ROLLER COMP (NEW DESIGN)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Con lăn ly tâm (TKe moi)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">9</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">44830-VS1-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">SPEEDOMETER CABLE COMP.</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Bộ dây đồng hồ tốc độ</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">10</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">53200-M9R-0002</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">STEERING STEM COMP</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Cốt lái</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">11</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">64310-VT1-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">FLOOR PANEL</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Sàn để chân</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">50624-VT1-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">L. PILLION STEP MAT</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Cao su gác chân bên trái</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">13</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">33100-VT1-0001</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">HEAD LIGHT ASSY</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Bộ đèn pha</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">14</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">35010-VT1-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">KEY SET</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Bộ ổ chìa khóa</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">15</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">42601-M9P-0000-SE</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">RR. WHEEL CAST</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Bộ mâm bánh sau (Màu Bạc trắng)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">16</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">53100-M9P-9100</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">HANDLE PIPE COMP (CG)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Tay lái (mới)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">17</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">53208-VT1-0001</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">L. SIDE HANDLE COVER</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Chụp tay thắng trái</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">18</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">50620-VT1-0001</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">R. FLOOR RNFCT COMP</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Miếng lót sàn bên phải</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">19</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">53100-VT1-0002</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">HANDLE PIPE COMP.</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Tay lái</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">20</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">64301-VT1-0002-RE</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">FR COVER (R-8188)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Nắp trước (Màu đỏ)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">21</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">64301-VT1-0002-KB</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">FR. COVER (BK-500)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Nắp trước (Màu đen)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">22</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">13101-VT1-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">PISTON (STD)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Piston (STD)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">23</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">31120-VT1-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">STATOR COMP</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Bộ phát điện</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">24</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">51104-SA1-0000-BP</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">L. FR. FORK COVER (BL-5113)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Nắp che phuộc nhún trái (xanh tím mới</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">25</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">64303-SA1-0000-BP</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">R. MAIN PIPE COVER (BL-5113)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Yếm bửng bên phải (Màu xanh)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">26</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">30400-HKA-1000-E3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">CDI UNIT ASS'Y (DC)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Bộ C.D.I</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">27</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">87123-H85-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">SLOGO (40 POLY)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Biểu tượng SYM</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">28</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">32100-VT1-0001</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">WIRE HARNESS</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Bộ dây điện</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">29</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">38900-VT1-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">POWER FILTER UNIT ASSY</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Bộ lọc nguồn điện</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">30</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">50322-HKD-0001</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">BATTERY LID</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Nắp hộp bình điện</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">31</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">22132-VT1-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">SLICE PIECE</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Con trượt</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">32</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">83501-VT1-0000-IF</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">R. SIDE COVER (GY-097S)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Nắp cốp phải (Màu xám rêu)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">33</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">53300-VT1-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">FR. HANDLE COVER EMBLEM</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Đề can nắp tay lái trước</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">34</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">53100-M9R-0100</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">HANDLE PIPE COMP. (NEW DESIGN)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Tay lái (mới)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">35</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">4312B-M9B-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">BRAKE SHOE ASSY (SET)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Bộ bố thắng</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">36</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">83601-VT1-0000-IF</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">L.SIDE COVER (GY-097S)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Nắp cốp trái (Màu xám rêu)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">37</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">33100-SA1-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">HEAD LIGHT ASSY</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Bộ đèn pha</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">38</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">50530-VT1-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">SIDE STAND COMP</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Chống nghiêng</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">39</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">31600-VS1-0001</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">REGULATE RECTIFIER COMP. (NEW DESIGN)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Bộ chỉnh lưu (Cục xạc)-TKế mới</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">40</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">77100-M9T-0002-N</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">DOUBLE SEAT COMP (NEW)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Bộ yên nệm</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">41</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">14711-VT1-0002</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">INLET VALVE</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Xupáp hút</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">42</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">64301-VT1-0002-SV</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">FR. COVER (S-420)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Nắp trước (Màu bạc)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">43</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">53176-VS1-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">R. STEERING HANDLE LEVER</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Tay thắng phải</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">44</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">51103-SA1-0000-BP</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">R. FR. FORK COVER (BL-5113)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Nắp che phuộc nhún phải (xanh tím mới</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">45</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">53207-VT1-0002</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">R. SIDE HANDLE COVER</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Chụp tay thắng phải</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">46</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">50725-VT1-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">PILLION STEP PIN</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Chốt ở bộ gác chân</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">47</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">53100-VT2-0002</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">HANDLE PIPE COMP.</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Tay lái</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">48</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">53206-SA1-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">RR. HANDLE COVER</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Nắp tay lái sau</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">49</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">53140-VT1-0001</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">R. HANDLE GRIP</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Tay ga</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">50</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">12100-VT1-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">CYLINDER COMP.</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Xy lanh</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">51</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">35010-VS1-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">KEY SET</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Bộ ổ chìa khóa (Jắt 3 chấu)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">52</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">61100-M9P-0000-IF</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">FR. FENDER (GY-097)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Vè trước (Màu xám rêu)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">53</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">64304-SA1-0000-BP</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">L. MAIN PIPE COVER (BL-5113)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Yếm bửng bên trái (Màu xanh)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">54</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">50621-VT1-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">L. FLOOR RNFCT COMP</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Miếng lót sàn bên trái</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">55</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">50729-VT1-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">PILLION STEP SPRING</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Lò xo gác chân</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">56</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">13101-H7K-0000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">PISTON (STD)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Piston (STD)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">57</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">77100-VT1-0004</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">DOUBLE SEAT COMP</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Bộ yên nệm</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">58</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">53205-VT1-0000-KB</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">FR. HANDLE COVER (BK-500)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Nắp tay lái trước (Màu đen)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailOddCenter">
+          <s:Data s:Type="Number">59</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOddCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">53205-VT1-0000-RE</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">FR. HANDLE COVER (R-8188)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="String">Nắp tay lái trước (Màu đỏ)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailOdd">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:Index="4" s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="Number">60</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEvenCenter">
+          <s:Data s:Type="String">P</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">11331-VT1-0000-SV</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">R. CRANK CASE COVER</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="String">Nắp cacte máy phải</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="DetailEven">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+      </s:Row>
+    </s:Table>
+  </s:Worksheet>
+</s:Workbook>

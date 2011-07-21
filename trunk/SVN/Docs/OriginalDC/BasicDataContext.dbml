@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="VDMS" EntityNamespace="VDMS.II.Entity" ContextNamespace="VDMS.II.Linq" Class="BasicDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="User Id=vdms;Server=VDMS;Unicode=True" Provider="Devart.Data.Oracle" />
+  <Table Name="VDMS.V2_DATA_FILE" Member="Files">
+    <Type Name="File">
+      <Column Name="FILE_ID" Member="FileId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MESSAGE_ID" Member="MessageId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="FILE_NAME" Member="FileName" Type="System.String" DbType="NVARCHAR2(256) NOT NULL" CanBeNull="false" />
+      <Column Name="BODY" Member="Body" Type="System.Byte[]" DbType="LONG RAW NOT NULL" CanBeNull="false" IsDelayLoaded="true" />
+      <Association Name="Message_File" Member="Message" ThisKey="MessageId" OtherKey="MessageId" Type="Message" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_DATA_MESSAGE" Member="Messages">
+    <Type Name="Message">
+      <Column Name="MESSAGE_ID" Member="MessageId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PARENT_ID" Member="ParentId" Type="System.Int64" DbType="NUMBER(10)" CanBeNull="true" />
+      <Column Name="BODY" Member="Body" Type="System.String" DbType="NVARCHAR2(1024) NOT NULL" CanBeNull="false" />
+      <Column Name="CREATED_DATE" Member="CreatedDate" Type="System.DateTime" DbType="TIMESTAMP(6) NOT NULL" CanBeNull="false" />
+      <Column Name="CREATED_BY" Member="CreatedBy" Type="System.String" DbType="NVARCHAR2(512) NOT NULL" CanBeNull="false" />
+      <Column Name="FLAG" Member="Flag" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" />
+      <Association Name="Message_File" Member="Files" ThisKey="MessageId" OtherKey="MessageId" Type="File" />
+      <Association Name="Message_Message" Member="Messages" ThisKey="MessageId" OtherKey="ParentId" Type="Message" />
+      <Association Name="Message_Message" Member="Message1" Storage="_Message" ThisKey="ParentId" OtherKey="MessageId" Type="Message" IsForeignKey="true" />
+      <Association Name="Message_MessageBox" Member="MessageBoxes" ThisKey="MessageId" OtherKey="MessageId" Type="MessageBox" />
+    </Type>
+  </Table>
+  <Table Name="VDMS.V2_DATA_MESSAGE_BOX" Member="MessageBoxes">
+    <Type Name="MessageBox">
+      <Column Name="MESSAGE_BOX_ID" Member="MessageBoxId" AutoSync="OnInsert" Type="System.Int64" DbType="NUMBER(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MESSAGE_ID" Member="MessageId" Type="System.Int64" DbType="NUMBER(10) NOT NULL" CanBeNull="false" />
+      <Column Name="FROM_USER" Member="FromUser" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="TO_USER" Member="ToUser" Type="System.String" DbType="VARCHAR2(30) NOT NULL" CanBeNull="false" />
+      <Column Name="FLAG" Member="Flag" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" />
+      <Column Name="POSITION" Member="Position" Type="System.String" DbType="CHAR(1) NOT NULL" CanBeNull="false" />
+      <Association Name="Message_MessageBox" Member="Message" ThisKey="MessageId" OtherKey="MessageId" Type="Message" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

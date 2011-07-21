@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="VDMS.Core.Domain.Batchinvoicedetail, VDMS.Core" table="SALE_BATCHINVOICEDETAIL" lazy="false">
+		<id name="Id" type="Int64" unsaved-value="0">
+			<column name="BATCHINVOICEDETAILID" sql-type="NUMBER" not-null="true" unique="true" index="PK_SALE_BATCHINVOICEDETAIL"/>
+			<generator class="sequence">
+				<param name="sequence">seq_Batchinvoicedetail</param>
+			</generator>
+		</id>
+		<property name="Enginenumber" type="String">
+			<column name="ENGINENUMBER" length="20" sql-type="VARCHAR2" not-null="true" unique="true" index="UNI_ENGNO_BATINV"/>
+		</property>
+		<property name="Createddate" type="DateTime">
+			<column name="CREATEDDATE" sql-type="TIMESTAMP(6)" not-null="true"/>
+		</property>
+		<property name="Createdby" type="String">
+			<column name="CREATEDBY" length="512" sql-type="NVARCHAR2" not-null="true"/>
+		</property>
+		<many-to-one name="Iteminstance" class="VDMS.Core.Domain.Iteminstance, VDMS.Core">
+			<column name="ITEMINSTANCEID" sql-type="NUMBER" not-null="true"/>
+		</many-to-one>
+		<many-to-one name="Batchinvoiceheader" class="VDMS.Core.Domain.Batchinvoiceheader, VDMS.Core">
+			<column name="BATCHINVOICEHEADERID" sql-type="NUMBER" not-null="true"/>
+		</many-to-one>
+	</class>
+</hibernate-mapping>

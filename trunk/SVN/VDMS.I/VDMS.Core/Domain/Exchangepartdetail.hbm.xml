@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="VDMS.Core.Domain.Exchangepartdetail, VDMS.Core" table="SER_EXCHANGEPARTDETAIL" lazy="false">
+		<id name="Id" type="Int64" unsaved-value="0">
+			<column name="EXCHANGEPARTDETAILID" sql-type="NUMBER" not-null="true" unique="true" index="PK_EXCHANGEPARTDETAIL"/>
+			<generator class="sequence">
+				<param name="sequence">seq_Exchangepartdetail</param>
+			</generator>
+		</id>
+		<property name="Partcodeo" type="String">
+			<column name="PARTCODEO" length="35" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+		<property name="Partcodem" type="String">
+			<column name="PARTCODEM" length="35" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+		<property name="Serialnumber" type="String">
+			<column name="SERIALNUMBER" length="30" sql-type="VARCHAR2" not-null="false"/>
+		</property>
+		<property name="Unitpricem" type="Int64">
+			<column name="UNITPRICEM" sql-type="NUMBER" not-null="true"/>
+		</property>
+		<property name="Totalfeeo" type="Int64">
+			<column name="TOTALFEEO" sql-type="NUMBER" not-null="true"/>
+		</property>
+		<property name="Totalfeem" type="Int64">
+			<column name="TOTALFEEM" sql-type="NUMBER" not-null="true"/>
+		</property>
+		<property name="Unitpriceo" type="Int64">
+			<column name="UNITPRICEO" sql-type="NUMBER" not-null="true"/>
+		</property>
+    
+    <property name="PartAmountO" type="Int64" insert="false" formula="UNITPRICEO * PARTQTYO"></property>
+    <property name="PartAmountM" type="Int64" insert="false" formula="UNITPRICEM * PARTQTYM"></property>
+    <property name="SubTotalO" type="Int64" insert="false" formula="UNITPRICEO * PARTQTYO + TOTALFEEO"></property>
+    <property name="SubTotalM" type="Int64" insert="false" formula="UNITPRICEM * PARTQTYM + TOTALFEEM"></property>
+    
+    <property name="Partqtyo" type="Int32">
+			<column name="PARTQTYO" sql-type="NUMBER" not-null="true"/>
+		</property>
+		<property name="Partqtym" type="Int32">
+			<column name="PARTQTYM" sql-type="NUMBER" not-null="true"/>
+		</property>
+		<property name="Vmepcomment" type="String">
+			<column name="VMEPCOMMENT" length="2048" sql-type="NVARCHAR2" not-null="false"/>
+		</property>
+		<many-to-one name="Broken" class="VDMS.Core.Domain.Broken, VDMS.Core">
+			<column name="BROKENID" sql-type="NUMBER" not-null="true"/>
+		</many-to-one>
+		<many-to-one name="Exchangepartheader" class="VDMS.Core.Domain.Exchangepartheader, VDMS.Core">
+			<column name="EXCHANGEPARTHEADERID" sql-type="NUMBER" not-null="true"/>
+		</many-to-one>
+	</class>
+</hibernate-mapping>

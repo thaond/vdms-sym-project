@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="VDMS.WebService.Service.Common" CodeBehind="~/App_Code/WebService/Common.cs" %>

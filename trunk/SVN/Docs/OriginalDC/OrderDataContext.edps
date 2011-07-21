@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDeveloper>
+  <ProjectSettings Template="LINQ C#" DestinationFolder="D:\Working\Temp">
+    <Rules>
+      <Class RemoveUnderscores="True" CodeCase="Capitalized" AddPrefix="" AddSuffix="" RemovePrefixes="" RemoveSuffixes="" PluralizationName="Pluralize" />
+      <Property RemoveUnderscores="True" CodeCase="Capitalized" AddPrefix="" AddSuffix="" RemovePrefixes="" RemoveSuffixes="" PluralizationName="Unchanged" />
+    </Rules>
+  </ProjectSettings>
+</EntityDeveloper>

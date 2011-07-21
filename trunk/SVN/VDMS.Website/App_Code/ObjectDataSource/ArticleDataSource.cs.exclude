@@ -1,0 +1,71 @@
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Web;
+using NHibernate.Expression;
+using VDMS.Core.Data;
+using VDMS.Core.Domain;
+using VDMS.Data.DAL.NHibernateDAL;
+using VDMS.Data.IDAL.Interface;
+using VDMS.Helper;
+
+namespace VDMS.I.ObjectDataSource
+{
+	public class ArticleDataSource
+	{
+		private static int count = 0;
+
+		public static int SelectCount(int maximumRows, int startRowIndex)
+		{
+			return count;
+		}
+
+		public static IList<Article> Select(int maximumRows, int startRowIndex)
+		{
+			IDao<Article, long> articleDao = DaoFactory.GetDao<Article, long>();
+			articleDao.SetOrder(new Order[] { Order.Desc("Createddate") });
+			List<Article> list = articleDao.GetPaged(startRowIndex / maximumRows, maximumRows);
+			count = articleDao.ItemCount;
+			HttpContext.Current.Items["rowCount"] = count;
+			return list;
+		}
+
+		public static int SelectCount(int maximumRows, int startRowIndex, string sFromDate, string sToDate)
+		{
+			return count;
+		}
+
+		public static IList<Article> Select(int maximumRows, int startRowIndex, string sFromDate, string sToDate)
+		{
+			DateTime fromDate, toDate;
+			DateTime.TryParse(sFromDate, new CultureInfo(UserHelper.Language), DateTimeStyles.AllowWhiteSpaces, out fromDate);
+			DateTime.TryParse(sToDate, new CultureInfo(UserHelper.Language), DateTimeStyles.AllowWhiteSpaces, out toDate);
+
+			IDao<Article, long> articleDao = DaoFactory.GetDao<Article, long>();
+			articleDao.SetOrder(new Order[] { Order.Desc("Createddate") });
+			articleDao.SetCriteria(new ICriterion[] { Expression.Between("Createddate", fromDate, toDate.AddDays(1)) });
+			List<Article> list = articleDao.GetPaged(startRowIndex / maximumRows, maximumRows);
+			count = articleDao.ItemCount;
+			HttpContext.Current.Items["rowCount"] = count;
+			return list;
+		}
+
+		public static void Delete(int Id)
+		{
+			using (TransactionBlock tran = new TransactionBlock())
+			{
+				IDao<Article, long> articleDao = DaoFactory.GetDao<Article, long>();
+
+				IDao<Attachment, long> attachmentDao = DaoFactory.GetDao<Attachment, long>();
+				Article article = new Article();
+				article.Id = Id;
+				attachmentDao.SetCriteria(new ICriterion[] { Expression.Eq("Article", article) });
+				foreach (Attachment a in attachmentDao.GetAll())
+					attachmentDao.Delete(a);
+
+				articleDao.Delete(Id);
+				tran.IsValid = true;
+			}
+		}
+	}
+}

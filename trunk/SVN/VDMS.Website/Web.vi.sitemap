@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode title="Trang chủ" description="" url="~/Default.aspx">
+    <siteMapNode title="Thưởng/Thanh toán" description="">
+        <siteMapNode title="Dữ liệu thưởng" url="~/Bonus/Query.aspx" description="" />
+      <siteMapNode title="Kinh doanh" description="" >
+        <siteMapNode title="Tổng kết tháng" url="~/Bonus/Sale/BonusClose.aspx" description="" />
+        <siteMapNode title="Kế hoạch thưởng" url="~/Bonus/Sale/BonusPlanList.aspx" description="" >
+          <siteMapNode title="Lập kế hoạch thưởng" url="~/Bonus/Sale/BonusPlan.aspx" description="Invisible" />
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode title="Nhân viên kinh doanh" description="" >
+        <siteMapNode title="Xác nhận thưởng" url="~/Bonus/Sale/BonusConfirm.aspx" description="" />
+      </siteMapNode>
+      <siteMapNode title="Kế toán" description="" >
+        <siteMapNode title="Xác nhận thanh toán" url="~/Vehicle/Fin/ConfirmPayment.aspx" description="" />
+        <siteMapNode title="Nhập dữ liệu thanh toán" url="~/Vehicle/Fin/ImportPayment.aspx" description="" />
+        <siteMapNode title="Kiểm tra dữ liệu thanh toán" url="~/Vehicle/Fin/QueryPayment.aspx" description="" />
+        <siteMapNode title="Đối trừ" url="~/Vehicle/Fin/ReConsign.aspx" description="" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Xe nguyên chiếc" description="" >
+      <siteMapNode title="Kho xe nguyên chiếc" description="">
+        <siteMapNode url="~/Vehicle/Inventory/Orderform.aspx" title="Đơn đặt hàng xe nguyên chiếc" description="">
+          <siteMapNode url="~/Vehicle/Inventory/EditOrder.aspx" title="Soạn thảo đơn hàng" description="hide"></siteMapNode>
+          <siteMapNode url="~/Vehicle/Report/PrintOrder.aspx" title="In đơn hàng" description="Invisible"/>
+        </siteMapNode>
+        <siteMapNode url="~/Vehicle/Inventory/Business.aspx" title="Kinh doanh VMEP xác nhận" description="">
+          <siteMapNode url="~/Vehicle/Inventory/ProcessOrder.aspx" title="Xử lí đơn đặt hàng" description="" />
+        </siteMapNode>
+        <siteMapNode url="~/Vehicle/Inventory/CheckOrder.aspx" title="Kiểm tra đơn đặt hàng" description="" >
+          <siteMapNode url="~/Vehicle/Inventory/ShippingIssues.aspx" title="Danh sách phiếu xuất cho đơn hàng" description="Invisible" />
+        </siteMapNode>
+        <siteMapNode url="~/Vehicle/Inventory/Import.aspx" title="Thao tác nhập xe" description="" />
+        <siteMapNode url="~/Vehicle/Inventory/SaleReject.aspx" title="Kinh doanh VMEP xác nhận trả xe" description="" />
+        <siteMapNode url="~/Vehicle/Inventory/Reject.aspx" title="Thao tác trả xe" description="" />
+        <siteMapNode url="~/Vehicle/Inventory/StockAdjust.aspx" title="Chuyển kho nội bộ" description="" />
+        <siteMapNode url="~/Vehicle/Inventory/adjustment.aspx" title="Thao tác điều chỉnh xuất nhập kho" description="" />
+        <siteMapNode url="~/Vehicle/Inventory/History.aspx" title="Kiểm tra lịch sử xuất nhập kho" description="" />
+        <siteMapNode url="~/Vehicle/Inventory/Detail.aspx" title="Kiểm tra chi tiết tồn kho" description="" />
+        <siteMapNode url="~/Vehicle/Inventory/reformation.aspx" title="Thao tác sửa đổi nhập xe" description="" />
+        <siteMapNode url="~/Vehicle/Inventory/MonthlyClose.aspx" title="Thao tác tổng kết tồn kho tháng" description="" />
+      </siteMapNode>
+      <siteMapNode title="Bán xe nguyên chiếc" description="">
+        <siteMapNode url="~/Vehicle/Sale/Customer.aspx" title="Bán xe cho khách hàng cuối" description=""/>
+        <siteMapNode url="~/Vehicle/Sale/SaleImportExcel.aspx" title="Nhập dữ liệu bán xe từ Excel" description=""/>
+        <siteMapNode url="~/Vehicle/Sale/LotSale.aspx" title="Bán xe theo lô cho khách lẻ" description=""/>
+        <siteMapNode url="~/Vehicle/Sale/Store.aspx" title="Bán hàng theo lô cho cửa hàng phụ" description=""/>
+        <siteMapNode url="~/Vehicle/Sale/DataReformation.aspx" title="Cập nhật dữ liệu khách hàng" description=""/>
+        <siteMapNode url="~/Vehicle/Sale/Datacheck.aspx" title="Kiểm tra dữ liệu khách hàng" description=""/>
+        <!--<siteMapNode url="~/Vehicle/Sale/Money.aspx" title="Sửa đổi dữ liệu thu tiền khách hàng" description=""/>
+        <siteMapNode url="~/Vehicle/Sale/Receipt.aspx" title="Kiểm tra khoản cần thu" description=""/>-->
+      </siteMapNode>
+      <siteMapNode title="Báo cáo" description="">
+        <siteMapNode url="~/Vehicle/Report/IOStockReport.aspx" title="Báo cáo Xuất - Nhập - Tồn" description=""/>
+        <siteMapNode url="~/Vehicle/Report/SaleDetail.aspx" title="Báo cáo bán hàng chi tiết" description=""/>
+        <siteMapNode url="~/Vehicle/Report/ReceiptDetail.aspx" title="Báo cáo các khoản cần thu" description=""/>
+        <siteMapNode url="~/Vehicle/Report/DailySaleReport.aspx" title="Báo cáo xuất nhập tồn - Sale" description=""/>
+        <siteMapNode title="Báo cáo đặt xe" url="~/Vehicle/Report/OrderStatistic.aspx" description="" />
+        <siteMapNode title="Báo cáo nhập xuất xe" url="~/Vehicle/Report/InOutStatistic.aspx" description="" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Phục vụ, bảo hành" description="">
+      <siteMapNode title="Phục vụ" description="">
+        <siteMapNode url="~/Service/WarrantyContent.aspx" title="Bảng đăng ký nội dung phục vụ" description="">
+          <siteMapNode url="~/Service/RepairHistory.aspx" title="Lịch sử bảo dưỡng và sửa chữa" description="Invisible"></siteMapNode>
+          <siteMapNode url="~/Service/RepairList.aspx" title="Danh sách dịch vụ" description="Invisible"></siteMapNode>
+          <siteMapNode url="~/Service/Report/PrintPartChange.aspx" title="In phiếu bảo hành" description="Invisible" ></siteMapNode>
+          <siteMapNode url="~/Service/Report/PrintSRS.aspx" title="In bảng đăng ký nội dung phục vụ" description="Invisible" ></siteMapNode>
+          <siteMapNode url="~/Service/Popup/SelectCustomer.aspx" title="Chọn khách hàng" description="Invisible"></siteMapNode>
+          <siteMapNode url="~/Service/Popup/SelectEngineNo.aspx" title="Tìm kiếm số máy" description="Invisible"></siteMapNode>
+          <siteMapNode url="~/Service/Popup/SelectModel.aspx" title="Chọn chủng loại xe" description="Invisible"></siteMapNode>
+          <siteMapNode url="~/Service/Popup/SelectSpares.aspx" title="Tìm kiếm phụ tùng" description="Invisible"></siteMapNode>
+        </siteMapNode>
+        <siteMapNode url="~/Service/tempSRS.aspx" title="Bảng đăng ký nội dung phục vụ lưu tạm" description="" />
+      </siteMapNode>
+      <siteMapNode title="Bảo hành" description="">
+        <siteMapNode url="~/Service/LookupWarrantyParts.aspx" title="Danh sách linh kiện thuộc dạng bảo hành" description="" />
+        <siteMapNode url="~/Service/ImportWarrantyParts.aspx" title="Nhập linh kiện dạng bảo hành từ Excel" description="" />
+        <siteMapNode url="~/Service/ExchangeVoucher.aspx" title="Lập phiếu Đề nghị bồi thường phụ tùng bảo hành" description="" />
+        <siteMapNode url="~/Service/ExchangeReport.aspx" title="Báo cáo chi tiết bồi thường bảo hành" description="" />
+        <siteMapNode url="~/Service/LookupExchange.aspx" title="Tra cứu phiếu bồi thường bảo hành" description="" />
+        <siteMapNode url="~/Service/confirmation.aspx" title="Xác nhận đổi hàng bảo hành" description="">
+          <siteMapNode url="~/Service/verifyExchangeVoucher.aspx" title="Thẩm tra phiếu đổi hàng bảo hành" description="Invisible" />
+        </siteMapNode>
+        <siteMapNode url="~/Service/CustomerInfor.aspx" title="Tư liệu khách hàng" description="" />
+        <siteMapNode url="~/Vehicle/Report/ForBusiness.aspx" title="Báo cáo tháng Service VMEP" description=""/>
+        <siteMapNode url="~/Service/WarrantyInfo.aspx" title="Thông tin bảo hành" description="" >
+        </siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Linh kiện" description="">
+      <siteMapNode title="Đặt hàng" description="">
+        <siteMapNode title="Đặt hàng linh kiện" url="~/Part/Inventory/Order.aspx" description="">
+          <siteMapNode title="Soạn thảo đơn hàng" url="~/Part/Inventory/OrderEdit.aspx"></siteMapNode>
+          <siteMapNode title="In đơn hàng" url="~/Part/Inventory/PrintOrderForm.aspx" description="Invisible"></siteMapNode>
+        </siteMapNode>
+        <siteMapNode title="Nhận hàng linh kiện" url="~/Part/Inventory/Receive.aspx" description="">
+          <siteMapNode title="Thực hiện nhập kho" url="~/Part/Inventory/InStock.aspx" description="Invisible">
+          </siteMapNode>
+        </siteMapNode>
+        <siteMapNode title="Biểu mẫu hàng lỗi" url="~/Part/Inventory/NotGood.aspx" description="">
+          <siteMapNode title="Biểu mẫu hàng lỗi khi Nhận hàng" url="~/Part/Inventory/NotGoodAuto.aspx" description="hide"></siteMapNode>
+          <siteMapNode title="Thu thập hàng lỗi" url="~/Part/Inventory/NotGoodEdit.aspx" description="hide"></siteMapNode>
+        </siteMapNode>
+        <siteMapNode title="Xác nhận hàng lỗi" url="~/Part/Inventory/NotGoodApprove.aspx" description=""></siteMapNode>
+        <siteMapNode url="~/Part/Inventory/LackTracking.aspx" title="Kiểm soát hàng thiếu"></siteMapNode>
+        <siteMapNode title="Hủy nhập tự động" url="~/Part/Inventory/UndoConfirm.aspx" description=""></siteMapNode>
+        <siteMapNode title="Theo dõi cung cấp thiếu" url="~/Part/Inventory/InShort.aspx"></siteMapNode>
+      </siteMapNode>
+      <siteMapNode title="Bán linh kiện" description="">
+        <siteMapNode title="Phiếu đã lưu" url="~/Part/SavedSP.aspx" description=""></siteMapNode>
+        <siteMapNode title="Tạo phiếu mới" url="~/Part/Sale.aspx" description=""/>
+        <siteMapNode title="In phiếu" url="~/Part/PrintSaleForm.aspx" description=""/>
+      </siteMapNode>
+      <siteMapNode title="Kho linh kiện" description="">
+        <siteMapNode title="Nhập xuất đặc biệt" url="~/Part/Inventory/SpecialIE.aspx" description=""></siteMapNode>
+        <siteMapNode url="~/Part/Inventory/SIEHistory.aspx" title="Lich su nhap xuat dac biet" description="" />
+        <siteMapNode title="Chuyển kho linh kiện" url="~/Part/Inventory/StockTransfer.aspx" description=""></siteMapNode>
+        <siteMapNode title="Dữ liệu chuyển kho linh kiện" url="~/Part/Inventory/StockTransferHis.aspx" description=""></siteMapNode>
+        <siteMapNode title="Tra cứu thẻ kho" url="~/Part/Inventory/BinCard2.aspx" description=""></siteMapNode>
+        <siteMapNode title="Khóa sổ tồn" url="~/Part/Inventory/MonthlyClose.aspx"></siteMapNode>
+        <siteMapNode url="~/Admin/Part/CCA.aspx" title="Điều chỉnh số tồn kho" description="" />
+        <siteMapNode url="" title="Điều chỉnh giao dịch" description="" />
+      </siteMapNode>
+      <siteMapNode title="Báo cáo" description="">
+        <siteMapNode title="Báo cáo Đơn hàng chi tiết" url="~/Part/Report/RemainingOrderDetailReport.aspx"></siteMapNode>
+        <siteMapNode title="Báo cáo hàng thiếu" url="~/Part/Report/InShortsupplier.aspx"></siteMapNode>
+        <siteMapNode title="Hàng nhập hỏng" url="~/Part/Report/ReceiptDetail.aspx"></siteMapNode>
+        <siteMapNode title="Hàng trả bảo hành" url="~/Part/Report/WarrantyReturn.aspx"></siteMapNode>
+        <siteMapNode title="Báo cáo quá hạn" url="~/Part/Report/ShippingSpan.aspx"></siteMapNode>
+        <siteMapNode title="Theo dõi dịch vụ" url="~/Part/Report/PartOrderServiceSummary.aspx"></siteMapNode>
+        <siteMapNode title="Báo cáo bán hàng" url="~/Part/Report/saleReport.aspx"></siteMapNode>
+        <siteMapNode title="Tồn kho" url="~/Part/Report/inventory.aspx"></siteMapNode>
+        <siteMapNode title="Báo cáo xuất nhập tồn" url="~/Part/Report/IOSReport.aspx"></siteMapNode>
+        <siteMapNode title="Chi tiết nhập kho" url="~/Part/Report/PartInputReport.aspx"></siteMapNode>
+        <siteMapNode title="Chi tiết bán hàng" url="~/Part/Report/SaleDetailReport.aspx"></siteMapNode>
+        <siteMapNode title="Báo cáo bán hàng chi tiết" url="~/Part/Report/CustomerReport.aspx"></siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Quản lý dữ liệu cơ bản" description="">
+      <siteMapNode title="Xe nguyên chiếc" description="">
+        <siteMapNode url="~/Admin/Vehicle/Broken.aspx" title="Quản lý mã hư hỏng linh kiện" description="">
+          <siteMapNode url="~/Admin/Vehicle/AddBroken.aspx" title="Thêm mới mã hư hỏng linh kiện" description="Invisible" />
+        </siteMapNode>
+        <siteMapNode url="~/Admin/Vehicle/Branch.aspx" title="Quản lý cửa hàng phụ" description="" />
+        <siteMapNode url="~/Admin/Vehicle/WarrantyTime.aspx" title="Quản lý thời hạn bảo hành linh kiện" description="" />
+        <siteMapNode url="~/Admin/Vehicle/Agency.aspx" title="Quản lý thông tin nhập xe đại lý" description="" />
+        <siteMapNode url="~/Admin/Vehicle/ListMotorSale.aspx" title="Danh mục bán xe nguyên chiếc" description="" />
+      </siteMapNode>
+      <siteMapNode title="Linh phụ kiện" description="">
+        <siteMapNode url="~/Admin/Part/FindPart.aspx" title="Tìm kiếm linh kiện mới" description="" />
+        <siteMapNode url="~/Admin/Part/Part.aspx" title="Thiết lập linh phụ kiện" description="">
+          <siteMapNode url="~/Admin/Part/PartEdit.aspx" title="Thêm linh kiện mới" description=""></siteMapNode>
+        </siteMapNode>
+        <siteMapNode url="~/Admin/Part/Category.aspx" title="Thiết lập danh mục" description="" />
+        <siteMapNode url="~/Admin/Part/Customer.aspx" title="Thông tin khách hàng" description="" />
+        <siteMapNode url="~/Admin/Database/Vendor.aspx" title="Thông tin nhà cung cấp" description="" />
+        <siteMapNode url="~/Admin/Part/PartSpec.aspx" title="Thông tin linh kiện" description="" >
+          <siteMapNode url="~/Admin/Part/PartSpecEdit.aspx" title="Sửa thông tin linh kiện" description="Invisible" />
+        </siteMapNode>
+        <siteMapNode url="~/Admin/Part/PartReplace.aspx" title="Thay thế linh kiện" description="" >
+          <siteMapNode url="~/Admin/Part/PartReplaceEdit.aspx" title="Sửa dữ liệu thay thế linh kiện" description="Invisible" />
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode title="Phân quyền" description="">
+        <siteMapNode url="~/Admin/Security/ManageUsers.aspx" title="Quản lý tài khoản trong VDMS" description="">
+          <siteMapNode url="~/Admin/Security/EditUser.aspx" title="Thiết lập tài khoản" description="Invisible" />
+        </siteMapNode>
+        <siteMapNode url="~/Admin/Security/Role.aspx" title="Quản lý nhóm quyền trong hệ thống" description="" />
+        <siteMapNode url="~/Admin/Security/Permission.aspx" title="Khởi tạo quyền hạn trong hệ thống" description="" />
+      </siteMapNode>
+      <siteMapNode title="Thiết lập hệ thống" description="">
+        <siteMapNode url="~/Admin/Database/Dealer.aspx" title="Danh sách đại lý" description="" />
+        <siteMapNode url="~/Admin/Bonus/BonusSource.aspx" title="Quản lý nguồn tiền thưởng" description="" />
+        <siteMapNode url="~/Admin/Database/Article.aspx" title="Quản lý thông tin mới nhất" description=""></siteMapNode>
+        <siteMapNode url="~/Admin/Security/Setting.aspx" title="Thiết lập hệ thống" description="" />
+      </siteMapNode>
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

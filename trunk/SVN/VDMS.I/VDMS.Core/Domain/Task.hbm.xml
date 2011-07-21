@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="VDMS.Core.Domain.Task, VDMS.Core" table="APP_TASKS" lazy="false">
+		<id name="Id" type="Int32" unsaved-value="0">
+			<column name="TASKID" sql-type="NUMBER" not-null="true" unique="true" index="PK43"/>
+			<generator class="sequence">
+				<param name="sequence">seq_Task</param>
+			</generator>
+		</id>
+		<property name="Pathid" type="String">
+			<column name="PATHID" length="100" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+		<property name="Taskname" type="String">
+			<column name="TASKNAME" length="100" sql-type="NVARCHAR2" not-null="true"/>
+		</property>
+		<property name="Commandname" type="String">
+			<column name="COMMANDNAME" length="30" sql-type="VARCHAR2" not-null="false"/>
+		</property>
+	</class>
+</hibernate-mapping>

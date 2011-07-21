@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BirthDateInvalid" xml:space="preserve">
+    <value>Dữ liệu "Ngày sinh" không đúng với định dạng ngày!</value>
+  </data>
+  <data name="CusFullnameEmpty" xml:space="preserve">
+    <value>Dữ liệu "Họ và tên" không được để trống!</value>
+  </data>
+  <data name="CusIdNumEmpty" xml:space="preserve">
+    <value>Dữ liệu "Số CMND/Mã số công ty" không được để trống!</value>
+  </data>
+  <data name="CusMobileEmpty" xml:space="preserve">
+    <value>Dữ liệu "Số ĐTDĐ" không được để trống!</value>
+  </data>
+  <data name="CusMobileNumbeFormatInvalid" xml:space="preserve">
+    <value>Dữ liệu "Số ĐTDĐ" phải bằng số!</value>
+  </data>
+  <data name="CusPhoneNumberFormatInvalid" xml:space="preserve">
+    <value>Dữ liệu "Số điện thoại" phải bằng số!</value>
+  </data>
+  <data name="CustomerEmpty" xml:space="preserve">
+    <value>Hãy nhập dữ liệu khách hàng!</value>
+  </data>
+  <data name="DateUFHPValid" xml:space="preserve">
+    <value>Ngày trong các kỳ trả góp cố định không thể nhỏ hơn ngày bán hàng hoặc trùng nhau!</value>
+  </data>
+  <data name="EmailEmpty" xml:space="preserve">
+    <value>Dữ liệu "Email" không được để trống!</value>
+  </data>
+  <data name="EmailFormatErr" xml:space="preserve">
+    <value>Dữ liệu "Email" không đúng với định dạng mail!</value>
+  </data>
+  <data name="Invoice_BillDuplicated" xml:space="preserve">
+    <value>Số hóa đơn này đã tồn tại hoặc số máy đã được bán!</value>
+  </data>
+  <data name="Money_EmptyField" xml:space="preserve">
+    <value>Phải nhập ít một trong hai dữ liệu, mã máy hoặc số CMND.</value>
+  </data>
+  <data name="MoneyValid" xml:space="preserve">
+    <value>Số tiền trả góp đầu tiên phải nhỏ hơn số tiền trong hóa đơn!</value>
+  </data>
+  <data name="MotorInformationNull" xml:space="preserve">
+    <value>Xe này đã báo bán!</value>
+  </data>
+  <data name="PriceEmpty" xml:space="preserve">
+    <value>Bạn phải nhập số tiền bán xe để có thể tính cho phần trả góp!</value>
+  </data>
+  <data name="RecDateInvalid" xml:space="preserve">
+    <value>Dữ liệu "Ngày cần thu tiền" có định dạng ngày không đúng!</value>
+  </data>
+  <data name="RecDateSmallerThanSelDate" xml:space="preserve">
+    <value>"Ngày cần thu tiền" phải lớn hơn hoặc bằng "Ngày bán"!</value>
+  </data>
+  <data name="txtDateRecEmpty" xml:space="preserve">
+    <value>Bạn phải nhập ngày cần thu để có thể tính thời gian cho phần trả góp cố định!</value>
+  </data>
+  <data name="WrongSellingDate" xml:space="preserve">
+    <value>Dữ liệu "Ngày bán" không hợp lệ (Phải trong khoảng từ ngày nhập xe đến hiện tại)!</value>
+  </data>
+  <data name="AddressEmpty" xml:space="preserve">
+    <value>Dữ liệu địa chỉ không được để trống!</value>
+  </data>
+  <data name="NeedOnePhoneNumber" xml:space="preserve">
+    <value>Bạn phải nhập số điện thoại/di động khách hàng!</value>
+  </data>
+  <data name="IdentifyNumberExist" xml:space="preserve">
+    <value>Khách hàng có mã số: "{0}" đã tồn tại!</value>
+  </data>
+</root>

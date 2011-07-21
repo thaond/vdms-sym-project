@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="VDMS.Core.Domain.Item, VDMS.Core" table="DATA_ITEM" lazy="false">
+		<id name="Id" type="String" unsaved-value="null">
+			<column name="ITEMCODE" length="50" sql-type="VARCHAR2" not-null="true" unique="true" index="PK38"/>
+			<generator class="assigned">
+			</generator>
+		</id>
+		<property name="Itemname" type="String">
+			<column name="ITEMNAME" length="100" sql-type="NVARCHAR2" not-null="true"/>
+		</property>
+		<property name="Colorcode" type="String">
+			<column name="COLORCODE" length="20" sql-type="VARCHAR2" not-null="true"/>
+		</property>
+		<property name="Colorname" type="String">
+			<column name="COLORNAME" length="60" sql-type="NVARCHAR2" not-null="true"/>
+		</property>
+		<property name="Forhtf" type="Boolean">
+			<column name="FORHTF" sql-type="NUMBER" not-null="true"/>
+		</property>
+		<property name="Fordnf" type="Boolean">
+			<column name="FORDNF" sql-type="NUMBER" not-null="true"/>
+		</property>
+		<property name="Itemtype" type="String">
+			<column name="ITEMTYPE" length="50" sql-type="VARCHAR2" not-null="false"/>
+		</property>
+		<property name="DatabaseCode" type="String">
+			<column name="DATABASECODE" length="10" sql-type="VARCHAR2" not-null="false"/>
+		</property>
+		<property name="Htfprice" type="Int64">
+			<column name="HTFPRICE" sql-type="NUMBER" not-null="false"/>
+		</property>
+		<property name="Dnfprice" type="Int64">
+			<column name="DNFPRICE" sql-type="NUMBER" not-null="false"/>
+		</property>
+	</class>
+</hibernate-mapping>

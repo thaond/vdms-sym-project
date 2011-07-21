@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="VDMS.Core.Domain.Warrantycondition, VDMS.Core" table="DATA_WARRANTYCONDITION" lazy="false">
+		<id name="Id" type="Decimal" unsaved-value="0">
+			<column name="WARRANTYCONDITIONID" sql-type="NUMBER" not-null="true" unique="true" index="PK_DATA_WARRANTYCONDITION"/>
+			<generator class="sequence">
+				<param name="sequence">seq_Warrantycondition</param>
+			</generator>
+		</id>
+		<property name="Partcode" type="String">
+			<column name="PARTCODE" length="35" sql-type="VARCHAR2" not-null="true" unique="true" index="UK_WARRANTYCONDITION"/>
+		</property>
+		<property name="Partnamevn" type="String">
+			<column name="PARTNAMEVN" length="512" sql-type="NVARCHAR2" not-null="true"/>
+		</property>
+		<property name="Partnameen" type="String">
+			<column name="PARTNAMEEN" length="512" sql-type="NVARCHAR2" not-null="true"/>
+		</property>
+		<property name="Motorcode" type="String">
+			<column name="MOTORCODE" length="12" sql-type="VARCHAR2" not-null="false"/>
+		</property>
+		<property name="Warrantytime" type="Int64">
+			<column name="WARRANTYTIME" sql-type="NUMBER" not-null="true"/>
+		</property>
+		<property name="Warrantylength" type="Decimal">
+			<column name="WARRANTYLENGTH" sql-type="NUMBER" not-null="true"/>
+		</property>
+		<property name="Labour" type="Decimal">
+			<column name="LABOUR" sql-type="NUMBER" not-null="false"/>
+		</property>
+		<property name="Manpower" type="String">
+			<column name="MANPOWER" length="10" sql-type="VARCHAR2" not-null="false"/>
+		</property>
+		<property name="Unitprice" type="Decimal">
+			<column name="UNITPRICE" sql-type="NUMBER" not-null="false"/>
+		</property>
+	</class>
+</hibernate-mapping>

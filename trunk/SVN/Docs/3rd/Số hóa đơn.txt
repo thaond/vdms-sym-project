@@ -1,0 +1,33 @@
+﻿Linh iwnd: hi anh Tuấn
+small_gr: Hi em
+Linh iwnd: em là Linh bên Thăng Long
+Linh iwnd: cho em hỏi chút
+small_gr: yes
+Linh iwnd: cái change request có phần mở rộng số hóa đơn ấy ạ
+Linh iwnd: vậy sao đại lý lại cần dùng 1 số hóa đơn 2 lần 
+Linh iwnd: em hỏi kĩ thêm về nghiệp vụ tí
+small_gr: trước đây (và hiện nay), chương trình VDMS không cho phép bán sỉ (bán buôn) cho khách hàng cuối
+small_gr: cũng như khách mua đi bán lại
+small_gr: lúc này, đại lý bán nguyên lô xe cho khách hàng mà chỉ xuất 1 hóa đơn
+small_gr: mà VDMS chỉ cho phép bán từng xe
+small_gr: nên họ gõ 1 hóa đơn cho nhiều xe, đương nhiên khách hàng không thể mang hóa đơn này đến Công An đăng ký xe được
+small_gr: mà khi họ bán cho người tiêu dùng, họ phải xuất 1 hóa đơn khác. (điều này phù hợp với luật thuế GTGT)
+small_gr: ==> mở VDMS cho đại lý gõ hóa đơn trùng nhau
+Linh iwnd: vâng
+small_gr: anything else?
+Linh iwnd: vậy cái này liên quan đến bán xe theo lô
+Linh iwnd: tức là lúc bán theo lô mình sẽ chỉ có 1 số hóa đơn dùng cho tất cả các xe ạ
+small_gr: đúng
+Linh iwnd: vâng
+Linh iwnd: ngoài ra có yêu cầu mở rộng cột số hóa đơn
+Linh iwnd: hiện tại độ rộng của nó là 30 chars
+Linh iwnd: lớn cỡ nào là đủ ạ
+small_gr: 30 ok rồi em
+Linh iwnd: vâng ok
+Linh iwnd: em tưởng thế chưa đủ 
+small_gr: nếu cần anh modify *.aspx
+Linh iwnd: ok thank anh
+Linh iwnd: sau này có gì em hỏi sau
+small_gr is typing...
+small_gr: ok, anh off nhé
+Linh iwnd: bye anh

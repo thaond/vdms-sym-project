@@ -1,0 +1,194 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EDFFA06B-7697-4AD1-8FE5-2837DA262A28}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VDMS.Core</RootNamespace>
+    <AssemblyName>VDMS.Core</AssemblyName>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common.cs" />
+    <Compile Include="Data\DaoFactory.cs" />
+    <Compile Include="Domain\Broken.cs" />
+    <Compile Include="Domain\Batchinvoicedetail.cs" />
+    <Compile Include="Domain\Batchinvoiceheader.cs" />
+    <Compile Include="Domain\Custom\Item.cs" />
+    <Compile Include="Domain\Inventory.cs" />
+    <Compile Include="Domain\Inventorylock.generate.cs" />
+    <Compile Include="Domain\Event.generate.cs" />
+    <Compile Include="Domain\Exchangepartdetail.cs" />
+    <Compile Include="Domain\Exchangepartheader.cs" />
+    <Compile Include="Domain\Exchangevoucherheader.cs" />
+    <Compile Include="Domain\InventoryDay.cs" />
+    <Compile Include="Domain\Servicedetail.cs" />
+    <Compile Include="Domain\Warrantycondition.cs" />
+    <Compile Include="Domain\Serviceheader.cs" />
+    <Compile Include="Domain\Customer.cs" />
+    <Compile Include="Domain\Invoice.cs" />
+    <Compile Include="Domain\Payment.cs" />
+    <Compile Include="Domain\Returnitem.generate.cs" />
+    <Compile Include="Domain\Item.generate.cs" />
+    <Compile Include="Domain\Itemfavorite.cs" />
+    <Compile Include="Domain\ItemInstance.cs" />
+    <Compile Include="Domain\Orderdetail.cs" />
+    <Compile Include="Domain\Orderheader.cs" />
+    <Compile Include="Domain\Sellitem.cs" />
+    <Compile Include="Domain\ShippingDetail.cs" />
+    <Compile Include="Domain\ShippingHeader.cs" />
+    <Compile Include="Domain\Specialoffer.cs" />
+    <Compile Include="Domain\SubShop.generate.cs" />
+    <Compile Include="Domain\RolesInPaths.generate.cs" />
+    <Compile Include="Domain\RolesInTasks.generate.cs" />
+    <Compile Include="Domain\Task.generate.cs" />
+    <Compile Include="Domain\DomainObject.cs" />
+    <Compile Include="Domain\Transhis.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Domain\WarrantyInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VDMS.Data.IDAL\VDMS.Data.IDAL.csproj">
+      <Project>{7EF4EB21-EE83-4E58-B2A8-9C5D14576EC5}</Project>
+      <Name>VDMS.Data.IDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Task.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\RolesInTasks.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\RolesInPaths.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\SubShop.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\ShippingHeader.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\ShippingDetail.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\ItemInstance.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Item.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Orderdetail.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Orderheader.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Specialoffer.hbm.xml" />
+    <EmbeddedResource Include="Domain\Transhis.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Broken.hbm.xml" />
+    <EmbeddedResource Include="Domain\Itemfavorite.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Returnitem.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Customer.hbm.xml" />
+    <EmbeddedResource Include="Domain\Invoice.hbm.xml" />
+    <EmbeddedResource Include="Domain\Payment.hbm.xml" />
+    <EmbeddedResource Include="Domain\Sellitem.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Serviceheader.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Warrantycondition.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Servicedetail.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Batchinvoicedetail.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Batchinvoiceheader.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Exchangepartheader.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Exchangepartdetail.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Exchangevoucherheader.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\InventoryDay.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Event.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\WarrantyInfo.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Inventorylock.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Inventory.hbm.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

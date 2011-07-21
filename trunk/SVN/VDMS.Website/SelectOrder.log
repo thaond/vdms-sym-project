@@ -1,0 +1,333 @@
+01/03/2010 9:30:53 SA: Start select order by admin: sFromDate = 01/03/2010, sToDate = 01/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+01/03/2010 9:30:53 SA: All: 1036
+01/03/2010 9:30:54 SA: Dealer: 1036
+01/03/2010 9:30:54 SA: Area: 1036
+01/03/2010 9:30:54 SA: OrderNumber: 1036
+01/03/2010 9:30:54 SA: Status: 4
+01/03/2010 9:30:54 SA: Date: 0
+01/03/2010 9:30:54 SA: Result: 0
+01/03/2010 9:30:54 SA: Done!
+01/03/2010 9:31:26 SA: Start select order by admin: sFromDate = 28/09/2009, sToDate = 01/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+01/03/2010 9:31:27 SA: All: 1036
+01/03/2010 9:31:27 SA: Dealer: 1036
+01/03/2010 9:31:27 SA: Area: 1036
+01/03/2010 9:31:27 SA: OrderNumber: 1036
+01/03/2010 9:31:27 SA: Status: 4
+01/03/2010 9:31:27 SA: Date: 0
+01/03/2010 9:31:27 SA: Result: 0
+01/03/2010 9:31:27 SA: Done!
+01/03/2010 9:31:36 SA: Start select order by admin: sFromDate = 28/09/2007, sToDate = 01/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+01/03/2010 9:31:36 SA: All: 1036
+01/03/2010 9:31:36 SA: Dealer: 1036
+01/03/2010 9:31:36 SA: Area: 1036
+01/03/2010 9:31:36 SA: OrderNumber: 1036
+01/03/2010 9:31:36 SA: Status: 4
+01/03/2010 9:31:36 SA: Date: 3
+01/03/2010 9:31:36 SA: Result: 3
+01/03/2010 9:31:36 SA: Done!
+01/03/2010 9:41:17 SA: Start select order by admin: sFromDate = 01/03/2010, sToDate = 01/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+01/03/2010 9:41:17 SA: All: 1036
+01/03/2010 9:41:17 SA: Dealer: 1036
+01/03/2010 9:41:17 SA: Area: 1036
+01/03/2010 9:41:17 SA: OrderNumber: 1036
+01/03/2010 9:41:17 SA: Status: 3
+01/03/2010 9:41:17 SA: Date: 0
+01/03/2010 9:41:17 SA: Result: 0
+01/03/2010 9:41:17 SA: Done!
+01/03/2010 9:41:55 SA: Start select order by admin: sFromDate = 01/03/2010, sToDate = 01/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+01/03/2010 9:41:55 SA: All: 1036
+01/03/2010 9:41:55 SA: Dealer: 1036
+01/03/2010 9:41:55 SA: Area: 1036
+01/03/2010 9:41:55 SA: OrderNumber: 1036
+01/03/2010 9:41:55 SA: Status: 3
+01/03/2010 9:41:55 SA: Date: 0
+01/03/2010 9:41:55 SA: Result: 0
+01/03/2010 9:41:55 SA: Done!
+01/03/2010 9:41:57 SA: Start select order by admin: sFromDate = 28/09/2007, sToDate = 01/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+01/03/2010 9:41:57 SA: All: 1036
+01/03/2010 9:41:57 SA: Dealer: 1036
+01/03/2010 9:41:57 SA: Area: 1036
+01/03/2010 9:41:57 SA: OrderNumber: 1036
+01/03/2010 9:41:57 SA: Status: 3
+01/03/2010 9:41:57 SA: Date: 2
+01/03/2010 9:41:57 SA: Result: 2
+01/03/2010 9:41:57 SA: Done!
+01/03/2010 9:44:26 SA: Start select order by admin: sFromDate = 28/09/2007, sToDate = 01/03/2010, DealerCode = , AreaCode = , StatusCode = 2
+01/03/2010 9:44:26 SA: All: 1036
+01/03/2010 9:44:26 SA: Dealer: 1036
+01/03/2010 9:44:26 SA: Area: 1036
+01/03/2010 9:44:26 SA: OrderNumber: 1036
+01/03/2010 9:44:26 SA: Status: 836
+01/03/2010 9:44:26 SA: Date: 834
+01/03/2010 9:44:26 SA: Result: 10
+01/03/2010 9:44:26 SA: Done!
+01/03/2010 9:44:48 SA: Start select order by admin: sFromDate = 28/09/2007, sToDate = 01/03/2010, DealerCode = , AreaCode = , StatusCode = 2
+01/03/2010 9:44:48 SA: All: 1036
+01/03/2010 9:44:48 SA: Dealer: 1036
+01/03/2010 9:44:48 SA: Area: 1036
+01/03/2010 9:44:48 SA: OrderNumber: 1
+01/03/2010 9:44:48 SA: Status: 1
+01/03/2010 9:44:48 SA: Date: 1
+01/03/2010 9:44:48 SA: Result: 1
+01/03/2010 9:44:48 SA: Done!
+01/03/2010 9:45:23 SA: Start select order by admin: sFromDate = 28/09/2007, sToDate = 01/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+01/03/2010 9:45:24 SA: All: 1036
+01/03/2010 9:45:24 SA: Dealer: 1036
+01/03/2010 9:45:24 SA: Area: 1036
+01/03/2010 9:45:24 SA: OrderNumber: 1
+01/03/2010 9:45:24 SA: Status: 0
+01/03/2010 9:45:24 SA: Date: 0
+01/03/2010 9:45:24 SA: Result: 0
+01/03/2010 9:45:24 SA: Done!
+01/03/2010 9:48:39 SA: Start select order by admin: sFromDate = 28/09/2007, sToDate = 01/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+01/03/2010 9:48:39 SA: All: 1036
+01/03/2010 9:48:39 SA: Dealer: 1036
+01/03/2010 9:48:39 SA: Area: 1036
+01/03/2010 9:48:39 SA: OrderNumber: 1036
+01/03/2010 9:48:39 SA: Status: 2
+01/03/2010 9:48:39 SA: Date: 1
+01/03/2010 9:48:39 SA: Result: 1
+01/03/2010 9:48:39 SA: Done!
+01/03/2010 10:11:33 SA: Start select order by admin: sFromDate = 01/03/2010, sToDate = 01/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+01/03/2010 10:11:33 SA: All: 1036
+01/03/2010 10:11:33 SA: Dealer: 1036
+01/03/2010 10:11:33 SA: Area: 1036
+01/03/2010 10:11:34 SA: OrderNumber: 1036
+01/03/2010 10:11:34 SA: Status: 1
+01/03/2010 10:11:34 SA: Date: 0
+01/03/2010 10:11:34 SA: Result: 0
+01/03/2010 10:11:34 SA: Done!
+01/03/2010 10:11:42 SA: Start select order by admin: sFromDate = 01/03/2001, sToDate = 01/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+01/03/2010 10:11:43 SA: All: 1036
+01/03/2010 10:11:43 SA: Dealer: 1036
+01/03/2010 10:11:43 SA: Area: 1036
+01/03/2010 10:11:43 SA: OrderNumber: 1036
+01/03/2010 10:11:43 SA: Status: 1
+01/03/2010 10:11:43 SA: Date: 0
+01/03/2010 10:11:43 SA: Result: 0
+01/03/2010 10:11:43 SA: Done!
+01/03/2010 10:11:52 SA: Start select order by admin: sFromDate = 01/03/2001, sToDate = 01/03/2010, DealerCode = , AreaCode = , StatusCode = 4
+01/03/2010 10:11:52 SA: All: 1036
+01/03/2010 10:11:52 SA: Dealer: 1036
+01/03/2010 10:11:52 SA: Area: 1036
+01/03/2010 10:11:52 SA: OrderNumber: 1036
+01/03/2010 10:11:52 SA: Status: 0
+01/03/2010 10:11:52 SA: Date: 0
+01/03/2010 10:11:52 SA: Result: 0
+01/03/2010 10:11:52 SA: Done!
+01/03/2010 10:13:06 SA: Start select order by admin: sFromDate = 01/03/2001, sToDate = 01/03/2010, DealerCode = , AreaCode = , StatusCode = 4
+01/03/2010 10:13:06 SA: All: 1037
+01/03/2010 10:13:06 SA: Dealer: 1037
+01/03/2010 10:13:06 SA: Area: 1037
+01/03/2010 10:13:06 SA: OrderNumber: 1037
+01/03/2010 10:13:06 SA: Status: 0
+01/03/2010 10:13:06 SA: Date: 0
+01/03/2010 10:13:06 SA: Result: 0
+01/03/2010 10:13:06 SA: Done!
+01/03/2010 10:13:11 SA: Start select order by admin: sFromDate = 01/03/2001, sToDate = 01/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+01/03/2010 10:13:11 SA: All: 1037
+01/03/2010 10:13:11 SA: Dealer: 1037
+01/03/2010 10:13:11 SA: Area: 1037
+01/03/2010 10:13:11 SA: OrderNumber: 1037
+01/03/2010 10:13:11 SA: Status: 2
+01/03/2010 10:13:11 SA: Date: 1
+01/03/2010 10:13:11 SA: Result: 1
+01/03/2010 10:13:11 SA: Done!
+01/03/2010 10:26:34 SA: Start select order by admin: sFromDate = 01/03/2010, sToDate = 01/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+01/03/2010 10:26:35 SA: All: 1036
+01/03/2010 10:26:35 SA: Dealer: 1036
+01/03/2010 10:26:35 SA: Area: 1036
+01/03/2010 10:26:35 SA: OrderNumber: 1036
+01/03/2010 10:26:35 SA: Status: 1
+01/03/2010 10:26:35 SA: Date: 0
+01/03/2010 10:26:35 SA: Result: 0
+01/03/2010 10:26:35 SA: Done!
+01/03/2010 10:38:34 SA: Start select order by admin: sFromDate = 01/03/2010, sToDate = 01/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+01/03/2010 10:38:34 SA: All: 1035
+01/03/2010 10:38:35 SA: Dealer: 1035
+01/03/2010 10:38:35 SA: Area: 1035
+01/03/2010 10:38:35 SA: OrderNumber: 1035
+01/03/2010 10:38:35 SA: Status: 1
+01/03/2010 10:38:35 SA: Date: 0
+01/03/2010 10:38:35 SA: Result: 0
+01/03/2010 10:38:35 SA: Done!
+01/03/2010 10:38:52 SA: Start select order by admin: sFromDate = 01/03/2003, sToDate = 01/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+01/03/2010 10:38:52 SA: All: 1035
+01/03/2010 10:38:52 SA: Dealer: 1035
+01/03/2010 10:38:52 SA: Area: 1035
+01/03/2010 10:38:52 SA: OrderNumber: 1035
+01/03/2010 10:38:52 SA: Status: 1
+01/03/2010 10:38:52 SA: Date: 0
+01/03/2010 10:38:52 SA: Result: 0
+01/03/2010 10:38:52 SA: Done!
+01/03/2010 10:40:09 SA: Start select order by admin: sFromDate = 01/03/2003, sToDate = 01/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+01/03/2010 10:40:09 SA: All: 1036
+01/03/2010 10:40:09 SA: Dealer: 1036
+01/03/2010 10:40:09 SA: Area: 1036
+01/03/2010 10:40:09 SA: OrderNumber: 1036
+01/03/2010 10:40:09 SA: Status: 2
+01/03/2010 10:40:09 SA: Date: 1
+01/03/2010 10:40:09 SA: Result: 1
+01/03/2010 10:40:09 SA: Done!
+01/03/2010 10:46:52 SA: Start select order by admin: sFromDate = 01/03/2003, sToDate = 01/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+01/03/2010 10:46:52 SA: All: 1037
+01/03/2010 10:46:52 SA: Dealer: 1037
+01/03/2010 10:46:52 SA: Area: 1037
+01/03/2010 10:46:52 SA: OrderNumber: 1037
+01/03/2010 10:46:52 SA: Status: 2
+01/03/2010 10:46:52 SA: Date: 1
+01/03/2010 10:46:52 SA: Result: 1
+01/03/2010 10:46:52 SA: Done!
+03/03/2010 4:38:58 CH: Start select order by admin: sFromDate = 01/03/2010, sToDate = 03/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+03/03/2010 4:38:58 CH: All: 1041
+03/03/2010 4:38:58 CH: Dealer: 1041
+03/03/2010 4:38:58 CH: Area: 1041
+03/03/2010 4:38:58 CH: OrderNumber: 1041
+03/03/2010 4:38:59 CH: Status: 1
+03/03/2010 4:38:59 CH: Date: 0
+03/03/2010 4:38:59 CH: Result: 0
+03/03/2010 4:38:59 CH: Done!
+03/03/2010 4:44:43 CH: Start select order by admin: sFromDate = 01/03/2010, sToDate = 03/03/2010, DealerCode = , AreaCode = , StatusCode = 1;2;4
+03/03/2010 4:44:44 CH: All: 1041
+03/03/2010 4:44:44 CH: Dealer: 1041
+03/03/2010 4:44:44 CH: Area: 1041
+03/03/2010 4:44:44 CH: OrderNumber: 1041
+03/03/2010 4:44:44 CH: Status: 839
+03/03/2010 4:44:44 CH: Date: 3
+03/03/2010 4:44:44 CH: Result: 3
+03/03/2010 4:44:44 CH: Done!
+03/03/2010 5:15:35 CH: Start select order by admin: sFromDate = 01/03/2010, sToDate = 03/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+03/03/2010 5:15:35 CH: All: 1041
+03/03/2010 5:15:36 CH: Dealer: 1041
+03/03/2010 5:15:36 CH: Area: 1041
+03/03/2010 5:15:36 CH: OrderNumber: 1041
+03/03/2010 5:15:36 CH: Status: 1
+03/03/2010 5:15:36 CH: Date: 0
+03/03/2010 5:15:37 CH: Result: 0
+03/03/2010 5:15:37 CH: Done!
+03/03/2010 5:15:37 CH: Start select order by admin: sFromDate = 01/03/2010, sToDate = 03/03/2010, DealerCode = , AreaCode = , StatusCode = 1;2;4
+03/03/2010 5:15:38 CH: All: 1041
+03/03/2010 5:15:38 CH: Dealer: 1041
+03/03/2010 5:15:38 CH: Area: 1041
+03/03/2010 5:15:38 CH: OrderNumber: 1041
+03/03/2010 5:15:38 CH: Status: 839
+03/03/2010 5:15:38 CH: Date: 3
+03/03/2010 5:15:39 CH: Result: 3
+03/03/2010 5:15:39 CH: Done!
+03/03/2010 5:18:00 CH: Start select order by admin: sFromDate = 01/03/2010, sToDate = 03/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+03/03/2010 5:18:00 CH: All: 1041
+03/03/2010 5:18:01 CH: Dealer: 1041
+03/03/2010 5:18:01 CH: Area: 1041
+03/03/2010 5:18:01 CH: OrderNumber: 1041
+03/03/2010 5:18:01 CH: Status: 1
+03/03/2010 5:18:01 CH: Date: 0
+03/03/2010 5:18:02 CH: Result: 0
+03/03/2010 5:18:02 CH: Done!
+04/03/2010 9:55:45 SA: Start select order by admin: sFromDate = 01/03/2010, sToDate = 04/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+04/03/2010 9:55:48 SA: All: 1042
+04/03/2010 9:55:49 SA: Dealer: 1042
+04/03/2010 9:55:49 SA: Area: 1042
+04/03/2010 9:55:49 SA: OrderNumber: 1042
+04/03/2010 9:55:49 SA: Status: 2
+04/03/2010 9:55:50 SA: Date: 1
+04/03/2010 9:55:50 SA: Result: 1
+04/03/2010 9:55:50 SA: Done!
+04/03/2010 10:05:33 SA: Start select order by admin: sFromDate = 01/03/2010, sToDate = 04/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+04/03/2010 10:05:33 SA: All: 1042
+04/03/2010 10:05:33 SA: Dealer: 1042
+04/03/2010 10:05:33 SA: Area: 1042
+04/03/2010 10:05:33 SA: OrderNumber: 1042
+04/03/2010 10:05:34 SA: Status: 2
+04/03/2010 10:05:34 SA: Date: 1
+04/03/2010 10:05:34 SA: Result: 1
+04/03/2010 10:05:34 SA: Done!
+04/03/2010 10:13:20 SA: Start select order by admin: sFromDate = 01/03/2010, sToDate = 04/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+04/03/2010 10:13:20 SA: All: 1043
+04/03/2010 10:13:20 SA: Dealer: 1043
+04/03/2010 10:13:21 SA: Area: 1043
+04/03/2010 10:13:21 SA: OrderNumber: 1043
+04/03/2010 10:13:21 SA: Status: 2
+04/03/2010 10:13:21 SA: Date: 1
+04/03/2010 10:13:21 SA: Result: 1
+04/03/2010 10:13:21 SA: Done!
+04/03/2010 10:15:12 SA: Start select order by admin: sFromDate = 01/03/2010, sToDate = 04/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+04/03/2010 10:15:13 SA: All: 1044
+04/03/2010 10:15:13 SA: Dealer: 1044
+04/03/2010 10:15:14 SA: Area: 1044
+04/03/2010 10:15:15 SA: OrderNumber: 1044
+04/03/2010 10:15:15 SA: Status: 2
+04/03/2010 10:15:16 SA: Date: 1
+04/03/2010 10:15:17 SA: Result: 1
+04/03/2010 10:15:17 SA: Done!
+04/03/2010 10:15:39 SA: Start select order by admin: sFromDate = 01/03/2010, sToDate = 04/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+04/03/2010 10:15:40 SA: All: 1044
+04/03/2010 10:15:40 SA: Dealer: 1044
+04/03/2010 10:15:40 SA: Area: 1044
+04/03/2010 10:15:40 SA: OrderNumber: 1044
+04/03/2010 10:15:40 SA: Status: 2
+04/03/2010 10:15:41 SA: Date: 1
+04/03/2010 10:15:41 SA: Result: 1
+04/03/2010 10:15:41 SA: Done!
+04/03/2010 10:17:31 SA: Start select order by admin: sFromDate = 01/03/2010, sToDate = 04/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+04/03/2010 10:17:31 SA: All: 1045
+04/03/2010 10:17:31 SA: Dealer: 1045
+04/03/2010 10:17:31 SA: Area: 1045
+04/03/2010 10:17:31 SA: OrderNumber: 1045
+04/03/2010 10:17:32 SA: Status: 2
+04/03/2010 10:17:32 SA: Date: 1
+04/03/2010 10:17:32 SA: Result: 1
+04/03/2010 10:17:32 SA: Done!
+04/03/2010 10:17:33 SA: Start select order by admin: sFromDate = 01/03/2010, sToDate = 04/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+04/03/2010 10:17:33 SA: All: 1045
+04/03/2010 10:17:33 SA: Dealer: 1045
+04/03/2010 10:17:34 SA: Area: 1045
+04/03/2010 10:17:34 SA: OrderNumber: 1045
+04/03/2010 10:17:34 SA: Status: 2
+04/03/2010 10:17:34 SA: Date: 1
+04/03/2010 10:17:34 SA: Result: 1
+04/03/2010 10:17:34 SA: Done!
+04/03/2010 10:45:00 SA: Start select order by admin: sFromDate = 01/03/2010, sToDate = 04/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+04/03/2010 10:45:01 SA: All: 1049
+04/03/2010 10:45:01 SA: Dealer: 1049
+04/03/2010 10:45:01 SA: Area: 1049
+04/03/2010 10:45:01 SA: OrderNumber: 1049
+04/03/2010 10:45:01 SA: Status: 6
+04/03/2010 10:45:01 SA: Date: 5
+04/03/2010 10:45:02 SA: Result: 5
+04/03/2010 10:45:02 SA: Done!
+04/03/2010 11:01:01 SA: Start select order by admin: sFromDate = 01/03/2010, sToDate = 04/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+04/03/2010 11:01:01 SA: All: 1050
+04/03/2010 11:01:01 SA: Dealer: 1050
+04/03/2010 11:01:01 SA: Area: 1050
+04/03/2010 11:01:02 SA: OrderNumber: 1050
+04/03/2010 11:01:02 SA: Status: 6
+04/03/2010 11:01:02 SA: Date: 5
+04/03/2010 11:01:02 SA: Result: 5
+04/03/2010 11:01:02 SA: Done!
+04/03/2010 11:13:24 SA: Start select order by admin: sFromDate = 01/03/2010, sToDate = 04/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+04/03/2010 11:13:24 SA: All: 1050
+04/03/2010 11:13:24 SA: Dealer: 1050
+04/03/2010 11:13:25 SA: Area: 1050
+04/03/2010 11:13:25 SA: OrderNumber: 1050
+04/03/2010 11:13:25 SA: Status: 6
+04/03/2010 11:13:25 SA: Date: 5
+04/03/2010 11:13:26 SA: Result: 5
+04/03/2010 11:13:26 SA: Done!
+04/03/2010 5:01:33 CH: Start select order by admin: sFromDate = 01/03/2010, sToDate = 04/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+04/03/2010 5:01:34 CH: All: 1052
+04/03/2010 5:01:35 CH: Dealer: 1052
+04/03/2010 5:01:35 CH: Area: 1052
+04/03/2010 5:01:35 CH: OrderNumber: 1052
+04/03/2010 5:01:35 CH: Status: 6
+04/03/2010 5:01:35 CH: Date: 5
+04/03/2010 5:01:35 CH: Result: 5
+04/03/2010 5:01:35 CH: Done!
+06/03/2010 11:43:16 SA: Start select order by admin: sFromDate = 01/03/2010, sToDate = 06/03/2010, DealerCode = , AreaCode = , StatusCode = 1
+06/03/2010 11:43:18 SA: All: 1052
+06/03/2010 11:43:20 SA: Dealer: 1052
+06/03/2010 11:43:21 SA: Area: 1052
+06/03/2010 11:43:21 SA: OrderNumber: 1052
+06/03/2010 11:43:21 SA: Status: 6
+06/03/2010 11:43:21 SA: Date: 5
+06/03/2010 11:43:21 SA: Result: 5
+06/03/2010 11:43:21 SA: Done!

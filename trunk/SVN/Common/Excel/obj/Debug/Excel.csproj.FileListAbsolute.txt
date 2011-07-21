@@ -1,0 +1,34 @@
+D:\Projects\VDMS\Common\Excel\bin\Debug\Excel.dll
+D:\Projects\VDMS\Common\Excel\bin\Debug\Excel.pdb
+D:\Projects\VDMS\Common\Excel\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\VDMS\Common\Excel\obj\Debug\Excel.dll
+D:\Projects\VDMS\Common\Excel\obj\Debug\Excel.pdb
+D:\Projects\TLS\VDMS\Common\Excel\bin\Debug\Excel.dll
+D:\Projects\TLS\VDMS\Common\Excel\bin\Debug\Excel.pdb
+D:\Projects\TLS\VDMS\Common\Excel\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\TLS\VDMS\Common\Excel\obj\Debug\Excel.dll
+D:\Projects\TLS\VDMS\Common\Excel\obj\Debug\Excel.pdb
+D:\Job\vdms\vdms-ii\VDMS-II\Common\Excel\bin\Debug\Excel.dll
+D:\Job\vdms\vdms-ii\VDMS-II\Common\Excel\bin\Debug\Excel.pdb
+D:\Job\vdms\vdms-ii\VDMS-II\Common\Excel\obj\Debug\ResolveAssemblyReference.cache
+D:\Job\vdms\vdms-ii\VDMS-II\Common\Excel\obj\Debug\Excel.dll
+D:\Job\vdms\vdms-ii\VDMS-II\Common\Excel\obj\Debug\Excel.pdb
+D:\Job\vdms\vdms-ii\VDMS-II\Common\Excel\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\Workspace ThangLongsoftware\VDMS SVN4share\SVN\Common\Excel\bin\Debug\Excel.dll
+E:\Workspace ThangLongsoftware\VDMS SVN4share\SVN\Common\Excel\bin\Debug\Excel.pdb
+E:\Workspace ThangLongsoftware\VDMS SVN4share\SVN\Common\Excel\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\Workspace ThangLongsoftware\VDMS SVN4share\SVN\Common\Excel\obj\Debug\ResolveAssemblyReference.cache
+E:\Workspace ThangLongsoftware\VDMS SVN4share\SVN\Common\Excel\obj\Debug\Excel.dll
+E:\Workspace ThangLongsoftware\VDMS SVN4share\SVN\Common\Excel\obj\Debug\Excel.pdb
+D:\Workspace ThangLongsoftware\VDMS SVN4share\SVN\Common\Excel\bin\Debug\Excel.dll
+D:\Workspace ThangLongsoftware\VDMS SVN4share\SVN\Common\Excel\bin\Debug\Excel.pdb
+D:\Workspace ThangLongsoftware\VDMS SVN4share\SVN\Common\Excel\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Workspace ThangLongsoftware\VDMS SVN4share\SVN\Common\Excel\obj\Debug\ResolveAssemblyReference.cache
+D:\Workspace ThangLongsoftware\VDMS SVN4share\SVN\Common\Excel\obj\Debug\Excel.dll
+D:\Workspace ThangLongsoftware\VDMS SVN4share\SVN\Common\Excel\obj\Debug\Excel.pdb
+D:\Dropbox\SVN\Common\Excel\bin\Debug\Excel.dll
+D:\Dropbox\SVN\Common\Excel\bin\Debug\Excel.pdb
+D:\Dropbox\SVN\Common\Excel\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Dropbox\SVN\Common\Excel\obj\Debug\ResolveAssemblyReference.cache
+D:\Dropbox\SVN\Common\Excel\obj\Debug\Excel.dll
+D:\Dropbox\SVN\Common\Excel\obj\Debug\Excel.pdb

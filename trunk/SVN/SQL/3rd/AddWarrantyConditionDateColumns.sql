@@ -1,0 +1,6 @@
+alter table DATA_WARRANTYCONDITION
+add 
+    (
+    START_DATE TIMESTAMP(6),
+    STOP_DATE TIMESTAMP(6)
+    )

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode title="Homepage" description="" url="~/Default.aspx">
+    <siteMapNode title="Bonus/Payment" description="">
+        <siteMapNode title="Query bonus" url="~/Bonus/Query.aspx" description="" />
+      <siteMapNode title="Sale ADM" description="" >
+        <siteMapNode title="Monthly closing" url="~/Bonus/Sale/BonusClose.aspx" description="" />
+        <siteMapNode title="Bonus plan" url="~/Bonus/Sale/BonusPlanList.aspx" description="" >
+          <siteMapNode title="Edit bonus plan" url="~/Bonus/Sale/BonusPlan.aspx" description="Invisible" />
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode title="Sale man" description="" >
+        <siteMapNode title="Bonus confirm" url="~/Bonus/Sale/BonusConfirm.aspx" description="" />
+      </siteMapNode>
+      <siteMapNode title="FIN" description="" >
+        <siteMapNode title="Confirm payment" url="~/Vehicle/Fin/ConfirmPayment.aspx" description="" />
+        <siteMapNode title="Import payment data" url="~/Vehicle/Fin/ImportPayment.aspx" description="" />
+        <siteMapNode title="Query payment data" url="~/Vehicle/Fin/QueryPayment.aspx" description="" />
+        <siteMapNode title="Do re-consign" url="~/Vehicle/Fin/ReConsign.aspx" description="" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Entire Vehicles" description="">
+      <siteMapNode title="Entire Vehicles Inventory" description="">
+        <siteMapNode url="~/Vehicle/Inventory/Orderform.aspx" title="Entire Vehicles Order" description="">
+          <siteMapNode url="~/Vehicle/Inventory/EditOrder.aspx" title="Edit Vehicle Order" description="" displayInNav="false"/>
+          <siteMapNode url="~/Vehicle/Report/PrintOrder.aspx" title="Print order" description="Invisible"/>
+        </siteMapNode>
+        <siteMapNode url="~/Vehicle/Inventory/Business.aspx" title="VMEP Sale Confirms Order" description="">
+          <siteMapNode url="~/Vehicle/Inventory/ProcessOrder.aspx" title="Process Order" description="" />
+        </siteMapNode>
+        <siteMapNode url="~/Vehicle/Inventory/CheckOrder.aspx" title="Check Delivered Order Status" description="">
+          <siteMapNode url="~/Vehicle/Inventory/ShippingIssues.aspx" title="Shipping issues for order" description="Invisible" />
+        </siteMapNode>
+        <siteMapNode url="~/Vehicle/Inventory/Import.aspx" title="Import Vehicle" description="" />
+        <siteMapNode url="~/Vehicle/Inventory/SaleReject.aspx" title="VMEP Sale Confirms Vehicle Return" description="" />
+        <siteMapNode url="~/Vehicle/Inventory/Reject.aspx" title="Return Vehicle" description="" />
+        <siteMapNode url="~/Vehicle/Inventory/StockAdjust.aspx" title="Stock Adjustment" description="" />
+        <siteMapNode url="~/Vehicle/Inventory/adjustment.aspx" title="Modify Issue-Import to Store" description="" />
+        <siteMapNode url="~/Vehicle/Inventory/History.aspx" title="Check Issue-Import to Store History" description="" />
+        <siteMapNode url="~/Vehicle/Inventory/Detail.aspx" title="Check Inventory Details" description="" />
+        <siteMapNode url="~/Vehicle/Inventory/reformation.aspx" title="Modify Vehicles Import Action" description="" />
+        <siteMapNode url="~/Vehicle/Inventory/MonthlyClose.aspx" title="Month-end Close" description="" />
+      </siteMapNode>
+      <siteMapNode title="Sell Entire Vehicle" description="">
+        <siteMapNode url="~/Vehicle/Sale/Customer.aspx" title="Input Customer Data" description=""/>
+        <siteMapNode url="~/Vehicle/Sale/SaleImportExcel.aspx" title="Import Sale Data from Excel" description=""/>
+        <siteMapNode url="~/Vehicle/Sale/LotSale.aspx" title="Lot sale" description=""/>
+        <siteMapNode url="~/Vehicle/Sale/Store.aspx" title="Sell Vehicle to Sub-store" description=""/>
+        <siteMapNode url="~/Vehicle/Sale/DataReformation.aspx" title="Modify Customer Data" description=""/>
+        <siteMapNode url="~/Vehicle/Sale/Datacheck.aspx" title="Check Customer Data" description=""/>
+        <!--<siteMapNode url="~/Vehicle/Sale/Money.aspx" title="Modify Income Data" description=""/>
+        <siteMapNode url="~/Vehicle/Sale/Receipt.aspx" title="Check Needed Receipts" description=""/>-->
+      </siteMapNode>
+      <siteMapNode title="Entire Vehicle Report" description="">
+        <siteMapNode url="~/Vehicle/Report/IOStockReport.aspx" title="Statistical Report for Dealer" description=""/>
+        <siteMapNode url="~/Vehicle/Report/SaleDetail.aspx" title="Detail Selling Report" description=""/>
+        <siteMapNode url="~/Vehicle/Report/ReceiptDetail.aspx" title="Needed Receipts Report" description=""/>
+        <siteMapNode url="~/Vehicle/Report/DailySaleReport.aspx" title="Sale report – Daily details" description=""/>
+        <siteMapNode title="Order statistic report" url="~/Vehicle/Report/OrderStatistic.aspx" description="" />
+        <siteMapNode title="Import/sold-out statistic report" url="~/Vehicle/Report/InOutStatistic.aspx" description="" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Service" description="">
+      <siteMapNode title="Service" description="">
+        <siteMapNode url="~/Service/WarrantyContent.aspx" title="Service Record Sheet" description="">
+          <siteMapNode url="~/Service/Report/PrintPartChange.aspx" title="Print parts change voucher" description="Invisible"></siteMapNode>
+          <siteMapNode url="~/Service/Report/PrintSRS.aspx" title="Print Service Record Sheet" description="Invisible"></siteMapNode>
+          <siteMapNode url="~/Service/Popup/SelectCustomer.aspx" title="Select Customer" description="Invisible"></siteMapNode>
+          <siteMapNode url="~/Service/Popup/SelectEngineNo.aspx" title="Select EngineNo" description="Invisible"></siteMapNode>
+          <siteMapNode url="~/Service/Popup/SelectModel.aspx" title="Select Model" description="Invisible"></siteMapNode>
+          <siteMapNode url="~/Service/Popup/SelectSpares.aspx" title="Select Spares" description="Invisible"></siteMapNode>
+          <siteMapNode url="~/Service/RepairHistory.aspx" title="Repair and Warranty History" description="Invisible"></siteMapNode>
+          <siteMapNode url="~/Service/RepairList.aspx" title="Service List" description="Invisible"></siteMapNode>
+        </siteMapNode>
+        <siteMapNode url="~/Service/tempSRS.aspx" title="Temporary service record sheets" description=""></siteMapNode>
+      </siteMapNode>
+      <siteMapNode title="Warranty" description="">
+        <siteMapNode url="~/Service/LookupWarrantyParts.aspx" title="Lookup warranty parts" description="" />
+        <siteMapNode url="~/Service/ImportWarrantyParts.aspx" title="Import warranty parts" description="" />
+        <siteMapNode url="~/Service/ExchangeVoucher.aspx" title="Set up Request Voucher of Claim for Warranty Parts" description="" />
+        <siteMapNode url="~/Service/ExchangeReport.aspx" title="Parts Change Voucher Report" description="" />
+        <siteMapNode url="~/Service/LookupExchange.aspx" title="Lookup Exchange part voucher" description="" />
+        <siteMapNode url="~/Service/confirmation.aspx" title="Confirm Exchange Request" description="" >
+          <siteMapNode url="~/Service/verifyExchangeVoucher.aspx" title="Service VMEP Confirms Parts Change Voucher" description="Invisible" />
+        </siteMapNode>
+        <siteMapNode url="~/Service/CustomerInfor.aspx" title="Customer Data" description="" />
+        <siteMapNode url="~/Vehicle/Report/ForBusiness.aspx" title="Monthly Service Report" description=""/>
+        <siteMapNode url="~/Service/WarrantyInfo.aspx" title="Warranty Information" description="" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Spare Parts" description="">
+      <siteMapNode title="Order" description="">
+        <siteMapNode url="~/Part/Inventory/Order.aspx" title="Order Parts">
+          <siteMapNode url="~/Part/Inventory/OrderEdit.aspx" title="Order Edit"></siteMapNode>
+          <siteMapNode title="Print Order" url="~/Part/Inventory/PrintOrderForm.aspx" description="Invisible"></siteMapNode>
+        </siteMapNode>
+        <siteMapNode url="~/Part/Inventory/Receive.aspx" title="Order List and Receive">
+          <siteMapNode title="In stock Order" url="~/Part/Inventory/InStock.aspx" description="Invisible"></siteMapNode>
+        </siteMapNode>
+        <siteMapNode url="~/Part/Inventory/NotGood.aspx" title="Not Good Form">
+          <siteMapNode url="~/Part/Inventory/NotGoodAuto.aspx" title="Collect Not Good when Receive" description="hide"></siteMapNode>
+          <siteMapNode url="~/Part/Inventory/NotGoodEdit.aspx" title="Collect Not Good Part" description="hide"></siteMapNode>
+        </siteMapNode>
+        <siteMapNode url="~/Part/Inventory/NotGoodApprove.aspx" title="Not Good Confirm"></siteMapNode>
+        <siteMapNode url="~/Part/Inventory/LackTracking.aspx" title="Lack case Tracking"></siteMapNode>
+        <siteMapNode url="~/Part/Inventory/UndoConfirm.aspx" title="Undo Auto Receive"></siteMapNode>
+        <siteMapNode url="~/Part/Inventory/InShort.aspx" title="Short Order Query"></siteMapNode>
+      </siteMapNode>
+      <siteMapNode title="Parts Sale" description="">
+        <siteMapNode url="~/Part/SavedSP.aspx" title="Saved sale form"></siteMapNode>
+        <siteMapNode url="~/Part/Sale.aspx" title="New sale form"></siteMapNode>
+        <siteMapNode title="Print sale form" url="~/Part/PrintSaleForm.aspx" description=""/>
+      </siteMapNode>
+      <siteMapNode title="Inventory" description="">
+        <siteMapNode url="~/Part/Inventory/SpecialIE.aspx" title="Special Import/Export" description=""></siteMapNode>
+        <siteMapNode url="~/Part/Inventory/SIEHistory.aspx" title="Special import/export history" description="" />
+        <siteMapNode url="~/Part/Inventory/StockTransfer.aspx" title="Stock Transfer" description=""></siteMapNode>
+        <siteMapNode url="~/Part/Inventory/StockTransferHis.aspx" title="Stock Transfer data" description=""></siteMapNode>
+        <siteMapNode url="~/Part/Inventory/BinCard2.aspx" title="Bin Card Query" description=""></siteMapNode>
+        <siteMapNode url="~/Part/Inventory/MonthlyClose.aspx" title="Monthly Close"></siteMapNode>
+        <siteMapNode url="~/Admin/Part/CCA.aspx" title="Cycle count adjust" description="" />
+        <siteMapNode url="" title="Transaction Adjust" description="" />
+      </siteMapNode>
+      <siteMapNode title="Report" description="">
+        <siteMapNode title="Order detail report" url="~/Part/Report/RemainingOrderDetailReport.aspx"></siteMapNode>
+        <siteMapNode url="~/Part/Report/InShortsupplier.aspx" title="Short Order Statistics Report"></siteMapNode>
+        <siteMapNode url="~/Part/Report/ReceiptDetail.aspx" title="Abnormal Receive Report"></siteMapNode>
+        <siteMapNode url="~/Part/Report/WarrantyReturn.aspx" title="Warranty Return Report"></siteMapNode>
+        <siteMapNode url="~/Part/Report/ShippingSpan.aspx" title="Over Shipping Span Report"></siteMapNode>
+        <siteMapNode url="~/Part/Report/PartOrderServiceSummary.aspx" title="Supply and Service Rate Report"></siteMapNode>
+        <siteMapNode url="~/Part/Report/saleReport.aspx" title="Sales Detailed Report"></siteMapNode>
+        <siteMapNode url="~/Part/Report/inventory.aspx" title="Parts Inventory Report"></siteMapNode>
+        <siteMapNode url="~/Part/Report/IOSReport.aspx" title="In/Out/Stock Report"></siteMapNode>
+        <siteMapNode url="~/Part/Report/PartInputReport.aspx" title="Part input report"></siteMapNode>
+        <siteMapNode url="~/Part/Report/SaleDetailReport.aspx" title="Sale detail report"></siteMapNode>
+        <siteMapNode title="Customer sale report" url="~/Part/Report/CustomerReport.aspx"></siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Basic Data Setting" description="">
+      <siteMapNode title="Vehicle Setting" description="">
+        <siteMapNode url="~/Admin/Vehicle/Broken.aspx" title="Broken Information" description="" >
+          <siteMapNode url="~/Admin/Vehicle/AddBroken.aspx" title="Add New Broken Code" description="Invisible" />
+        </siteMapNode>
+        <siteMapNode url="~/Admin/Vehicle/Branch.aspx" title="Branch Setting" description="" />
+        <siteMapNode url="~/Admin/Vehicle/WarrantyTime.aspx" title="Warranty Parts" description="" />
+        <siteMapNode url="~/Admin/Vehicle/Agency.aspx" title="Import Information" description="" />
+        <siteMapNode url="~/Admin/Vehicle/ListMotorSale.aspx" title="Selling Vehicles List" description="" />
+      </siteMapNode>
+      <siteMapNode title="Part/Accessory" description="">
+        <siteMapNode url="~/Admin/Part/FindPart.aspx" title="Search new part" description="" />
+        <siteMapNode url="~/Admin/Part/Part.aspx" title="Part setting" description="">
+          <siteMapNode url="~/Admin/Part/PartEdit.aspx" title="Add new part" description="" />
+        </siteMapNode>
+        <siteMapNode url="~/Admin/Part/Category.aspx" title="Accessory category setting" description="" />
+        <siteMapNode url="~/Admin/Part/Customer.aspx" title="Customer setting" description="" />
+        <siteMapNode url="~/Admin/Database/Vendor.aspx" title="Vendor setting" description="" />
+        <siteMapNode url="~/Admin/Part/PartSpec.aspx" title="Part specification" description="" >
+          <siteMapNode url="~/Admin/Part/PartSpecEdit.aspx" title="Edit Part specification" description="Invisible" />
+        </siteMapNode>
+        <siteMapNode url="~/Admin/Part/PartReplace.aspx" title="Part replacing" description="" >
+          <siteMapNode url="~/Admin/Part/PartReplaceEdit.aspx" title="Edit Part replacement" description="Invisible" />
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode title="Right Setting" description="">
+        <siteMapNode url="~/Admin/Security/ManageUsers.aspx" title="Account Management" description="" >
+          <siteMapNode url="~/Admin/Security/EditUser.aspx" title="Edit User" description="Invisible" />
+        </siteMapNode>
+        <siteMapNode url="~/Admin/Security/Role.aspx" title="Role Management" description="" />
+        <siteMapNode url="~/Admin/Security/Permission.aspx" title="Right Setup" description="" />
+      </siteMapNode>
+      <siteMapNode title="VMEP Setting" description="">
+        <siteMapNode url="~/Admin/Database/Dealer.aspx" title="Dealer List" description="" />
+        <siteMapNode url="~/Admin/Bonus/BonusSource.aspx" title="Bonus Source" description="" />
+        <siteMapNode url="~/Admin/Database/Article.aspx" title="Common Message" description="" />
+        <siteMapNode url="~/Admin/Security/Setting.aspx" title="System parameters" description="" />
+      </siteMapNode>
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

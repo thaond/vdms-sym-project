@@ -1,0 +1,113 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using VDMS.Provider;
+using System.Web.Profile;
+
+namespace VDMS.Provider
+{
+    public class VDMSProfileProvider : ProfileProvider
+    {
+        private string _currentOrgCode; // tuong tung voi Provider hien thoi
+        private ProfileProvider _currentProvider;
+
+        public ProfileProvider Provider
+        {
+            get
+            {
+                if (!_currentOrgCode.Equals(VDMSProvider.OrgCode) || (this._currentProvider == null))
+                {
+                    _currentOrgCode = VDMSProvider.OrgCode;
+                    _currentProvider = VDMSProfileProvider.GetProvider(_currentOrgCode);
+                    if (_currentProvider == null)
+                    {
+                        throw new Exception("Invalid Organization Code!");
+                    }
+                }
+                return _currentProvider;
+            }
+            //private set;
+        }
+
+        public static ProfileProvider GetProvider(string app)
+        {
+            ProfileProvider res = ProfileManager.Providers[VDMSProvider.GetProfileProviderName(app.Trim())];
+            return res;
+        }
+
+        public override void Initialize(string name, System.Collections.Specialized.NameValueCollection config)
+        {
+            base.Initialize(name, config);
+            _currentOrgCode = VDMSProvider.OrgCode;
+        }
+
+        #region ProfileProvider
+
+        public override int DeleteInactiveProfiles(ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate)
+        {
+            return this.Provider.DeleteInactiveProfiles(authenticationOption, userInactiveSinceDate);
+        }
+
+        public override int DeleteProfiles(string[] usernames)
+        {
+            return this.Provider.DeleteProfiles(usernames);
+        }
+
+        public override int DeleteProfiles(ProfileInfoCollection profiles)
+        {
+            return this.Provider.DeleteProfiles(profiles);
+        }
+
+        public override ProfileInfoCollection FindInactiveProfilesByUserName(ProfileAuthenticationOption authenticationOption, string usernameToMatch, DateTime userInactiveSinceDate, int pageIndex, int pageSize, out int totalRecords)
+        {
+            return this.Provider.FindInactiveProfilesByUserName(authenticationOption, usernameToMatch, userInactiveSinceDate, pageIndex, pageSize, out totalRecords);
+        }
+
+        public override ProfileInfoCollection FindProfilesByUserName(ProfileAuthenticationOption authenticationOption, string usernameToMatch, int pageIndex, int pageSize, out int totalRecords)
+        {
+            return this.Provider.FindProfilesByUserName(authenticationOption, usernameToMatch, pageIndex, pageSize, out totalRecords);
+        }
+
+        public override ProfileInfoCollection GetAllInactiveProfiles(ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate, int pageIndex, int pageSize, out int totalRecords)
+        {
+            return this.Provider.GetAllInactiveProfiles(authenticationOption, userInactiveSinceDate, pageIndex, pageSize, out totalRecords);
+        }
+
+        public override ProfileInfoCollection GetAllProfiles(ProfileAuthenticationOption authenticationOption, int pageIndex, int pageSize, out int totalRecords)
+        {
+            return this.Provider.GetAllProfiles(authenticationOption, pageIndex, pageSize, out totalRecords);
+        }
+
+        public override int GetNumberOfInactiveProfiles(ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate)
+        {
+            return this.Provider.GetNumberOfInactiveProfiles(authenticationOption, userInactiveSinceDate);
+        }
+
+        public override string ApplicationName
+        {
+#warning check this
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public override System.Configuration.SettingsPropertyValueCollection GetPropertyValues(System.Configuration.SettingsContext context, System.Configuration.SettingsPropertyCollection collection)
+        {
+            return this.Provider.GetPropertyValues(context, collection);
+        }
+
+        public override void SetPropertyValues(System.Configuration.SettingsContext context, System.Configuration.SettingsPropertyValueCollection collection)
+        {
+            this.Provider.SetPropertyValues(context, collection);
+        }
+
+        #endregion
+    }
+}

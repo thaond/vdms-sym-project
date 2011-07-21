@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BoundFieldResource1.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BoundFieldResource1.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BoundFieldResource1.HeaderText" xml:space="preserve">
+    <value>Ngày đặt</value>
+  </data>
+  <data name="BoundFieldResource2.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BoundFieldResource2.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BoundFieldResource2.HeaderText" xml:space="preserve">
+    <value>Nơi nhận</value>
+  </data>
+  <data name="BoundFieldResource3.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BoundFieldResource3.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BoundFieldResource3.HeaderText" xml:space="preserve">
+    <value>Số đơn hàng</value>
+  </data>
+  <data name="BoundFieldResource4.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BoundFieldResource4.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BoundFieldResource4.HeaderText" xml:space="preserve">
+    <value>Ngày xác nhận</value>
+  </data>
+  <data name="BoundFieldResource5.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BoundFieldResource5.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BoundFieldResource5.HeaderText" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="BoundFieldResource6.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BoundFieldResource6.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BoundFieldResource6.HeaderText" xml:space="preserve">
+    <value>Nhân viên</value>
+  </data>
+  <data name="cmdAddNewResource1.Text" xml:space="preserve">
+    <value>Thêm mới</value>
+  </data>
+  <data name="cmdAddNewResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmdQueryResource1.Text" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+  <data name="cmdQueryResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlDealerResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlOTResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlSResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlWHResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gvResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gvResource1.EmptyDataText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gvResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="h1Resource2.Text" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="h1Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="h2Resource2.Text" xml:space="preserve">
+    <value>Xoá</value>
+  </data>
+  <data name="h2Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="h3Resource2.Text" xml:space="preserve">
+    <value>Xem</value>
+  </data>
+  <data name="h3Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HyperLinkFieldResource1.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HyperLinkFieldResource1.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HyperLinkFieldResource1.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HyperLinkFieldResource1.Text" xml:space="preserve">
+    <value>Xác nhận và gửi đi</value>
+  </data>
+  <data name="HyperLinkFieldResource2.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HyperLinkFieldResource2.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HyperLinkFieldResource2.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HyperLinkFieldResource2.Text" xml:space="preserve">
+    <value>In</value>
+  </data>
+  <data name="ibFromDateResource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ibFromDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ibToDateResource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ibToDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lh1Resource1.Text" xml:space="preserve">
+    <value>Người dùng có thể kết hợp nhiều điều kiện để tìm kiếm đơn hàng.</value>
+  </data>
+  <data name="lh2Resource1.Text" xml:space="preserve">
+    <value>Chọn &lt;Thêm mới&gt; để tạo Đơn hàng mới.</value>
+  </data>
+  <data name="lh3Resource1.Text" xml:space="preserve">
+    <value>Trạng thái Đơn hàng, tham khảo danh sách &lt;Trạng thái&gt;</value>
+  </data>
+  <data name="ListItemResource1.Text" xml:space="preserve">
+    <value>Tất cả</value>
+  </data>
+  <data name="ListItemResource1.Value" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource10.Text" xml:space="preserve">
+    <value>Đơn hàng bình thường</value>
+  </data>
+  <data name="ListItemResource10.Value" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="ListItemResource11.Text" xml:space="preserve">
+    <value>Đơn hàng con</value>
+  </data>
+  <data name="ListItemResource11.Value" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="ListItemResource2.Text" xml:space="preserve">
+    <value>OP: Đang mở, chưa gửi</value>
+  </data>
+  <data name="ListItemResource2.Value" xml:space="preserve">
+    <value>OP</value>
+  </data>
+  <data name="ListItemResource3.Text" xml:space="preserve">
+    <value>SN: gửi cho VMEP</value>
+  </data>
+  <data name="ListItemResource3.Value" xml:space="preserve">
+    <value>SN</value>
+  </data>
+  <data name="ListItemResource4.Text" xml:space="preserve">
+    <value>CF: VMEP xác nhận</value>
+  </data>
+  <data name="ListItemResource4.Value" xml:space="preserve">
+    <value>CF</value>
+  </data>
+  <data name="ListItemResource5.Text" xml:space="preserve">
+    <value>NC: đóng</value>
+  </data>
+  <data name="ListItemResource5.Value" xml:space="preserve">
+    <value>NC</value>
+  </data>
+  <data name="ListItemResource6.Text" xml:space="preserve">
+    <value>RO: mở lại</value>
+  </data>
+  <data name="ListItemResource6.Value" xml:space="preserve">
+    <value>RO</value>
+  </data>
+  <data name="ListItemResource7.Text" xml:space="preserve">
+    <value>AC: Đóng bất thường</value>
+  </data>
+  <data name="ListItemResource7.Value" xml:space="preserve">
+    <value>AC</value>
+  </data>
+  <data name="ListItemResource8.Text" xml:space="preserve">
+    <value>VD: huỷ bởi VMEP</value>
+  </data>
+  <data name="ListItemResource8.Value" xml:space="preserve">
+    <value>VD</value>
+  </data>
+  <data name="ListItemResource9.Text" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="ListItemResource9.Value" xml:space="preserve">
+    <value />
+  </data>
+  <data name="litDealerResource1.Text" xml:space="preserve">
+    <value>Đại lý:</value>
+  </data>
+  <data name="litOrderDateResource1.Text" xml:space="preserve">
+    <value>Ngày đặt:</value>
+  </data>
+  <data name="litOrderNumberResource1.Text" xml:space="preserve">
+    <value>Số đơn hàng:</value>
+  </data>
+  <data name="litOrderTypeResource1.Text" xml:space="preserve">
+    <value>Loại đơn hàng:</value>
+  </data>
+  <data name="litStatusResource1.Text" xml:space="preserve">
+    <value>Trạng thái:</value>
+  </data>
+  <data name="litWarehouseResource1.Text" xml:space="preserve">
+    <value>Kho nhận:</value>
+  </data>
+  <data name="Localize1Resource1.Text" xml:space="preserve">
+    <value>Không có đơn đặt hàng nào!</value>
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>Danh sách đơn đặt hàng</value>
+  </data>
+  <data name="rfvFromDateResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvFromDateResource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rfvFromDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvToDateResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvToDateResource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rfvToDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tbONResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tbONResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource1.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource1.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource1.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="th4Resource1.Text" xml:space="preserve">
+    <value>Đơn hàng con (Sub): Do hệ thống tự tạo ra khi số lượng VMEP báo giá nhỏ hơn số lượng đại lý đặt hàng.</value>
+  </data>
+  <data name="txtFromDateResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtFromDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtToDateResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtToDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+</root>
